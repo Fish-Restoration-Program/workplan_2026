@@ -1,0 +1,2351 @@
+---
+editor_options: 
+  chunk_output_type: console
+---
+This file is the first step in preparing data for reports and EDI. All of the following can be completed once Fish QC is complete for the year desired.
+
+
+This is chunk is used to import raw data and perform initial manipulations
+```{r}
+
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+
+#########################################
+
+
+library(readxl)
+library(dplyr)
+library(lubridate)
+
+#Input files are Site Visits and Sample export from db- be sure to note the data date were exported from the db and export new files if any updates have been make to the db.
+# Import files (export 05JUL2023)
+sample1 <- read.csv(here::here("working","Sample_26JUN2024.csv"), quote = "")
+dwr_sv <- read.csv(here::here("working","SiteVisit_26JUN2024.csv"), header=T, quote = "") # All site visits from the export page
+str(dwr_sv)
+
+
+
+
+#This is creating new columns that might be needed for EDI, fish haven't used this before but might need to. 
+sample1$Flagged_Data = NA
+#Might remove if it turns out these aren't being used
+
+#Convert Visit.Date to date format
+typeof(dwr_sv$Visit.Date)
+dwr_sv$Visit.Date2 <- NA
+dwr_sv$Visit.Date2 <- factor(dwr_sv$Visit.Date)
+dwr_sv$Visit.Date2<-lubridate::mdy(dwr_sv$Visit.Date2)
+dwr_sv$Visit.Date2<-as.Date(dwr_sv$Visit.Date2, format = "%Y-%m-%d")
+
+#Use to double check that nothing weird happened when converting the dates
+dwr_sv[,c("Visit.Date","Visit.Date2")]
+
+#Create month and year variables 
+dwr_sv$year =lubridate::year(dwr_sv$Visit.Date2)
+dwr_sv$month = lubridate::month(dwr_sv$Visit.Date2)
+
+#Filter for desired year(s)/months
+
+#Select year or date range desired
+#dwr_sv= subset(dwr_sv, Visit.Date2 > "2023-01-01" & Visit.Date2 < "2023-12-31")
+
+
+dwr_sv=filter(dwr_sv, dwr_sv$year== 2023)
+
+save(list=ls(),file= here::here("RData","fish_prep_code_01.RData"))
+
+```
+
+Merging site and sample files, checking gear types and assigning seasons
+```{r}
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData", "fish_prep_code_01.RData"))
+
+library(dplyr)
+library(lubridate)
+library(readxl)
+
+
+
+#######################################################################
+#Test the merge of sample with dwr_sv to ensure nothing we want is dropped
+nrow(sample1) ## 10280 rows
+nrow(dwr_sv) ## 886 rows
+test=merge(sample1, dwr_sv, by='VisitNo');test
+nrow(test) ## 1392 rows; This information isn't helpful by itself yet; could be a good merge or there could be bad merges masking each other
+unique(test$year) #2023
+test2=merge(sample1, dwr_sv, by='VisitNo', all=T)
+nrow(test2) ## 10281 rows;The takeaway from the fact that test 2 has more rows.
+      ### 1)Because test2 is a different size than test, it suggests that there are some visitNo's found in either sample1 or dwr_sv that is not found in the other. Otherwise, test2 would be the same size as test
+      #This is expected since dwr_sv only has samples from a specified range in 2023 and sample1 hasn't been filtered down to the desired dates.
+unique(test2$year)
+
+###How do we identify these issues once we know they exist?
+##If we have identified that visitNo's are duplicated, can use the aggregate function to determine which are those visitNo's
+summary.table.x=with(sample1, aggregate(list(number=VisitNo), list(VisitNo=VisitNo), length)) ##This function creates a summary table of how many times a SampleID appears in the data set (can go into further detail if needed)
+summary.table.x[which(summary.table.x$number!=1),] ##Filters out which SampleID shows up more than once (remember that in actual dataframe, this can be a large table rather than just 4 rows)
+###Repeat with the other data set
+summary.table.y=with(dwr_sv, aggregate(list(number=VisitNo), list(VisitNo=VisitNo), length)) 
+summary.table.y[which(summary.table.y$number!=1),] #Shows that SampleID shows up 3 times in the dataframe
+
+###How do we identify which SampleIDs are found in 1 dataset and not the other?
+`%!in%` = Negate(`%in%`) ##Run this line of code to create our own function which is %!in$; this function tells us what objects are not found in common between 2 vectors
+(sample1$VisitNo) ##A vector of  SampleIDs found in dataframe x.3
+(dwr_sv$VisitNo) ##A vector of  SampleIDs found in dataframe y.3
+
+
+test1=sample1[which(sample1$VisitNo %!in% dwr_sv$VisitNo),] ##This function tells me what SampleIDs are found in sample1 but not found in dwr_sv
+test2=dwr_sv[which(dwr_sv$VisitNo %!in% sample1$VisitNo),] ###Switch order around to determine what SampleIDs are found in dwr_sv but not sample1
+# zero 2023 samples are missing from sample1, okay to move on
+#No samples needed for current purposes are missing. Just new samples and some invert stuff from 2023
+
+
+
+
+############################################################
+
+# Merge site and sample files (CHECK # rows in sitesample should be = or > # rows in sample1) **merge vs join
+sitesample= merge(sample1, dwr_sv, by="VisitNo") 
+
+
+# Change locations as needed
+sort(unique(sitesample$Location))
+#sitesample$Location[sitesample$Location == "Stacys Island"] <- "WTIB"
+
+
+#rename file
+ss2<- sitesample
+
+
+#create Datetime column, potentially used for time of day analysis. R doesn't like regular time formats.
+ss2$DateTime <-NA
+
+
+ss2$DateTime <- paste(ss2$Visit.Date2, ss2$StartTime, sep = " ")
+
+unique(ss2$DateTime)
+typeof(ss2$DateTime)
+
+library(lubridate)
+
+#ss2$DateTime <-as.POSIXct(ss2$DateTime, format="%Y-%m-%d %H:%M:%S")
+
+typeof(ss2$StartTime)
+unique(ss2$StartTime)
+#remove inaccurate date from the start time column
+#ss2$StartTime<- substr(as.character(ss2$StartTime), 12, 16)
+
+
+#add season 
+#changed starting with Tule Red 2019;
+
+
+#1. Winter - Jan 1- Feb 29
+#2. Spring - Mar 1 - May 31
+#3. Summer - Jun 1 - Aug 31
+#4. Fall  - Sep 1 - Dec 31
+
+#Check what months we have
+unique(ss2$month)
+
+(ss2$Season<-ifelse((ss2$month<=2), "Winter",
+                  ifelse((ss2$month>=3) & (ss2$month<=5), "Spring",
+                         ifelse((ss2$month>=6) & (ss2$month<=8), "Summer",
+                                ifelse((ss2$month>=9) & (ss2$month<=12), "Fall",
+                                              ifelse((ss2$month>13), "fix me", 0 ))))))
+#Check that none say "fix me" or 0 or NA
+unique(ss2$Season)
+
+#Check gear types
+sort(unique(ss2$GearTypeAbbreviation))
+
+fish_in_inverts=filter(ss2, ss2$GearTypeAbbreviation== "MAC"|
+             ss2$GearTypeAbbreviation == "NT"|
+             ss2$GearTypeAbbreviation == "ZOOP"|
+              ss2$GearTypeAbbreviation == "EAV"|
+               ss2$GearTypeAbbreviation == "FAV"|
+               ss2$GearTypeAbbreviation == "SAV"|
+               ss2$GearTypeAbbreviation == "PPG"|
+               ss2$GearTypeAbbreviation == "PVC"|
+               ss2$GearTypeAbbreviation == "SR"
+             )
+
+unique(fish_in_inverts$GearTypeAbbreviation)
+
+#Wrong spot for this, double check that it is below
+#write.csv(fish_in_inverts, file=here::here("Export.Files", paste('fish_in_invert_samples', Sys.Date(),'.csv', sep = '')))
+
+unique(ss2$GearTypeAbbreviation)
+
+ss2$GearTypeAbbreviation <- gsub("CAST0", "CAST", ss2$GearTypeAbbreviation)
+ss2$GearTypeAbbreviation <- gsub("CASTB", "CAST", ss2$GearTypeAbbreviation)
+
+#Filter just fish gear types used in 2022
+#Change ss2 to a different variable name instead of overwriting ss2
+ss_fish=filter(ss2, ss2$GearTypeAbbreviation== "BEASEI"|
+             ss2$GearTypeAbbreviation == "LAMOPE"|
+             ss2$GearTypeAbbreviation == "BIGLAM"|
+             ss2$GearTypeAbbreviation == "OTTTRA"|
+             ss2$GearTypeAbbreviation == "CAST"|
+             ss2$GearTypeAbbreviation == "HOOK" )
+             #ss2$GearTypeAbbreviation == "BOEFISH"|
+             #ss2$GearTypeAbbreviation == "EFISH"|
+             #ss2$GearTypeAbbreviation == "FYKE"|
+             #ss2$GearTypeAbbreviation == "GILNET"|
+            # ss2$GearTypeAbbreviation == "KODI")
+
+#check that only fish gear types are left
+unique(ss_fish$GearTypeAbbreviation)
+
+#File now ready for fish prep!
+
+save(list=ls(),file= here::here("RData","fish_prep_code_02.RData"))
+
+```
+
+
+```{r}
+
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData", "fish_prep_code_02.RData"))
+
+
+################################################################################################### 
+#for feesh
+# Prepare to check that the sample type (geartypeabbreviation) for each sample in the database matches its sampleID
+
+# Make a df to hold data with issues
+test <- data.frame(matrix(NA, nrow = nrow(ss_fish), ncol = 2))
+
+# Change column name
+names(test)[1]<-"SampleID"
+names(test)[2]<-"Geartype"
+
+# Change to character type
+test$SampleID <- as.character(test$SampleID)
+test$Geartype <- as.character(test$Geartype)
+ss_fish$SampleID_frp <- as.character(ss_fish$SampleID_frp)
+ss_fish$GearTypeAbbreviation <- as.character(ss_fish$GearTypeAbbreviation)
+
+library(stringr)
+
+
+# Change the way this is done later. Doesn't actually check that Geartype matches SampleID. Doesn't explicitly check that SampleID FRP is all fish.But, earlier checks make sure that the only GearTypeAbbreviations are fish ones, and this will check if any sampleIDs don't match their geartype. 
+#E.G. if somehow MAC12-.... said it's geartype was LAMOPE, below would catch that. 
+# Check that the sample type (geartypeabbreviation) for each sample in the database matches its sampleID
+ for (i in 1:nrow(ss_fish)){
+   if (str_detect(ss_fish$SampleID_frp[i],regex("LAMOPE", ignore_case =   TRUE)) & ss_fish$GearTypeAbbreviation[i] != "LAMOPE"){
+    test[i,1]<-ss_fish$SampleID_frp[i]
+    test[i,2]<-ss_fish$GearTypeAbbreviation[i]}
+   if (str_detect(ss_fish$SampleID_frp[i],regex("OTTTRA", ignore_case =   TRUE)) & ss_fish$GearTypeAbbreviation[i] != "OTTTRA"){
+    test[i,1]<-ss_fish$SampleID_frp[i]
+    test[i,2]<-ss_fish$GearTypeAbbreviation[i]}
+  if (str_detect(ss_fish$SampleID_frp[i],regex("BEASEI", ignore_case =   TRUE)) & ss_fish$GearTypeAbbreviation[i] != "BEASEI"){
+    test[i,1]<-ss_fish$SampleID_frp[i]
+    test[i,2]<-ss_fish$GearTypeAbbreviation[i]}
+  if (str_detect(ss_fish$SampleID_frp[i],regex("BIGLAM", ignore_case =   TRUE)) & ss_fish$GearTypeAbbreviation[i] != "BIGLAM"){
+    test[i,1]<-ss_fish$SampleID_frp[i]
+    test[i,2]<-ss_fish$GearTypeAbbreviation[i]}
+   if (str_detect(ss_fish$SampleID_frp[i],regex("CAST", ignore_case =   TRUE)) & ss_fish$GearTypeAbbreviation[i] != "CAST"){
+    test[i,1]<-ss_fish$SampleID_frp[i]
+    test[i,2]<-ss_fish$GearTypeAbbreviation[i]}
+ print(i/nrow(ss_fish)) }
+
+# Save a list of all sampleID's where the SampleID and geartypes dont match within the database!
+gtype_ss_fish_issues <- data.frame(test$SampleID,test$Geartype)
+gtype_ss_fish_issues <- distinct(gtype_ss_fish_issues) # Cut it down to one row per SampleID, we dont need all of them
+
+# Check if there are real issues, correct, and proceed
+
+
+# Save the file, use it to make corrections in Database
+write.csv(gtype_ss_fish_issues, file = here::here("Export.Files","Data.Checks", "gtype_ss_fish_issues.csv"))
+####
+##################################################################################################################
+
+save(list=c("dwr_sv", "ss2","ss_fish", "sample1", "sitesample", "fish_in_inverts"), file=here::here("RData","fish_prep_code_03.RData")) #replace list=ls() with names of objects you want to keep
+```
+
+
+```{r Depth Adjustments}
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData","fish_prep_code_03.RData"))
+
+#rename ss_fish to f1
+f1<-ss_fish
+
+## We have some problems below. Some are missing seine code, some missing deployment ED 07JUN2023 ###
+##### CHECK BEFORE MOVING ON!! #######################################
+
+#This has been corrected for EDI data and in the future, when needing older data, use EDI. 
+
+#FOR YEARS PRIOR TO 2019 DepthOfWater IS IN FEET IN DATABASE OUTPUT
+
+
+
+#depth correction for draft of mudsucker and chinook only for lampara samples (only ones where volume is affected)
+
+#some samples got depth from handheld or secchi, these don't need adjustment since they are true depths
+library(stringr)
+
+f1$DepthSource <- trimws(f1$DepthSource, which = c("both"))
+
+
+#In future, there will be a column for depth source so this bit won't be needed
+#Grabs any samples with the words "depth from" in the comments
+f1$Comments <- tolower(f1$Comments) # make all comments lower case so grepl finds them
+depth_handheld = f1[grepl('depth from', f1$Comments),]
+nrow(depth_handheld) # 66 for 2023. 
+length(depth_handheld$GearTypeAbbreviation[which(depth_handheld$GearTypeAbbreviation=="LAMOPE")])#how many are lampara samples. Only need to adjust for lampara samples really, depth goes into volume calculation
+
+
+
+#Make a duplicate of DepthSource to house values from comments
+f1$DepthSource2=f1$DepthSource
+#Check that nothing weird happened with the new column
+test=f1[,c("Boat","GearTypeAbbreviation", "DepthSource","DepthSource2")]
+
+depth_handheld[,c("DepthOfWater","Boat","GearTypeAbbreviation")]
+
+#For SampleIDs in Depth_handheld df, make the final depth the original depth, since handheld methods are true depth and need no adjustment
+for (i in 1:nrow(f1)){
+  for (j in 1:nrow(depth_handheld)){
+    if (f1$SampleID_frp[i]==depth_handheld$SampleID_frp[j]){
+      f1$DepthSource2[i]="Handheld depth finder"
+    }
+  }
+}
+
+
+#check that it worked
+test_depth_handheld = filter(f1, f1$DepthSource != f1$DepthSource2) #the same samples as in depth_handheld should show up in this test. All did! -ED 25JUN2024
+# It did! 
+test_depth_handheld2 = filter(test_depth_handheld, test_depth_handheld$SampleID_frp != depth_handheld$SampleID_frp) #Should be zero
+# 0! -ED 25JUN2024
+
+
+test_depth = filter(f1, is.na(f1$DepthOfWater)==T)
+# a few samples missing depth, checked, all except one are code 3 or CAST/HOOK samples, so we'll apply the maximum depth later on for the one LAMOPE missing depth -ED 25JUN2024
+f1$DepthOfWater2 <- NA
+f1$DepthOfWater2 <- ifelse((f1$Boat == "Mudsucker"| f1$Boat == "Chinook") & f1$GearTypeAbbreviation == "LAMOPE"& f1$DepthSource2 !="Handheld depth finder", f1$DepthOfWater+0.3, f1$DepthOfWater)
+f1$DepthOfWater3 <- ifelse(f1$Boat == "Kvichak" & f1$GearTypeAbbreviation == "OTTTRA" & f1$DepthSource2 !="Handheld depth finder", f1$DepthOfWater2+0.25, f1$DepthOfWater2)
+f1$DepthMeters <- ifelse((f1$Boat == "Mudsucker" |f1$Boat == "Chinook") & f1$GearTypeAbbreviation == "BIGLAM" & f1$DepthSource2 !="Handheld depth finder", f1$DepthOfWater3+0.3, f1$DepthOfWater3)
+
+#Changes number of significant figures in depth to 2  
+f1$DepthMeters <- signif(f1$DepthMeters, 3)
+
+
+test = f1[c('SampleID_frp','GearTypeAbbreviation','Boat','DepthOfWater' ,'DepthMeters','SeineCode',"DepthSource","DepthSource2")]
+
+#Create new volume column, apply volume estimated column to new column, new volumes calculated later on. Avoids losing samples.
+f1$volume <- f1$VolumeEstimated
+f1$volume <- NA
+
+
+save(list=c("dwr_sv", "ss2","ss_fish","f1", "sample1", "sitesample", "fish_in_inverts"), file=here::here("RData","fish_prep_code_04.RData")) #replace list=ls() with names of objects you want to keep
+```
+
+
+```{r Fill in missing fields}
+
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData","fish_prep_code_04.RData"))
+
+library(dplyr)
+#check that all have NetNumber
+unique(f1$NetNumber)
+test_netnumber = filter(f1, is.na(f1$NetNumber)==T) #correct in database then re-download sitevisit/sample
+#Otter trawls or missing net number on datasheet, multiple nets were used during this time so can't definitively say which net was used. 
+
+
+# Save the file, use it to make corrections in Database
+write.csv(test_netnumber, file = here::here("Export.Files","Data.Checks","missing_netnumber.csv")) # samples from 14NOV2022 and 15NOV2022 missing net number on datasheets
+#Otter trawls missing net number, no net numbers have been assigned yet. ok to move on - ED 05JUL2023
+
+#check that all have Veg %
+unique(f1$CodEndPercent)
+
+test_veg = filter(f1, f1$CodEndPercent == " ") #correct in database then re-download sitevisit/sample
+#Only cast nets and code 3's left, good. ED 01FEB2024
+
+# Save the file, use it to make corrections in Database
+write.csv(test_veg, file = here::here("Export.Files","Data.Checks", "missing_veg.csv")) #these samples do not have cod end percent recorded on datasheet, bring to group with how to handle - ED 05JUL2023
+
+
+
+### Add seine code to otter trawl samples, prior to seine code being added to trawl DB entry page
+library(stringr)
+
+unique(f1$SeineCode)
+f1$SeineCode <- trimws(f1$SeineCode, which = c("both"))
+
+
+test_seinecode = filter(f1, f1$SeineCode=="") #correct in database then re-download sitevisit/sample
+# All corrected for 2023 so far, seine code field added to trawl entry in database in 2023 -ED 01FEB2024
+#CAST and HOOK don't have seine code
+
+f1$Comments <- tolower(f1$Comments)
+
+
+#The following section does not work. Samples missing "paired" are still missing paired for now. 
+
+#Grabs any samples with the word "paired" in the comments - NEEDS WORK!
+missing_paired = f1[grepl('paired', f1$Comments),]
+
+# #change for consistency
+# missing_paired$Comments2 <- gsub("paired:", "paired ", missing_paired$Comments)
+# missing_paired$Comments3 <- gsub("paired?", "paired ", missing_paired$Comments2)
+# missing_paired$Comments4 <- gsub("paired.", "paired ", missing_paired$Comments3)
+# missing_paired$Comments5 <- gsub("not paired.", "paired n", missing_paired$Comments4)
+# missing_paired$Comments6 <- gsub("?", "", missing_paired$Comments5)
+# 
+# 
+# 
+# f1$Paired = NA
+# 
+# for (i in 1:nrow(missing_paired)){
+#   if (grepl("paired y", missing_paired$Comments6[i])){
+#     missing_paired$Paired[i]= "Y"
+#   }
+#   if (grepl("paired n", missing_paired$Comments6[i])){
+#     missing_paired$Paired[i]= "N"
+#   }
+# 
+# }
+# 
+# for (i in 1:nrow(f1)){
+#   for (j in 1:nrow(missing_paired)){
+#     if (f1$SampleID_frp[i]==missing_paired$SampleID_frp[j]){
+#       f1$Paired[i]= missing_paired$Paired[j]
+#     }
+#   }
+# }
+
+
+#Removes leading and trailing spaces
+f1$SeineCode <- trimws(f1$SeineCode, which = c("both"))
+f1$GearTypeAbbreviation <- trimws(f1$GearTypeAbbreviation, which = c("both"))
+f1$SeineDeploymentType <- trimws(f1$SeineDeploymentType, which = c("both"))
+
+
+
+
+#exclude if seine code= 3 or 4 (did not sample)
+#First check how many there are
+Test<-f1[((f1$SeineCode == "4. DTS") | f1$SeineCode == "3. Complete twist; snag; or large tear") ,]
+nrow(Test)# 18
+unique(Test$SeineCode) # Should just have 3 and 4
+Test2<-f1[!((f1$SeineCode == "4. DTS") | f1$SeineCode == "3. Complete twist; snag; or large tear") ,]
+nrow(Test2)# 441
+unique(Test2$SeineCode) #Should just have 1 and 2
+
+nrow(unique(f1[c("SampleID_frp")])) - nrow(Test)-nrow(Test2) #Should be zero
+
+
+f2<-f1[!((f1$SeineCode == "4. DTS") | f1$SeineCode == "3. Complete twist; snag; or large tear") ,]
+
+
+
+f_check<- f2 %>% count(f2$GearTypeAbbreviation,f2$SeineDeploymentType) #Checked against sample inventory-Was missing some HOOK samples, fixed- now matches -ED 25JUN2024
+
+# f_check2<-f2[(f2$GearTypeAbbreviation == "HOOK") ,] # Use this to pull out problematic gear types and find missing samples, adjust to suit current needs. 
+
+#Add sample inventory to check against like invert code
+#Use f_check as a reference CHECK that all sample types and deployment methods are included in volume calculations below and are correct! 
+
+unique(f2$SeineDeploymentType)
+test_deployment = filter(f2, f2$SeineDeploymentType=="") #Correct in database then re-download sitevisit/sample
+# Good to go, only otter trawls, Cast, and hook and don't need this- ED 25JUN2024
+
+
+## DSE - confirm counts add up
+nrow(unique(f2[c("GearTypeAbbreviation","SeineDeploymentType")])) - nrow(f_check)
+# SHOULD BE ZERO
+## it is - ED 25JUN2024
+
+
+#Lists what gear types and deployment methods are present in the data
+unique(f2$GearTypeAbbreviation)
+unique(f2$SeineDeploymentType)
+
+
+
+############################### Do fish calculations- finally!##############################
+
+
+
+
+save(list=c("dwr_sv", "ss2","ss_fish", "sample1", "sitesample","f1", "f2", "fish_in_inverts","f_check"),file=here::here("RData","fish_prep_code_05.RData")) #replace list=ls() with names of objects you want to keep, currently keeps all
+
+```
+
+
+Check against sample inventory
+```{r}
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+
+load(here::here("RData","fish_prep_code_05.RData"))
+
+library(readxl)
+
+##TESTING 
+inventory_23 <- read_excel(here::here("working", "FRP_FISH_Sample_Inventory.xlsx"),sheet = "2023")
+View(inventory_23)
+inventory_23$Duplicate<-NA
+inventory_23<-subset(inventory_23, select=c('Location', 'Date','VisitNo', 'SampleID', 'Gear Type','Seine Deployment Type', 'Seine Code' , 'Duplicate'))
+glimpse(inventory_23)
+ 
+#Merge all years if needed
+#inv<-rbind(inventory_23, inventory_24) #Not needed for 2023 report, needed for upcoming presentations
+
+
+##WORKS below
+#Make sure to copy latest version into data prep folder (working directory)
+#fish_sample_inventory.2022<- readxl::read_excel(here::here("working","2022_fish_sample_inventory.xlsx"))
+#fish_sample_inventory.2023<- read_excel(here::here("working","2023_fish_sample_inventory.xlsx"))
+
+
+# fish_sample_inventory.2022 <- fish_sample_inventory.2022[,c("Location","Date","VisitNo","SampleID_frp","Gear Type","Seine Code")]
+# fish_sample_inventory.2023 <- fish_sample_inventory.2023[,c("Location","Date","VisitNo","SampleID_frp","Gear Type", "Seine Code")]
+# 
+# # Bind 2022 and 2023 for this purpose, in future figure out how to select sheets
+# fish_sample_inventory <- rbind(fish_sample_inventory.2022, fish_sample_inventory.2023)
+# #check that no rows were lost
+# nrow(fish_sample_inventory)-nrow(fish_sample_inventory.2022)-nrow(fish_sample_inventory.2023) #should equal zero
+
+fish_sample_inventory <- inventory_23
+
+#Convert Visit.Date to date format
+typeof(fish_sample_inventory$Date)
+fish_sample_inventory$Visit.Date <- fish_sample_inventory$Date
+fish_sample_inventory$Visit.Date <- factor(fish_sample_inventory$Visit.Date)
+fish_sample_inventory$Visit.Date<-as.Date(fish_sample_inventory$Visit.Date, format = "%Y-%m-%d")
+
+#Use to double check that nothing weird happened when converting the dates
+test=fish_sample_inventory[,c("Visit.Date","Date")] #Looks good! - ED 25JUN2024 
+
+fish_sample_inventory$`Gear Type` <- gsub("CastNet", "CAST", fish_sample_inventory$`Gear Type`)
+fish_sample_inventory$`Gear Type` <- gsub("Hook and Line", "HOOK", fish_sample_inventory$`Gear Type`)
+
+
+#Filter for desired year(s)/months
+
+#Select year or date range desired
+fish_sample_inventory2= subset(fish_sample_inventory, Visit.Date > "2023-01-01" & Visit.Date < "2023-12-31")
+
+#rename columns to match
+names(fish_sample_inventory2)[which(colnames(fish_sample_inventory2)=="Seine Code")]<-"SeineCode"
+names(fish_sample_inventory2)[which(colnames(fish_sample_inventory2)=="SampleID")]<-"SampleID_frp"
+
+list(unique(fish_sample_inventory2$SeineCode))
+
+test_seinecode= filter(fish_sample_inventory2, is.na(fish_sample_inventory2$SeineCode)) #Make sure the only samples missing seine code are CAST and HOOK
+fish_sample_inventory2$SeineCode[is.na(fish_sample_inventory2$SeineCode)] <- 1
+
+#Remove Code 3/4
+fish_sample_inventory3<-fish_sample_inventory2[!((fish_sample_inventory2$SeineCode == "4") | fish_sample_inventory2$SeineCode == "3") ,] #NA's were getting dropped, need to sub in 1 for NA's
+
+###How do we identify which SampleIDs are found in 1 dataset and not the other?
+`%!in%` = Negate(`%in%`) ##Run this line of code to create our own function which is %!in$; this function tells us what objects are not found in common between 2 vectors
+(fish_sample_inventory3$SampleID_frp) ##A vector of  SampleIDs found in dataframe x.3
+(f2$SampleID_frp) ##A vector of  SampleIDs found in dataframe y.3
+
+test_samp1 = fish_sample_inventory3[which(fish_sample_inventory3$SampleID_frp %!in% f2$SampleID_frp),] ##This function tells me what SampleIDs are found in fish_sample_inventory but not found in f2
+test_samp2 = f2[which(f2$SampleID_frp %!in% fish_sample_inventory3$SampleID_frp),] ###Switch order around to determine what SampleIDs are found in f2 but not fish_sample_inventory
+
+test_samp11 = test_samp1[c('SampleID_frp','VisitNo', 'SeineCode')]
+names(test_samp11)[which(colnames(test_samp11)=="SampleID_frp")]<-"Inv_SampleID_frp"
+
+test_samp22 = test_samp2[c('SampleID_frp','VisitNo', 'SeineCode')]
+
+test_sample_IDs = merge(test_samp11, test_samp22, by = "VisitNo", all=T) # all good! Nothing showing up - ED 25JUN2024
+
+
+save(list=c("dwr_sv", "ss2","ss_fish", "sample1", "sitesample","f1", "f2", "fish_in_inverts","f_check"),file=here::here("RData","fish_prep_code_06.RData"))
+
+```
+
+
+Beach seine outlier checks
+```{r Beach Seine Outlier Checks}
+
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData","fish_prep_code_06.RData"))
+#BEACH SEINE
+
+
+#Pull only beachseines with crew. Note "Crew Members" was spelled differently in other years.
+beachseine <- subset(f2, f2$GearTypeAbbreviation == "BEASEI") 
+
+
+#Check that number of deployment types match number returned in new dataframes
+table(beachseine['SeineDeploymentType'])
+
+#Check for NA in Depth, Length, Width, and net number
+test_d= filter(beachseine, is.na(beachseine$DepthMeters)==T)
+test_l= filter(beachseine, is.na(beachseine$LengthOfTrawl)==T)
+test_w= filter(beachseine, is.na(beachseine$Width)==T) # one missing width, apply average for now...ED 01FEB2024
+test_netnumber= filter(beachseine, is.na(beachseine$NetNumber)==T)
+
+#### fancy complicated geometry for visitNo 7307
+
+# so we made an isosceles triangle...10 for two sides and an estimate of 15 for the long side (probably too high)
+#Resulted in a volume that was way too high....made the decision to treat like a normal sample at this point and flag...-ED 25JUN2024
+
+
+#volume_7307=filter(beachseine, beachseine$VisitNo==7307) # separate this sample out, calculate volume, then bind back in at the end of volume calcs
+#volume_7307$volume= ((15/2)*((volume_7307$LengthOfTrawl^2)-((15^2)/4)))*(0.5*volume_7307$DepthMeters)
+
+
+#beachseine2=beachseine[!(beachseine$VisitNo == 7307),]
+
+#beachseine<-beachseine2
+
+###depth, length, width checks ######################################################################################
+
+hist(beachseine$DepthMeters) #Should not exceed 1.2
+hist(beachseine$LengthOfTrawl) #Should not exceed 15, without explanation
+hist(beachseine$Width) #Should not exceed 15
+
+boxplot(beachseine$DepthMeters) #Should not exceed 1.2
+boxplot(beachseine$LengthOfTrawl) #Should not exceed 15, without explanation
+boxplot(beachseine$Width) #Should not exceed 15
+
+# Calculate quantiles for beach seine dimensions
+quant_BSD = quantile(beachseine$DepthMeters, na.rm=T) # beachseine_depth: 0%- 0.4, 25%- 0.625, 50%- 0.8, 75%- 0.9, 100%- 1
+quant_BSW = quantile(beachseine$Width, na.rm=T) # beachseine_width: 0%- 8, 25%- 10.5, 50%- 13.2, 75%- 15, 100%- 15
+quant_BSL = quantile(beachseine$LengthOfTrawl, na.rm=T) # beachseine_length: 0%- 8, 25%- 10.5, 50%- 13.2, 75%- 15, 100%- 15
+
+# Store the quantile values for beach seine depths
+Q1_bsd = quant_BSD[2] # Put 25% value here
+Q3_bsd = quant_BSD[4] # Put 75% value here
+IQR_bsd = Q3_bsd - Q1_bsd
+min_bsd = Q1_bsd - 1.5*IQR_bsd
+max_bsd = Q3_bsd + 1.5*IQR_bsd
+
+# Set aside samples which are greater than the max or less than the min
+check_bsd = filter(beachseine, beachseine$DepthMeters < min_bsd | beachseine$DepthMeters > max_bsd)
+
+# Store the quantile values for beach seine widths
+Q1_bsw = quant_BSW[2] # Put 25% value here
+Q3_bsw = quant_BSW[4] # Put 75% value here
+IQR_bsw = Q3_bsw - Q1_bsw
+min_bsw = Q1_bsw - 1.5*IQR_bsw
+max_bsw = Q3_bsw + 1.5*IQR_bsw
+
+# Set aside samples which are greater than the max or less than the min
+check_bsw = filter(beachseine, beachseine$Width < min_bsw | beachseine$Width > max_bsw) #One sample. Data sheet says 2.75, check with crew from that day to make sure this sounds right. ED 01FEB2024
+#Crew does not remember - ED 25JUN2024
+
+
+# Store the quantile values for beach seine lengths
+Q1_bsl = quant_BSL[2] # Put 25% value here
+Q3_bsl = quant_BSL[4] # Put 75% value here
+IQR_bsl = Q3_bsl - Q1_bsl
+min_bsl = Q1_bsl - 1.5*IQR_bsl
+max_bsl = Q3_bsl + 1.5*IQR_bsl
+
+# Set aside samples which are greater than the max or less than the min
+check_bsl = filter(beachseine, beachseine$LengthOfTrawl < min_bsl | beachseine$LengthOfTrawl > max_bsl)
+
+# Merge the files
+BeachSeine_check = rbind(check_bsw, check_bsl, check_bsd) #No outliers ED 18JAN2024
+
+write.csv(BeachSeine_check, file = here::here("Export.Files","Data.Checks","BeachSeine_check.csv"))
+
+# Correct outliers before continuing if needed
+
+
+###
+##
+#
+# CHECK THOSE SAMPLES, ONLY PROCEED IF YOU DO NOT CONSIDER THEM OUTLIERS OR IF YOU JUST CORRECTED THEM !
+#
+##
+###
+
+# these wont be different unless you changed the data and got back to this step
+boxplot(beachseine$DepthMeters) 
+boxplot(beachseine$LengthOfTrawl) 
+boxplot(beachseine$Width) 
+
+# This is what the data look like with calculated outliers removed (not necessarily the ones you kept/removed)
+test_BSD = filter(beachseine, beachseine$DepthMeters > min_bsd )
+test_BSD = filter(test_BSD, test_BSD$DepthMeters < max_bsd)
+test_BSW = filter(beachseine, beachseine$Width > min_bsw )
+test_BSW = filter(test_BSW,test_BSW$Width < max_bsw)
+test_BSL = filter(beachseine, beachseine$LengthOfTrawl > min_bsl )
+test_BSL = filter(test_BSL,test_BSL$LengthOfTrawl < max_bsl)
+
+boxplot(test_BSD$DepthMeters)
+boxplot(test_BSW$Width) 
+boxplot(test_BSL$LengthOfTrawl)
+# END OF QC
+################################################################################
+
+# takes the mean and fills it in for samples missing a value
+beachseine$LengthOfTrawl[is.na(beachseine$LengthOfTrawl)] <- mean(beachseine$LengthOfTrawl, na.rm = TRUE)
+beachseine$DepthMeters[is.na(beachseine$DepthMeters)] <- mean(beachseine$DepthMeters, na.rm = TRUE)
+beachseine$Width[is.na(beachseine$Width)] <- mean(beachseine$Width, na.rm = TRUE)
+
+beachseine$LengthOfTrawl <- signif(beachseine$LengthOfTrawl, 2)
+beachseine$DepthMeters <- signif(beachseine$DepthMeters, 2)
+beachseine$Width <- signif(beachseine$Width, 2)
+
+
+
+# ##Volume Calcs
+#  for (i in 1:nrow(beachseine)){
+#    if (beachseine$SeineDeploymentType == "CrewMembers"){
+#      beachseine$volume<-((0.5*beachseine$DepthMeters*beachseine$LengthOfTrawl*
+#                             beachseine$Width))
+#      }
+#  #    if (beachseine$SeineDeploymentType == "Boat"){
+#  #     beachseine$volume <-(((4/3)*pi*beachseine$DepthMeters*beachseine$Width*
+#  #                             beachseine$LengthOfTrawl)/4)
+#  #     }
+#  #    
+#  #       
+#  }            
+
+
+
+
+#subset beach seine deployed by crewmembers for volume calculation
+beachseine_crew <- subset(beachseine, beachseine$SeineDeploymentType == "Crew Members")
+
+
+#Calculation for beach seine volume
+beachseine_crew$volume<-((0.5*beachseine_crew$DepthMeters*beachseine_crew$LengthOfTrawl*beachseine_crew$Width))
+
+#check that volumes calculated
+table(beachseine_crew['volume'])
+
+#randomly select 3 samples and calculate manually to check calculation is good
+# (Length*Width*Depth) /2
+library(dplyr)
+test_volume=beachseine_crew[,c("LengthOfTrawl","Width","DepthMeters","volume")]
+test_beach=sample_n(test_volume,3)
+
+#Manually checked, good to go - ED 10JUN2023
+
+
+#Check that number of deployment types match number returned in new dataframes
+table(beachseine['SeineDeploymentType'])#14, that's all for 2022
+
+
+
+#beachseines with boat - not needed for 2022 ED 10JUN2023
+beachseine_boat <- subset(beachseine, beachseine$SeineDeploymentType == "Boat") 
+#CHECK Beach seine with crewmembers and a boat, quarter of an elipsoid calculation
+beachseine_boat$volume <- ((4/3)*pi*beachseine_boat$DepthMeters*beachseine_boat$Width*beachseine_boat$LengthOfTrawl)/4
+
+#randomly select 3 samples and calculate manually to check calculation is good
+library(dplyr)
+sample_n(beachseine_boat,3)
+
+#Check that number of deployment types match number returned in new df
+table(beachseine['SeineDeploymentType'])
+
+
+#################### Beach seine Drag and Drop Volume calculations #########################
+
+#beach seine drag & drop 
+beachseine_dragdrop <- subset(beachseine, beachseine$SeineDeploymentType == "Drag and Drop") 
+
+#for the volume calculation
+bsdd_centerlength <- sqrt(((beachseine_dragdrop$LengthOfTrawl)^2)-(0.25*(((beachseine_dragdrop$Width)-0.1)^2)))
+
+beachseine_dragdrop$volume <- (((beachseine_dragdrop$DepthMeters*bsdd_centerlength)/6)*((2*0.1)+beachseine_dragdrop$Width))
+
+#randomly select 3 samples and calculate manually to check calculation is good
+library(dplyr)
+sample_n(beachseine_dragdrop,3)
+
+#beach seines with Drag & Drop End
+beachseine_dragdropend <- subset(beachseine, beachseine$SeineDeploymentType == "Drag & Drop End") 
+beachseine_dragdropend$volume<-(((4/3)*pi*beachseine_dragdropend$LengthOfTrawl*beachseine_dragdropend$Width*beachseine_dragdropend$DepthMeters)/4)
+
+#randomly select 3 samples and calculate manually to check calculation is good
+library(dplyr)
+sample_n(beachseine_dragdropend,3)
+
+#Check that number of deployment types match number returned in new df
+table(beachseine['SeineDeploymentType'])
+
+beachseine_alldragdrop <- rbind(beachseine_dragdrop, beachseine_dragdropend)
+
+#to check that volumes calculated correctly, none are negative, none are empty, none are greater than 40 m^3
+table(beachseine_alldragdrop['volume'])
+
+
+#### MERGE ALL BEACH SEINES
+#
+beachseine_ddb<-rbind(beachseine_alldragdrop, beachseine_boat)
+beachseine_all<-rbind(beachseine_crew, beachseine_ddb)# rename to beachseine_all and remove next line for years that aren't 2023- ED 25JUN2024
+
+
+#Check that number of deployment types match number returned in new df
+table(beachseine['SeineDeploymentType']) #missing one because I intentionally pulled one sample, matches otherwise - ED 25JUN2024
+table(beachseine_all['SeineDeploymentType'])
+
+
+####################### OUTLIER DETECTION - VOLUME CHECKS ALL BEACH SEINES ############################
+
+hist(beachseine_crew$volume) #maximum volume 135m^3, unless an explanation is provided
+hist(beachseine_boat$volume) #Should not exceed 
+hist(beachseine_dragdrop$volume) #Should not exceed 39.6
+hist(beachseine_dragdropend$volume) #Should not exceed 282.6 without explanation
+hist(beachseine_all$volume) #Should not exceed
+
+boxplot(beachseine_crew$volume) #maximum volume 135m^3, unless an explanation is provided
+boxplot(beachseine_boat$volume) #Should not exceed 
+boxplot(beachseine_dragdrop$volume) #Should not exceed 
+boxplot(beachseine_dragdropend$volume) #Should not exceed
+boxplot(beachseine_all$volume) #Should not exceed
+
+# Calculate quantiles for beach seine volumes
+quant_bsc = quantile(beachseine_crew$volume, na.rm=T) # beachseine_crew: 0%- 2.4, 25%- 26.8, 50%- 41.8, 75%- 64, 100%- 123.8
+quant_bsb = quantile(beachseine_boat$volume, na.rm=T) # beachseine_boat: 0%- 38.3, 25%- 57.6, 50%- 77, 75%- 95, 100%- 113.1
+quant_bsdd = quantile(beachseine_dragdrop$volume, na.rm=T) # beachseine_dragdrop: 0%- 5.4, 25%- 7.93, 50%- 12.41, 75%- 19.48, 100%- 29.8
+quant_bsdde = quantile(beachseine_dragdropend$volume, na.rm=T) # beachseine_dragdropend: 0%- 52.8, 25%- 88.7, 50%- 124.6, 75%- 125.7, 100%- 126.7
+quant_bs = quantile(beachseine_all$volume, na.rm=T) # beachseine_all: 0%- 2.4, 25%- 24.5, 50%- 41.2, 75%- 63.6, 100%- 123.8
+
+# Store the quantile values for beach seine crew
+Q1_bsc = quant_bsc[2] # Put 25% value here
+Q3_bsc = quant_bsc[4] # Put 75% value here
+IQR_bsc = Q3_bsc - Q1_bsc
+min_bsc = Q1_bsc - 1.5*IQR_bsc
+max_bsc = Q3_bsc + 1.5*IQR_bsc
+
+# Set aside samples which are greater than the max or less than the min
+check_bsc = filter(beachseine_crew, beachseine_crew$DepthMeters < min_bsc | beachseine_crew$DepthMeters > max_bsc)
+
+# Store the quantile values for beach seine boat
+Q1_bsb = quant_bsb[2] # Put 25% value here
+Q3_bsb = quant_bsb[4] # Put 75% value here
+IQR_bsb = Q3_bsb - Q1_bsb
+min_bsb = Q1_bsb - 1.5*IQR_bsb
+max_bsb = Q3_bsb + 1.5*IQR_bsb
+
+# Set aside samples which are greater than the max or less than the min
+check_bsb = filter(beachseine_boat, beachseine_boat$volume < min_bsb | beachseine_boat$volume > max_bsb)
+
+
+# Store the quantile values for beach seine drag drop
+Q1_bsdd = quant_bsdd[2] # Put 25% value here
+Q3_bsdd = quant_bsdd[4] # Put 75% value here
+IQR_bsdd = Q3_bsdd - Q1_bsdd
+min_bsdd = Q1_bsdd - 1.5*IQR_bsdd
+max_bsdd = Q3_bsdd + 1.5*IQR_bsdd
+
+# Set aside samples which are greater than the max or less than the min
+check_bsdd = filter(beachseine_dragdrop, beachseine_dragdrop$volume < min_bsdd | beachseine_dragdrop$volume > max_bsdd)
+
+# Store the quantile values for beach seine drag drop end
+Q1_bsdde = quant_bsdde[2] # Put 25% value here
+Q3_bsdde = quant_bsdde[4] # Put 75% value here
+IQR_bsdde = Q3_bsdde - Q1_bsdde
+min_bsdde = Q1_bsdde - 1.5*IQR_bsdde
+max_bsdde = Q3_bsdde + 1.5*IQR_bsdde
+
+# Set aside samples which are greater than the max or less than the min
+check_bsdde = filter(beachseine_dragdropend, beachseine_dragdropend$volume < min_bsdde | beachseine_dragdropend$volume > max_bsdde)
+
+# Store the quantile values for all beach seines
+Q1_bs = quant_bs[2] # Put 25% value here
+Q3_bs = quant_bs[4] # Put 75% value here
+IQR_bs = Q3_bs - Q1_bs
+min_bs = Q1_bs - 1.5*IQR_bs
+max_bs = Q3_bs + 1.5*IQR_bs
+
+# Set aside samples which are greater than the max or less than the min
+check_bs = filter(beachseine_all, beachseine_all$volume < min_bs | beachseine_all$volume > max_bs)
+
+
+# Merge the files
+BeachSeine_volumecheck = rbind(check_bsc, check_bsb, check_bsdd, check_bsdde, check_bs)
+
+write.csv(BeachSeine_volumecheck, file = here::here("Export.Files","Data.Checks","BeachSeine_volumecheck.csv"))
+
+# Correct outliers
+#Good to go - ED 25JUN2024
+
+###
+##
+#
+# CHECK THOSE SAMPLES, ONLY PROCEED IF YOU DO NOT CONSIDER THEM OUTLIERS OR IF YOU JUST CORRECTED THEM !
+#
+##
+###
+
+# these wont be different unless you changed the data and got back to this step
+boxplot(beachseine$DepthMeters) 
+boxplot(beachseine$LengthOfTrawl) 
+boxplot(beachseine$Width) 
+
+# This is what the data look like with calculated outliers removed (not necessarily the ones you kept/removed)
+test_BSD = filter(beachseine, beachseine$DepthMeters > min_bsd )
+test_BSD = filter(test_BSD, test_BSD$DepthMeters < max_bsd)
+test_BSW = filter(beachseine, beachseine$Width > min_bsw )
+test_BSW = filter(test_BSW,test_BSW$Width < max_bsw)
+test_BSL = filter(beachseine, beachseine$LengthOfTrawl > min_bsl )
+test_BSL = filter(test_BSL,test_BSL$LengthOfTrawl < max_bsl)
+
+boxplot(test_BSD$DepthMeters)
+boxplot(test_BSW$Width) 
+boxplot(test_BSL$LengthOfTrawl)
+# END OF QC
+################################################################################
+
+############ Flag Data #################################
+#Make flags for sus samples
+vectorWidth <- c("BEASEI01-WING-04APR2023")
+beachseine_all$Flagged_Data <- ifelse(beachseine_all$SampleID_frp %in% c(vectorWidth), "flagWidth", NA)
+#The column will be made and anything not in that sampleID vector will get an NA
+
+vectorVolume <- c("BEASEI02-TULE-30JAN2023")
+beachseine_all$Flagged_Data <- ifelse(beachseine_all$SampleID_frp %in% c(vectorVolume), "flagVolume", beachseine_all$Flagged_Data)
+#The column will be made and anything not in that sampleID vector will get an NA
+
+
+save(list=c("beachseine_all","dwr_sv", "ss2","ss_fish", "sample1", "sitesample","f1", "f2", "fish_in_inverts","f_check"), file=here::here("RData","fish_prep_code_07.RData")) #replace list=ls() with list=c("names of objects you want to keep") , list-ls() keeps all
+
+```
+
+BIG Lampara volume calculations and checks
+```{r}
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData","fish_prep_code_07.RData"))
+
+#Pull out BIGLAM
+biglam <- subset(f2, f2$GearTypeAbbreviation == "BIGLAM") # NONE in 2023
+
+
+
+#create a dataframe with the constants from table in Seine Volume Calcs, from Big Lampara sheet, 3rd table
+biglam_constants <- data.frame(TotalWidth = c(5.3,10,15.55,20,25,30,35,40), a = c(2.65,5,7.775,10,12.5,15,17.5,20), b = c(27.18,25.53,24.65,23.75,21.52,20.39,17.95,17.5), NEW_R = c(13.71918506,13.25462005,13.55,13.98026316,14.39034387,15.7124105, 17.50564067,20.17857143), Theta = c(2.947209,2.754791,2.529768,2.344546,2.089145,1.873078,1.596182,1.437659))
+
+biglam_calcs<-biglam_constants
+
+#check that all samples have depth
+test_d= filter(biglam, is.na(biglam$DepthMeters)==T)
+
+#replace volume NA with avg volume for all samples
+biglam$DepthMeters[is.na(biglam$DepthMeters)] <- mean(biglam$DepthMeters, na.rm = TRUE)
+biglam$DepthMeters <- signif(biglam$DepthMeters, 2)
+
+
+biglam$ave_vol=NA
+
+for (i in 1:nrow(biglam)){
+  biglam_calcs$h=biglam$DepthMeters[i]
+  biglam_calcs$vol=(biglam_calcs$h/(3*biglam_calcs$b))*((biglam_calcs$a*((3*(biglam_calcs$NEW_R^2))-(biglam_calcs$a^2)))+((3*(biglam_calcs$NEW_R^2))*(biglam_calcs$b-biglam_calcs$NEW_R)*biglam_calcs$Theta))
+  biglam$volume[i]= mean(biglam_calcs$vol)
+  biglam_calcs$h=NA
+  biglam_calcs$vol=NA
+}  
+
+#check that all samples have volume
+test_v= filter(biglam, is.na(biglam$volume)==T)
+
+# Now check for outliers########################################
+hist(biglam$volume)
+
+boxplot(biglam$volume)
+
+# Calculate quantiles for beach seine volumes
+quant_biglam = quantile(biglam$volume, na.rm=T) # biglam: 0%- 222, 25%- 371, 50%- 494, 75%- 587, 100%- 815
+
+# Store the quantile values for beach seine crew
+Q1_biglam = quant_biglam[2] # Put 25% value here
+Q3_biglam = quant_biglam[4] # Put 75% value here
+IQR_biglam = Q3_biglam - Q1_biglam
+min_biglam = Q1_biglam - 1.5*IQR_biglam
+max_biglam = Q3_biglam + 1.5*IQR_biglam
+
+# Set aside samples which are greater than the max or less than the min
+check_biglam = filter(biglam, biglam$volume < min_biglam | biglam$volume > max_biglam)
+
+
+write.csv(check_biglam, file = here::here("Export.Files","Data.Checks", "BIGLAM_volumecheck.csv"))
+
+# Correct outliers
+
+
+###
+##
+#
+# CHECK THOSE SAMPLES, ONLY PROCEED IF YOU DO NOT CONSIDER THEM OUTLIERS OR IF YOU JUST CORRECTED THEM !
+#
+##
+###
+
+# these wont be different unless you changed the data and got back to this step
+boxplot(biglam$volume)
+
+# This is what the data look like with calculated outliers removed (not necessarily the ones you kept/removed)
+test_biglam = filter(biglam, biglam$volume > min_biglam )
+test_biglam = filter(test_biglam, test_biglam$volume < max_biglam)
+
+
+boxplot(test_biglam$volume)
+
+# END OF QC
+
+
+save(list=c("beachseine_all", "biglam","dwr_sv", "ss2","ss_fish", "sample1", "sitesample","f1", "f2", "fish_in_inverts","f_check"),file=here::here("RData","fish_prep_code_08.RData")) #replace list=ls() with names of objects you want to keep, currently keeps all
+
+
+```
+
+
+Lampara volume calculations and outlier checks
+```{r}
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData","fish_prep_code_08.RData"))
+
+#Numbers in the following calculations come from the Seine Volume Calculations excel file found in Working folder. Created by Dave Contreras
+
+
+#Lamparas- 	separate LAMOPE
+lamope <- subset(f2, f2$GearTypeAbbreviation == "LAMOPE" ) #199, checked against f_check and it's the right number
+lamope$volume<- NA
+
+#Width and length aren't needed for lampara calculations, unless weird circumstances...drag & drop. If you have deployments besides boat and crewmembers and boat, then check. 
+test_d= filter(lamope, is.na(lamope$DepthMeters)==T)
+#test_l= filter(lamope, is.na(lamope$LengthOfTrawl)==T) #Not needed 
+#test_w= filter(lamope, is.na(lamope$Width)==T)
+test_deploy= filter(lamope, is.na(lamope$SeineDeploymentType)==T)
+
+#Change missing SeineDeploymentType to Boat, vast majority are boat samples, but check individual samples to confirm
+lamope$SeineDeploymentType[is.na(lamope$SeineDeploymentType)] <- "Boat"
+
+
+#replace depth NA with maximum value
+# this can make the cpue falsely low but better than inflating CPUE
+lamope$DepthMeters[is.na(lamope$DepthMeters)] <- 3.6 #only one sample missing depth, data sheet says the depth was at the max ED 01FEB2024
+# DSE - is this really a safe assumption?
+##ECD - it has to do with the volume calculation. it's the maximum depth the net can fish
+
+#lamope$SeineDeploymentType[lamope$SeineDeploymentType == "Crew Members"] <- "Boat"# made the decision to change all to Boat, based on datasheet errors but double check later!!
+unique(lamope$SeineDeploymentType)
+
+
+
+
+#Pull only boat
+lamope_boat <- subset(lamope, lamope$SeineDeploymentType == "Boat")
+
+#separate lamope deeper than 12'
+lamope_boatdeep<-subset(lamope_boat, lamope_boat$DepthMeters >= 3.6)
+lamope_boatshallow<-subset(lamope_boat,lamope_boat$DepthMeters < 3.6)
+  
+lamope_boatdeep$volume<-332.7
+
+
+##Lampara boat equations use depth in feet, conversion built into equations
+lamope_boatshallow$volume <-(-0.7915*(lamope_boatshallow$DepthMeters*3.2808)^2)+
+  (37.921*(lamope_boatshallow$DepthMeters*3.2808)) - 8.3261
+
+#randomly select 3 samples and calculate manually to check calculation is good
+test_volume=lamope_boatshallow[,c("DepthMeters","volume")]
+test_lamope_shallow= dplyr::sample_n(test_volume,3)
+
+### Same as LAMBE crew in previous years
+lamope_crew <- subset(lamope, lamope$SeineDeploymentType == "Crew Members")
+
+## Maximum depth that the net samples is 3.65 meters, replace any value over 3.65 with 3.65 for lampara crew calculations
+#lamope_crew$DepthMeters <- ifelse (lamope_crew$DepthMeters > 3.6, lamope_crew$DepthMeters <- 3.6, lamope_crew$DepthMeters <- lamope_crew$DepthMeters)
+lamope_crewdeep<-subset(lamope_crew, lamope_crew$DepthMeters >= 3.6)
+lamope_crewshallow<-subset(lamope_crew,lamope_crew$DepthMeters < 3.6)
+lamope_crewdeep$DepthMeters <- 3.6
+lamope_crew <- rbind(lamope_crewdeep, lamope_crewshallow)
+
+test_w= filter(lamope_crew, is.na(lamope_crew$Width)==T)
+
+#lamope_crew = filter(lamope_crew, lamope_crew$SeineCode != "3. Complete twist; snag; or large tear" )
+
+h <- lamope_crew$DepthMeters
+a <- lamope_crew$Width/2
+b <- lamope_crew$LengthOfTrawl
+R <- ((((lamope_crew$Width/2)^2)+((lamope_crew$LengthOfTrawl)^2))/(2*lamope_crew$LengthOfTrawl))
+Theta <- (0.5*pi)+atan(((b)-(R))/(a)) # Id suggest using "pi" here 
+
+lamope_crew$volume<- (h/(3*(b)))*(((a)*((3*R^2)-((a)^2)))+(3*(R^2)*((b)-R))*Theta)
+
+
+#randomly select 3 samples and calculate manually to check calculation is good
+test_volume=lamope_boatshallow[,c("DepthMeters","volume")]
+test_lamope_crew= dplyr::sample_n(test_volume,3)
+
+# Lampara deployed by crewmember and boat volume calculation
+lamope_crewboat <- subset(lamope, lamope$SeineDeploymentType == "Crew Members and Boat")
+lamope_crewboat$volume<-(-0.7915*((lamope_crewboat$DepthMeters*3.2808)^2)) +((37.921* lamope_crewboat$DepthMeters*3.2808)) - 8.3261
+
+#randomly select 3 samples and calculate manually to check calculation is good
+library(dplyr)
+test_crewboat=sample_n(lamope_crewboat,3)
+
+# Lampara drag and drop at the end of a channel volume calculation
+lamope_dragdropend <- subset(lamope, lamope$SeineDeploymentType == "Drag & Drop End")
+lamope_dragdropend$volume <- ((4/3)*pi*lamope_dragdropend$LengthOfTrawl * lamope_dragdropend$Width * lamope_dragdropend$DepthMeters)/4
+
+#randomly select 3 samples and calculate manually to check calculation is good
+library(dplyr)
+sample_n(lamope_dragdropend,3)
+
+#Lampara drag and drop deployed in the middle of a channel
+lamope_dragdropmid <- subset(lamope, lamope$SeineDeploymentType == "Drag & Drop Middle")
+lamope_dragdropmid$volume <- (lamope_dragdropmid$LengthOfTrawl * lamope_dragdropmid$Width * (lamope_dragdropmid$DepthMeters*3.2808) * 0.5)
+
+#randomly select 3 samples and calculate manually to check calculation is good
+library(dplyr)
+sample_n(lamope_dragdropmid,3)
+
+#MERGE ALL LAMOPE
+lamope_allboat<-rbind(lamope_boatdeep,lamope_boatshallow)
+lamope_alldrag<-rbind(lamope_dragdropend,lamope_dragdropmid)
+lamope_a<-rbind(lamope_allboat, lamope_alldrag)
+lamope_all<-rbind(lamope_crew,lamope_allboat,lamope_crewboat, lamope_alldrag)
+
+
+#Check that number of deployment types match number returned in new df
+table(lamope['SeineDeploymentType'])
+table(lamope_all['SeineDeploymentType'])
+#Should match!!
+
+
+
+
+
+####################### OUTLIER DETECTION - VOLUME CHECKS ALL Lampara ############################
+
+ 
+hist(lamope_all$volume)
+
+boxplot(lamope_all$volume)
+
+# Calculate quantiles for beach seine volumes
+quant_lamope_all = quantile(lamope_all$volume, na.rm=T) # lamope_all: 0%- 51.7, 25%- 178.6, 50%- 241.2, 75%- 322.8, 100%- 445.5
+
+# Store the quantile values for beach seine crew
+Q1_lamope_all = quant_lamope_all[2] # Put 25% value here
+Q3_lamope_all = quant_lamope_all[4] # Put 75% value here
+IQR_lamope_all = Q3_lamope_all - Q1_lamope_all
+min_lamope_all = Q1_lamope_all - 1.5*IQR_lamope_all
+max_lamope_all = Q3_lamope_all + 1.5*IQR_lamope_all
+
+# Set aside samples which are greater than the max or less than the min
+check_lamope_all = filter(lamope_all, lamope_all$volume < min_lamope_all | lamope_all$volume > max_lamope_all)
+
+
+write.csv(check_lamope_all, file = here::here("Export.Files","Data.Checks", "Lampara_volumecheck.csv"))
+
+
+
+###
+##
+#
+# CHECK THOSE SAMPLES, ONLY PROCEED IF YOU DO NOT CONSIDER THEM OUTLIERS OR IF YOU JUST CORRECTED THEM !
+#
+##
+###
+
+# these wont be different unless you changed the data and got back to this step
+boxplot(lamope_all$volume)
+
+# This is what the data look like with calculated outliers removed (not necessarily the ones you kept/removed)
+test_lamope = filter(lamope_all, lamope_all$volume > min_lamope_all )
+test_lamope = filter(test_lamope, test_lamope$volume < max_lamope_all)
+
+
+boxplot(test_lamope$volume)
+
+# END OF QC
+
+
+save(list=c("lamope_all","beachseine_all", "biglam","dwr_sv", "ss2","ss_fish", "sample1", "sitesample","f1", "f2", "fish_in_inverts","f_check"),file=here::here("RData","fish_prep_code_09.RData")) #replace list=ls() with names of objects you want to keep, currently keeps all
+
+```
+
+
+Otter Trawl volume calculations and outlier checks, merge gear types back together following outlier checks
+```{r}
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData","fish_prep_code_09.RData"))
+
+unique(f2$GearTypeAbbreviation)
+
+other_gear=filter(f2, f2$GearTypeAbbreviation == "CAST"|
+             f2$GearTypeAbbreviation == "BOEFISH"|
+             f2$GearTypeAbbreviation == "EFISH"|
+             f2$GearTypeAbbreviation == "FYKE"|
+             f2$GearTypeAbbreviation == "GILNET"|
+             f2$GearTypeAbbreviation == "KODI"|
+             f2$GearTypeAbbreviation == "HOOK"
+             )
+
+
+#OTTERTRAWL
+ottertrawl <- subset(f2, f2$GearTypeAbbreviation == "OTTTRA") 
+
+#calculate rotations
+ottertrawl$rotations <- (ottertrawl$NetMeterEnd)-(ottertrawl$NetMeterStart)
+
+
+ottertrawl$rotation.final=rep(c('a'), nrow(ottertrawl))
+
+ 
+#looking for number of rows with positive numbers
+length(ottertrawl[ottertrawl$rotations>0,]$rotations) # 52 out of 53, which means one rolled over past 999,999 on the flowmeter, giving a negative rotations value - ED 26JUN2024
+
+#looking for rotations that are greater than zero and not NA, then replacing it 
+ottertrawl[ottertrawl$rotations>0 & !is.na(ottertrawl$rotations),]$rotation.final=ottertrawl[ottertrawl$rotations>0 & !is.na(ottertrawl$rotations),]$rotations
+ 
+
+unique(ottertrawl[ottertrawl$rotations<0 & !is.na(ottertrawl$rotations),]$rotations)
+length(ottertrawl[ottertrawl$rotations<0 & !is.na(ottertrawl$rotations),]$rotations)
+ottertrawl[ottertrawl$rotations<0 & !is.na(ottertrawl$rotations),]$rotation.final=ottertrawl[ottertrawl$rotations<0 & !is.na(ottertrawl$rotations),]$NetMeterEnd+(999999-ottertrawl[ottertrawl$rotations<0 & !is.na(ottertrawl$rotations),]$NetMeterStart)
+
+ 
+#puts a zero if there's any NAs
+ottertrawl[is.na(ottertrawl$rotations),]$rotation.final=0
+
+str(ottertrawl$rotation.final)
+ottertrawl$rotation.final <- as.numeric(ottertrawl$rotation.final)
+
+#check that all samples have duration
+test_dur= filter(ottertrawl, is.na(ottertrawl$Duration)==T)
+
+ottertrawl$rpm <- ottertrawl$rotation.final/ottertrawl$Duration
+
+#explain this better
+#comes from SOP, 2.75 mouth area
+#double check
+ottertrawl$volume <- ((ottertrawl$rotation.final)*0.02687*2.75)
+
+#randomly select 3 samples and calculate manually to check calculation is good
+library(dplyr)
+test_otter=sample_n(ottertrawl,3)
+
+####################### OUTLIER DETECTION - VOLUME CHECKS ALL Lampara ############################
+
+
+hist(ottertrawl$volume)
+
+boxplot(ottertrawl$volume)
+
+# Calculate quantiles for otter trawl volumes
+quant_ottra = quantile(ottertrawl$volume, na.rm=T) # OtterTrawl: 0%- 103898, 25%- 114503, 50%- 126677, 75%- 140876, 100%- 150913
+
+# Store the quantile values for beach seine crew
+Q1_ottra = quant_ottra[2] # Put 25% value here
+Q3_ottra = quant_ottra[4] # Put 75% value here
+IQR_ottra = Q3_ottra - Q1_ottra
+min_ottra = Q1_ottra - 1.5*IQR_ottra
+max_ottra = Q3_ottra + 1.5*IQR_ottra
+
+# Set aside samples which are greater than the max or less than the min
+check_ottra = filter(ottertrawl, ottertrawl$volume < min_ottra | ottertrawl$volume > max_ottra)
+
+
+write.csv(check_ottra, file = here::here("Export.Files","Data.Checks", "Otter_volumecheck.csv"))
+
+# Correct outliers
+
+
+###
+##
+#
+# CHECK THOSE SAMPLES, ONLY PROCEED IF YOU DO NOT CONSIDER THEM OUTLIERS OR IF YOU JUST CORRECTED THEM !
+#
+##
+###
+
+# these wont be different unless you changed the data and got back to this step
+boxplot(ottertrawl$volume)
+
+# This is what the data look like with calculated outliers removed (not necessarily the ones you kept/removed)
+test_ottra = filter(ottertrawl, ottertrawl$volume > min_ottra )
+test_ottra = filter(test_ottra, test_ottra$volume < max_ottra)
+
+
+boxplot(test_ottra$volume)
+
+####################### OUTLIER DETECTION - RPM CHECKS ALL Otter Trawl ############################
+
+
+hist(ottertrawl$rpm)
+plot(ottertrawl$rotation.final, ottertrawl$Duration)
+
+boxplot(ottertrawl$rpm)
+
+# Calculate quantiles for otter trawl rpm
+quant_ottrarpm = quantile(ottertrawl$rpm, na.rm=T) # OtterTrawl: 0%- 103898, 25%- 114503, 50%- 126677, 75%- 140876, 100%- 150913
+
+# Store the quantile values for beach seine crew
+Q1_ottrarpm = quant_ottrarpm[2] # Put 25% value here
+Q3_ottrarpm = quant_ottrarpm[4] # Put 75% value here
+IQR_ottrarpm = Q3_ottrarpm - Q1_ottrarpm
+min_ottrarpm = Q1_ottrarpm - 1.5*IQR_ottrarpm
+max_ottrarpm = Q3_ottrarpm + 1.5*IQR_ottrarpm
+
+# Set aside samples which are greater than the max or less than the min
+check_ottrarpm = filter(ottertrawl, ottertrawl$rpm < min_ottrarpm | ottertrawl$rpm > max_ottrarpm)
+
+
+write.csv(check_ottra, file = here::here("Export.Files","Data.Checks", "Otter_rpmcheck.csv")) #Checked against datasheets, matches up. Must have just been a little slow/a little fast on these two. -ED 05JUL2023
+
+# Correct outliers
+
+
+
+###
+##
+#
+# CHECK THOSE SAMPLES, ONLY PROCEED IF YOU DO NOT CONSIDER THEM OUTLIERS OR IF YOU JUST CORRECTED THEM !
+#
+##
+###
+
+# these wont be different unless you changed the data and got back to this step
+boxplot(ottertrawl$rpm)
+
+# This is what the data look like with calculated outliers removed (not necessarily the ones you kept/removed)
+test_ottrarpm = filter(ottertrawl, ottertrawl$rpm > min_ottrarpm )
+test_ottrarpm = filter(test_ottrarpm, test_ottrarpm$rpm < max_ottrarpm)
+
+
+boxplot(test_ottra$volume)
+
+
+# END OF QC
+
+
+
+save(list=c("ottertrawl","lamope_all","beachseine_all", "biglam","dwr_sv", "ss2","ss_fish", "sample1", "sitesample","f1", "f2", "fish_in_inverts","f_check"),file=here::here("RData","fish_prep_code_10.RData")) #replace list=ls() with names of objects you want to keep, currently keeps all
+
+```
+
+
+```{r CAST and HOOK}
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData","fish_prep_code_10.RData"))
+
+unique(f2$GearTypeAbbreviation)
+
+other_gear=dplyr::filter(f2, f2$GearTypeAbbreviation == "BOEFISH"|
+             f2$GearTypeAbbreviation == "EFISH"|
+             f2$GearTypeAbbreviation == "FYKE"|
+             f2$GearTypeAbbreviation == "GILNET"|
+             f2$GearTypeAbbreviation == "KODI")
+
+
+#Subset for castnet samples
+CAST_HOOK <- subset(f2, f2$GearTypeAbbreviation == "CAST" |f2$GearTypeAbbreviation == "HOOK") 
+
+
+#cast_count <- read_excel(here::here("working","CAST_COUNTS.xlsx"))
+
+#castnet2 <-merge(castnet, cast_count, by="SampleID_frp")
+
+#test_c =filter(castnet2, is.na(castnet2$Casts)==T)
+  
+#replace volume NA with avg volume for all samples
+#castnet2$Casts[is.na(castnet2$Casts)] <- mean(castnet2$Casts, na.rm = TRUE)
+
+
+CAST_HOOK$volume <- NA
+
+#check that it worked
+#test_cast_volume = filter(castnet2, castnet2$volume != castnet2$Casts)
+#they should all be equal, so zero not equal is good
+
+
+#remove row to enable bind below
+#castnet2$Casts <- NULL
+
+fish0 <- dplyr::bind_rows(ottertrawl, CAST_HOOK)
+lamope_beasei<-dplyr::bind_rows(lamope_all, beachseine_all)
+fish <- dplyr::bind_rows(lamope_beasei, fish0)
+
+#Flagged data wasn't cooperating between fish and biglam, change to character so they are the same
+typeof(biglam$Flagged_Data)
+biglam$Flagged_Data<- as.character(biglam$Flagged_Data)
+
+fish1<-dplyr::bind_rows(fish, biglam)
+
+unique(fish1$Flagged_Data) #Make sure flags are still there, yep! - ED 6/27/2024
+
+#fish1<-bind_rows(fish, other_gear)
+
+#Checks for differences between f2 and fish1 to make sure they merged correctly
+bind_check <- dplyr::anti_join(fish1, f2, by=c('SampleID_frp', 'VisitNo', 'Comments')) #Should be zero
+
+
+
+#Check that the datasets merged properly by picking a random sample ID and comparing in f2 and fish1
+# library(arsenal)
+# 
+# summary(comparedf(f2, fish1, by="SampleID_frp"))S
+
+
+#Check that all gear types in f2 are present in fish1
+unique(f2$GearTypeAbbreviation)
+
+#Check that all gear types are present
+unique(fish1$GearTypeAbbreviation)
+
+
+f_check2<- fish1 %>% count(fish1$GearTypeAbbreviation,fish1$SeineDeploymentType)
+
+#Check that number of samples for each method matches number returned in new df
+table(f2['GearTypeAbbreviation'])
+table(fish1['GearTypeAbbreviation'])
+#should be equal. They are - ED 05JUL2023
+
+
+
+
+#check sample sizes by location and station
+fish_sample<- fish1 %>% count(Location)
+
+save(list=c("beachseine_all","lamope_all", "ottertrawl", "biglam","CAST_HOOK", "f1", "f2", "sitesample",  "fish1","fish_in_inverts","f_check","f_check2"),file=here::here("RData","fish_prep_code_11.RData")) #replace list=ls() with names of objects you want to keep, currently keeps all
+
+```
+
+Add fish catch data
+```{r Merge Fish Catch Data}
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData","fish_prep_code_11.RData"))
+
+
+################################################# add catch ##########################################
+#Import db export file for fish catch
+catch1 <- read.csv(here::here("working","Fish_27JUN2024.csv"))
+
+#change column TagSerial to character instead of numeric
+class(catch1$TagSerial)
+catch1$TagSerial <- as.character(catch1$TagSerial)
+
+#
+### Combine catch and fish sample data
+#
+library(readxl)
+#Add species 
+org <- read.csv(here::here("working","OrganismCode_ZooCodes_Merged_26FEB2024.csv"))
+names(org)[which(colnames(org)=="ï..OrganismID")]<-"OrganismID"
+
+
+#Change Organism code for BLUKIL and RAIKIL to 1381 so that they are combined in KILSPP
+#catch1$OrganismId[catch1$OrganismId == 54] <- 1381 #BLUKIL to KILSPP
+#catch1$OrganismId[catch1$OrganismId == 422] <- 1381 #RAIKIL to KILSPP
+
+#test the merge
+###How do we identify which SampleIDs are found in 1 dataset and not the other?
+`%!in%` = Negate(`%in%`) ##Run this line of code to create our own function which is %!in$; this function tells us what objects are not found in common between 2 vectors
+(fish1$SampleID_key) ##A vector of  SampleIDs found in dataframe x.3
+(catch1$SampleID_key) ##A vector of  SampleIDs found in dataframe y.3
+
+
+test1=fish1[which(fish1$SampleID_key %!in% catch1$SampleID_key),] ##This function tells me that no SampleID_key is found in fish1 but not found in catch1
+# 0 - ED 26JUN2024
+
+
+#merge fish data with site and sample data
+fish2<-merge(fish1, catch1, by.x = "SampleID_key", all.x= T)
+
+#test the merge
+test1=fish_in_inverts[which(fish_in_inverts$SampleID_key %!in% catch1$SampleID_key),] ##This function tells me that there are SampleID_keys found in fish_in_invert but not found in catch1, which makes sense since catch1 is a fish file so it won't have all inverts (mysids, copepods, etc.)
+
+fish_in_inverts2 <-merge(fish_in_inverts, catch1, by.x = "SampleID_key")
+
+
+#test the merge
+test1=fish2[which(fish2$OrganismId %!in% org$OrganismID),] ##This function tells me that no OrganismIDs are found in fish2 but not found in org
+#Add species info to fish data
+fish3<-merge(fish2, org, by.x = "OrganismId", by.y = "OrganismID", all.x= T)
+
+#test the merge
+test1=fish_in_inverts2[which(fish_in_inverts2$OrganismId %!in% org$OrganismID),] ##This function tells me that no OrganismIDs are found in fish2 but not found in org
+fish_in_inverts3<-merge(fish_in_inverts2, org, by.x = "OrganismId", by.y = "OrganismID", all.x= T)
+
+#helps me remember that all fish lengths are in this one
+fishlengths <- fish3
+fish_inverts_lengths <- fish_in_inverts3
+
+library(dplyr)
+
+#Limit to 1 record for each sample- species combination. (Drops multiple length measurements.)
+#one row with counts for each species, not lengths for all
+#use catch1 if wanting all length meausurements
+catch2 <-catch1 %>% distinct(SampleID_key, OrganismId, .keep_all=TRUE)
+
+
+
+
+
+
+#excel file with all fish species and lengths
+write.csv(fishlengths, file=here::here("Export.Files", paste('Fish_catch_all', "_",Sys.Date(),".csv", sep = '')))
+write.csv(fish_inverts_lengths, file=here::here("Export.Files", paste('Fish_in_inverts_all_lengths', "_",Sys.Date(),".csv", sep = ''))) #I believe this is the file that gets sent to the invert lead
+
+
+######COUNT CHECK################
+#test the merge
+test1=f2[which(f2$SampleID_frp %!in% fish1$SampleID_frp), c("SampleID_frp","VisitNo")] ##This function tells me that no SampleIDs are found in f2 but not found in fish1
+
+#test the merge
+test2=fish1[which(fish1$SampleID_frp %!in% f2$SampleID_frp), c("SampleID_frp","VisitNo")] ##This function tells me that no SampleIDs are found in fish1 but not found in f2
+
+
+# # Christy helped explain, there is maybe a better way
+# #makes a column titled f2 with a value of one
+# f2$f2=1
+# #makes a column titled fish1 with a value of one
+# fish1$fish1=1
+# #merge together
+# f2_fish1<-merge(x=f2,y=fish1,by="SampleID_frp",all=TRUE)
+# #Add f2 and fish1, should equal 2 if present in both dataframes
+# f2_fish1$check<-f2_fish1$f2 + f2_fish1$fish1
+# write.csv(f2_fish1, file = here::here("Export.Files","Data.Checks", "Sample_Check.csv"))
+# #If any "1"s are present in the "check" column, that means the sample is missing from either f2 or fish1
+
+# end of check ------------------------------------------------------------
+
+
+############################## Count Check ##########################################################
+# To check that the number of measured fish and plus count add up to the total catch per sample/species combo
+
+
+#Make fish3 a dataframe
+fish3 = data.frame(fish3)
+
+#christy what does this do?
+#fish3[fish3 == 0] <- NA
+
+#filter out only chordata (fish)
+Chord_only = filter(fish3, fish3$Phylum == "Chordata")
+sort(unique(Chord_only$Class))
+fish_only = filter(Chord_only, Chord_only$Class != "Amphibia")
+sort(unique(fish_only$Class))
+
+Chord_only_inverts = filter(fish_in_inverts3, fish_in_inverts3$Phylum == "Chordata")
+sort(unique(Chord_only_inverts$Class))
+fish_only_inverts = filter(Chord_only_inverts, Chord_only_inverts$Class != "Amphibia")
+sort(unique(fish_only_inverts$Class))
+
+library(plyr)
+library(dplyr)
+
+
+# Make the dataframe and calculate count, effort, for each taxa group in a SampleID
+#counts_check = summarize(group_by(fish_only, SampleID_frp, OrganismCode),length_count = length(is.na(FishLength)==F))
+counts_check = ddply(fish_only, c("SampleID_frp", "OrganismCode"), 
+                  summarise,
+                           length_count = length(is.na(FishLength)==F)
+                           )
+
+counts_check_inverts = ddply(fish_only_inverts, c("SampleID_frp", "OrganismCode"), 
+                  summarise,
+                           length_count = length(is.na(FishLength)==F)
+                           )
+
+
+# add the calculated count to your other data set
+fish4 = merge(fish3, counts_check, by=c("SampleID_frp","OrganismCode"), all.x=T)
+
+fish_in_inverts4 = merge(fish_in_inverts3, counts_check_inverts, by=c("SampleID_frp","OrganismCode"), all.x=T)
+
+# Make it so we have one row per sampleid-species combination
+fish_test=distinct(fish4,fish4$SampleID_frp, fish4$CommonName, .keep_all = T)
+
+fish_in_verts_test=distinct(fish_in_inverts4,fish_in_inverts4$SampleID_frp, fish_in_inverts4$CommonName, .keep_all = T)
+
+# make a column to hold the check
+fish_test$count_check = NA
+
+fish_in_verts_test$count_check = NA
+
+
+# Calculate the difference
+fish_test$count_check = (fish_test$TotalCatch - fish_test$PlusCount-fish_test$length_count)
+
+fish_in_verts_test$count_check = (fish_in_verts_test$TotalCatch - fish_in_verts_test$PlusCount - fish_in_verts_test$length_count)
+
+# Check your results
+test_fish_counts = filter(fish_test, fish_test$count != 0)
+
+test_fish_in_verts_counts = filter(fish_in_verts_test, fish_in_verts_test$count != 0)
+
+
+#Equals zero when all counts add up
+#Plus count only species (invertebrates or carp (other fish) when they jump out) might have a value of -1 due to length_count being NA (which apparently still counts as one)
+#Good to go, only plus count fish left that add up in database and match datasheets - ED 26JUN2024
+
+
+#export and correct any fish counts that are wrong
+write.csv(test_fish_counts, file = here::here("Export.Files","Data.Checks", paste('fish_count_check', "_",Sys.Date(),".csv", sep = '')))
+
+write.csv(test_fish_in_verts_counts, file = here::here("Export.Files","Data.Checks", paste('fish_in_verts_count_check', "_",Sys.Date(),".csv", sep = '')))
+
+#Correct any fish counts that are off in database and re-export
+
+
+save(list=ls(),file= here::here("RData","fish_prep_code_12.RData")) #replace list=ls() with names of objects you want to keep, currently keeps all
+
+```
+
+RESTART HERE
+
+```{r}
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData","fish_prep_code_12.RData"))
+
+##############################################################################################
+
+#fish_test is unique sampleID/species combination
+fish_test$volume <- as.numeric(fish_test$volume)
+
+
+#calculate CPUE=(total catch/volume)*10000 by species
+fish_test$CPUEbySpp<-((fish_test$TotalCatch/fish_test$volume))*10000
+
+library(dplyr)
+library(plyr)
+
+#filter out "" legend_fish to make sure no fish get dropped that you actually want CPUE for
+sort(unique(fish_test$Legend_Fish))
+test= filter(fish_test[,c("Legend_Fish","CommonName")],fish_test$Legend_Fish=="")
+sort(unique(test$CommonName)) # All plus-count-only species/taxa
+##changes value to a zero if Legend_Fish is na (avoids inverts or nonfish CPUE being counted in total CPUE)
+fish_test$CPUEbySpp2<-if_else(is.na(fish_test$Legend_Fish== T)|fish_test$Legend_Fish== "No Catch"|fish_test$Legend_Fish== "", true=0, false=fish_test$CPUEbySpp, missing = 0)
+
+#check that it worked
+sort(unique(fish_test$CommonName[which(fish_test$CPUEbySpp2==0)])) #It did!
+
+#TotalCPUE<-aggregate(fish_test$CPUEbySpp2, by=list(SampleID_key=fish_$SampleID_key), FUN=sum)
+
+#TotalCPUE = summarize(group_by(fish_test, SampleID_frp), tCPUE = sum(CPUEbySpp2))
+#sum TotalCatch by Sample, total cpue per sample
+
+TotalCPUE = ddply(fish_test, c("SampleID_frp"), 
+                  summarise,
+                           tCPUE = sum(CPUEbySpp2)
+                           )
+
+nrow(unique(fish_test[c("SampleID_frp")])) - nrow(TotalCPUE) # should be zero
+
+
+#test= fish3[which(fish3$SampleID_frp=="BEASEI01-HORS-10NOV2021"),]
+#test= fish3[which(fish3$GearTypeAbbreviation=="OTTTRA"),]
+fish4=fish_test
+
+
+#test the merge
+test1=fish4[which(fish4$SampleID_frp %!in% TotalCPUE$SampleID_frp), c("SampleID_frp","VisitNo")] ##This function tells me that no SampleIDs are found in fish4 but not found in TotalCPUE
+
+# has one row per species-sampleID combo
+fish5<-merge(fish4, TotalCPUE, by = "SampleID_frp", all.x=T)
+
+# do the sampleid #s match up where they should
+# Should be zero
+nrow(unique(fish_test[c("SampleID_frp", "CommonName")])) - nrow(fish5)
+
+fish5$PercentComp<- fish5$CPUEbySpp2/fish5$tCPUE
+#fish5$x2<-fish5$x
+
+#removes No catch
+#fish5$tCPUE<- ifelse(fish5$CommonName== "No Catch", fish5$tCPUE ==0, fish5$tCPUE<-fish5$tCPUE)
+
+# do not remove no catch --------------------------------------------------
+
+
+    
+                     
+                     
+#Fish5 has multiple records per sample; 1 record (row) for each individual species in a sample 
+                     
+### tCPUE is the total CPUE by SampleID     
+
+#make it so we have one row per species per sample ID
+                     
+fish6 = distinct(fish5, fish5$SampleID_frp,fish5$CommonName,.keep_all = T) 
+
+
+# makes one row per sampleID, tCPUE is the total CPUE for the sample --------
+
+# Same as adult.samp in figure code
+TotalCPUE4 <-fish6%>% distinct(SampleID_frp, .keep_all=TRUE) 
+
+
+#TotalCPUE4 has 1 record (row) per sample with total CPUE. tCPUE is the sum of all individual species CPUE. 
+#(Note there is some remnant taxonomic info here that should be ignored. Eventually can drop those variables to clean up the file.)
+# 
+# library(reshape2)
+# 
+# # Make df wide format and group by Legend column
+# # This puts in zeros for any taxa which were not found in a SampleID
+# ComMat.1 = dcast(fish6, formula = SampleID_frp~CommonName, value.var="CPUEbySpp2", fun.aggregate = sum, fill = 0)
+# 
+# 
+# 
+# # Make a long format version of ComMat.1- This merges better
+# DWR.2x = melt(ComMat.1, id.vars = "SampleID_frp", variable.name = "CommonName", value.name = "CPUEbySpp2")
+# 
+# 
+# 
+# # Add the CPUE and Legend from DWR.2x to DWR.1
+# # This adds rows for groups which had CPUE = 0
+# fish.comp = merge(fish6, DWR.2x,by=c("SampleID_frp","CommonName","CPUEbySpp2"),all=T)
+# 
+# 
+# # remove rows if sampleID is na ---------------------------------------------------------------
+# fish.comp= filter(fish.comp, is.na(SampleID_frp) == F)
+# 
+# 
+# # Copy in factors for merged data with empty cells
+# for (i in 1:nrow(fish.comp)){
+#   for(j in 1:nrow(fish.comp)){
+#     if(fish.comp$SampleID_frp[i]==fish.comp$SampleID_frp[j]){
+#       print(i)
+#       if(is.na(fish.comp$Location[i])==F){
+#         fish.comp$Location[j] = fish.comp$Location[i] # Location
+#       }
+#       if(is.na(fish.comp$Visit.Date[i])==F){
+#         fish.comp$Visit.Date[j] = fish.comp$Visit.Date[i] # Visit.Date
+#       }
+#       if(is.na(fish.comp$Region2[i])==F){
+#         fish.comp$Region2[j] = fish.comp$Region2[i] # Region2
+#       }
+#       if(is.na(fish.comp$year[i])==F){
+#         fish.comp$year[j] = fish.comp$year[i] # year
+#       }
+#       if(is.na(fish.comp$Season[i])==F){
+#         fish.comp$Season[j] = fish.comp$Season[i] # season
+#       }
+#       if(is.na(fish.comp$month[i])==F){
+#         fish.comp$month[j] = fish.comp$month[i] # month
+#       }
+#       if(is.na(fish.comp$sitetype[i])==F){
+#         fish.comp$sitetype[j] = fish.comp$sitetype[i] #sitetype
+#       }
+#       if(is.na(fish.comp$GearTypeAbbreviation[i])==F){
+#         fish.comp$GearTypeAbbreviation[j] = fish.comp$GearTypeAbbreviation[i] #sitetype
+#       }
+#       if(is.na(fish.comp$Native[i])==F){
+#         fish.comp$Native[j] = fish.comp$Native[i] #native v introduced
+#       }
+#       if(is.na(fish.comp$Phylum[i])==F){
+#         fish.comp$Phylum[j] = fish.comp$Phylum[i] #Phylum
+#       }
+#     }
+#   }
+# }
+# 
+# 
+
+
+#These are the input files for Fish_figs;
+
+#write.csv(fish.comp, "fish.comp.csv")
+write.csv(fish6, file=here::here("Export.Files", paste('fish.comp',"_", Sys.Date(),'.csv', sep = '')))
+
+#need to eliminate inverts before this file-  replace inverts with no catch and change CPUE to zero
+#write.csv(TotalCPUE4, "TotalCPUE4.csv")
+write.csv(TotalCPUE4, file=here::here("Export.Files", paste('TotalCPUE4',"_", Sys.Date(),'.csv', sep = '')))
+
+
+# fish7=fish6[,c("SampleID_frp","Location","GearTypeAbbreviation","Visit.Date","Season","DepthMeters", "Legend_Fish", "TotalCatch", "CPUEbySpp2","tCPUE","PercentComp")]
+# 
+# #For AFS talk stats
+# write.csv(fish7, file=here::here("Export.Files", paste('fish.comp.AFS',"_", Sys.Date(),'.csv', sep = '')))
+
+save(list=ls(),file= here::here("RData","fish_prep_code_13.RData")) #replace list=ls() with names of objects you want to keep, currently keeps all
+
+```
+
+For EDI
+```{r}
+
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData","fish_prep_code_13.RData"))
+
+
+#Below is to import 2022 data to fix a problem with FishLength Comments. 
+fish3<-read.csv(here::here("C:/Users/edavidson/GitHub/AnnualReport_2022/AnnualBook_2022/imports_ED/Prep/Export.Files","fish3_2025-02-03.csv"))
+TotalCPUE4<-read.csv(here::here("C:/Users/edavidson/GitHub/AnnualReport_2022/AnnualBook_2022/imports_ED/working","TotalCPUE4_2024-01-31.csv"))
+## comment out above section after done with 2022
+
+fish7 <- fish3
+TotalCPUE5 <-TotalCPUE4
+
+
+#Used to Limit to a date range
+#fish7<-fish7 %>% filter(Visit.Date >= as.Date("2023-01-01", format = "%Y-%m-%d"))
+#fish7<- fish7 %>% filter(Visit.Date <= as.Date("2023-12-31", format = "%Y-%m-%d"))
+
+#TotalCPUE5<-TotalCPUE5 %>% filter(Visit.Date >= as.Date("2023-01-01", format = "%Y-%m-%d"))
+#TotalCPUE5<- TotalCPUE5 %>% filter(Visit.Date <= as.Date("2023-12-31", format = "%Y-%m-%d"))
+
+# fish7 <- fish7[,c("SampleID_key","CommonName", "PlusCount","TotalCatch", "FishLength", "FishCatchNotes")]
+# 
+# 
+# TotalCPUE5 <- TotalCPUE5[,c("VisitNo","SampleID_key", "SampleID_frp", "StartTime", "EndTime", "Visit.Date2", "DepthMeters", "NetMeterStart", "NetMeterEnd", "TowDirection", "SeineCode","SeineDeploymentType", "LengthOfTrawl", "Width", "GearTypeAbbreviation", "volume","Flagged_Data")]
+
+#### DELETE FOR OTHER YEARS JUST FOR 2022 ###############
+fish6<-read.csv(here::here("C:/Users/edavidson/GitHub/AnnualReport_2022/AnnualBook_2022/imports_ED/Prep/Export.Files","fish.comp_2024-01-31.csv"))
+#### DELETE FOR OTHER YEARS ###############
+
+
+test_fishnotes<- fish6[,c("VisitNo","SampleID_frp","CommonName","FishLength","FishLengthComments","FishCatchNotes")]
+
+
+#test the merge
+###How do we identify which SampleIDs are found in 1 dataset and not the other?
+`%!in%` = Negate(`%in%`) ##Run this line of code to create our own function which is %!in$; this function tells us what objects are not found in common between 2 vectors
+(fish7$SampleID_key) ##A vector of  SampleIDs found in dataframe x.3
+(TotalCPUE5$SampleID_key) ##A vector of  SampleIDs found in dataframe y.3
+
+
+test1=fish7[which(fish7$SampleID_key %!in% TotalCPUE5$SampleID_key),] ##This function tells me that no SampleID_key is found in fish1 but not found in catch1
+# 0 - ED 26JUN2024
+test2=TotalCPUE5[which(TotalCPUE5$SampleID_key %!in% fish7$SampleID_key),] ##This function tells me that no SampleID_key is found in fish1 but not found in catch1
+
+fish7 <- fish7[,c("SampleID_key","CommonName","FishLength", "PlusCount","TotalCatch",  "FishLengthComments","EntryOrder")]
+
+TotalCPUE5 <- TotalCPUE5[,c("VisitNo","SampleID_key", "SampleID_frp", "StartTime", "EndTime","Duration", "LatitudeStart","LatitudeEnd",	"LongitudeStart","LongitudeEnd","DepthMeters", "NetMeterStart", "NetMeterEnd", "TowDirection", "SeineCode","SeineDeploymentType", "LengthOfTrawl", "Width","PercentOpen", "GearTypeAbbreviation", "volume","Location","Visit.Date2", "Comments")]
+
+
+
+fish_FRP2023<- merge(TotalCPUE5, fish7, by="SampleID_key", all.x = T)
+
+fish_FRP2023$LAB_NAME<-"FRP"
+
+fish_FRP2023 <- fish_FRP2023[,c("VisitNo","SampleID_key", "SampleID_frp","CommonName", "FishLength", "PlusCount","TotalCatch","StartTime", "EndTime","Duration", "LatitudeStart","LatitudeEnd",	"LongitudeStart","LongitudeEnd","DepthMeters","NetMeterEnd", "TowDirection","NetMeterStart", "SeineCode","SeineDeploymentType", "LengthOfTrawl", "Width","PercentOpen", "GearTypeAbbreviation", "volume","LAB_NAME", "Location","Visit.Date2", "Comments" ,"FishLengthComments")]
+
+
+
+
+# Change column names
+names(fish_FRP2023)[which(colnames(fish_FRP2023)=="SampleID_frp")]<-"SampleID"
+names(TotalCPUE5)[which(colnames(TotalCPUE5)=="SampleID_frp")]<-"SampleID"
+names(test_fishnotes)[which(colnames(test_fishnotes)=="SampleID_frp")]<-"SampleID"
+names(fish_FRP2023)[which(colnames(fish_FRP2023)=="DepthMeters")]<-"DepthOfWater"
+names(TotalCPUE5)[which(colnames(TotalCPUE5)=="DepthMeters")]<-"DepthOfWater"
+names(fish_FRP2023)[which(colnames(fish_FRP2023)=="Visit.Date2")]<-"Date"
+names(TotalCPUE5)[which(colnames(TotalCPUE5)=="Visit.Date2")]<-"Date"
+names(fish_FRP2023)[which(colnames(fish_FRP2023)=="volume")]<-"effort"
+names(TotalCPUE5)[which(colnames(TotalCPUE5)=="volume")]<-"effort"
+names(fish_FRP2023)[which(colnames(fish_FRP2023)=="FishLength")]<-"Length"
+names(TotalCPUE5)[which(colnames(TotalCPUE5)=="FishLength")]<-"Length"
+names(test_fishnotes)[which(colnames(test_fishnotes)=="FishLength")]<-"Length"
+#names(TotalCPUE5)[which(colnames(TotalCPUE5)=="SeineCode2")]<-"SeineCode"
+
+##### FROM Christy's code #####################################################################
+fnew<- fish_FRP2023
+
+fnew$Count<-NA
+#fix 2022 and 2023 data
+#separate non measured taxa, where length = NA
+fnew_invert<-fnew
+
+#FIX ERROR IN COUNT FOR MEASURED FISH IN 2022 and 2023
+#separate nonmeasured and measured taxa, create a file for each
+unique(fnew$Length) #numbers and NA
+sort(unique(fnew$Length)) #no zeros, all reasonable lengths
+
+fnew_fishnotmeasured<- fnew[is.na(fnew$Length),] #these are good to go with current counts
+sort(unique(fnew_fishnotmeasured$CommonName))
+fnew_fishmeasured<- fnew[!is.na(fnew$Length),] #all are fish 
+sort(unique(fnew_fishmeasured$CommonName))
+#check didn't lose records- must be zero
+nrow(fnew)-nrow(fnew_fishmeasured)-nrow(fnew_fishnotmeasured) 
+
+#make a file of sample info (not count and length) to remerge with count-taxonomy files later.
+fnew2<-fnew[,c("Comments", "CommonName", "Date", "DepthOfWater", "effort", "FishLengthComments", "GearTypeAbbreviation", "LAB_NAME", "LatitudeEnd", "LatitudeStart", "LengthOfTrawl", "Location", "LongitudeEnd", "LongitudeStart", "NetMeterEnd", "NetMeterStart", "PercentOpen", "SampleID", "SampleID_key", "SeineCode", "SeineDeploymentType", "StartTime", "TowDirection", "Date", "VisitNo", "Width")] #FIX ADD ENDTIME AND DURATION, and in above code too
+fnew2<-unique.data.frame(fnew2)
+nrow(fnew2) #1126 sampleID x commonnames (with measured and not measured)
+
+
+
+#Fish not measured
+sort(unique(fnew_fishnotmeasured$CommonName)) #mostly inverts, only fish are a mosquitofish that escaped and Silverside unids and jumpy carp that weren't measured- should be good
+fnew_fishnotmeasured<-subset(fnew_fishnotmeasured, select=c(SampleID, CommonName, PlusCount)) #CHECK COUNT IS ACTUALLY PLUS COUNT. EMMA SAYS PLUS COUNT SHOULD BE PLUS COUNT.
+fnew_fishnotmeasured$Length<-NA
+
+#Measured fish- will create files for plus count and measured
+#calculate number of lengths per taxa per sampleID
+fnew_fishmeasured_n<-aggregate(x=fnew_fishmeasured$Length, 
+                               by=list(fnew_fishmeasured$SampleID, 
+                                       fnew_fishmeasured$CommonName), 
+                               FUN=length)
+fnew_fishmeasured_n$SampleID<-fnew_fishmeasured_n$Group.1
+fnew_fishmeasured_n$CommonName<-fnew_fishmeasured_n$Group.2
+
+#1098 combinations of SampleID-CommonName (of measured fish)
+#Make a file with one row for each sampleID-CommonName
+fnew_fishmeasured_plus<-subset(fnew_fishmeasured, select = c(SampleID, CommonName, Count, PlusCount))
+fnew_fishmeasured_plus<-unique.data.frame(fnew_fishmeasured_plus)
+fnew_fishmeasured_plus<-dplyr::full_join(fnew_fishmeasured_plus, fnew_fishmeasured_n)#, #by=join_by(SampleID==Group.1,CommonName==Group.2))## Is this the best way to join these? -ECM 23DEC2024
+#Check the actual number of measured fish (from aggregate) is the same as count-plus count. 
+fnew_fishmeasured_plus$test<-fnew_fishmeasured_plus$Count-fnew_fishmeasured_plus$PlusCount-fnew_fishmeasured_plus$x #All are zero, except two records with a plus count=NA where all fish are measured
+unique(fnew_fishmeasured_plus$test)
+
+#Need to separate fish into two files: One file (fnew_fishmeasured_plus) with nonmeasured fish and a count that's equal to the plus count (fnew_fishmeasured_only). A second file will have all measured fish, with a count of 1
+fnew_fishmeasured_plus$countnew<-fnew_fishmeasured_plus$PlusCount
+#drop NAs
+fnew_fishmeasured_plus<-fnew_fishmeasured_plus[!is.na(fnew_fishmeasured_plus$countnew),] 
+#drop if all fish are measured (newcount is zero)
+fnew_fishmeasured_plus<-fnew_fishmeasured_plus[(fnew_fishmeasured_plus$countnew >0),] 
+fnew_fishmeasured_plus$Count<-NULL
+fnew_fishmeasured_plus$Count<-fnew_fishmeasured_plus$countnew
+fnew_fishmeasured_plus<-subset(fnew_fishmeasured_plus, select=c(SampleID, CommonName, Count))
+fnew_fishmeasured_plus$Length<-NA
+
+#Limit to measured fish only and make counts 1
+fnew_fishmeasured_only<- fnew_fishmeasured[(fnew_fishmeasured$Length>0),]
+fnew_fishmeasured_only$Count<-NULL
+fnew_fishmeasured_only$Count<-1
+fnew_fishmeasured_only<-subset(fnew_fishmeasured_only, select=c(SampleID, CommonName, Length, Count))
+
+#merge files- nonmeasured taxa, measured fish, and plus count measure fish
+nrow(fnew) #4266
+nrow(fnew2) #1126
+nrow(fnew_fishnotmeasured) #443
+nrow(fnew_fishmeasured_plus) #61
+nrow(fnew_fishmeasured_only) #3823
+
+names(fnew_fishnotmeasured)[which(colnames(fnew_fishnotmeasured)=="PlusCount")]<-"Count"
+
+fnew_allfish<-rbind(fnew_fishnotmeasured, fnew_fishmeasured_plus, fnew_fishmeasured_only)
+fnew3<-dplyr::full_join(fnew_allfish, fnew2)
+nrow(fnew3) #7520
+nrow(fnew3)-nrow(fnew)-nrow(fnew_fishmeasured_plus)
+#FIX_ FIGURE OUT MATH FOR NUMBER OF ROWS CHANGED WHEN ADJUSTING PLUS COUNT/COUNT/LENGTHS
+#Adding rows- number of new rows is equal to #plus count fish species with measured and nonmeasured fish- ADD CODE TO CALCULATE
+fnew_counts<-fnew[,c("SampleID","PlusCount","TotalCatch","CommonName","Length")]
+test_counts=dplyr::sample_n(fnew_allfish,3)
+unique(test_counts$SampleID)#Manually check that these are correct vs fnew_counts file
+#Take the above sampleIDs and subset below, change each time
+
+
+#Use these to manually check that lengths and counts are the same between the two files. One has been manipulated and the other is original.
+check1<-subset(fnew_counts, fnew_counts$SampleID=="LAMOPE05-WINT-17NOV2022"|fnew_counts$SampleID=="BEASEI03-HORS-30NOV2022"|fnew_counts$SampleID=="LAMOPE03-LOWE-04MAY2022")
+check2<-subset(fnew_allfish, fnew_allfish$SampleID=="LAMOPE05-WINT-17NOV2022"|fnew_allfish$SampleID=="BEASEI03-HORS-30NOV2022"|fnew_allfish$SampleID=="LAMOPE03-LOWE-04MAY2022")
+
+#They match! only check left is to make sure the lengths didn't get messed up
+#check3<-fish_FRP2023[,c("SampleID","PlusCount","TotalCatch","CommonName","Length","EntryOrder")]
+#check4<-subset(check3, check3$SampleID=="LAMOPE08-BROW-08FEB2023"|check3$SampleID=="BEASEI02-TULE-14DEC2023"|check3$SampleID=="OTTTRA04-TULE-15JUN2023")
+#check5<-filter(check2,is.na(Length)==F)
+
+
+##### ^^^ FROM Christy's code #####################################################################
+fish_notes<-dplyr::full_join(fnew_allfish, test_fishnotes, by=c("SampleID","Length","CommonName"))
+
+fish_EDI.2023<-dplyr::full_join(TotalCPUE5, fish_notes, by="SampleID")
+
+fish_EDI.2023$LAB_NAME<-"FRP"
+
+fish_EDI.2023.2<-fish_EDI.2023[,c("Comments", "CommonName","Length","Count", "Date", "DepthOfWater", "effort", "FishLengthComments", "GearTypeAbbreviation", "LAB_NAME", "LatitudeEnd", "LatitudeStart", "LengthOfTrawl", "Location", "LongitudeEnd", "LongitudeStart", "NetMeterEnd", "NetMeterStart", "PercentOpen", "SampleID", "SampleID_key", "SeineCode", "SeineDeploymentType", "StartTime", "TowDirection",  "VisitNo.x", "Width")]
+
+names(fish_EDI.2023.2)[which(colnames(fish_EDI.2023.2)=="VisitNo.x")]<-"VisitNo"
+names(fish_EDI.2023.2)[which(colnames(fish_EDI.2023.2)=="FishLengthComments")]<-"FishCatchNotes" #This is done becuase of a weird database export issue. Sometimes the database exports to FishCatchNotes column, but always exports to FishLengthComments column. There are a handfull of duplicate comments in the FishCatchNotes column, but all are present in the other. Past years we used FishCatchNotes so renaming to match. Need to fix in previous years.
+#ECM 07JAN2025
+
+
+#write.csv(fish.comp, "fish.comp.csv")
+write.csv(fish7, file=here::here("Export.Files", paste('fish.comp.EDI',"_", Sys.Date(),'.csv', sep = '')))
+
+
+
+#write.csv(TotalCPUE4, "TotalCPUE4.csv")
+write.csv(TotalCPUE5, file=here::here("Export.Files", paste('TotalCPUE5.EDI',"_", Sys.Date(),'.csv', sep = '')))
+
+#Fish EDI file
+write.csv(fish_EDI.2023.2, file=here::here("Export.Files", paste('2022.fish.FRP.EDI',"_", Sys.Date(),'.csv', sep = '')))
+
+
+##EDI file checks
+#below file from Christy, has all years
+edi_allfish<-read.csv(here::here("C:/Users/edavidson/GitHub/AnnualReport_2023/AnnualBook_2023/imports_ED/Prep/working","fish_FRP2023_20250307.1.csv"),colClasses=c("LatitudeStart"="character","LatitudeEnd"="character","LongitudeStart"="character","LongitudeEnd"="character")) #colClasses is needed to make sure that lat and long are correctly imported and not truncated, there's probably a more concise way to do this 
+
+
+# I want to pull random samples and check them against datasheets to make sure there is NOTHING wrong with the samples
+
+# I want to check 1-5% of the samples to ensure they are correct
+#1% of 20786 rows is about 20 rows
+test_counts=dplyr::sample_n(edi_allfish,20)
+test_counts2<-unique(test_counts$SampleID_frp)#Manually check that these are correct in the edi_allfish file vs physical datasheet/database
+#Take the above sampleIDs and subset below, change each time
+
+
+library(dplyr)
+test_edi_allfish<- test_counts %>% distinct(SampleID_frp, .keep_all = TRUE)
+test_edi_allfish <- edi_allfish[edi_allfish$SampleID_frp %in% test_counts2, ]
+
+save(list=ls(),file= here::here("RData","fish_prep_code_14.RData")) #replace list=ls() with names of objects you want to keep, currently keeps all
+
+```
+
+
+```{r}
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData","fish_prep_code_14.RData"))
+
+####################### OUTLIER DETECTION - CPUE ############################
+
+hist(fish5$CPUEbySpp2)
+boxplot(fish5$CPUEbySpp2)
+boxplot(TotalCPUE4$CPUEbySpp2)
+
+# Calculate quantiles for beach seine volumes
+quant_fish5 = quantile(fish5$CPUEbySpp2, na.rm=T) # fish5: 0%- 0, 25%- 508, 50%- 2156, 75%- 10989, 100%- 341111
+quant_TotalCPUE4 = quantile(TotalCPUE4$CPUEbySpp2, na.rm=T) # TotalCPUE4: 0%- 0, 25%- 2.30e-01, 50%- 7.77e+01, 75%- 3.45e+02, 100%- 3.4e+05
+
+# Store the quantile values for beach seine crew
+Q1_fish5 = quant_fish5[2] # Put 25% value here
+Q3_fish5 = quant_fish5[4] # Put 75% value here
+IQR_fish5 = Q3_fish5 - Q1_fish5
+min_fish5 = Q1_fish5 - 1.5*IQR_fish5
+max_fish5 = Q3_fish5 + 1.5*IQR_fish5
+
+# Set aside samples which are greater than the max or less than the min
+check_fish5 = filter(fish5, fish5$CPUEbySpp2 < min_fish5 | fish5$CPUEbySpp2 > max_fish5)
+
+check_fish5 =check_fish5[,c("SampleID_frp", "Location","CommonName", "TotalCatch","CPUEbySpp2")]
+
+
+write.csv(check_fish5, "Fish5_CPUE_check.csv")
+
+
+# Store the quantile values for TotalCPUE4
+Q1_TotalCPUE4 = quant_TotalCPUE4[2] # Put 25% value here
+Q3_TotalCPUE4 = quant_TotalCPUE4[4] # Put 75% value here
+IQR_TotalCPUE4 = Q3_TotalCPUE4 - Q1_TotalCPUE4
+min_TotalCPUE4 = Q1_TotalCPUE4 - 1.5*IQR_TotalCPUE4
+max_TotalCPUE4 = Q3_TotalCPUE4 + 1.5*IQR_TotalCPUE4
+
+# Set aside samples which are greater than the max or less than the min
+check_TotalCPUE4 = filter(TotalCPUE4, TotalCPUE4$CPUEbySpp2 < min_TotalCPUE4 | TotalCPUE4$CPUEbySpp2 > max_TotalCPUE4)
+
+check_TotalCPUE4 =check_TotalCPUE4[,c("SampleID_frp", "Location","CommonName", "TotalCatch","CPUEbySpp2")]
+
+write.csv(check_TotalCPUE4, "TotalCPUE4_CPUE_check.csv")
+# Correct outliers
+
+
+###
+##
+#
+# CHECK THOSE SAMPLES, ONLY PROCEED IF YOU DO NOT CONSIDER THEM OUTLIERS OR IF YOU JUST CORRECTED THEM !
+#
+##
+###
+
+# these wont be different unless you changed the data and got back to this step
+boxplot(fish5$CPUEbySpp2)
+boxplot(TotalCPUE4$CPUEbySpp2)
+
+# This is what the data look like with calculated outliers removed (not necessarily the ones you kept/removed)
+test_fish5 = filter(fish5, fish5$CPUEbySpp2 > min_fish5 )
+test_fish5 = filter(test_fish5, test_fish5$CPUEbySpp2 < max_fish5)
+
+test_TotalCPUE4 = filter(TotalCPUE4, TotalCPUE4$CPUEbySpp2 > min_TotalCPUE4 )
+test_TotalCPUE4 = filter(test_TotalCPUE4, test_TotalCPUE4$CPUEbySpp2 < max_TotalCPUE4)
+
+boxplot(test_fish5$CPUEbySpp2)
+boxplot(test_TotalCPUE4$CPUEbySpp2)
+
+# END OF QC
+################################################################################
+
+save(list=ls(),file= here::here("RData","fish_prep_code_15.RData")) #replace list=ls() with names of objects you want to keep, currently keeps all
+
+```
+
+
+```{r}
+
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData","fish_prep_code_15.RData"))
+####FROM HERE ON NEEDS WORK
+
+
+################## SPECIES LENGTH CHECKS ##########################
+#Get a list of all species in the dataframe
+unique(fish5$CommonName)
+
+fish_only = filter(fishlengths, fishlengths$Phylum == "Chordata", fishlengths$Class!= "Amphibia")
+
+fish_inverts_only = filter(fish_inverts_lengths, fish_inverts_lengths$Phylum == "Chordata", fish_inverts_lengths$Class!= "Amphibia")
+
+fish_in_mac_only = filter(fish_inverts_only, fish_inverts_only$GearTypeAbbreviation == "MAC")
+
+#If you want to exclude invertebrates and no catches - need to finish. For outlier purposes not necessary 
+#fish_only <- [fish5$CommonName != "palaemon", ] 
+
+library(ggplot2)
+library(viridis)
+
+#Plots multiple small histograms of all species with lengths
+#Look for strange values on histograms. For example, a lengtht hat is outside the normal range for a species.
+#look for lengths showing up for species that are not measured
+ggplot(data=fish_only, aes(x=FishLength)) +
+  geom_histogram(bins = 15, color = "black", fill = "gray") +
+  facet_wrap(~CommonName, scales = "free")+
+  ggtitle("Fish Lengths") +
+  theme_grey()
+ggsave("AllFish Hist.jpeg", width = 20, height = 15, plot = last_plot())
+
+project= "DATA_PREP"
+
+Y1 = ggplot(data=fish_only, aes(x=FishLength, fill=Location))
+jpeg(file = paste('ALL_ADULT_FISH_HIST_CHECK', Sys.Date(),'.jpg', sep = ''),quality=100, width=150,height=60,units='in', res=500) 
+Y1+geom_histogram(bins = 15) +
+  facet_wrap(~Legend_Fish, scales = "free")+
+  ggtitle("Fish Lengths All Locations") +
+  scale_x_continuous(labels = scales::number_format(accuracy = 1))+  scale_color_viridis()
+dev.off()
+
+
+###### Fish caught in invert sampling lengths check ####################
+
+ggplot(data=fish_in_verts_only, aes(x=FishLength)) +
+  geom_histogram(bins = 15, color = "black", fill = "gray") +
+  facet_wrap(~CommonName, scales = "free")+
+  ggtitle("Fish_in_verts_Lengths") +
+  theme_grey()
+ggsave("All_Fish_in_invert_Hist.jpeg", width = 20, height = 15, plot = last_plot())
+
+project= "DATA_PREP"
+
+Y1 = ggplot(data=fish_in_verts_only, aes(x=FishLength, fill=Location))
+jpeg(file = paste(project,"_",'Fish_in_verts_Lengths All Locations_', Sys.Date(),'.jpg', sep = ''),quality=100, width=10,height=6,units='in', res=300) 
+Y1+geom_histogram(bins = 15) +
+  facet_wrap(~Legend_Fish, scales = "free")+
+  ggtitle("Fish_in_verts_Lengths All Locations") +
+  scale_x_continuous(labels = scales::number_format(accuracy = 1))+  scale_color_viridis()
+dev.off()
+
+######### fish caught in MAC samples lengths check ################
+
+ggplot(data=fish_in_mac_only, aes(x=FishLength)) +
+  geom_histogram(bins = 15, color = "black", fill = "gray") +
+  facet_wrap(~CommonName, scales = "free")+
+  ggtitle("Fish_in_MAC_Lengths") +
+  theme_grey()
+ggsave("All_Fish_in_MAC_Hist.jpeg", width = 20, height = 15, plot = last_plot())
+
+project= "DATA_PREP"
+
+Y1 = ggplot(data=fish_in_mac_only, aes(x=FishLength, fill=Location))
+jpeg(file = paste(project,"_",'Fish_in_MAC_Lengths All Locations_', Sys.Date(),'.jpg', sep = ''),quality=100, width=10,height=6,units='in', res=300) 
+Y1+geom_histogram(bins = 15) +
+  facet_wrap(~Legend_Fish, scales = "free")+
+  ggtitle("Fish_in_MAC_Lengths All Locations") +
+  scale_x_continuous(labels = scales::number_format(accuracy = 1))+  scale_color_viridis()
+dev.off()
+
+
+####################### OUTLIER DETECTION - Fish Lengths ############################
+
+
+hist(fish5$FishLength)
+
+boxplot(fish5$FishLength)
+
+# Calculate quantiles for beach seine volumes
+quant_fishLength = quantile(fish5$FishLength, na.rm=T) # Fish Lengths: 0%- 0, 25%- 30, 50%- 46, 75%- 64, 100%- 635
+
+# Store the quantile values for beach seine crew
+Q1_fishLength = quant_fishLength[2] # Put 25% value here
+Q3_fishLength = quant_fishLength[4] # Put 75% value here
+IQR_fishLength = Q3_fishLength - Q1_fishLength
+min_fishLength = Q1_fishLength - 1.5*IQR_fishLength
+max_fishLength = Q3_fishLength + 1.5*IQR_fishLength
+
+# Set aside samples which are greater than the max or less than the min
+check_fishLength = filter(fish5, fish5$FishLength < min_fishLength | fish5$FishLength > max_fishLength)
+
+check_fishLength2 =check_fishLength[,c("SampleID_frp", "Location","CommonName", "FishLength")]
+
+write.csv(check_fishLength, "FishLength_check.csv")
+
+# Correct outliers
+
+
+###
+##
+#
+# CHECK THOSE SAMPLES, ONLY PROCEED IF YOU DO NOT CONSIDER THEM OUTLIERS OR IF YOU JUST CORRECTED THEM !
+#
+##
+###
+
+# these wont be different unless you changed the data and got back to this step
+boxplot(fish5$FishLength)
+
+# This is what the data look like with calculated outliers removed (not necessarily the ones you kept/removed)
+test_fishLength = filter(fish5, fish5$FishLength > min_fishLength )
+test_fishLength = filter(test_fishLength, test_fishLength$FishLength < max_fishLength)
+
+
+boxplot(test_fishLength$FishLength)
+
+# END OF QC
+################################################################################
+
+#export these files for invert ES
+write.csv(fish_in_mac_only, file=here::here("Export.Files", paste('fish_in_MAC',"_", Sys.Date(),'.csv', sep = '')))
+write.csv(fish_in_inverts, file=here::here("Export.Files", paste('fish_in_INVERTS',"_", Sys.Date(),'.csv', sep = '')))
+
+
+####################################################################
+# QC - END OF ADDING FLAG COMMENTS #################################
+
+
+# Make a column for the data
+fish4$Flagged_Data = NA
+TotalCPUE4$Flagged_Data = NA
+
+# Go through complete Flags dataframe and add comments to primary dataframe
+for(i in 1:nrow(Flags)){
+  # Find SampleIDs that match first row in Flags df
+  # Paste in the item and its comment, it will add this to the existing list
+  fish4$Flagged_Data[which(Flags$SampleID[i]==fish4$SampleID)]=paste0(fish4$Flagged_Data[which(Flags$SampleID[i]==fish4$SampleID)],"; ",Flags$Data_Type[i],", ","Flag ",Flags$Flag[i])
+  TotalCPUE4$Flagged_Data[which(Flags$SampleID[i]==TotalCPUE4$SampleID)]=paste0(TotalCPUE4$Flagged_Data[which(Flags$SampleID[i]==TotalCPUE4$SampleID)],"; ",Flags$Data_Type[i],", ","Flag ",Flags$Flag[i])
+}
+
+# Now clean up how each Flag started- remove the NA
+fish4$Flagged_Data= gsub("NA;","",fish4$Flagged_Data)
+TotalCPUE4$Flagged_Data= gsub("NA;","",TotalCPUE4$Flagged_Data)
+
+
+# Now add the site visit flags
+for(i in 1:nrow(Flags)){
+  # Find SampleIDs that match first row in Flags df
+  # Paste in the item and its comment, it will add this to the existing list
+  fish4$Flagged_Data[which(Flags$VisitNo[i]==fish4$VisitNo)]=paste0(fish4$Flagged_Data[which(Flags$VisitNo[i]==fish4$VisitNo)],"; ",Flags$Data_Type[i],", ","Flag ",Flags$Flag[i])
+  TotalCPUE4$Flagged_Data[which(Flags$VisitNo[i]==TotalCPUE4$VisitNo)]=paste0(TotalCPUE4$Flagged_Data[which(Flags$VisitNo[i]==TotalCPUE4$VisitNo)],"; ",Flags$Data_Type[i],", ","Flag ",Flags$Flag[i])
+}
+
+
+
+fish4$Flagged_Data=str_replace(fish4$Flagged_Data, "NA; NA, Flag ", "")
+
+TotalCPUE4$Flagged_Data=str_replace(TotalCPUE4$Flagged_Data, "NA; NA, Flag ", "")
+
+#fish4=fish4%>% replace_with_na(replace = list(Flagged_Data=""))
+# Check it worked
+check_fish4 = filter(fish4,is.na(Flagged_Data)==F)
+check_TotalCPUE4 = filter(TotalCPUE4,is.na(Flagged_Data)==F)
+
+
+# QC - END OF ADDING FLAG COMMENTS #################################
+####################################################################
+
+# QC - ADDING FLAG COMMENTS ########################################
+
+# Make a column for the data
+###
+##
+# Note: starting a new column for flagged data is only necessary if site visits did not have it already
+##
+###
+# DWR$Flagged_Data = NA
+# Add in the flags from site visits
+sv_flags = filter(dwr_sv,is.na(dwr_sv$Flagged_Data)==F)
+# Make a dataframe to hold lists of flags
+Flags <- data.frame(SampleID = character(nrow(sv_flags)), Data_Type = character(nrow(sv_flags)), Flag = numeric(nrow(sv_flags)))
+# Copy over existing flagged data from site visits
+Flags$Flag = sv_flags$Flagged_Data
+Flags$VisitNo = sv_flags$VisitNo
+# Make SampleID NA
+Flags$SampleID = NA
+Flags$Data_Type = NA
+# # Make first row
+# Flags$SampleID[nrow(Flags)]="ExampleID"
+# Flags$Data_Type[nrow(Flags)]="PC"
+# Flags$Flag[nrow(Flags)]=9999999
+# Flags$VisitNo[nrow(Flags)]=9999999
+# END OF FLAG COMMENTS QC ...for now ###############################
+
+save(list=ls(),file= here::here("RData","fish_prep_code_13.RData")) #replace list=ls() with names of objects you want to keep, currently keeps all
+
+```
+
+CREATE FISHLENGTHS_MAC FILE. THIS CANNOT BE DONE UNTIL ALL LAB ENTRY AND QC IS DONE!!
+```{r}
+
+# Clear environment
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+
+load(here::here("RData","fish_prep_code_13.RData"))
+
+#Load FRP Mac Data
+site_visits_edi<-read.csv(here::here("C:/Users/edavidson/GitHub/AnnualReport_2023/AnnualBook_2023/imports_ED/working", "SiteVisit2023_LocationsChecked_DMC240626.csv")) # FROM DANNY
+
+lengths_verts <-read.csv(here::here("working","Invertebrate_30AUG2024.csv")) # FROM DATABASE
+lengths_verts <- lengths_verts[,c("SampleID_key","OrganismId","EntryOrder","InvertebrateLength")]#Select desired columns, sampleID_key is a unique identifier for each measured individual
+names(lengths_verts)[which(colnames(lengths_verts)=="InvertebrateLength")]<-"FishLength"
+
+org <- read.csv(here::here("C:/Users/edavidson/GitHub/AnnualReport_2023/AnnualBook_2023/imports_ED/working","OrganismCode_ZooCodes_Merged_06AUG2024.csv"))
+names(org)[which(colnames(org)=="ï..OrganismID")]<-"OrganismId"
+
+site_visits_edi <- site_visits_edi[,c("VisitNo","newLocation")]
+
+library(dplyr)
+sitesample<-sitesample %>% filter(Visit.Date2 >= as.Date("2023-01-01"))
+sitesample<-sitesample %>% filter(Visit.Date2 <= as.Date("2023-12-31"))
+sitesample <- sitesample[,c("VisitNo","SampleID_key", "GearTypeAbbreviation", "Location")]
+
+catch1 <- catch1[,c("SampleID_key","FishLength","OrganismId","EntryOrder")]
+all_catch <-rbind(catch1,lengths_verts)
+
+
+sitesample_visit = merge(site_visits_edi, sitesample, by="VisitNo", all.x = T)
+sitesample_visit_mac = subset(sitesample_visit, sitesample_visit$GearTypeAbbreviation == "MAC")
+
+all_vert_lengths_sv = left_join(sitesample_visit_mac, all_catch, by = "SampleID_key", all.x=T)
+
+fishlengths_MAC = left_join(all_vert_lengths_sv, org, by="OrganismId", all.x=T)
+
+# Save for use in figure code, for histograms
+write.csv(fishlengths_MAC, file=here::here("Export.Files", paste('Fishlengths_MAC', "_",Sys.Date(),".csv", sep = '')))
+
+
+save(list=ls(),file= here::here("RData","fish_prep_code_14.RData"))
+```
+

@@ -1,0 +1,162 @@
+"","SampleID_frp","Location","CommonName","TotalCatch","CPUEbySpp2"
+"1","BEASEI01-BRAD-09MAY2023","Bradmoor Island","Mississippi Silverside",535,95111.1111111111
+"2","BEASEI01-BRAD-09MAY2023","Bradmoor Island","Splittail",132,23466.6666666667
+"3","BEASEI01-BRAD-09MAY2023","Bradmoor Island","Threespine Stickleback",495,88000
+"4","BEASEI01-BRAD-16NOV2023","Bradmoor Island","Killifish spp.",4,711.111111111111
+"5","BEASEI01-BRAD-16NOV2023","Bradmoor Island","Mississippi Silverside",158,28088.8888888889
+"6","BEASEI01-BRAD-21DEC2023","Bradmoor Island","Mosquitofish",2,799.200799200799
+"7","BEASEI01-BRAD-21DEC2023","Bradmoor Island","Mississippi Silverside",52,20779.2207792208
+"8","BEASEI01-BRAD-21DEC2023","Bradmoor Island","Threespine Stickleback",1,399.6003996004
+"9","BEASEI01-HORS-01FEB2023","Horseshoe Bend","Chinook Salmon (fall)",2,355.555555555556
+"10","BEASEI01-HORS-01FEB2023","Horseshoe Bend","Mississippi Silverside",4,711.111111111111
+"11","BEASEI01-HORS-02MAR2023","Horseshoe Bend","Chinook Salmon (fall)",59,12190.0826446281
+"12","BEASEI01-HORS-02MAR2023","Horseshoe Bend","Chinook Salmon (spring)",4,826.446280991735
+"13","BEASEI01-HORS-02MAR2023","Horseshoe Bend","Mississippi Silverside",34,7024.79338842975
+"14","BEASEI01-HORS-03JAN2023","Horseshoe Bend","Chinook Salmon (fall)",4,888.888888888889
+"15","BEASEI01-HORS-03JAN2023","Horseshoe Bend","Mississippi Silverside",2,444.444444444444
+"16","BEASEI01-HORS-03JAN2023","Horseshoe Bend","Sacramento Pikeminnow",4,888.888888888889
+"17","BEASEI01-HORS-10MAY2023","Horseshoe Bend","Mississippi Silverside",3,484.848484848485
+"18","BEASEI01-HORS-10MAY2023","Horseshoe Bend","Splittail",252,40727.2727272727
+"19","BEASEI01-HORS-11APR2023","Horseshoe Bend","Chinook Salmon (fall)",25,5341.88034188034
+"20","BEASEI01-HORS-11APR2023","Horseshoe Bend","Pacific Staghorn Sculpin",2,427.350427350427
+"21","BEASEI01-HORS-11APR2023","Horseshoe Bend","Sacramento Pikeminnow",3,641.025641025641
+"22","BEASEI01-HORS-11APR2023","Horseshoe Bend","Shimofuri Goby",12,2564.10256410256
+"23","BEASEI01-HORS-11APR2023","Horseshoe Bend","Yellowfin Goby",3,641.025641025641
+"24","BEASEI01-HORS-19DEC2023","Horseshoe Bend","Mississippi Silverside",59,14898.9898989899
+"25","BEASEI01-HORS-21NOV2023","Horseshoe Bend","Mississippi Silverside",195,28824.8337028825
+"26","BEASEI01-LIBE-07NOV2023","Liberty Island","Killifish spp.",1,663.129973474801
+"27","BEASEI01-LIBE-07NOV2023","Liberty Island","Mississippi Silverside",1,663.129973474801
+"28","BEASEI01-LIBE-25MAY2023","Liberty Island","Splittail",1109,122203.856749311
+"29","BEASEI01-TULE-14DEC2023","Tule Red","Killifish spp.",323,61523.8095238095
+"30","BEASEI01-TULE-14DEC2023","Tule Red","Mosquitofish",3,571.428571428571
+"31","BEASEI01-TULE-14DEC2023","Tule Red","Threespine Stickleback",36,6857.14285714286
+"32","BEASEI01-TULE-20MAR2023","Tule Red","Pacific Staghorn Sculpin",8,1185.18518518519
+"33","BEASEI01-TULE-30JAN2023","Tule Red","Pacific Staghorn Sculpin",26,4622.22222222222
+"34","BEASEI01-WING-04APR2023","Wings Landing","Pacific Staghorn Sculpin",2,2721.08843537415
+"35","BEASEI01-WING-04APR2023","Wings Landing","Shimofuri Goby",1,1360.54421768707
+"36","BEASEI01-WING-04APR2023","Wings Landing","Threespine Stickleback",3,4081.63265306122
+"37","BEASEI02-BRAD-09MAY2023","Bradmoor Island","Killifish spp.",26,2888.88888888889
+"38","BEASEI02-BRAD-09MAY2023","Bradmoor Island","Mississippi Silverside",109,12111.1111111111
+"39","BEASEI02-BRAD-09MAY2023","Bradmoor Island","Threespine Stickleback",86,9555.55555555556
+"40","BEASEI02-BRAD-16NOV2023","Bradmoor Island","Mississippi Silverside",229,29079.3650793651
+"41","BEASEI02-BRAD-16NOV2023","Bradmoor Island","Splittail",5,634.920634920635
+"42","BEASEI02-BRAD-16NOV2023","Bradmoor Island","Threadfin Shad",11,1396.8253968254
+"43","BEASEI02-BRAD-21DEC2023","Bradmoor Island","Mosquitofish",2,538.720538720539
+"44","BEASEI02-BRAD-21DEC2023","Bradmoor Island","Mississippi Silverside",63,16969.696969697
+"45","BEASEI02-FLYW-08MAR2023","Flyway Farms","Killifish spp.",4,1098.9010989011
+"46","BEASEI02-FLYW-08MAR2023","Flyway Farms","Mosquitofish",10,2747.25274725275
+"47","BEASEI02-FLYW-08MAR2023","Flyway Farms","Mississippi Silverside",838,230219.78021978
+"48","BEASEI02-FLYW-08MAR2023","Flyway Farms","Golden Shiner",7,1923.07692307692
+"49","BEASEI02-FLYW-08MAR2023","Flyway Farms","Hitch",4,1098.9010989011
+"50","BEASEI02-FLYW-08MAR2023","Flyway Farms","Sacramento Pikeminnow",4,1098.9010989011
+"51","BEASEI02-HORS-01FEB2023","Horseshoe Bend","Killifish spp.",3,350.877192982456
+"52","BEASEI02-HORS-01FEB2023","Horseshoe Bend","Mississippi Silverside",6,701.754385964912
+"53","BEASEI02-HORS-02MAR2023","Horseshoe Bend","Chinook Salmon (fall)",5,701.754385964912
+"54","BEASEI02-HORS-02MAR2023","Horseshoe Bend","Mississippi Silverside",291,40842.1052631579
+"55","BEASEI02-HORS-03JAN2023","Horseshoe Bend","Chinook Salmon (fall)",4,1367.52136752137
+"56","BEASEI02-HORS-03JAN2023","Horseshoe Bend","Mosquitofish",2,683.760683760684
+"57","BEASEI02-HORS-03JAN2023","Horseshoe Bend","Mississippi Silverside",32,10940.1709401709
+"58","BEASEI02-HORS-03JAN2023","Horseshoe Bend","Sacramento Pikeminnow",5,1709.40170940171
+"59","BEASEI02-HORS-10MAY2023","Horseshoe Bend","Splittail",110,18394.6488294314
+"60","BEASEI02-HORS-11APR2023","Horseshoe Bend","Chinook Salmon (fall)",6,4273.50427350427
+"61","BEASEI02-HORS-11APR2023","Horseshoe Bend","Mississippi Silverside",1,712.250712250712
+"62","BEASEI02-HORS-11APR2023","Horseshoe Bend","Pacific Staghorn Sculpin",1,712.250712250712
+"63","BEASEI02-HORS-11APR2023","Horseshoe Bend","Shimofuri Goby",4,2849.00284900285
+"64","BEASEI02-HORS-11APR2023","Horseshoe Bend","Starry Flounder",1,712.250712250712
+"65","BEASEI02-HORS-21NOV2023","Horseshoe Bend","Mississippi Silverside",4,355.555555555556
+"66","BEASEI02-HORS-21NOV2023","Horseshoe Bend","Threadfin Shad",7,622.222222222222
+"67","BEASEI02-LIBE-07NOV2023","Liberty Island","Killifish spp.",2,796.305144131231
+"68","BEASEI02-LIBE-07NOV2023","Liberty Island","Largemouth Bass",9,3583.37314859054
+"69","BEASEI02-TULE-14DEC2023","Tule Red","Killifish spp.",52,20392.1568627451
+"70","BEASEI02-TULE-14DEC2023","Tule Red","Mosquitofish",72,28235.2941176471
+"71","BEASEI02-TULE-14DEC2023","Tule Red","Threespine Stickleback",36,14117.6470588235
+"72","BEASEI02-TULE-30JAN2023","Tule Red","Mississippi Silverside",8,1025.64102564103
+"73","BEASEI03-BRAD-09MAY2023","Bradmoor Island","Killifish spp.",23,2920.63492063492
+"74","BEASEI03-BRAD-09MAY2023","Bradmoor Island","Mississippi Silverside",12,1523.80952380952
+"75","BEASEI03-BRAD-09MAY2023","Bradmoor Island","Threespine Stickleback",55,6984.12698412698
+"76","BEASEI03-BRAD-16NOV2023","Bradmoor Island","Killifish spp.",11,1086.41975308642
+"77","BEASEI03-BRAD-16NOV2023","Bradmoor Island","Mississippi Silverside",323,31901.2345679012
+"78","BEASEI03-BRAD-16NOV2023","Bradmoor Island","Threadfin Shad",83,8197.53086419753
+"79","BEASEI03-LIBE-08MAR2023","Liberty Island","Mississippi Silverside",2,341.880341880342
+"80","BEASEI04-ARNO-09MAY2023","Arnold Slough","Killifish spp.",39,11555.5555555556
+"81","BEASEI04-ARNO-09MAY2023","Arnold Slough","Mississippi Silverside",50,14814.8148148148
+"82","BEASEI04-ARNO-09MAY2023","Arnold Slough","Yellowfin Goby",4,1185.18518518519
+"83","BEASEI04-ARNO-16NOV2023","Arnold Slough","Killifish spp.",9,2285.71428571429
+"84","BEASEI04-ARNO-16NOV2023","Arnold Slough","Mississippi Silverside",21,5333.33333333333
+"85","BEASEI04-ARNO-21DEC2023","Arnold Slough","Mosquitofish",5,653.59477124183
+"86","BEASEI04-ARNO-21DEC2023","Arnold Slough","Mississippi Silverside",465,60784.3137254902
+"87","LAMOPE01-PEYT-19JAN2023","Peytonia-Suisun","Mississippi Silverside",11,1022.63092556206
+"88","LAMOPE02-FLYW-08MAR2023","Flyway Farms","Mississippi Silverside",10,777.004496080734
+"89","LAMOPE02-HORS-19DEC2023","Horseshoe Bend","Killifish spp.",5,388.502248040367
+"90","LAMOPE02-HORS-21NOV2023","Horseshoe Bend","Bluegill",9,603.413207456355
+"91","LAMOPE02-LIBE-20DEC2023","Liberty Island","Largemouth Bass",5,422.94839948557
+"92","LAMOPE02-LOWE-26MAY2023","Lower Yolo Ranch","Splittail",16,1653.86201006802
+"93","LAMOPE02-NURS-28NOV2023","Nurse-Denverton","Mississippi Silverside",7,650.765134448582
+"94","LAMOPE02-PEYT-29DEC2023","Peytonia-Suisun","Mississippi Silverside",10,777.004496080734
+"95","LAMOPE03-FLYW-25MAY2023","Flyway Farms","Splittail",249,15648.3692105322
+"96","LAMOPE03-LOWE-20NOV2023","Lower Yolo Ranch","Largemouth Bass",10,670.45911939595
+"97","LAMOPE03-LOWE-20NOV2023","Lower Yolo Ranch","Redear Sunfish",12,804.55094327514
+"98","LAMOPE03-LOWE-25JAN2023","Lower Yolo Ranch","Prickly Sculpin",5,388.502248040367
+"99","LAMOPE03-LOWE-26MAY2023","Lower Yolo Ranch","Mississippi Silverside",37,2874.91663549872
+"100","LAMOPE03-NURS-28NOV2023","Nurse-Denverton","Mississippi Silverside",25,1798.42337513965
+"101","LAMOPE03-PEYT-29DEC2023","Peytonia-Suisun","Mississippi Silverside",27,1810.23962236906
+"102","LAMOPE03-STAI-06DEC2023","Stairsteps-Liberty Cut","Threadfin Shad",89,2675.08265704839
+"103","LAMOPE03-TULE-22DEC2023","Tule Red","Mississippi Silverside",23,922.008068538516
+"104","LAMOPE04-BROW-12JAN2023","Browns Island","Mississippi Silverside",6,336.036895901629
+"105","LAMOPE04-DECK-21NOV2023","Decker Island","Mississippi Silverside",12,638.260038971896
+"106","LAMOPE04-FLYW-25MAY2023","Flyway Farms","Mississippi Silverside",6,431.621610033516
+"107","LAMOPE04-FLYW-25MAY2023","Flyway Farms","Hitch",5,359.68467502793
+"108","LAMOPE04-FLYW-25MAY2023","Flyway Farms","Splittail",32,2301.98192017875
+"109","LAMOPE04-LIBE-20DEC2023","Liberty Island","Mississippi Silverside",17,1757.22838569727
+"110","LAMOPE04-LOWE-25JAN2023","Lower Yolo Ranch","Bluegill",6,402.27547163757
+"111","LAMOPE04-LOWE-26APR2023","Lower Yolo Ranch","Bluegill",6,466.20269764844
+"112","LAMOPE04-LOWE-26MAY2023","Lower Yolo Ranch","Killifish spp.",5,359.68467502793
+"113","LAMOPE04-LOWE-26MAY2023","Lower Yolo Ranch","Mississippi Silverside",13,935.180155072617
+"114","LAMOPE04-TULE-22DEC2023","Tule Red","Mississippi Silverside",33,1243.04293363875
+"115","LAMOPE05-BRAD-26DEC2023","Bradmoor Island","Mississippi Silverside",11,791.306285061445
+"116","LAMOPE05-FLYW-20DEC2023","Flyway Farms","Mississippi Silverside",63,3528.3874069671
+"117","LAMOPE05-FLYW-26APR2023","Flyway Farms","Bluegill",11,854.704945688807
+"118","LAMOPE05-FLYW-26APR2023","Flyway Farms","Golden Shiner",10,777.004496080734
+"119","LAMOPE05-LOWE-06DEC2023","Lower Yolo Ranch","Mississippi Silverside",1564,52931.367210554
+"120","LAMOPE05-LOWE-06DEC2023","Lower Yolo Ranch","Black Crappie",12,406.123022075862
+"121","LAMOPE05-LOWE-20NOV2023","Lower Yolo Ranch","Mississippi Silverside",38,1926.0002600144
+"122","LAMOPE05-LOWE-20NOV2023","Lower Yolo Ranch","American Shad",11,557.526391056801
+"123","LAMOPE05-STAI-26MAY2023","Stairsteps-Liberty Cut","Black Bass (unknown species)",163,6534.23109442513
+"124","LAMOPE05-STAI-26MAY2023","Stairsteps-Liberty Cut","Wakasagi",33,1322.88114181613
+"125","LAMOPE05-WINT-11DEC2023","Winter Island","Mississippi Silverside",88,3220.69451621914
+"126","LAMOPE06-BRAD-26DEC2023","Bradmoor Island","Mississippi Silverside",38,3532.72501557802
+"127","LAMOPE06-CHIP-15NOV2023","Chipps Island","Mississippi Silverside",41,1270.33241766172
+"128","LAMOPE06-FLYW-20DEC2023","Flyway Farms","Mississippi Silverside",227,19201.8573366449
+"129","LAMOPE06-FLYW-20DEC2023","Flyway Farms","Threadfin Shad",27,2283.92135722208
+"130","LAMOPE06-FLYW-25JAN2023","Flyway Farms","Killifish spp.",11,585.071702390904
+"131","LAMOPE06-FLYW-26APR2023","Flyway Farms","Mississippi Silverside",34,3514.45677139454
+"132","LAMOPE06-LOWE-06DEC2023","Lower Yolo Ranch","Killifish spp.",10,464.324167421724
+"133","LAMOPE06-STAI-20NOV2023","Stairsteps-Liberty Cut","Mississippi Silverside",48,2841.54629522585
+"134","LAMOPE06-STAI-26MAY2023","Stairsteps-Liberty Cut","Prickly Sculpin",14,744.636712133878
+"135","LAMOPE07-ARNO-28NOV2023","Arnold Slough","Mississippi Silverside",15,942.672844007966
+"136","LAMOPE07-BROW-08FEB2023","Browns Island","Mississippi Silverside",12,439.185615848065
+"137","LAMOPE07-FLYW-20DEC2023","Flyway Farms","Mississippi Silverside",620,41568.4654025489
+"138","LAMOPE07-FLYW-20DEC2023","Flyway Farms","Golden Shiner",22,1475.01006267109
+"139","LAMOPE07-FLYW-20DEC2023","Flyway Farms","Threadfin Shad",6,402.27547163757
+"140","LAMOPE07-FLYW-20NOV2023","Flyway Farms","Mississippi Silverside",138,9927.29703077086
+"141","LAMOPE07-RYER-22DEC2023","Ryer Island","Mississippi Silverside",25,1267.10543422
+"142","LAMOPE08-ARNO-28NOV2023","Arnold Slough","Mississippi Silverside",123,8246.64716857018
+"143","LAMOPE08-BROW-11DEC2023","Browns Island","Threadfin Shad",18,541.027953110911
+"144","LAMOPE09-ARNO-16MAR2023","Arnold Slough","Mississippi Silverside",16,1653.86201006802
+"145","LAMOPE09-ARNO-28NOV2023","Arnold Slough","Mississippi Silverside",10,560.061493169381
+"146","LAMOPE09-HONK-12JAN2023","Honker-Spoonbill","Mississippi Silverside",4,413.465502517004
+"147","LAMOPE09-WTIB-21NOV2023","Webb Tract Island and Berms","Bluegill",27,1942.29724515082
+"148","LAMOPE09-WTIB-21NOV2023","Webb Tract Island and Berms","Largemouth Bass",5,359.68467502793
+"149","LAMOPE10-BLAC-28NOV2023","Blacklock","Mississippi Silverside",65,3294.47412897201
+"150","LAMOPE10-CHIP-05APR2023","Chipps Island","Mississippi Silverside",7,543.903147256514
+"151","LAMOPE11-ARNO-19JAN2023","Arnold Slough","Mississippi Silverside",6,466.20269764844
+"152","LAMOPE11-BROW-15NOV2023","Browns Island","Mississippi Silverside",77,2818.10770169175
+"153","LAMOPE11-BROW-15NOV2023","Browns Island","Threadfin Shad",11,402.586814527393
+"154","LAMOPE12-ARNO-19JAN2023","Arnold Slough","Mississippi Silverside",34,2445.85579018992
+"155","LAMOPE12-BROW-05APR2023","Browns Island","Mississippi Silverside",7,543.903147256514
+"156","LAMOPE12-BROW-15NOV2023","Browns Island","Mississippi Silverside",87,4872.53499057362
+"157","LAMOPE12-BROW-18MAY2023","Browns Island","Mississippi Silverside",9,504.055343852443
+"158","LAMOPE12-NURS-03MAY2023","Nurse-Denverton","Mississippi Silverside",28,2175.61258902606
+"159","LAMOPE13-CHIP-11DEC2023","Chipps Island","Mississippi Silverside",101,4689.67409095941
+"160","LAMOPE13-WINT-15NOV2023","Winter Island","Mississippi Silverside",31,2230.04498517316
+"161","OTTTRA01-GRIZ-11OCT2023","Grizzly Bay","Threadfin Shad",89,455.972899481267

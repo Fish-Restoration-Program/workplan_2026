@@ -1,0 +1,700 @@
+{
+    "sources": [
+        {
+            "DOI": "10.15447/sfews.2016v14iss3art4",
+            "ISSN": "15462366",
+            "author": [
+                {
+                    "family": "Brown",
+                    "given": "L."
+                },
+                {
+                    "family": "Kimmerer",
+                    "given": "W."
+                },
+                {
+                    "family": "Conrad",
+                    "given": "J. L."
+                },
+                {
+                    "family": "Lesmeister",
+                    "given": "S."
+                },
+                {
+                    "family": "Mueller–Solger",
+                    "given": "A."
+                }
+            ],
+            "container-title": "San Francisco Estuary and Watershed Science",
+            "id": "Brown2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        10
+                    ]
+                ]
+            },
+            "title": "Food webs of the delta, suisun bay, and suisun marsh: An update on current understanding and possibilities for management",
+            "title-short": "Food webs of the delta, suisun bay, and suisun marsh",
+            "type": "article-journal",
+            "volume": "14"
+        },
+        {
+            "author": [
+                {
+                    "literal": "California Department of Fish and Wildlife"
+                }
+            ],
+            "id": "CDFW2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "publisher": "Permit number 2081-2019-066-00.",
+            "title": "Incidental take permit for long-terms operation of the state water project in the sacramento-san joaquin delta",
+            "type": ""
+        },
+        {
+            "URL": "https://www.waterboards.ca.gov/waterrights/water_issues/programs/bay_delta/california_waterfix/exhibits/exhibit107/docs/attch8_FRPAimplementation.pdf",
+            "author": [
+                {
+                    "literal": "California Department of Water Resources and California Department of Fish and Wildlife"
+                }
+            ],
+            "id": "CDWR2012x",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "publisher": "California Department of Water Resources",
+            "title": "Fish restoration program agreement implementation strategy",
+            "type": ""
+        },
+        {
+            "URL": "https://www.waterboards.ca.gov/waterrights/water_issues/programs/bay_delta/california_waterfix/exhibits/exhibit107/docs/attch8_FRPAimplementation.pdf",
+            "author": [
+                {
+                    "dropping-particle": "of",
+                    "family": "Water Resources",
+                    "given": "California Department"
+                },
+                {
+                    "dropping-particle": "of",
+                    "family": "Fish",
+                    "given": "California Department"
+                },
+                {
+                    "family": "Wildlife"
+                }
+            ],
+            "id": "CDWR2012",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "publisher": "California Department of Water Resources; California Department of Fish; Wildlife",
+            "title": "Fish restoration program agreement implementation strategy",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Feyrer",
+                    "given": "F."
+                },
+                {
+                    "family": "Herbold",
+                    "given": "B."
+                },
+                {
+                    "family": "Matern",
+                    "given": "S"
+                },
+                {
+                    "family": "Moyle",
+                    "given": "P."
+                }
+            ],
+            "container-title": "Environmental Biology of Fishes",
+            "id": "Feyrer2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "title": "Dietary shifts in a stressed fish assemblage consequences of a bivalve invasion in the san francisco estuary. Environmental biology of fishes",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hasenbein",
+                    "given": "M."
+                },
+                {
+                    "family": "Fangue",
+                    "given": "N."
+                },
+                {
+                    "family": "Geist",
+                    "given": "J."
+                },
+                {
+                    "family": "Komoroske",
+                    "given": "L."
+                },
+                {
+                    "family": "Truong",
+                    "given": "J."
+                },
+                {
+                    "family": "McPherson",
+                    "given": "R."
+                },
+                {
+                    "family": "Connon",
+                    "given": "R."
+                }
+            ],
+            "container-title": "Conservation Physiology",
+            "id": "Hasenbein2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "title": "Assessments at multiple levels of biological organization allow for an integrative determination of physiological tolerances to turbidity in an endangered fish species.",
+            "type": "article-journal",
+            "volume": "4"
+        },
+        {
+            "author": [
+                {
+                    "literal": "Interagency Ecological Program Tidal Wetlands Monitoring Project Work Team"
+                }
+            ],
+            "id": "IEP2017a",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "title": "Tidal wetland monitoring framework for the upper san francisco estuary, version 1.0",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Johnston",
+                    "given": "K."
+                },
+                {
+                    "family": "Medel",
+                    "given": "I."
+                },
+                {
+                    "family": "Anderson",
+                    "given": "S."
+                },
+                {
+                    "family": "Stein",
+                    "given": "E."
+                },
+                {
+                    "family": "Whitcraft",
+                    "given": "C."
+                },
+                {
+                    "family": "Crooks",
+                    "given": "J."
+                }
+            ],
+            "id": "CRAM2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "The Bay Foundation for the United States Environmental Protection Agency.",
+            "title": "California estuarine wetland monitoring manual (level 3)",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Knuth",
+                    "given": "Donald E."
+                }
+            ],
+            "container-title": "The Computer Journal",
+            "id": "Knuth1984",
+            "issued": {
+                "date-parts": [
+                    [
+                        1984
+                    ]
+                ]
+            },
+            "title": "Literate programming",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lowe",
+                    "given": "S."
+                },
+                {
+                    "family": "Collins",
+                    "given": "J."
+                },
+                {
+                    "family": "Pearce",
+                    "given": "S."
+                }
+            ],
+            "id": "Lowe2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "publisher": "San Francisco Estuary Institute; Aquatic Science Center",
+            "title": "Developmental trajectory for california tidal marsh restoration and mitigation projects",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Moyle",
+                    "given": "P."
+                },
+                {
+                    "family": "Durand",
+                    "given": "J."
+                },
+                {
+                    "family": "O’Rear",
+                    "given": "T."
+                }
+            ],
+            "container-title": "University of California, Davis.",
+            "id": "MoyleSuisun",
+            "title": "Suisun marsh fish study",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "literal": "National Marine Fisheries Service"
+                }
+            ],
+            "id": "NMFS2009",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "title": "Biological opinion and conference opinion on the long-term operations of the central valley project and the state water project. Permit number 2008/09022",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "literal": "National Marine Fisheries Service"
+                }
+            ],
+            "id": "NMFS2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "title": "Biological opinion long- term operation of the central valley project and the state water project. Permit number 2019/11596",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Rich",
+                    "given": "A."
+                }
+            ],
+            "id": "Rich1987",
+            "issued": {
+                "date-parts": [
+                    [
+                        1987
+                    ]
+                ]
+            },
+            "publisher": "McDonough, Holland, & Allen",
+            "title": "Report on studies conducted by sacramento county to determine the temperatures which optimize growth and survival in juvenile chinook salmon (onchorhynchus tshawwytscha)",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Sherman",
+                    "given": "S."
+                },
+                {
+                    "family": "Hartman",
+                    "given": "R."
+                },
+                {
+                    "family": "Contreras",
+                    "given": "D."
+                }
+            ],
+            "id": "Sherman2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "publisher": "California Department of Fish; Wildlife",
+            "title": "Effects of tidal wetland restoration on fish: A suite of conceptual models",
+            "title-short": "Effects of tidal wetland restoration on fish",
+            "type": ""
+        },
+        {
+            "URL": "www.elsevier.com/locate/ecoleng",
+            "abstract": "Restoration of estuarine habitats is essential for the conservation and recovery of depressed Pacific salmon populations. However, assessing the functions of recently restored habitat poses a number of problems because of the transitory occurrence of salmonids in any one location. We propose assessment criteria and metrics that are based on the habitat’s capacity, opportunity, and realized function to enhance survivability of juvenile salmon. Because of the paucity of data relating capacity and opportunity attributes to realized function (e.g. growth, consumption rate, survival), there continues to be a need for manipulative experiments to assess the developmental status of restoration sites. Such a self-monitoring approach of letting the fish diagnose the ecological state of restoration would effectively address the small-scale, site-specific assessment goals and criteria, but ignores the larger-scale issues relating to the ability of diverse salmon species and life histories to occupy estuarine habitat landscapes. If coastal restoration is going to contribute the recovery of anadromous salmonid populations, a landscape perspective is fundamental to restoration planning, implementation, and particularly assessment.",
+            "author": [
+                {
+                    "family": "Simenstad",
+                    "given": "Charles A"
+                },
+                {
+                    "family": "Cordell",
+                    "given": "Jeffery R"
+                }
+            ],
+            "container-title": "Ecological Engineering",
+            "id": "Simenstad2000",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000
+                    ]
+                ]
+            },
+            "keyword": "Anadromous salmonids,Assessment criteria wwwelseviercom/locate/ecoleng,Habitat,Pacific Northwest,Restoration",
+            "title": "Ecological assessment criteria for restoring anadromous salmonid habitat in pacific northwest estuaries",
+            "type": "",
+            "volume": "15"
+        },
+        {
+            "DOI": "10.15447/sfews.2014v12iss3art1",
+            "ISSN": "15462366",
+            "author": [
+                {
+                    "family": "Slater",
+                    "given": "S."
+                },
+                {
+                    "family": "Baxter",
+                    "given": "R."
+                }
+            ],
+            "container-title": "San Francisco Estuary and Watershed Science",
+            "id": "Slater2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        9
+                    ]
+                ]
+            },
+            "title": "Diet, prey selection, and body condition of age-0 delta smelt, hypomesus transpacificus, in the upper san francisco estuary",
+            "type": "article-journal",
+            "volume": "12"
+        },
+        {
+            "author": [
+                {
+                    "family": "Swanson",
+                    "given": "C."
+                },
+                {
+                    "family": "Reid",
+                    "given": "T."
+                },
+                {
+                    "family": "P.",
+                    "given": "Young"
+                },
+                {
+                    "family": "J.",
+                    "given": "Cech Jr"
+                }
+            ],
+            "container-title": "Oecologia",
+            "id": "Swanson2000",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000
+                    ]
+                ]
+            },
+            "title": "Comparative environmental tolerances of threatened delta smelt (hypomesus transpacificus) and introduced wakasagi (h. Nipponensis) in an altered california estuary",
+            "type": "article-journal",
+            "volume": "123"
+        },
+        {
+            "author": [
+                {
+                    "literal": "United States Fish and Wildlife Service"
+                }
+            ],
+            "id": "USFWS2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "title": "Formal endangered species act consultation on the proposed coordinated operations of the central valley project (CVP) and state water project (SWP). Permit number 81420-2008-f-1481-5",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "literal": "United States Fish and Wildlife Service"
+                }
+            ],
+            "id": "USFWS2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "title": "Biological opinion for the reinitiation of consultation on the coordinated operations of the central valley project (CVP) and state water project (SWP). Permit number 08FBTD00-2019-f-0164",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "literal": "US Geological Survey"
+                }
+            ],
+            "id": "USGS2012",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "publisher": "Western Ecological Research Center, San Francisco Bay Estuary Field Station",
+            "title": "Photo-point standard operating procedures. Unpublished protocols",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Wagner",
+                    "given": "R."
+                },
+                {
+                    "family": "Jr",
+                    "given": "R. Boulger"
+                },
+                {
+                    "family": "Oblinger",
+                    "given": "C."
+                },
+                {
+                    "family": "Smith",
+                    "given": "B."
+                }
+            ],
+            "id": "Wagner2006",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "publisher": "United States Geological Survey",
+            "title": "Guidelines and standard procedures for continuous water-quality monitors: Station operation, record computation, and data reporting (no. 1-D3)",
+            "title-short": "Guidelines and standard procedures for continuous water-quality monitors",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Whipple",
+                    "given": "A."
+                },
+                {
+                    "family": "Grossinger",
+                    "given": "R."
+                },
+                {
+                    "family": "Rankin",
+                    "given": "D."
+                },
+                {
+                    "family": "Stanford",
+                    "given": "B."
+                },
+                {
+                    "family": "Askevold",
+                    "given": "R."
+                }
+            ],
+            "id": "Whipple2012",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "publisher": "SFEI Contribution No. 672",
+            "title": "Sacramento-san joaquin delta historical ecology investigation: Exploring pattern and process",
+            "title-short": "Sacramento-san joaquin delta historical ecology investigation",
+            "type": ""
+        },
+        {
+            "URL": "https://doi.org/10.6073/pasta \n    /c699616de7a4b186726c65a976cce9ea",
+            "author": [
+                {
+                    "family": "Sherman",
+                    "given": "S."
+                },
+                {
+                    "family": "Bowles",
+                    "given": "C."
+                },
+                {
+                    "family": "Avila",
+                    "given": "M."
+                },
+                {
+                    "family": "Cox",
+                    "given": "D."
+                },
+                {
+                    "family": "Davidson",
+                    "given": "E."
+                },
+                {
+                    "family": "Ng",
+                    "given": "G."
+                },
+                {
+                    "family": "Hartman",
+                    "given": "R."
+                },
+                {
+                    "family": "Ellis",
+                    "given": "D."
+                },
+                {
+                    "family": "Contreras",
+                    "given": "D."
+                }
+            ],
+            "container-title": "Environmental Data Initiative.",
+            "id": "Sherman2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "title": "Fish restoration program tidal wetland restoration monitoring in upper san francisco estuary, 2015-ongoing",
+            "type": ""
+        },
+        {
+            "URL": "https://doi.org/10.6073/pasta/e2d248fcfaa8a1668b602d11984a5a2c",
+            "author": [
+                {
+                    "family": "Vance",
+                    "given": "L."
+                },
+                {
+                    "family": "Kwan",
+                    "given": "N."
+                }
+            ],
+            "container-title": "Environmental Data Initiative.",
+            "id": "ybfmp2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "title": "Interagency ecological program: Fish catch and water quality data from the sacramento river floodplain and tidal slough, collected by the yolo bypass fish monitoring program, 1998-2023. Ver 4.",
+            "title-short": "Interagency ecological program",
+            "type": ""
+        },
+        {
+            "abstract": "We, the U.S. Fish and Wildlife Service (Service), determine endangered species status under the Endangered Species Act of 1973, as amended (Act), for the San Francisco Bay-Delta distinct population segment (DPS) of longfin smelt (Spirinchus thaleichthys), a fish species of the Pacific Coast. This rule extends the protections of the Act to this DPS and adds it to the List of Endangered and Threatened Wildlife.",
+            "author": [
+                {
+                    "family": "Fish",
+                    "given": "Interior"
+                },
+                {
+                    "family": "Service",
+                    "given": "Wildlife"
+                }
+            ],
+            "container-title": "Federal Register",
+            "id": "USFWS2024",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024,
+                        8
+                    ]
+                ]
+            },
+            "title": "Endangered species status for the san francisco bay-delta distinct population segment of the longfin smelt",
+            "type": ""
+        }
+    ],
+    "project_biblios": [
+        "references.bib"
+    ]
+}

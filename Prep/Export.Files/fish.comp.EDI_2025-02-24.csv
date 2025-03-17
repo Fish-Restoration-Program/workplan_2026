@@ -1,0 +1,3022 @@
+"","SampleID_key","CommonName","FishLength","PlusCount","TotalCatch","FishLengthComments","EntryOrder"
+"1",12087,"American Shad",103,0,3,"",26198
+"2",10949,"American Shad",152,0,1,"",25228
+"3",12087,"American Shad",96,0,3,"",26196
+"4",12087,"American Shad",97,0,3,"",26197
+"5",11528,"American Shad",152,0,1,"",25824
+"6",11470,"American Shad",61,0,2,"",25543
+"7",11470,"American Shad",92,0,2,"",25542
+"8",12170,"American Shad",80,0,3,"",27124
+"9",12217,"American Shad",80,0,1,"",27707
+"10",12170,"American Shad",75,0,3,"",27125
+"11",12170,"American Shad",81,0,3,"",27123
+"12",12085,"American Shad",92,0,1,"",26190
+"13",12172,"Bay Pipefish",187,0,1,"",27190
+"14",11470,"Bigscale Logperch",26,0,1,"",29082
+"15",11471,"Bigscale Logperch",91,0,1,"",25555
+"16",11470,"Black Crappie",81,0,2,"",25531
+"17",10311,"Black Crappie",313,0,1,"",24916
+"18",11470,"Black Crappie",105,0,2,"",25530
+"19",10294,"Bluefin Killifish",27,0,1,"",24873
+"20",12223,"Bluegill",33,0,1,"",27901
+"21",10318,"Bluegill",62,0,8,"",24994
+"22",10311,"Bluegill",35,0,5,"",24949
+"23",10981,"Bluegill",53,0,2,"",25266
+"24",10311,"Bluegill",34,0,5,"",24953
+"25",10288,"Bluegill",38,0,2,"",24811
+"26",10288,"Bluegill",42,0,2,"",24810
+"27",10318,"Bluegill",33,0,8,"",24998
+"28",10980,"Bluegill",66,0,1,"",25263
+"29",10318,"Bluegill",46,0,8,"",24999
+"30",12143,"Bluegill",39,0,4,"",26673
+"31",10311,"Bluegill",45,0,5,"",24952
+"32",10318,"Bluegill",37,0,8,"",25000
+"33",12123,"Bluegill",28,0,1,"",26535
+"34",10981,"Bluegill",56,0,2,"",25267
+"35",12161,"Bluegill",27,0,2,"",26931
+"36",12161,"Bluegill",27,0,2,"",26932
+"37",12143,"Bluegill",37,0,4,"",26671
+"38",10318,"Bluegill",35,0,8,"",24995
+"39",10318,"Bluegill",42,0,8,"",24996
+"40",12143,"Bluegill",39,0,4,"",26672
+"41",10318,"Bluegill",30,0,8,"",24993
+"42",12220,"Bluegill",63,0,1,"",27753
+"43",12225,"Bluegill",55,0,1,"",27933
+"44",10318,"Bluegill",48,0,8,"",24997
+"45",10311,"Bluegill",40,0,5,"",24950
+"46",12143,"Bluegill",41,0,4,"",26674
+"47",12144,"Bluegill",46,0,1,"",26709
+"48",10311,"Bluegill",44,0,5,"",24951
+"49",11471,"Bluegill",50,0,1,"",25573
+"50",12169,"Bullfrog tadpole",NA,3,3,"",NA
+"51",11471,"Channel Catfish",404,0,1,"",25563
+"52",12081,"Clam Other",NA,1,1,"",NA
+"53",12160,"Common Carp",75,0,1,"",26864
+"54",10951,"Common Carp",500,0,1,"",25235
+"55",10953,"Common Carp",NA,1,1,"",NA
+"56",12143,"Common Carp",167,0,1,"",26670
+"57",11470,"Common Carp",NA,1,1,"",NA
+"58",10285,"Corbicula",NA,1,1,"",NA
+"59",12043,"Corbicula",NA,2,2,"",NA
+"60",12024,"Corbicula",NA,22,22,"",NA
+"61",12197,"Corbicula",NA,2,2,"",NA
+"62",12181,"Corbicula",NA,7,7,"",NA
+"63",12026,"Corbicula",NA,22,22,"",NA
+"64",12162,"Corbicula",NA,16,16,"",NA
+"65",10952,"Corbicula",NA,2,2,"",NA
+"66",12053,"Corbicula",NA,2,2,"",NA
+"67",11528,"Corbicula",NA,23,23,"",NA
+"68",11527,"Corbicula",NA,59,59,"",NA
+"69",10296,"Corbicula",NA,81,81,"",NA
+"70",10949,"Corbicula",NA,3,3,"",NA
+"71",12182,"Corbicula",NA,4,4,"",NA
+"72",12022,"Corbicula",NA,1,1,"",NA
+"73",12058,"Corbicula",NA,5,5,"",NA
+"74",12183,"Corbicula",NA,1,1,"",NA
+"75",10297,"Corbicula",NA,2,2,"",NA
+"76",12172,"Corbicula",NA,5,5,"",NA
+"77",11526,"Corbicula",NA,72,72,"",NA
+"78",10315,"Corbicula",NA,1,1,"",NA
+"79",12045,"Corbicula",NA,1,1,"",NA
+"80",11468,"Corbicula",NA,4,4,"",NA
+"81",12082,"Corbicula",NA,3,3,"",NA
+"82",12119,"Corbicula",NA,1,1,"",NA
+"83",12081,"Corbicula",NA,11,11,"",NA
+"84",12188,"Corbicula",NA,1,1,"",NA
+"85",12126,"Corbicula",NA,1,1,"",NA
+"86",12175,"Corbicula",NA,2,2,"",NA
+"87",10303,"Corbicula",NA,109,109,"",NA
+"88",12063,"Corbicula",NA,1,1,"",NA
+"89",10316,"Corbicula",NA,7,7,"",NA
+"90",12203,"Corbicula",NA,1,1,"",NA
+"91",12021,"Corbicula",NA,1,1,"",NA
+"92",12222,"Corbicula",NA,1,1,"",NA
+"93",11526,"Bay Shrimp",NA,17,17,"",NA
+"94",12087,"Bay Shrimp",NA,2,2,"",NA
+"95",10948,"Bay Shrimp",NA,10,10,"",NA
+"96",12192,"Bay Shrimp",NA,1,1,"",NA
+"97",10944,"Bay Shrimp",NA,124,124,"",NA
+"98",12172,"Bay Shrimp",NA,1,1,"",NA
+"99",10941,"Bay Shrimp",NA,1,1,"",NA
+"100",11524,"Bay Shrimp",NA,53,53,"",NA
+"101",11527,"Bay Shrimp",NA,30,30,"",NA
+"102",11520,"Bay Shrimp",NA,16,16,"",NA
+"103",12081,"Bay Shrimp",NA,3,3,"",NA
+"104",11522,"Bay Shrimp",NA,3,3,"",NA
+"105",12026,"Bay Shrimp",NA,5,5,"",NA
+"106",11545,"Bay Shrimp",NA,1,1,"",NA
+"107",10945,"Bay Shrimp",NA,90,90,"",NA
+"108",12193,"Bay Shrimp",NA,1,1,"",NA
+"109",11521,"Bay Shrimp",NA,3,3,"",NA
+"110",11523,"Bay Shrimp",NA,48,48,"",NA
+"111",11464,"Bay Shrimp",NA,1,1,"",NA
+"112",10949,"Bay Shrimp",NA,73,73,"",NA
+"113",12088,"Bay Shrimp",NA,4,4,"",NA
+"114",12043,"Bay Shrimp",NA,2,2,"",NA
+"115",12082,"Bay Shrimp",NA,1,1,"",NA
+"116",12141,"Bay Shrimp",NA,0,1,"",NA
+"117",11509,"Bay Shrimp",NA,17,17,"",NA
+"118",11528,"Bay Shrimp",NA,4,4,"",NA
+"119",12044,"Bay Shrimp",NA,3,3,"",NA
+"120",12046,"Bay Shrimp",NA,181,181,"",NA
+"121",12085,"Bay Shrimp",NA,13,13,"",NA
+"122",12083,"Bay Shrimp",NA,5,5,"",NA
+"123",10946,"Bay Shrimp",NA,80,80,"",NA
+"124",12063,"Bay Shrimp",NA,2,2,"",NA
+"125",12045,"Bay Shrimp",NA,1,1,"",NA
+"126",11525,"Bay Shrimp",NA,49,49,"",NA
+"127",10952,"Bay Shrimp",NA,15,15,"",NA
+"128",12042,"Bay Shrimp",NA,2,2,"",NA
+"129",11556,"Bay Shrimp",NA,1,1,"",NA
+"130",11543,"Bay Shrimp",NA,1,1,"",NA
+"131",10292,"Crappie spp.",83,0,1,"",24859
+"132",10981,"Crayfish",NA,0,0,"",NA
+"133",12219,"Crayfish",NA,1,1,"",NA
+"134",10288,"Crayfish",NA,1,1,"",NA
+"135",11514,"Crayfish",NA,1,1,"",NA
+"136",12163,"Crayfish",NA,4,4,"",NA
+"137",10289,"Crayfish",NA,16,16,"",NA
+"138",12132,"Crayfish",NA,0,0,"",NA
+"139",12171,"Crayfish",NA,1,1,"",NA
+"140",11464,"Crayfish",NA,1,1,"",NA
+"141",12120,"Crayfish",NA,20,20,"",NA
+"142",12022,"Crayfish",NA,1,1,"",NA
+"143",10290,"Crayfish",NA,2,2,"",NA
+"144",12146,"Crayfish",NA,8,8,"",NA
+"145",10311,"Crayfish",NA,2,2,"",NA
+"146",12119,"Crayfish",NA,6,6,"",NA
+"147",12161,"Crayfish",NA,1,1,"",NA
+"148",10294,"Crayfish",NA,1,1,"",NA
+"149",12129,"Crayfish",NA,2,2,"",NA
+"150",12169,"Crayfish",NA,19,19,"",NA
+"151",12223,"Crayfish",NA,5,5,"",NA
+"152",11478,"Siberian Prawn",NA,11,11,"",NA
+"153",12169,"Siberian Prawn",NA,1,1,"",NA
+"154",10954,"Siberian Prawn",NA,1,1,"",NA
+"155",12129,"Siberian Prawn",NA,14,14,"",NA
+"156",10951,"Siberian Prawn",NA,6,6,"",NA
+"157",12163,"Siberian Prawn",NA,4,4,"",NA
+"158",12143,"Siberian Prawn",NA,5,5,"",NA
+"159",12161,"Siberian Prawn",NA,55,55,"",NA
+"160",11509,"Siberian Prawn",NA,4,4,"",NA
+"161",11524,"Siberian Prawn",NA,2,2,"",NA
+"162",12199,"Siberian Prawn",NA,1,1,"",NA
+"163",11525,"Siberian Prawn",NA,1,1,"",NA
+"164",10320,"Siberian Prawn",NA,1,1,"",NA
+"165",12130,"Siberian Prawn",NA,1,1,"",NA
+"166",12217,"Siberian Prawn",NA,2,2,"",NA
+"167",12054,"Siberian Prawn",NA,1,1,"",NA
+"168",10292,"Siberian Prawn",NA,3,3,"",NA
+"169",10316,"Siberian Prawn",NA,12,12,"",NA
+"170",12046,"Siberian Prawn",NA,7,7,"",NA
+"171",10312,"Siberian Prawn",NA,4,4,"",NA
+"172",11504,"Siberian Prawn",NA,1,1,"",NA
+"173",11553,"Siberian Prawn",NA,1,1,"",NA
+"174",12128,"Siberian Prawn",NA,2,2,"",NA
+"175",10288,"Siberian Prawn",NA,3,3,"",NA
+"176",12043,"Siberian Prawn",NA,1,1,"",NA
+"177",10290,"Siberian Prawn",NA,7,7,"",NA
+"178",10289,"Siberian Prawn",NA,16,16,"",NA
+"179",11471,"Siberian Prawn",NA,4,4,"",NA
+"180",12223,"Siberian Prawn",NA,1,1,"",NA
+"181",12146,"Siberian Prawn",NA,1,1,"",NA
+"182",12160,"Siberian Prawn",NA,8,8,"",NA
+"183",12088,"Siberian Prawn",NA,1,1,"",NA
+"184",12145,"Siberian Prawn",NA,7,7,"",NA
+"185",10953,"Siberian Prawn",NA,3,3,"",NA
+"186",10955,"Siberian Prawn",NA,1,1,"",NA
+"187",12144,"Siberian Prawn",NA,1,1,"",NA
+"188",11545,"Siberian Prawn",NA,15,15,"",NA
+"189",10294,"Siberian Prawn",NA,16,16,"",NA
+"190",12042,"Siberian Prawn",NA,2,2,"",NA
+"191",10952,"Siberian Prawn",NA,32,32,"",NA
+"192",10945,"Siberian Prawn",NA,4,4,"",NA
+"193",10946,"Siberian Prawn",NA,2,2,"",NA
+"194",10286,"Siberian Prawn",NA,2,2,"",NA
+"195",10293,"Siberian Prawn",NA,1,1,"",NA
+"196",11462,"Siberian Prawn",NA,2,2,"",NA
+"197",12205,"Siberian Prawn",NA,2,2,"",NA
+"198",10944,"Siberian Prawn",NA,2,2,"",NA
+"199",11470,"Siberian Prawn",NA,22,22,"",NA
+"200",11479,"Golden Shiner",81,0,7,"",25652
+"201",11471,"Golden Shiner",60,0,3,"",25567
+"202",11479,"Golden Shiner",80,0,7,"",25657
+"203",10290,"Golden Shiner",72,0,3,"",24797
+"204",11471,"Golden Shiner",66,0,3,"",25566
+"205",11479,"Golden Shiner",83,0,7,"",25655
+"206",11479,"Golden Shiner",84,0,7,"",25656
+"207",10290,"Golden Shiner",76,0,3,"",24796
+"208",10290,"Golden Shiner",62,0,3,"",24798
+"209",10292,"Golden Shiner",100,0,1,"",24861
+"210",12123,"Golden Shiner",149,0,2,"",26536
+"211",10296,"Golden Shiner",117,0,1,"",24876
+"212",12123,"Golden Shiner",134,0,2,"",26537
+"213",11479,"Golden Shiner",70,0,7,"",25654
+"214",12119,"Golden Shiner",111,0,1,"",26363
+"215",11471,"Golden Shiner",78,0,3,"",25565
+"216",11479,"Golden Shiner",94,0,7,"",25653
+"217",11479,"Golden Shiner",76,0,7,"",25651
+"218",12058,"Harris Mud Crab",NA,1,1,"",NA
+"219",12159,"Harris Mud Crab",NA,1,1,"",NA
+"220",11542,"Harris Mud Crab",NA,1,1,"",NA
+"221",12201,"Harris Mud Crab",NA,1,1,"",NA
+"222",10305,"Harris Mud Crab",NA,1,1,"",NA
+"223",11546,"Harris Mud Crab",NA,2,2,"",NA
+"224",11470,"Hitch",114,0,10,"2022_HCH_026",25533
+"225",10290,"Hitch",65,0,7,"HCH_2022_012",24789
+"226",10292,"Hitch",98,0,6,"HCH_2022_018",24853
+"227",10311,"Hitch",75,0,1,"2022_HCH_002",24948
+"228",10290,"Hitch",83,0,7,"HCH_2022_017",24795
+"229",10316,"Hitch",63,0,6,"2022_HCH_005",24956
+"230",11470,"Hitch",122,0,10,"2022_HCH_025",25532
+"231",10292,"Hitch",80,0,6,"HCH_2022_020",24855
+"232",11470,"Hitch",80,0,10,"",25541
+"233",10290,"Hitch",75,0,7,"HCH_2022_011",24788
+"234",10289,"Hitch",64,0,2,"2022_HCH_010",24782
+"235",12220,"Hitch",126,0,1,"",27807
+"236",10289,"Hitch",93,0,2,"2022_HCH_009",24775
+"237",11470,"Hitch",69,0,10,"2022_HCH_028",25535
+"238",10290,"Hitch",95,0,7,"HCH_2022_014",24791
+"239",10316,"Hitch",75,0,6,"2022_HCH_008",24959
+"240",11470,"Hitch",80,0,10,"2022_HCH_027",25534
+"241",10290,"Hitch",68,0,7,"HCH_2022_016",24793
+"242",11470,"Hitch",76,0,10,"",25538
+"243",11504,"Hitch",77,0,1,"2022_HCH_024",25669
+"244",11471,"Hitch",84,0,4,"",25560
+"245",11471,"Hitch",96,0,4,"",25562
+"246",11470,"Hitch",75,0,10,"2022_HCH_030",25537
+"247",11470,"Hitch",92,0,10,"2022_HCH_029",25536
+"248",10290,"Hitch",63,0,7,"HCH_2022_013",24790
+"249",10292,"Hitch",67,0,6,"HCH_2022_023",24858
+"250",10292,"Hitch",76,0,6,"HCH_2022_022",24857
+"251",10316,"Hitch",69,0,6,"2022_HCH_007",24958
+"252",10290,"Hitch",63,0,7,"HCH_2022_015",24792
+"253",11471,"Hitch",90,0,4,"",25561
+"254",10292,"Hitch",70,0,6,"HCH_2022_021",24856
+"255",11470,"Hitch",74,0,10,"",25540
+"256",10292,"Hitch",76,0,6,"HCH_2022_019",24854
+"257",10316,"Hitch",60,0,6,"2022_HCH_006",24957
+"258",10316,"Hitch",101,0,6,"2022_HCH_004",24955
+"259",11471,"Hitch",122,0,4,"",25559
+"260",10316,"Hitch",78,0,6,"2022_HCH_003",24954
+"261",11470,"Hitch",95,0,10,"",25539
+"262",10286,"Largemouth Bass",161,0,1,"",26021
+"263",12143,"Largemouth Bass",88,0,2,"",26668
+"264",12143,"Largemouth Bass",173,0,2,"",26667
+"265",11505,"Longfin Smelt",30,0,6,"",25670
+"266",11505,"Longfin Smelt",37,0,6,"",25675
+"267",11505,"Longfin Smelt",30,0,6,"",25672
+"268",11523,"Longfin Smelt",33,NA,6,"",25743
+"269",11520,"Longfin Smelt",31,0,8,"",25715
+"270",11520,"Longfin Smelt",37,0,8,"",25709
+"271",10946,"Longfin Smelt",31,0,5,"",25209
+"272",11520,"Longfin Smelt",33,0,8,"",25711
+"273",11525,"Longfin Smelt",37,0,5,"",25754
+"274",10946,"Longfin Smelt",29,0,5,"",25211
+"275",10946,"Longfin Smelt",31,0,5,"",25208
+"276",10946,"Longfin Smelt",30,0,5,"",25207
+"277",11525,"Longfin Smelt",34,0,5,"",25756
+"278",11520,"Longfin Smelt",32,0,8,"",25714
+"279",11520,"Longfin Smelt",38,0,8,"",25716
+"280",11505,"Longfin Smelt",33,0,6,"",25673
+"281",11523,"Longfin Smelt",31,NA,6,"",25751
+"282",11505,"Longfin Smelt",34,0,6,"",25674
+"283",10944,"Longfin Smelt",31,0,2,"",25175
+"284",12043,"Longfin Smelt",60,0,1,"",26103
+"285",11520,"Longfin Smelt",34,0,8,"",25712
+"286",11505,"Longfin Smelt",34,0,6,"",25671
+"287",11520,"Longfin Smelt",32,0,8,"",25710
+"288",12042,"Longfin Smelt",63,0,1,"",26102
+"289",10946,"Longfin Smelt",33,0,5,"",25210
+"290",11523,"Longfin Smelt",36,NA,6,"",25742
+"291",11522,"Longfin Smelt",33,0,1,"could have been from prior sample",25739
+"292",11523,"Longfin Smelt",36,NA,6,"",25741
+"293",11525,"Longfin Smelt",33,0,5,"",25757
+"294",10310,"Longfin Smelt",36,0,1,"",24915
+"295",11523,"Longfin Smelt",34,NA,6,"",25752
+"296",10944,"Longfin Smelt",30,0,2,"",25174
+"297",11525,"Longfin Smelt",32,0,5,"",25753
+"298",11521,"Longfin Smelt",36,0,2,"",25722
+"299",11523,"Longfin Smelt",37,NA,6,"",25740
+"300",11520,"Longfin Smelt",30,0,8,"",25713
+"301",10943,"Longfin Smelt",31,0,1,"",25166
+"302",10945,"Longfin Smelt",35,0,1,"",25206
+"303",11521,"Longfin Smelt",33,0,2,"",25721
+"304",11525,"Longfin Smelt",73,0,5,"not expressing; nearly dead",25755
+"305",12026,"Maeotias",NA,3,3,"",NA
+"306",12024,"Maeotias",NA,3,3,"",NA
+"307",12021,"Maeotias",NA,1,1,"",NA
+"308",12058,"Maeotias",NA,4,4,"",NA
+"309",12059,"Maeotias",NA,1,1,"",NA
+"310",11514,"Mississippi Silverside",68,0,14,"",25681
+"311",10288,"Mississippi Silverside",54,109,139,"",24744
+"312",10288,"Mississippi Silverside",61,109,139,"",24724
+"313",10288,"Mississippi Silverside",58,109,139,"",24783
+"314",12120,"Mississippi Silverside",47,0,12,"",26405
+"315",10288,"Mississippi Silverside",72,109,139,"",24774
+"316",10288,"Mississippi Silverside",57,109,139,"",24736
+"317",10289,"Mississippi Silverside",58,63,93,"",24753
+"318",10285,"Mississippi Silverside",84,0,1,"",24721
+"319",10288,"Mississippi Silverside",67,109,139,"",24743
+"320",11514,"Mississippi Silverside",66,0,14,"",25686
+"321",10288,"Mississippi Silverside",68,109,139,"",24738
+"322",10289,"Mississippi Silverside",64,63,93,"",24731
+"323",10288,"Mississippi Silverside",82,109,139,"",24734
+"324",10288,"Mississippi Silverside",60,109,139,"",24726
+"325",10289,"Mississippi Silverside",56,63,93,"",24739
+"326",10288,"Mississippi Silverside",70,109,139,"",24784
+"327",10288,"Mississippi Silverside",67,109,139,"",24748
+"328",11514,"Mississippi Silverside",72,0,14,"",25693
+"329",12121,"Mississippi Silverside",50,7,37,"",26512
+"330",12054,"Mississippi Silverside",42,0,4,"",26138
+"331",10289,"Mississippi Silverside",54,63,93,"",24727
+"332",10289,"Mississippi Silverside",54,63,93,"",24728
+"333",12121,"Mississippi Silverside",56,7,37,"",26520
+"334",10289,"Mississippi Silverside",64,63,93,"",24766
+"335",10289,"Mississippi Silverside",54,63,93,"",24732
+"336",11514,"Mississippi Silverside",47,0,14,"",25685
+"337",10288,"Mississippi Silverside",70,109,139,"",24785
+"338",10289,"Mississippi Silverside",60,63,93,"",24733
+"339",12121,"Mississippi Silverside",44,7,37,"",26508
+"340",12121,"Mississippi Silverside",65,7,37,"",26528
+"341",10288,"Mississippi Silverside",73,109,139,"",24777
+"342",10289,"Mississippi Silverside",62,63,93,"",24765
+"343",10289,"Mississippi Silverside",62,63,93,"",24756
+"344",12124,"Mississippi Silverside",52,113,143,"",26553
+"345",10289,"Mississippi Silverside",60,63,93,"",24757
+"346",10289,"Mississippi Silverside",63,63,93,"",24755
+"347",10288,"Mississippi Silverside",57,109,139,"",24769
+"348",10288,"Mississippi Silverside",62,109,139,"",24723
+"349",10288,"Mississippi Silverside",59,109,139,"",24781
+"350",10288,"Mississippi Silverside",54,109,139,"",24780
+"351",10288,"Mississippi Silverside",63,109,139,"",24779
+"352",10289,"Mississippi Silverside",49,63,93,"",24746
+"353",10289,"Mississippi Silverside",62,63,93,"",24754
+"354",10290,"Mississippi Silverside",66,0,18,"",24802
+"355",10288,"Mississippi Silverside",57,109,139,"",24778
+"356",10290,"Mississippi Silverside",71,0,18,"",24807
+"357",10290,"Mississippi Silverside",58,0,18,"",24801
+"358",12124,"Mississippi Silverside",62,113,143,"",26546
+"359",12172,"Mississippi Silverside",61,11,41,"",27168
+"360",12124,"Mississippi Silverside",65,113,143,"",26540
+"361",10289,"Mississippi Silverside",56,63,93,"",24767
+"362",12124,"Mississippi Silverside",48,113,143,"",26555
+"363",10288,"Mississippi Silverside",60,109,139,"",24776
+"364",10288,"Mississippi Silverside",49,109,139,"",24773
+"365",12124,"Mississippi Silverside",59,113,143,"",26545
+"366",10288,"Mississippi Silverside",56,109,139,"",24747
+"367",10290,"Mississippi Silverside",68,0,18,"",24804
+"368",10290,"Mississippi Silverside",56,0,18,"",24813
+"369",10978,"Mississippi Silverside",70,0,1,"",25261
+"370",10290,"Mississippi Silverside",52,0,18,"",24817
+"371",10290,"Mississippi Silverside",54,0,18,"",24815
+"372",10290,"Mississippi Silverside",52,0,18,"",24816
+"373",10290,"Mississippi Silverside",66,0,18,"",24808
+"374",10290,"Mississippi Silverside",54,0,18,"",24803
+"375",10289,"Mississippi Silverside",66,63,93,"",24735
+"376",10289,"Mississippi Silverside",56,63,93,"",24758
+"377",10290,"Mississippi Silverside",69,0,18,"",24800
+"378",10290,"Mississippi Silverside",74,0,18,"",24806
+"379",10290,"Mississippi Silverside",63,0,18,"",24805
+"380",12126,"Mississippi Silverside",75,896,926,"",26576
+"381",12174,"Mississippi Silverside",69,0,27,"",27226
+"382",12126,"Mississippi Silverside",63,896,926,"",26595
+"383",10290,"Mississippi Silverside",72,0,18,"",24818
+"384",10290,"Mississippi Silverside",64,0,18,"",24814
+"385",12161,"Mississippi Silverside",52,68,98,"",26907
+"386",12124,"Mississippi Silverside",52,113,143,"",26562
+"387",12126,"Mississippi Silverside",68,896,926,"",26590
+"388",12161,"Mississippi Silverside",65,68,98,"",26923
+"389",10292,"Mississippi Silverside",50,140,170,"",24843
+"390",10289,"Mississippi Silverside",61,63,93,"",24759
+"391",10289,"Mississippi Silverside",53,63,93,"",24763
+"392",12161,"Mississippi Silverside",51,68,98,"",26901
+"393",10288,"Mississippi Silverside",73,109,139,"",24768
+"394",10292,"Mississippi Silverside",59,140,170,"",24842
+"395",12124,"Mississippi Silverside",79,113,143,"",26564
+"396",10292,"Mississippi Silverside",72,140,170,"",24846
+"397",12103,"Mississippi Silverside",57,83,113,"",26250
+"398",10292,"Mississippi Silverside",48,140,170,"",24837
+"399",10292,"Mississippi Silverside",48,140,170,"",24836
+"400",10292,"Mississippi Silverside",58,140,170,"",24823
+"401",12124,"Mississippi Silverside",64,113,143,"",26552
+"402",10292,"Mississippi Silverside",60,140,170,"",24847
+"403",11463,"Mississippi Silverside",70,0,5,"",25470
+"404",10290,"Mississippi Silverside",74,0,18,"",24799
+"405",10292,"Mississippi Silverside",60,140,170,"",24827
+"406",11463,"Mississippi Silverside",73,0,5,"",25469
+"407",11463,"Mississippi Silverside",56,0,5,"",25471
+"408",11463,"Mississippi Silverside",76,0,5,"",25473
+"409",10292,"Mississippi Silverside",69,140,170,"",24849
+"410",10292,"Mississippi Silverside",61,140,170,"",24833
+"411",10292,"Mississippi Silverside",63,140,170,"",24830
+"412",10292,"Mississippi Silverside",39,140,170,"",24839
+"413",10292,"Mississippi Silverside",54,140,170,"",24838
+"414",10292,"Mississippi Silverside",60,140,170,"",24852
+"415",10292,"Mississippi Silverside",65,140,170,"",24850
+"416",10288,"Mississippi Silverside",58,109,139,"",24745
+"417",10292,"Mississippi Silverside",50,140,170,"",24844
+"418",10288,"Mississippi Silverside",58,109,139,"",24730
+"419",10288,"Mississippi Silverside",58,109,139,"",24771
+"420",11468,"Mississippi Silverside",57,95,125,"",25478
+"421",10290,"Mississippi Silverside",53,0,18,"",24809
+"422",10292,"Mississippi Silverside",50,140,170,"",24848
+"423",11468,"Mississippi Silverside",64,95,125,"",25502
+"424",10292,"Mississippi Silverside",64,140,170,"",24831
+"425",11468,"Mississippi Silverside",58,95,125,"",25484
+"426",10292,"Mississippi Silverside",51,140,170,"",24851
+"427",11468,"Mississippi Silverside",58,95,125,"",29141
+"428",10292,"Mississippi Silverside",57,140,170,"",24832
+"429",10292,"Mississippi Silverside",70,140,170,"",24828
+"430",11468,"Mississippi Silverside",51,95,125,"",25493
+"431",11468,"Mississippi Silverside",58,95,125,"",25491
+"432",10288,"Mississippi Silverside",56,109,139,"",24751
+"433",10292,"Mississippi Silverside",46,140,170,"",24840
+"434",11468,"Mississippi Silverside",56,95,125,"",25495
+"435",11468,"Mississippi Silverside",60,95,125,"",25479
+"436",11468,"Mississippi Silverside",63,95,125,"",25499
+"437",11468,"Mississippi Silverside",57,95,125,"",25498
+"438",11468,"Mississippi Silverside",55,95,125,"",25503
+"439",11468,"Mississippi Silverside",63,95,125,"",25494
+"440",10289,"Mississippi Silverside",53,63,93,"",24729
+"441",11468,"Mississippi Silverside",63,95,125,"",25506
+"442",11468,"Mississippi Silverside",59,95,125,"",25501
+"443",11468,"Mississippi Silverside",76,95,125,"",25486
+"444",10292,"Mississippi Silverside",62,140,170,"",24845
+"445",10289,"Mississippi Silverside",45,63,93,"",24737
+"446",11470,"Mississippi Silverside",56,1,15,"",25522
+"447",11470,"Mississippi Silverside",73,1,15,"",25515
+"448",12108,"Mississippi Silverside",32,77,107,"",26285
+"449",11470,"Mississippi Silverside",58,1,15,"",25517
+"450",10289,"Mississippi Silverside",56,63,93,"",24750
+"451",12108,"Mississippi Silverside",30,77,107,"",26295
+"452",10296,"Mississippi Silverside",83,0,1,"",24875
+"453",10289,"Mississippi Silverside",48,63,93,"",24742
+"454",10298,"Mississippi Silverside",67,0,1,"",24877
+"455",11470,"Mississippi Silverside",56,1,15,"",25514
+"456",11470,"Mississippi Silverside",52,1,15,"",25523
+"457",11470,"Mississippi Silverside",58,1,15,"",25521
+"458",12054,"Mississippi Silverside",41,0,4,"",26137
+"459",10304,"Mississippi Silverside",78,0,1,"",24880
+"460",12108,"Mississippi Silverside",32,77,107,"",26294
+"461",10292,"Mississippi Silverside",62,140,170,"",24829
+"462",12108,"Mississippi Silverside",43,77,107,"",26283
+"463",11470,"Mississippi Silverside",50,1,15,"",25518
+"464",12108,"Mississippi Silverside",28,77,107,"",26299
+"465",12108,"Mississippi Silverside",52,77,107,"",26275
+"466",10311,"Mississippi Silverside",72,1,26,"",24921
+"467",10311,"Mississippi Silverside",52,1,26,"",24935
+"468",10311,"Mississippi Silverside",66,1,26,"",24934
+"469",10289,"Mississippi Silverside",54,63,93,"",24764
+"470",10311,"Mississippi Silverside",50,1,26,"",24923
+"471",12109,"Mississippi Silverside",82,0,17,"",26304
+"472",11468,"Mississippi Silverside",62,95,125,"",25489
+"473",11468,"Mississippi Silverside",52,95,125,"",25492
+"474",10311,"Mississippi Silverside",61,1,26,"",24939
+"475",10311,"Mississippi Silverside",70,1,26,"",24940
+"476",10311,"Mississippi Silverside",59,1,26,"",24924
+"477",11470,"Mississippi Silverside",50,1,15,"",25513
+"478",10311,"Mississippi Silverside",84,1,26,"",24919
+"479",10311,"Mississippi Silverside",73,1,26,"",24918
+"480",10311,"Mississippi Silverside",63,1,26,"",24920
+"481",10311,"Mississippi Silverside",70,1,26,"",24930
+"482",10311,"Mississippi Silverside",68,1,26,"",24941
+"483",10311,"Mississippi Silverside",65,1,26,"",24938
+"484",12109,"Mississippi Silverside",73,0,17,"",26309
+"485",10311,"Mississippi Silverside",53,1,26,"",24922
+"486",11545,"Mississippi Silverside",62,0,11,"",25853
+"487",10311,"Mississippi Silverside",30,1,26,"",24942
+"488",10311,"Mississippi Silverside",60,1,26,"",24931
+"489",10311,"Mississippi Silverside",54,1,26,"",24932
+"490",11545,"Mississippi Silverside",81,0,11,"",25845
+"491",10311,"Mississippi Silverside",61,1,26,"",24929
+"492",10311,"Mississippi Silverside",80,1,26,"",24925
+"493",12111,"Mississippi Silverside",80,0,5,"",26320
+"494",10311,"Mississippi Silverside",73,1,26,"",24926
+"495",10311,"Mississippi Silverside",63,1,26,"",24927
+"496",12161,"Mississippi Silverside",48,68,98,"",26910
+"497",10290,"Mississippi Silverside",55,0,18,"",24812
+"498",12143,"Mississippi Silverside",83,7,37,"",26703
+"499",12143,"Mississippi Silverside",77,7,37,"",26687
+"500",11470,"Mississippi Silverside",64,1,15,"",25511
+"501",12115,"Mississippi Silverside",51,0,3,"",26331
+"502",11546,"Mississippi Silverside",63,0,18,"",25876
+"503",10313,"Mississippi Silverside",74,0,1,"",24943
+"504",11471,"Mississippi Silverside",52,0,8,"",25551
+"505",11471,"Mississippi Silverside",64,0,8,"",25553
+"506",11471,"Mississippi Silverside",61,0,8,"",25552
+"507",12126,"Mississippi Silverside",74,896,926,"",26570
+"508",11471,"Mississippi Silverside",53,0,8,"",25550
+"509",11471,"Mississippi Silverside",72,0,8,"",25554
+"510",11546,"Mississippi Silverside",62,0,18,"",25889
+"511",11546,"Mississippi Silverside",55,0,18,"",25878
+"512",10311,"Mississippi Silverside",62,1,26,"",24933
+"513",10311,"Mississippi Silverside",59,1,26,"",24936
+"514",12118,"Mississippi Silverside",43,51,81,"",26501
+"515",12143,"Mississippi Silverside",54,7,37,"",26696
+"516",10292,"Mississippi Silverside",53,140,170,"",24835
+"517",11546,"Mississippi Silverside",70,0,18,"",25885
+"518",10317,"Mississippi Silverside",72,17,47,"",24970
+"519",10317,"Mississippi Silverside",65,17,47,"",24968
+"520",10317,"Mississippi Silverside",69,17,47,"",24988
+"521",10317,"Mississippi Silverside",47,17,47,"",24989
+"522",10317,"Mississippi Silverside",54,17,47,"",24984
+"523",10317,"Mississippi Silverside",58,17,47,"",24969
+"524",10317,"Mississippi Silverside",60,17,47,"",24967
+"525",10317,"Mississippi Silverside",60,17,47,"",24977
+"526",12118,"Mississippi Silverside",63,51,81,"",26469
+"527",10317,"Mississippi Silverside",52,17,47,"",24960
+"528",10317,"Mississippi Silverside",70,17,47,"",24973
+"529",10317,"Mississippi Silverside",76,17,47,"",24979
+"530",10317,"Mississippi Silverside",58,17,47,"",24982
+"531",10317,"Mississippi Silverside",66,17,47,"",24983
+"532",10317,"Mississippi Silverside",60,17,47,"",24966
+"533",10317,"Mississippi Silverside",63,17,47,"",24986
+"534",10317,"Mississippi Silverside",58,17,47,"",24987
+"535",10317,"Mississippi Silverside",75,17,47,"",24961
+"536",10317,"Mississippi Silverside",60,17,47,"",24972
+"537",10292,"Mississippi Silverside",54,140,170,"",24825
+"538",10317,"Mississippi Silverside",59,17,47,"",24964
+"539",10317,"Mississippi Silverside",56,17,47,"",24965
+"540",10317,"Mississippi Silverside",62,17,47,"",24980
+"541",10317,"Mississippi Silverside",60,17,47,"",24978
+"542",10317,"Mississippi Silverside",50,17,47,"",24971
+"543",10317,"Mississippi Silverside",55,17,47,"",24985
+"544",10317,"Mississippi Silverside",58,17,47,"",24976
+"545",10317,"Mississippi Silverside",54,17,47,"",24981
+"546",10317,"Mississippi Silverside",57,17,47,"",24974
+"547",10317,"Mississippi Silverside",57,17,47,"",24962
+"548",10317,"Mississippi Silverside",61,17,47,"",24975
+"549",12198,"Mississippi Silverside",78,100,130,"",27415
+"550",11477,"Mississippi Silverside",57,60,90,"",25579
+"551",11477,"Mississippi Silverside",52,60,90,"",25575
+"552",11477,"Mississippi Silverside",42,60,90,"",25596
+"553",11477,"Mississippi Silverside",61,60,90,"",25574
+"554",11477,"Mississippi Silverside",70,60,90,"",25599
+"555",11477,"Mississippi Silverside",57,60,90,"",25598
+"556",11477,"Mississippi Silverside",61,60,90,"",25601
+"557",11477,"Mississippi Silverside",58,60,90,"",25600
+"558",11477,"Mississippi Silverside",56,60,90,"",25591
+"559",11477,"Mississippi Silverside",48,60,90,"",25590
+"560",12119,"Mississippi Silverside",48,17,47,"",26336
+"561",10320,"Mississippi Silverside",48,25,55,"",25010
+"562",11477,"Mississippi Silverside",63,60,90,"",25582
+"563",10320,"Mississippi Silverside",70,25,55,"",25016
+"564",10320,"Mississippi Silverside",60,25,55,"",25004
+"565",11468,"Mississippi Silverside",51,95,125,"",25490
+"566",11477,"Mississippi Silverside",59,60,90,"",25592
+"567",11477,"Mississippi Silverside",59,60,90,"",25581
+"568",10320,"Mississippi Silverside",69,25,55,"",25008
+"569",11477,"Mississippi Silverside",49,60,90,"",25584
+"570",10320,"Mississippi Silverside",56,25,55,"",25013
+"571",10320,"Mississippi Silverside",52,25,55,"",25011
+"572",10320,"Mississippi Silverside",52,25,55,"",25014
+"573",10320,"Mississippi Silverside",55,25,55,"",25009
+"574",10320,"Mississippi Silverside",50,25,55,"",25030
+"575",11548,"Mississippi Silverside",75,0,5,"",25944
+"576",10320,"Mississippi Silverside",50,25,55,"",25032
+"577",10320,"Mississippi Silverside",52,25,55,"",25015
+"578",10320,"Mississippi Silverside",62,25,55,"",25020
+"579",10320,"Mississippi Silverside",54,25,55,"",25006
+"580",10320,"Mississippi Silverside",57,25,55,"",25021
+"581",10320,"Mississippi Silverside",46,25,55,"",25022
+"582",10320,"Mississippi Silverside",46,25,55,"",25028
+"583",10320,"Mississippi Silverside",70,25,55,"",25025
+"584",10320,"Mississippi Silverside",63,25,55,"",25012
+"585",10320,"Mississippi Silverside",55,25,55,"",25027
+"586",10320,"Mississippi Silverside",55,25,55,"",25007
+"587",10320,"Mississippi Silverside",46,25,55,"",25005
+"588",10320,"Mississippi Silverside",48,25,55,"",25031
+"589",10320,"Mississippi Silverside",62,25,55,"",25003
+"590",10320,"Mississippi Silverside",55,25,55,"",25017
+"591",10320,"Mississippi Silverside",47,25,55,"",25026
+"592",10320,"Mississippi Silverside",58,25,55,"",25019
+"593",10320,"Mississippi Silverside",50,25,55,"",25024
+"594",10320,"Mississippi Silverside",49,25,55,"",25023
+"595",10320,"Mississippi Silverside",56,25,55,"",25018
+"596",11478,"Mississippi Silverside",53,0,24,"",25635
+"597",11552,"Mississippi Silverside",75,0,16,"",25978
+"598",11478,"Mississippi Silverside",58,0,24,"",25625
+"599",11478,"Mississippi Silverside",73,0,24,"",25637
+"600",11478,"Mississippi Silverside",69,0,24,"",25626
+"601",11478,"Mississippi Silverside",65,0,24,"",25638
+"602",11552,"Mississippi Silverside",100,0,16,"",25968
+"603",11478,"Mississippi Silverside",64,0,24,"",25628
+"604",11478,"Mississippi Silverside",58,0,24,"",25629
+"605",11552,"Mississippi Silverside",79,0,16,"",25977
+"606",11552,"Mississippi Silverside",77,0,16,"",25976
+"607",11478,"Mississippi Silverside",66,0,24,"",25633
+"608",11552,"Mississippi Silverside",79,0,16,"",25970
+"609",11552,"Mississippi Silverside",79,0,16,"",25973
+"610",11478,"Mississippi Silverside",73,0,24,"",25631
+"611",11552,"Mississippi Silverside",91,0,16,"",25974
+"612",11478,"Mississippi Silverside",58,0,24,"",25636
+"613",11553,"Mississippi Silverside",65,0,2,"",25981
+"614",12158,"Mississippi Silverside",61,8,38,"",26787
+"615",11478,"Mississippi Silverside",67,0,24,"",25627
+"616",12120,"Mississippi Silverside",49,0,12,"",26394
+"617",10311,"Mississippi Silverside",92,1,26,"",24928
+"618",12111,"Mississippi Silverside",84,0,5,"",26319
+"619",12158,"Mississippi Silverside",57,8,38,"",26782
+"620",11553,"Mississippi Silverside",79,0,2,"",25982
+"621",12158,"Mississippi Silverside",87,8,38,"",26791
+"622",12158,"Mississippi Silverside",65,8,38,"",26771
+"623",12120,"Mississippi Silverside",46,0,12,"",26402
+"624",12158,"Mississippi Silverside",78,8,38,"",26790
+"625",12158,"Mississippi Silverside",86,8,38,"",26789
+"626",12159,"Mississippi Silverside",70,17,47,"",26804
+"627",11503,"Mississippi Silverside",66,0,6,"",25664
+"628",11503,"Mississippi Silverside",69,0,6,"",25666
+"629",11503,"Mississippi Silverside",68,0,6,"",25661
+"630",11503,"Mississippi Silverside",54,0,6,"",25665
+"631",11503,"Mississippi Silverside",66,0,6,"",25663
+"632",11503,"Mississippi Silverside",52,0,6,"",25662
+"633",11504,"Mississippi Silverside",65,0,2,"",25668
+"634",12103,"Mississippi Silverside",79,83,113,"",26234
+"635",12159,"Mississippi Silverside",60,17,47,"",26822
+"636",12159,"Mississippi Silverside",56,17,47,"",26823
+"637",11471,"Mississippi Silverside",64,0,8,"",25548
+"638",12159,"Mississippi Silverside",56,17,47,"",26819
+"639",12159,"Mississippi Silverside",67,17,47,"",26816
+"640",12159,"Mississippi Silverside",71,17,47,"",26813
+"641",12120,"Mississippi Silverside",53,0,12,"",26404
+"642",12159,"Mississippi Silverside",66,17,47,"",26825
+"643",12205,"Mississippi Silverside",70,4,34,"",27510
+"644",12159,"Mississippi Silverside",58,17,47,"",26817
+"645",12159,"Mississippi Silverside",80,17,47,"",26808
+"646",12159,"Mississippi Silverside",69,17,47,"",26809
+"647",12159,"Mississippi Silverside",51,17,47,"",26820
+"648",12159,"Mississippi Silverside",66,17,47,"",26814
+"649",12159,"Mississippi Silverside",63,17,47,"",26812
+"650",12172,"Mississippi Silverside",64,11,41,"",27161
+"651",12159,"Mississippi Silverside",74,17,47,"",26830
+"652",12159,"Mississippi Silverside",63,17,47,"",26827
+"653",10288,"Mississippi Silverside",64,109,139,"",24741
+"654",11514,"Mississippi Silverside",80,0,14,"",25684
+"655",12159,"Mississippi Silverside",77,17,47,"",26818
+"656",12120,"Mississippi Silverside",53,0,12,"",26399
+"657",11514,"Mississippi Silverside",65,0,14,"",25680
+"658",12209,"Mississippi Silverside",67,0,9,"",27528
+"659",11514,"Mississippi Silverside",77,0,14,"",25691
+"660",10288,"Mississippi Silverside",49,109,139,"",24772
+"661",11514,"Mississippi Silverside",77,0,14,"",25682
+"662",11514,"Mississippi Silverside",89,0,14,"",25689
+"663",12120,"Mississippi Silverside",51,0,12,"",26401
+"664",11514,"Mississippi Silverside",60,0,14,"",25694
+"665",11514,"Mississippi Silverside",79,0,14,"",25688
+"666",12172,"Mississippi Silverside",70,11,41,"",27176
+"667",11514,"Mississippi Silverside",77,0,14,"",25683
+"668",11514,"Mississippi Silverside",76,0,14,"",25687
+"669",12121,"Mississippi Silverside",61,7,37,"",26491
+"670",10288,"Mississippi Silverside",48,109,139,"",24770
+"671",11516,"Mississippi Silverside",83,0,4,"",25697
+"672",11516,"Mississippi Silverside",51,0,4,"",25699
+"673",11516,"Mississippi Silverside",59,0,4,"",25696
+"674",12121,"Mississippi Silverside",43,7,37,"",26494
+"675",12121,"Mississippi Silverside",64,7,37,"",26522
+"676",12121,"Mississippi Silverside",53,7,37,"",26529
+"677",12121,"Mississippi Silverside",60,7,37,"",26490
+"678",12160,"Mississippi Silverside",64,71,101,"",26836
+"679",12121,"Mississippi Silverside",54,7,37,"",26488
+"680",12160,"Mississippi Silverside",44,71,101,"",26838
+"681",12121,"Mississippi Silverside",58,7,37,"",26492
+"682",12121,"Mississippi Silverside",44,7,37,"",26518
+"683",12121,"Mississippi Silverside",42,7,37,"",26526
+"684",12160,"Mississippi Silverside",52,71,101,"",26842
+"685",12121,"Mississippi Silverside",61,7,37,"",26499
+"686",12121,"Mississippi Silverside",52,7,37,"",26527
+"687",10289,"Mississippi Silverside",49,63,93,"",24752
+"688",12121,"Mississippi Silverside",47,7,37,"",26525
+"689",12121,"Mississippi Silverside",60,7,37,"",26507
+"690",12160,"Mississippi Silverside",53,71,101,"",26848
+"691",12121,"Mississippi Silverside",47,7,37,"",26510
+"692",12121,"Mississippi Silverside",69,7,37,"",26497
+"693",12121,"Mississippi Silverside",66,7,37,"",26505
+"694",12121,"Mississippi Silverside",61,7,37,"",26504
+"695",12121,"Mississippi Silverside",53,7,37,"",26523
+"696",12121,"Mississippi Silverside",46,7,37,"",26506
+"697",12054,"Mississippi Silverside",40,0,4,"",26136
+"698",12160,"Mississippi Silverside",42,71,101,"",26856
+"699",12160,"Mississippi Silverside",48,71,101,"",26857
+"700",12174,"Mississippi Silverside",65,0,27,"",27243
+"701",12160,"Mississippi Silverside",52,71,101,"",26859
+"702",12054,"Mississippi Silverside",50,0,4,"",26139
+"703",12160,"Mississippi Silverside",62,71,101,"",26861
+"704",10289,"Mississippi Silverside",66,63,93,"",24761
+"705",12212,"Mississippi Silverside",54,124,154,"",27571
+"706",12174,"Mississippi Silverside",66,0,27,"",27222
+"707",12174,"Mississippi Silverside",53,0,27,"",27224
+"708",12174,"Mississippi Silverside",65,0,27,"",27236
+"709",12124,"Mississippi Silverside",53,113,143,"",26550
+"710",12174,"Mississippi Silverside",61,0,27,"",27232
+"711",10289,"Mississippi Silverside",61,63,93,"",24749
+"712",12124,"Mississippi Silverside",86,113,143,"",26554
+"713",10289,"Mississippi Silverside",63,63,93,"",24740
+"714",12124,"Mississippi Silverside",59,113,143,"",26556
+"715",12124,"Mississippi Silverside",55,113,143,"",26549
+"716",10289,"Mississippi Silverside",56,63,93,"",24760
+"717",10289,"Mississippi Silverside",59,63,93,"",24762
+"718",12124,"Mississippi Silverside",63,113,143,"",26558
+"719",12174,"Mississippi Silverside",65,0,27,"",27225
+"720",10953,"Mississippi Silverside",64,0,2,"",25241
+"721",12124,"Mississippi Silverside",53,113,143,"",26561
+"722",12174,"Mississippi Silverside",53,0,27,"",27230
+"723",12174,"Mississippi Silverside",56,0,27,"",27229
+"724",12175,"Mississippi Silverside",60,129,159,"",27274
+"725",12212,"Mississippi Silverside",64,124,154,"",27574
+"726",12175,"Mississippi Silverside",56,129,159,"",27268
+"727",10956,"Mississippi Silverside",87,0,1,"",25246
+"728",12124,"Mississippi Silverside",45,113,143,"",26551
+"729",12161,"Mississippi Silverside",53,68,98,"",26927
+"730",12124,"Mississippi Silverside",49,113,143,"",26568
+"731",12124,"Mississippi Silverside",58,113,143,"",26539
+"732",12124,"Mississippi Silverside",65,113,143,"",26543
+"733",12124,"Mississippi Silverside",67,113,143,"",26542
+"734",12124,"Mississippi Silverside",60,113,143,"",26547
+"735",12124,"Mississippi Silverside",74,113,143,"",26566
+"736",12124,"Mississippi Silverside",59,113,143,"",26563
+"737",12124,"Mississippi Silverside",50,113,143,"",26544
+"738",12124,"Mississippi Silverside",58,113,143,"",26565
+"739",12214,"Mississippi Silverside",52,90,120,"",27614
+"740",12126,"Mississippi Silverside",50,896,926,"",26592
+"741",10981,"Mississippi Silverside",75,0,1,"",25265
+"742",12126,"Mississippi Silverside",67,896,926,"",26598
+"743",12175,"Mississippi Silverside",50,129,159,"",27261
+"744",12161,"Mississippi Silverside",60,68,98,"",26902
+"745",12126,"Mississippi Silverside",90,896,926,"",26589
+"746",12161,"Mississippi Silverside",53,68,98,"",26904
+"747",12126,"Mississippi Silverside",78,896,926,"",26597
+"748",12126,"Mississippi Silverside",73,896,926,"",26594
+"749",12175,"Mississippi Silverside",50,129,159,"",27262
+"750",12161,"Mississippi Silverside",52,68,98,"",26908
+"751",12161,"Mississippi Silverside",42,68,98,"",26909
+"752",12175,"Mississippi Silverside",64,129,159,"",27257
+"753",12126,"Mississippi Silverside",75,896,926,"",26593
+"754",10292,"Mississippi Silverside",60,140,170,"",24841
+"755",11471,"Mississippi Silverside",73,0,8,"",25549
+"756",12126,"Mississippi Silverside",52,896,926,"",26591
+"757",12103,"Mississippi Silverside",58,83,113,"",26245
+"758",12103,"Mississippi Silverside",68,83,113,"",26224
+"759",11462,"Mississippi Silverside",80,0,4,"",25462
+"760",12103,"Mississippi Silverside",49,83,113,"",26232
+"761",12126,"Mississippi Silverside",82,896,926,"",26574
+"762",11462,"Mississippi Silverside",81,0,4,"",25465
+"763",11462,"Mississippi Silverside",92,0,4,"",25464
+"764",12103,"Mississippi Silverside",63,83,113,"",26251
+"765",10292,"Mississippi Silverside",53,140,170,"",24834
+"766",12103,"Mississippi Silverside",55,83,113,"",26229
+"767",12103,"Mississippi Silverside",65,83,113,"",26227
+"768",11463,"Mississippi Silverside",63,0,5,"",25472
+"769",12103,"Mississippi Silverside",73,83,113,"",26248
+"770",11527,"Mississippi Silverside",76,0,1,"",25782
+"771",12103,"Mississippi Silverside",70,83,113,"",26237
+"772",12103,"Mississippi Silverside",79,83,113,"",26252
+"773",12103,"Mississippi Silverside",61,83,113,"",26233
+"774",12103,"Mississippi Silverside",60,83,113,"",26223
+"775",12103,"Mississippi Silverside",63,83,113,"",26228
+"776",11465,"Mississippi Silverside",66,0,1,"",25476
+"777",12103,"Mississippi Silverside",55,83,113,"",26249
+"778",12103,"Mississippi Silverside",55,83,113,"",26236
+"779",11468,"Mississippi Silverside",57,95,125,"",25485
+"780",11468,"Mississippi Silverside",54,95,125,"",25483
+"781",11468,"Mississippi Silverside",62,95,125,"",25505
+"782",10292,"Mississippi Silverside",73,140,170,"",24826
+"783",11468,"Mississippi Silverside",56,95,125,"",25496
+"784",12103,"Mississippi Silverside",50,83,113,"",26238
+"785",11468,"Mississippi Silverside",47,95,125,"",25481
+"786",11468,"Mississippi Silverside",63,95,125,"",25482
+"787",12163,"Mississippi Silverside",46,141,171,"",26963
+"788",11468,"Mississippi Silverside",67,95,125,"",25497
+"789",12106,"Mississippi Silverside",74,0,11,"",26261
+"790",11468,"Mississippi Silverside",54,95,125,"",25480
+"791",12106,"Mississippi Silverside",55,0,11,"",26267
+"792",11468,"Mississippi Silverside",59,95,125,"",25500
+"793",11468,"Mississippi Silverside",66,95,125,"",25504
+"794",12106,"Mississippi Silverside",68,0,11,"",26264
+"795",12106,"Mississippi Silverside",87,0,11,"",26265
+"796",12177,"Mississippi Silverside",56,0,11,"",27308
+"797",12177,"Mississippi Silverside",52,0,11,"",27316
+"798",12106,"Mississippi Silverside",74,0,11,"",26259
+"799",12106,"Mississippi Silverside",43,0,11,"",26268
+"800",12106,"Mississippi Silverside",52,0,11,"",26266
+"801",12106,"Mississippi Silverside",73,0,11,"",26260
+"802",12107,"Mississippi Silverside",64,0,1,"",26269
+"803",12108,"Mississippi Silverside",37,77,107,"",26274
+"804",11468,"Mississippi Silverside",56,95,125,"",25488
+"805",12108,"Mississippi Silverside",42,77,107,"",26291
+"806",12108,"Mississippi Silverside",79,77,107,"",26270
+"807",12108,"Mississippi Silverside",36,77,107,"",26287
+"808",12108,"Mississippi Silverside",33,77,107,"",26286
+"809",11468,"Mississippi Silverside",63,95,125,"",25487
+"810",12108,"Mississippi Silverside",43,77,107,"",26278
+"811",12108,"Mississippi Silverside",36,77,107,"",26289
+"812",12164,"Mississippi Silverside",66,283,313,"",26999
+"813",12108,"Mississippi Silverside",45,77,107,"",26284
+"814",12108,"Mississippi Silverside",40,77,107,"",26280
+"815",12164,"Mississippi Silverside",41,283,313,"",26975
+"816",12108,"Mississippi Silverside",40,77,107,"",26290
+"817",12108,"Mississippi Silverside",66,77,107,"",26271
+"818",11470,"Mississippi Silverside",60,1,15,"",25516
+"819",11528,"Mississippi Silverside",76,0,1,"",25825
+"820",12108,"Mississippi Silverside",32,77,107,"",26298
+"821",12108,"Mississippi Silverside",37,77,107,"",26297
+"822",12108,"Mississippi Silverside",54,77,107,"",26276
+"823",11470,"Mississippi Silverside",64,1,15,"",25510
+"824",12164,"Mississippi Silverside",64,283,313,"",27002
+"825",12108,"Mississippi Silverside",35,77,107,"",26292
+"826",12164,"Mississippi Silverside",68,283,313,"",27000
+"827",12108,"Mississippi Silverside",67,77,107,"",26277
+"828",12132,"Mississippi Silverside",54,0,2,"",26651
+"829",12132,"Mississippi Silverside",62,0,2,"",26652
+"830",11470,"Mississippi Silverside",53,1,15,"",25520
+"831",12108,"Mississippi Silverside",49,77,107,"",26279
+"832",12108,"Mississippi Silverside",32,77,107,"",26293
+"833",10311,"Mississippi Silverside",45,1,26,"",24937
+"834",12109,"Mississippi Silverside",73,0,17,"",26303
+"835",12164,"Mississippi Silverside",82,283,313,"",26979
+"836",11545,"Mississippi Silverside",72,0,11,"",25850
+"837",11545,"Mississippi Silverside",79,0,11,"",25852
+"838",12109,"Mississippi Silverside",57,0,17,"",26315
+"839",11470,"Mississippi Silverside",59,1,15,"",25519
+"840",12109,"Mississippi Silverside",55,0,17,"",26314
+"841",11545,"Mississippi Silverside",65,0,11,"",25854
+"842",12109,"Mississippi Silverside",83,0,17,"",26300
+"843",12109,"Mississippi Silverside",80,0,17,"",26313
+"844",11545,"Mississippi Silverside",59,0,11,"",25851
+"845",12109,"Mississippi Silverside",44,0,17,"",26316
+"846",11545,"Mississippi Silverside",78,0,11,"",25849
+"847",12109,"Mississippi Silverside",72,0,17,"",26301
+"848",12143,"Mississippi Silverside",82,7,37,"",26679
+"849",11545,"Mississippi Silverside",54,0,11,"",25844
+"850",12143,"Mississippi Silverside",59,7,37,"",26699
+"851",11545,"Mississippi Silverside",74,0,11,"",25848
+"852",12143,"Mississippi Silverside",77,7,37,"",26675
+"853",11470,"Mississippi Silverside",55,1,15,"",25512
+"854",12167,"Mississippi Silverside",20,144,174,"",27009
+"855",12111,"Mississippi Silverside",71,0,5,"",26318
+"856",11545,"Mississippi Silverside",67,0,11,"",25847
+"857",12143,"Mississippi Silverside",66,7,37,"",26691
+"858",12143,"Mississippi Silverside",53,7,37,"",26681
+"859",12111,"Mississippi Silverside",76,0,5,"",26321
+"860",12167,"Mississippi Silverside",71,144,174,"",27019
+"861",12143,"Mississippi Silverside",65,7,37,"",26693
+"862",12167,"Mississippi Silverside",78,144,174,"",27017
+"863",12167,"Mississippi Silverside",75,144,174,"",27008
+"864",12143,"Mississippi Silverside",75,7,37,"",26683
+"865",12143,"Mississippi Silverside",76,7,37,"",26685
+"866",12115,"Mississippi Silverside",60,0,3,"",26330
+"867",11546,"Mississippi Silverside",68,0,18,"",25875
+"868",12143,"Mississippi Silverside",93,7,37,"",26698
+"869",11546,"Mississippi Silverside",56,0,18,"",25882
+"870",11546,"Mississippi Silverside",71,0,18,"",25883
+"871",11546,"Mississippi Silverside",63,0,18,"",25881
+"872",12118,"Mississippi Silverside",58,51,81,"",26477
+"873",11546,"Mississippi Silverside",61,0,18,"",25886
+"874",12118,"Mississippi Silverside",48,51,81,"",26480
+"875",12118,"Mississippi Silverside",57,51,81,"",26483
+"876",10292,"Mississippi Silverside",67,140,170,"",24824
+"877",11546,"Mississippi Silverside",64,0,18,"",25893
+"878",12143,"Mississippi Silverside",68,7,37,"",26686
+"879",12219,"Mississippi Silverside",72,196,226,"",27720
+"880",11546,"Mississippi Silverside",72,0,18,"",25887
+"881",12118,"Mississippi Silverside",45,51,81,"",26484
+"882",11546,"Mississippi Silverside",68,0,18,"",25880
+"883",11546,"Mississippi Silverside",66,0,18,"",25888
+"884",11546,"Mississippi Silverside",74,0,18,"",25892
+"885",11546,"Mississippi Silverside",80,0,18,"",25891
+"886",11546,"Mississippi Silverside",67,0,18,"",25884
+"887",11546,"Mississippi Silverside",89,0,18,"",25890
+"888",11547,"Mississippi Silverside",47,0,27,"",25901
+"889",11547,"Mississippi Silverside",72,0,27,"",25899
+"890",12144,"Mississippi Silverside",55,0,4,"",26708
+"891",12118,"Mississippi Silverside",62,51,81,"",26513
+"892",12118,"Mississippi Silverside",60,51,81,"",26511
+"893",11547,"Mississippi Silverside",63,0,27,"",25910
+"894",11471,"Mississippi Silverside",62,0,8,"",25547
+"895",12118,"Mississippi Silverside",43,51,81,"",26475
+"896",11547,"Mississippi Silverside",71,0,27,"",25897
+"897",12118,"Mississippi Silverside",75,51,81,"",26485
+"898",12118,"Mississippi Silverside",55,51,81,"",26515
+"899",12118,"Mississippi Silverside",60,51,81,"",26514
+"900",11477,"Mississippi Silverside",60,60,90,"",25602
+"901",10317,"Mississippi Silverside",52,17,47,"",24963
+"902",11547,"Mississippi Silverside",69,0,27,"",25896
+"903",11477,"Mississippi Silverside",54,60,90,"",25603
+"904",11547,"Mississippi Silverside",64,0,27,"",25913
+"905",11477,"Mississippi Silverside",52,60,90,"",25594
+"906",11477,"Mississippi Silverside",69,60,90,"",25576
+"907",11547,"Mississippi Silverside",28,0,27,"",29102
+"908",11477,"Mississippi Silverside",68,60,90,"",25577
+"909",11477,"Mississippi Silverside",48,60,90,"",25587
+"910",11477,"Mississippi Silverside",43,60,90,"",25585
+"911",11477,"Mississippi Silverside",59,60,90,"",25588
+"912",11477,"Mississippi Silverside",67,60,90,"",25593
+"913",12220,"Mississippi Silverside",71,20,50,"",27768
+"914",11547,"Mississippi Silverside",55,0,27,"",25902
+"915",11547,"Mississippi Silverside",65,0,27,"",25894
+"916",12119,"Mississippi Silverside",53,17,47,"",26362
+"917",11547,"Mississippi Silverside",62,0,27,"",25906
+"918",11547,"Mississippi Silverside",64,0,27,"",25917
+"919",12119,"Mississippi Silverside",59,17,47,"",26348
+"920",12119,"Mississippi Silverside",50,17,47,"",26355
+"921",12119,"Mississippi Silverside",51,17,47,"",26354
+"922",12119,"Mississippi Silverside",49,17,47,"",26356
+"923",11547,"Mississippi Silverside",67,0,27,"",25916
+"924",12169,"Mississippi Silverside",62,2,28,"",27076
+"925",11477,"Mississippi Silverside",44,60,90,"",25578
+"926",11547,"Mississippi Silverside",60,0,27,"",25904
+"927",11477,"Mississippi Silverside",64,60,90,"",25597
+"928",11477,"Mississippi Silverside",52,60,90,"",25595
+"929",10320,"Mississippi Silverside",61,25,55,"",25029
+"930",12119,"Mississippi Silverside",43,17,47,"",26341
+"931",12169,"Mississippi Silverside",69,2,28,"",27084
+"932",11477,"Mississippi Silverside",60,60,90,"",25586
+"933",11547,"Mississippi Silverside",76,0,27,"",25914
+"934",11477,"Mississippi Silverside",66,60,90,"",25583
+"935",11477,"Mississippi Silverside",60,60,90,"",25589
+"936",12170,"Mississippi Silverside",80,510,540,"",27110
+"937",11478,"Mississippi Silverside",65,0,24,"",25645
+"938",11548,"Mississippi Silverside",58,0,5,"",25945
+"939",12170,"Mississippi Silverside",56,510,540,"",27121
+"940",11548,"Mississippi Silverside",77,0,5,"",25947
+"941",11478,"Mississippi Silverside",63,0,24,"",25642
+"942",11478,"Mississippi Silverside",57,0,24,"",25644
+"943",11478,"Mississippi Silverside",64,0,24,"",25640
+"944",11478,"Mississippi Silverside",31,0,24,"",25646
+"945",11549,"Mississippi Silverside",60,0,3,"",25949
+"946",11478,"Mississippi Silverside",51,0,24,"",25639
+"947",11550,"Mississippi Silverside",76,0,2,"",25952
+"948",11550,"Mississippi Silverside",69,0,2,"",25953
+"949",12119,"Mississippi Silverside",50,17,47,"",26342
+"950",11478,"Mississippi Silverside",67,0,24,"",28481
+"951",12152,"Mississippi Silverside",84,0,3,"",26761
+"952",12153,"Mississippi Silverside",44,0,2,"",26764
+"953",11478,"Mississippi Silverside",69,0,24,"",25641
+"954",12154,"Mississippi Silverside",44,0,1,"",26766
+"955",11478,"Mississippi Silverside",59,0,24,"",25643
+"956",11478,"Mississippi Silverside",70,0,24,"",25632
+"957",11478,"Mississippi Silverside",66,0,24,"",25630
+"958",11478,"Mississippi Silverside",38,0,24,"",25647
+"959",11478,"Mississippi Silverside",63,0,24,"",25634
+"960",12120,"Mississippi Silverside",62,0,12,"",26396
+"961",12120,"Mississippi Silverside",27,0,12,"",26398
+"962",11552,"Mississippi Silverside",83,0,16,"",25966
+"963",12158,"Mississippi Silverside",72,8,38,"",26786
+"964",11552,"Mississippi Silverside",76,0,16,"",25969
+"965",11552,"Mississippi Silverside",85,0,16,"",25975
+"966",12158,"Mississippi Silverside",63,8,38,"",26797
+"967",11552,"Mississippi Silverside",76,0,16,"",25979
+"968",11552,"Mississippi Silverside",69,0,16,"",25971
+"969",12158,"Mississippi Silverside",75,8,38,"",26779
+"970",12158,"Mississippi Silverside",92,8,38,"",26778
+"971",11552,"Mississippi Silverside",76,0,16,"",25967
+"972",12158,"Mississippi Silverside",67,8,38,"",26793
+"973",12158,"Mississippi Silverside",66,8,38,"",26788
+"974",11552,"Mississippi Silverside",82,0,16,"",25972
+"975",12158,"Mississippi Silverside",86,8,38,"",26775
+"976",12158,"Mississippi Silverside",68,8,38,"",26781
+"977",12158,"Mississippi Silverside",48,8,38,"",26792
+"978",12171,"Mississippi Silverside",65,149,179,"",27152
+"979",12158,"Mississippi Silverside",65,8,38,"",26783
+"980",12158,"Mississippi Silverside",80,8,38,"",26795
+"981",12158,"Mississippi Silverside",86,8,38,"",26769
+"982",12158,"Mississippi Silverside",62,8,38,"",26777
+"983",12171,"Mississippi Silverside",58,149,179,"",27134
+"984",12120,"Mississippi Silverside",46,0,12,"",26397
+"985",12171,"Mississippi Silverside",76,149,179,"",27131
+"986",12171,"Mississippi Silverside",60,149,179,"",27132
+"987",12158,"Mississippi Silverside",81,8,38,"",26770
+"988",12171,"Mississippi Silverside",75,149,179,"",27138
+"989",12171,"Mississippi Silverside",62,149,179,"",27153
+"990",12171,"Mississippi Silverside",72,149,179,"",27136
+"991",12159,"Mississippi Silverside",65,17,47,"",26826
+"992",12159,"Mississippi Silverside",69,17,47,"",26801
+"993",12159,"Mississippi Silverside",56,17,47,"",26805
+"994",12159,"Mississippi Silverside",72,17,47,"",26806
+"995",12159,"Mississippi Silverside",61,17,47,"",26802
+"996",12159,"Mississippi Silverside",48,17,47,"",26807
+"997",12159,"Mississippi Silverside",60,17,47,"",26803
+"998",11504,"Mississippi Silverside",69,0,2,"",25667
+"999",12172,"Mississippi Silverside",34,11,41,"",27173
+"1000",12172,"Mississippi Silverside",53,11,41,"",27171
+"1001",12120,"Mississippi Silverside",51,0,12,"",26403
+"1002",12172,"Mississippi Silverside",52,11,41,"",27170
+"1003",12172,"Mississippi Silverside",40,11,41,"",27186
+"1004",12172,"Mississippi Silverside",69,11,41,"",27167
+"1005",12159,"Mississippi Silverside",57,17,47,"",26810
+"1006",12172,"Mississippi Silverside",53,11,41,"",27169
+"1007",12222,"Mississippi Silverside",65,388,418,"",27843
+"1008",12172,"Mississippi Silverside",54,11,41,"",27164
+"1009",12172,"Mississippi Silverside",49,11,41,"",27182
+"1010",12172,"Mississippi Silverside",49,11,41,"",27172
+"1011",12172,"Mississippi Silverside",53,11,41,"",27180
+"1012",12172,"Mississippi Silverside",57,11,41,"",27178
+"1013",12172,"Mississippi Silverside",52,11,41,"",27166
+"1014",12205,"Mississippi Silverside",50,4,34,"",27508
+"1015",12172,"Mississippi Silverside",43,11,41,"",27175
+"1016",12172,"Mississippi Silverside",52,11,41,"",27163
+"1017",12159,"Mississippi Silverside",50,17,47,"",26815
+"1018",12159,"Mississippi Silverside",55,17,47,"",26828
+"1019",12172,"Mississippi Silverside",58,11,41,"",27179
+"1020",12159,"Mississippi Silverside",68,17,47,"",26811
+"1021",12159,"Mississippi Silverside",68,17,47,"",26829
+"1022",12223,"Mississippi Silverside",98,71,101,"",27892
+"1023",12172,"Mississippi Silverside",57,11,41,"",27157
+"1024",11514,"Mississippi Silverside",86,0,14,"",25692
+"1025",12172,"Mississippi Silverside",49,11,41,"",27183
+"1026",12172,"Mississippi Silverside",57,11,41,"",27162
+"1027",12209,"Mississippi Silverside",80,0,9,"",27527
+"1028",12172,"Mississippi Silverside",50,11,41,"",27188
+"1029",12120,"Mississippi Silverside",46,0,12,"",26400
+"1030",12210,"Mississippi Silverside",85,0,2,"",27530
+"1031",12121,"Mississippi Silverside",55,7,37,"",26502
+"1032",12121,"Mississippi Silverside",50,7,37,"",26495
+"1033",12172,"Mississippi Silverside",44,11,41,"",27159
+"1034",11516,"Mississippi Silverside",71,0,4,"",25698
+"1035",12121,"Mississippi Silverside",55,7,37,"",26517
+"1036",12121,"Mississippi Silverside",62,7,37,"",26496
+"1037",12121,"Mississippi Silverside",59,7,37,"",26500
+"1038",12160,"Mississippi Silverside",51,71,101,"",26832
+"1039",12160,"Mississippi Silverside",52,71,101,"",26833
+"1040",12160,"Mississippi Silverside",49,71,101,"",26834
+"1041",12160,"Mississippi Silverside",32,71,101,"",26835
+"1042",12173,"Mississippi Silverside",46,0,26,"",27212
+"1043",12160,"Mississippi Silverside",50,71,101,"",26837
+"1044",12173,"Mississippi Silverside",52,0,26,"",27213
+"1045",12160,"Mississippi Silverside",52,71,101,"",26839
+"1046",12160,"Mississippi Silverside",53,71,101,"",26840
+"1047",12160,"Mississippi Silverside",47,71,101,"",26841
+"1048",12173,"Mississippi Silverside",56,0,26,"",27203
+"1049",12160,"Mississippi Silverside",51,71,101,"",26843
+"1050",12160,"Mississippi Silverside",47,71,101,"",26844
+"1051",12121,"Mississippi Silverside",56,7,37,"",26493
+"1052",12160,"Mississippi Silverside",45,71,101,"",26846
+"1053",12160,"Mississippi Silverside",47,71,101,"",26847
+"1054",12173,"Mississippi Silverside",46,0,26,"",27205
+"1055",12160,"Mississippi Silverside",70,71,101,"",26849
+"1056",12160,"Mississippi Silverside",48,71,101,"",26850
+"1057",12160,"Mississippi Silverside",42,71,101,"",26851
+"1058",12173,"Mississippi Silverside",49,0,26,"",27201
+"1059",12173,"Mississippi Silverside",64,0,26,"",27202
+"1060",12160,"Mississippi Silverside",67,71,101,"",26854
+"1061",12160,"Mississippi Silverside",55,71,101,"",26855
+"1062",12174,"Mississippi Silverside",72,0,27,"",27241
+"1063",12174,"Mississippi Silverside",56,0,27,"",27242
+"1064",12211,"Mississippi Silverside",60,35,65,"",27555
+"1065",12174,"Mississippi Silverside",60,0,27,"",27237
+"1066",12160,"Mississippi Silverside",41,71,101,"",26860
+"1067",12174,"Mississippi Silverside",71,0,27,"",27235
+"1068",12174,"Mississippi Silverside",62,0,27,"",27238
+"1069",12224,"Mississippi Silverside",82,6,36,"",27907
+"1070",12212,"Mississippi Silverside",82,124,154,"",27570
+"1071",12212,"Mississippi Silverside",49,124,154,"",27569
+"1072",12224,"Mississippi Silverside",76,6,36,"",27903
+"1073",12174,"Mississippi Silverside",70,0,27,"",27233
+"1074",12212,"Mississippi Silverside",77,124,154,"",27568
+"1075",12124,"Mississippi Silverside",55,113,143,"",26548
+"1076",12174,"Mississippi Silverside",63,0,27,"",27245
+"1077",10952,"Mississippi Silverside",67,0,1,"",25239
+"1078",12174,"Mississippi Silverside",61,0,27,"",27219
+"1079",12174,"Mississippi Silverside",60,0,27,"",27231
+"1080",12124,"Mississippi Silverside",75,113,143,"",26541
+"1081",10953,"Mississippi Silverside",51,0,2,"",25240
+"1082",12174,"Mississippi Silverside",58,0,27,"",27228
+"1083",12212,"Mississippi Silverside",58,124,154,"",27581
+"1084",12124,"Mississippi Silverside",73,113,143,"",26560
+"1085",12174,"Mississippi Silverside",64,0,27,"",27221
+"1086",12212,"Mississippi Silverside",73,124,154,"",27577
+"1087",12212,"Mississippi Silverside",63,124,154,"",27580
+"1088",12212,"Mississippi Silverside",46,124,154,"",27575
+"1089",12225,"Mississippi Silverside",75,70,100,"",27935
+"1090",12212,"Mississippi Silverside",61,124,154,"",27586
+"1091",12124,"Mississippi Silverside",81,113,143,"",26567
+"1092",12175,"Mississippi Silverside",46,129,159,"",27259
+"1093",12175,"Mississippi Silverside",47,129,159,"",27269
+"1094",12175,"Mississippi Silverside",53,129,159,"",27246
+"1095",12175,"Mississippi Silverside",42,129,159,"",27272
+"1096",12212,"Mississippi Silverside",68,124,154,"",27573
+"1097",12175,"Mississippi Silverside",53,129,159,"",27265
+"1098",12161,"Mississippi Silverside",54,68,98,"",26905
+"1099",12161,"Mississippi Silverside",55,68,98,"",26906
+"1100",12175,"Mississippi Silverside",49,129,159,"",27267
+"1101",12213,"Mississippi Silverside",50,0,4,"",27599
+"1102",12175,"Mississippi Silverside",46,129,159,"",27264
+"1103",12225,"Mississippi Silverside",72,70,100,"",27946
+"1104",12161,"Mississippi Silverside",40,68,98,"",26911
+"1105",12126,"Mississippi Silverside",80,896,926,"",26580
+"1106",12161,"Mississippi Silverside",48,68,98,"",26900
+"1107",12214,"Mississippi Silverside",31,90,120,"",27609
+"1108",12175,"Mississippi Silverside",43,129,159,"",27270
+"1109",12161,"Mississippi Silverside",55,68,98,"",26903
+"1110",12214,"Mississippi Silverside",37,90,120,"",27624
+"1111",12161,"Mississippi Silverside",51,68,98,"",26918
+"1112",12161,"Mississippi Silverside",64,68,98,"",26919
+"1113",12214,"Mississippi Silverside",38,90,120,"",27629
+"1114",12175,"Mississippi Silverside",48,129,159,"",27254
+"1115",12175,"Mississippi Silverside",45,129,159,"",27273
+"1116",12214,"Mississippi Silverside",38,90,120,"",27605
+"1117",12161,"Mississippi Silverside",56,68,98,"",26924
+"1118",12102,"Mississippi Silverside",54,0,2,"",26221
+"1119",11402,"Mississippi Silverside",51,0,1,"",25449
+"1120",12161,"Mississippi Silverside",57,68,98,"",26914
+"1121",12126,"Mississippi Silverside",49,896,926,"",26573
+"1122",12126,"Mississippi Silverside",76,896,926,"",26578
+"1123",12103,"Mississippi Silverside",62,83,113,"",26241
+"1124",12126,"Mississippi Silverside",57,896,926,"",26575
+"1125",12161,"Mississippi Silverside",44,68,98,"",26920
+"1126",12103,"Mississippi Silverside",60,83,113,"",26235
+"1127",12103,"Mississippi Silverside",69,83,113,"",26240
+"1128",12126,"Mississippi Silverside",87,896,926,"",26579
+"1129",11462,"Mississippi Silverside",62,0,4,"",25463
+"1130",12126,"Mississippi Silverside",99,896,926,"",26577
+"1131",12126,"Mississippi Silverside",62,896,926,"",26583
+"1132",12103,"Mississippi Silverside",51,83,113,"",26244
+"1133",12126,"Mississippi Silverside",60,896,926,"",26584
+"1134",12103,"Mississippi Silverside",50,83,113,"",26230
+"1135",12126,"Mississippi Silverside",79,896,926,"",26585
+"1136",12126,"Mississippi Silverside",84,896,926,"",26582
+"1137",12126,"Mississippi Silverside",70,896,926,"",26581
+"1138",12163,"Mississippi Silverside",40,141,171,"",26950
+"1139",12163,"Mississippi Silverside",56,141,171,"",26948
+"1140",12103,"Mississippi Silverside",58,83,113,"",26239
+"1141",12163,"Mississippi Silverside",54,141,171,"",26958
+"1142",12163,"Mississippi Silverside",54,141,171,"",26934
+"1143",12103,"Mississippi Silverside",49,83,113,"",26243
+"1144",12103,"Mississippi Silverside",52,83,113,"",26226
+"1145",12103,"Mississippi Silverside",85,83,113,"",26242
+"1146",12103,"Mississippi Silverside",46,83,113,"",26247
+"1147",12103,"Mississippi Silverside",51,83,113,"",26246
+"1148",12129,"Mississippi Silverside",59,0,17,"",26644
+"1149",12103,"Mississippi Silverside",61,83,113,"",26225
+"1150",12104,"Mississippi Silverside",53,0,1,"",26253
+"1151",12177,"Mississippi Silverside",51,0,11,"",27318
+"1152",12177,"Mississippi Silverside",57,0,11,"",27315
+"1153",12129,"Mississippi Silverside",50,0,17,"",26642
+"1154",12106,"Mississippi Silverside",59,0,11,"",26263
+"1155",12129,"Mississippi Silverside",70,0,17,"",26639
+"1156",12106,"Mississippi Silverside",80,0,11,"",26262
+"1157",12106,"Mississippi Silverside",58,0,11,"",26258
+"1158",12129,"Mississippi Silverside",78,0,17,"",26630
+"1159",12163,"Mississippi Silverside",45,141,171,"",26944
+"1160",12215,"Mississippi Silverside",43,55,85,"",27638
+"1161",12215,"Mississippi Silverside",39,55,85,"",27650
+"1162",12163,"Mississippi Silverside",54,141,171,"",26953
+"1163",12163,"Mississippi Silverside",76,141,171,"",26954
+"1164",12129,"Mississippi Silverside",58,0,17,"",26638
+"1165",12163,"Mississippi Silverside",33,141,171,"",26957
+"1166",12129,"Mississippi Silverside",54,0,17,"",26641
+"1167",12163,"Mississippi Silverside",43,141,171,"",26956
+"1168",12108,"Mississippi Silverside",37,77,107,"",26288
+"1169",12163,"Mississippi Silverside",39,141,171,"",26942
+"1170",12163,"Mississippi Silverside",56,141,171,"",26955
+"1171",12163,"Mississippi Silverside",59,141,171,"",26952
+"1172",12181,"Mississippi Silverside",61,0,14,"",27322
+"1173",12108,"Mississippi Silverside",34,77,107,"",26281
+"1174",12129,"Mississippi Silverside",56,0,17,"",26629
+"1175",12164,"Mississippi Silverside",71,283,313,"",26976
+"1176",12181,"Mississippi Silverside",62,0,14,"",27326
+"1177",12129,"Mississippi Silverside",53,0,17,"",26637
+"1178",12129,"Mississippi Silverside",69,0,17,"",26636
+"1179",12182,"Mississippi Silverside",43,0,16,"",27344
+"1180",12164,"Mississippi Silverside",42,283,313,"",26987
+"1181",12164,"Mississippi Silverside",56,283,313,"",26988
+"1182",12108,"Mississippi Silverside",49,77,107,"",26282
+"1183",12108,"Mississippi Silverside",44,77,107,"",26272
+"1184",12164,"Mississippi Silverside",58,283,313,"",26982
+"1185",12164,"Mississippi Silverside",76,283,313,"",26974
+"1186",12130,"Mississippi Silverside",76,0,1,"",26647
+"1187",12108,"Mississippi Silverside",34,77,107,"",26296
+"1188",12182,"Mississippi Silverside",53,0,16,"",27340
+"1189",12131,"Mississippi Silverside",75,0,1,"",26650
+"1190",12216,"Mississippi Silverside",60,201,231,"",27691
+"1191",12164,"Mississippi Silverside",39,283,313,"",26989
+"1192",12164,"Mississippi Silverside",62,283,313,"",26977
+"1193",12164,"Mississippi Silverside",42,283,313,"",26994
+"1194",12108,"Mississippi Silverside",38,77,107,"",26273
+"1195",12164,"Mississippi Silverside",72,283,313,"",26996
+"1196",12164,"Mississippi Silverside",61,283,313,"",26995
+"1197",12109,"Mississippi Silverside",84,0,17,"",26302
+"1198",12164,"Mississippi Silverside",73,283,313,"",26997
+"1199",12183,"Mississippi Silverside",44,0,5,"",27353
+"1200",12109,"Mississippi Silverside",57,0,17,"",26305
+"1201",12109,"Mississippi Silverside",54,0,17,"",26311
+"1202",12141,"Mississippi Silverside",70,0,4,"",26663
+"1203",12109,"Mississippi Silverside",80,0,17,"",26312
+"1204",12141,"Mississippi Silverside",75,0,4,"",26664
+"1205",12109,"Mississippi Silverside",85,0,17,"",26310
+"1206",12141,"Mississippi Silverside",89,0,4,"",26662
+"1207",12167,"Mississippi Silverside",75,144,174,"",27020
+"1208",12109,"Mississippi Silverside",68,0,17,"",26307
+"1209",12143,"Mississippi Silverside",64,7,37,"",26684
+"1210",12109,"Mississippi Silverside",46,0,17,"",26306
+"1211",12167,"Mississippi Silverside",72,144,174,"",27026
+"1212",12167,"Mississippi Silverside",58,144,174,"",27035
+"1213",12109,"Mississippi Silverside",69,0,17,"",26308
+"1214",12167,"Mississippi Silverside",68,144,174,"",27010
+"1215",12167,"Mississippi Silverside",85,144,174,"",27018
+"1216",12184,"Mississippi Silverside",51,30,60,"",27371
+"1217",11545,"Mississippi Silverside",79,0,11,"",25846
+"1218",12184,"Mississippi Silverside",66,30,60,"",27363
+"1219",12143,"Mississippi Silverside",80,7,37,"",26680
+"1220",12143,"Mississippi Silverside",80,7,37,"",26690
+"1221",12167,"Mississippi Silverside",68,144,174,"",27034
+"1222",12167,"Mississippi Silverside",71,144,174,"",27011
+"1223",12167,"Mississippi Silverside",79,144,174,"",27022
+"1224",12184,"Mississippi Silverside",50,30,60,"",27377
+"1225",12167,"Mississippi Silverside",79,144,174,"",27016
+"1226",12184,"Mississippi Silverside",42,30,60,"",27365
+"1227",12184,"Mississippi Silverside",52,30,60,"",27362
+"1228",12167,"Mississippi Silverside",74,144,174,"",27021
+"1229",12167,"Mississippi Silverside",62,144,174,"",27029
+"1230",12143,"Mississippi Silverside",84,7,37,"",26677
+"1231",12115,"Mississippi Silverside",64,0,3,"",26329
+"1232",12167,"Mississippi Silverside",81,144,174,"",27015
+"1233",12117,"Mississippi Silverside",37,0,1,"",26332
+"1234",12118,"Mississippi Silverside",60,51,81,"",26478
+"1235",12118,"Mississippi Silverside",61,51,81,"",26489
+"1236",12143,"Mississippi Silverside",67,7,37,"",26700
+"1237",12118,"Mississippi Silverside",61,51,81,"",26474
+"1238",12143,"Mississippi Silverside",73,7,37,"",26682
+"1239",12143,"Mississippi Silverside",71,7,37,"",26702
+"1240",11546,"Mississippi Silverside",68,0,18,"",25877
+"1241",12118,"Mississippi Silverside",49,51,81,"",26481
+"1242",12222,"Mississippi Silverside",53,388,418,"",27862
+"1243",12205,"Mississippi Silverside",58,4,34,"",27502
+"1244",12118,"Mississippi Silverside",72,51,81,"",26470
+"1245",12143,"Mississippi Silverside",63,7,37,"",26689
+"1246",12118,"Mississippi Silverside",48,51,81,"",26479
+"1247",12118,"Mississippi Silverside",48,51,81,"",26509
+"1248",12118,"Mississippi Silverside",45,51,81,"",26524
+"1249",12118,"Mississippi Silverside",55,51,81,"",26503
+"1250",12118,"Mississippi Silverside",51,51,81,"",26498
+"1251",12118,"Mississippi Silverside",42,51,81,"",26482
+"1252",12118,"Mississippi Silverside",68,51,81,"",26472
+"1253",12118,"Mississippi Silverside",35,51,81,"",26487
+"1254",12196,"Mississippi Silverside",72,0,6,"",27405
+"1255",12144,"Mississippi Silverside",50,0,4,"",26706
+"1256",12144,"Mississippi Silverside",38,0,4,"",26705
+"1257",12196,"Mississippi Silverside",69,0,6,"",27404
+"1258",12118,"Mississippi Silverside",41,51,81,"",26519
+"1259",12196,"Mississippi Silverside",72,0,6,"",27403
+"1260",12118,"Mississippi Silverside",52,51,81,"",26473
+"1261",12197,"Mississippi Silverside",60,0,3,"",27411
+"1262",12209,"Mississippi Silverside",74,0,9,"",27524
+"1263",12169,"Mississippi Silverside",65,2,28,"",27074
+"1264",11547,"Mississippi Silverside",64,0,27,"",25911
+"1265",11547,"Mississippi Silverside",68,0,27,"",25895
+"1266",12169,"Mississippi Silverside",78,2,28,"",27081
+"1267",12119,"Mississippi Silverside",53,17,47,"",26349
+"1268",12119,"Mississippi Silverside",50,17,47,"",26360
+"1269",11547,"Mississippi Silverside",55,0,27,"",25909
+"1270",11547,"Mississippi Silverside",63,0,27,"",25900
+"1271",12119,"Mississippi Silverside",58,17,47,"",26359
+"1272",11547,"Mississippi Silverside",52,0,27,"",25918
+"1273",12119,"Mississippi Silverside",73,17,47,"",26352
+"1274",12198,"Mississippi Silverside",64,100,130,"",27416
+"1275",11547,"Mississippi Silverside",63,0,27,"",25912
+"1276",11547,"Mississippi Silverside",66,0,27,"",25919
+"1277",12121,"Mississippi Silverside",52,7,37,"",26486
+"1278",12198,"Mississippi Silverside",37,100,130,"",27422
+"1279",12146,"Mississippi Silverside",42,0,3,"",26734
+"1280",12146,"Mississippi Silverside",36,0,3,"",26735
+"1281",12119,"Mississippi Silverside",53,17,47,"",26346
+"1282",12119,"Mississippi Silverside",54,17,47,"",26347
+"1283",12169,"Mississippi Silverside",59,2,28,"",27085
+"1284",12169,"Mississippi Silverside",56,2,28,"",27071
+"1285",12169,"Mississippi Silverside",73,2,28,"",27067
+"1286",12169,"Mississippi Silverside",67,2,28,"",27068
+"1287",12169,"Mississippi Silverside",55,2,28,"",27079
+"1288",12198,"Mississippi Silverside",69,100,130,"",27441
+"1289",11547,"Mississippi Silverside",66,0,27,"",25898
+"1290",12169,"Mississippi Silverside",47,2,28,"",27069
+"1291",11547,"Mississippi Silverside",67,0,27,"",25903
+"1292",12119,"Mississippi Silverside",38,17,47,"",26345
+"1293",11477,"Mississippi Silverside",55,60,90,"",25580
+"1294",12198,"Mississippi Silverside",72,100,130,"",27418
+"1295",12198,"Mississippi Silverside",30,100,130,"",27437
+"1296",11547,"Mississippi Silverside",71,0,27,"",25908
+"1297",12119,"Mississippi Silverside",63,17,47,"",26353
+"1298",11547,"Mississippi Silverside",53,0,27,"",25907
+"1299",11547,"Mississippi Silverside",67,0,27,"",25915
+"1300",12199,"Mississippi Silverside",61,0,12,"",27448
+"1301",12170,"Mississippi Silverside",62,510,540,"",27115
+"1302",12170,"Mississippi Silverside",53,510,540,"",27120
+"1303",12199,"Mississippi Silverside",63,0,12,"",27449
+"1304",12119,"Mississippi Silverside",50,17,47,"",26340
+"1305",11548,"Mississippi Silverside",63,0,5,"",25946
+"1306",11548,"Mississippi Silverside",62,0,5,"",25943
+"1307",12119,"Mississippi Silverside",61,17,47,"",26343
+"1308",11549,"Mississippi Silverside",99,0,3,"",25948
+"1309",12151,"Mississippi Silverside",70,0,6,"",26754
+"1310",11549,"Mississippi Silverside",64,0,3,"",25950
+"1311",12119,"Mississippi Silverside",47,17,47,"",26351
+"1312",12119,"Mississippi Silverside",46,17,47,"",26338
+"1313",12152,"Mississippi Silverside",45,0,3,"",26763
+"1314",12152,"Mississippi Silverside",75,0,3,"",26762
+"1315",12221,"Mississippi Silverside",75,894,924,"",27815
+"1316",12170,"Mississippi Silverside",81,510,540,"",27106
+"1317",12119,"Mississippi Silverside",53,17,47,"",26334
+"1318",12170,"Mississippi Silverside",60,510,540,"",27098
+"1319",12170,"Mississippi Silverside",60,510,540,"",27102
+"1320",12119,"Mississippi Silverside",53,17,47,"",26337
+"1321",11552,"Mississippi Silverside",87,0,16,"",25965
+"1322",11552,"Mississippi Silverside",80,0,16,"",25980
+"1323",12158,"Mississippi Silverside",82,8,38,"",26785
+"1324",12170,"Mississippi Silverside",66,510,540,"",27099
+"1325",12158,"Mississippi Silverside",73,8,38,"",26772
+"1326",12120,"Mississippi Silverside",50,0,12,"",26395
+"1327",12170,"Mississippi Silverside",61,510,540,"",27112
+"1328",12158,"Mississippi Silverside",63,8,38,"",26794
+"1329",12158,"Mississippi Silverside",62,8,38,"",26774
+"1330",12170,"Mississippi Silverside",32,510,540,"",27101
+"1331",12158,"Mississippi Silverside",71,8,38,"",26798
+"1332",12158,"Mississippi Silverside",73,8,38,"",26776
+"1333",12171,"Mississippi Silverside",65,149,179,"",27145
+"1334",12171,"Mississippi Silverside",84,149,179,"",27127
+"1335",12158,"Mississippi Silverside",74,8,38,"",26796
+"1336",12171,"Mississippi Silverside",50,149,179,"",27148
+"1337",12171,"Mississippi Silverside",54,149,179,"",27128
+"1338",12171,"Mississippi Silverside",71,149,179,"",27129
+"1339",12171,"Mississippi Silverside",53,149,179,"",27150
+"1340",12171,"Mississippi Silverside",60,149,179,"",27135
+"1341",12171,"Mississippi Silverside",76,149,179,"",27151
+"1342",12202,"Mississippi Silverside",87,24,54,"",27462
+"1343",12171,"Mississippi Silverside",78,149,179,"",27144
+"1344",12202,"Mississippi Silverside",58,24,54,"",27477
+"1345",12171,"Mississippi Silverside",70,149,179,"",27140
+"1346",12171,"Mississippi Silverside",81,149,179,"",27141
+"1347",12222,"Mississippi Silverside",52,388,418,"",27864
+"1348",12158,"Mississippi Silverside",60,8,38,"",26780
+"1349",12205,"Mississippi Silverside",69,4,34,"",27500
+"1350",12205,"Mississippi Silverside",64,4,34,"",27499
+"1351",12171,"Mississippi Silverside",63,149,179,"",27142
+"1352",12205,"Mississippi Silverside",88,4,34,"",27495
+"1353",12205,"Mississippi Silverside",60,4,34,"",27494
+"1354",12205,"Mississippi Silverside",73,4,34,"",27505
+"1355",12171,"Mississippi Silverside",80,149,179,"",27133
+"1356",12171,"Mississippi Silverside",73,149,179,"",27155
+"1357",12171,"Mississippi Silverside",64,149,179,"",27139
+"1358",12171,"Mississippi Silverside",60,149,179,"",27130
+"1359",12171,"Mississippi Silverside",58,149,179,"",27154
+"1360",12171,"Mississippi Silverside",65,149,179,"",27143
+"1361",12171,"Mississippi Silverside",62,149,179,"",27137
+"1362",12159,"Mississippi Silverside",59,17,47,"",26824
+"1363",12175,"Mississippi Silverside",53,129,159,"",27252
+"1364",12161,"Mississippi Silverside",43,68,98,"",26915
+"1365",12159,"Mississippi Silverside",58,17,47,"",26821
+"1366",12205,"Mississippi Silverside",60,4,34,"",27506
+"1367",12222,"Mississippi Silverside",56,388,418,"",27838
+"1368",12205,"Mississippi Silverside",53,4,34,"",27503
+"1369",12172,"Mississippi Silverside",66,11,41,"",27174
+"1370",12205,"Mississippi Silverside",88,4,34,"",27514
+"1371",12161,"Mississippi Silverside",51,68,98,"",26925
+"1372",12205,"Mississippi Silverside",67,4,34,"",27492
+"1373",12205,"Mississippi Silverside",63,4,34,"",27489
+"1374",12205,"Mississippi Silverside",51,4,34,"",27516
+"1375",12205,"Mississippi Silverside",42,4,34,"",27488
+"1376",12205,"Mississippi Silverside",59,4,34,"",27515
+"1377",12205,"Mississippi Silverside",51,4,34,"",27507
+"1378",12222,"Mississippi Silverside",59,388,418,"",27859
+"1379",12205,"Mississippi Silverside",56,4,34,"",27490
+"1380",12205,"Mississippi Silverside",54,4,34,"",27487
+"1381",12172,"Mississippi Silverside",48,11,41,"",27184
+"1382",12172,"Mississippi Silverside",63,11,41,"",27185
+"1383",12128,"Mississippi Silverside",32,0,1,"",26606
+"1384",12172,"Mississippi Silverside",59,11,41,"",27177
+"1385",12172,"Mississippi Silverside",71,11,41,"",27158
+"1386",12163,"Mississippi Silverside",55,141,171,"",26951
+"1387",12209,"Mississippi Silverside",62,0,9,"",27525
+"1388",12209,"Mississippi Silverside",71,0,9,"",27520
+"1389",12209,"Mississippi Silverside",90,0,9,"",27522
+"1390",12209,"Mississippi Silverside",74,0,9,"",27526
+"1391",12223,"Mississippi Silverside",55,71,101,"",27888
+"1392",12223,"Mississippi Silverside",55,71,101,"",27879
+"1393",12172,"Mississippi Silverside",63,11,41,"",27160
+"1394",12223,"Mississippi Silverside",83,71,101,"",27878
+"1395",12160,"Mississippi Silverside",40,71,101,"",26852
+"1396",12160,"Mississippi Silverside",50,71,101,"",26853
+"1397",12223,"Mississippi Silverside",64,71,101,"",27900
+"1398",12163,"Mississippi Silverside",38,141,171,"",26945
+"1399",12173,"Mississippi Silverside",60,0,26,"",27196
+"1400",12173,"Mississippi Silverside",52,0,26,"",27195
+"1401",12160,"Mississippi Silverside",65,71,101,"",26858
+"1402",12173,"Mississippi Silverside",65,0,26,"",27207
+"1403",12173,"Mississippi Silverside",60,0,26,"",27197
+"1404",12173,"Mississippi Silverside",54,0,26,"",27214
+"1405",12173,"Mississippi Silverside",67,0,26,"",27215
+"1406",12211,"Mississippi Silverside",54,35,65,"",27560
+"1407",12173,"Mississippi Silverside",49,0,26,"",27217
+"1408",12211,"Mississippi Silverside",48,35,65,"",27540
+"1409",12173,"Mississippi Silverside",54,0,26,"",27218
+"1410",12173,"Mississippi Silverside",68,0,26,"",27194
+"1411",12173,"Mississippi Silverside",54,0,26,"FISH W/OUT EYE; HEALED WOUND NOT CAUSED BY US.",27210
+"1412",12211,"Mississippi Silverside",66,35,65,"",27546
+"1413",12173,"Mississippi Silverside",53,0,26,"",27211
+"1414",12173,"Mississippi Silverside",58,0,26,"",27198
+"1415",12160,"Mississippi Silverside",46,71,101,"",26845
+"1416",12173,"Mississippi Silverside",51,0,26,"",27206
+"1417",12173,"Mississippi Silverside",53,0,26,"",27200
+"1418",12211,"Mississippi Silverside",69,35,65,"",27543
+"1419",12173,"Mississippi Silverside",58,0,26,"",27209
+"1420",12173,"Mississippi Silverside",58,0,26,"",27199
+"1421",12173,"Mississippi Silverside",56,0,26,"",27208
+"1422",12211,"Mississippi Silverside",42,35,65,"",27545
+"1423",12211,"Mississippi Silverside",60,35,65,"",27553
+"1424",12173,"Mississippi Silverside",49,0,26,"",27204
+"1425",12174,"Mississippi Silverside",61,0,27,"",27239
+"1426",12211,"Mississippi Silverside",63,35,65,"",27544
+"1427",12211,"Mississippi Silverside",68,35,65,"",27551
+"1428",12224,"Mississippi Silverside",81,6,36,"",27911
+"1429",12211,"Mississippi Silverside",49,35,65,"",27556
+"1430",12174,"Mississippi Silverside",61,0,27,"",27234
+"1431",12212,"Mississippi Silverside",48,124,154,"",27567
+"1432",12212,"Mississippi Silverside",71,124,154,"",27596
+"1433",12151,"Mississippi Silverside",43,0,6,"",26758
+"1434",12224,"Mississippi Silverside",72,6,36,"",27927
+"1435",12224,"Mississippi Silverside",61,6,36,"",27932
+"1436",12182,"Mississippi Silverside",61,0,16,"",27336
+"1437",12212,"Mississippi Silverside",45,124,154,"",27583
+"1438",12224,"Mississippi Silverside",72,6,36,"",27916
+"1439",12174,"Mississippi Silverside",55,0,27,"",27227
+"1440",12212,"Mississippi Silverside",63,124,154,"",27595
+"1441",12124,"Mississippi Silverside",49,113,143,"",26557
+"1442",12212,"Mississippi Silverside",61,124,154,"",27594
+"1443",12212,"Mississippi Silverside",65,124,154,"",27585
+"1444",12174,"Mississippi Silverside",57,0,27,"",27244
+"1445",12124,"Mississippi Silverside",38,113,143,"",26559
+"1446",12212,"Mississippi Silverside",54,124,154,"",27582
+"1447",12225,"Mississippi Silverside",79,70,100,"",27961
+"1448",12174,"Mississippi Silverside",67,0,27,"",27223
+"1449",12212,"Mississippi Silverside",53,124,154,"",27588
+"1450",12225,"Mississippi Silverside",60,70,100,"",27940
+"1451",12225,"Mississippi Silverside",77,70,100,"",27943
+"1452",12225,"Mississippi Silverside",63,70,100,"",27953
+"1453",12167,"Mississippi Silverside",80,144,174,"",27012
+"1454",12225,"Mississippi Silverside",32,70,100,"",27954
+"1455",12161,"Mississippi Silverside",44,68,98,"",26898
+"1456",12212,"Mississippi Silverside",75,124,154,"",27578
+"1457",12212,"Mississippi Silverside",62,124,154,"",27592
+"1458",12212,"Mississippi Silverside",64,124,154,"",27576
+"1459",12212,"Mississippi Silverside",45,124,154,"",27590
+"1460",12225,"Mississippi Silverside",58,70,100,"",27936
+"1461",12212,"Mississippi Silverside",48,124,154,"",27589
+"1462",12175,"Mississippi Silverside",50,129,159,"",27248
+"1463",12175,"Mississippi Silverside",48,129,159,"",27256
+"1464",12213,"Mississippi Silverside",48,0,4,"",27600
+"1465",12225,"Mississippi Silverside",75,70,100,"",27960
+"1466",12225,"Mississippi Silverside",63,70,100,"",27938
+"1467",12219,"Mississippi Silverside",60,196,226,"",27737
+"1468",12175,"Mississippi Silverside",42,129,159,"",27255
+"1469",12161,"Mississippi Silverside",73,68,98,"",26899
+"1470",12214,"Mississippi Silverside",42,90,120,"",27601
+"1471",12225,"Mississippi Silverside",65,70,100,"",27942
+"1472",12214,"Mississippi Silverside",20,90,120,"",27627
+"1473",12175,"Mississippi Silverside",41,129,159,"",27275
+"1474",12225,"Mississippi Silverside",52,70,100,"",27949
+"1475",12214,"Mississippi Silverside",43,90,120,"",27625
+"1476",12175,"Mississippi Silverside",48,129,159,"",27266
+"1477",12167,"Mississippi Silverside",69,144,174,"",27027
+"1478",12214,"Mississippi Silverside",45,90,120,"",27613
+"1479",12214,"Mississippi Silverside",48,90,120,"",27610
+"1480",12167,"Mississippi Silverside",73,144,174,"",27024
+"1481",12175,"Mississippi Silverside",52,129,159,"",27258
+"1482",12161,"Mississippi Silverside",45,68,98,"",26912
+"1483",12102,"Mississippi Silverside",60,0,2,"",26222
+"1484",12143,"Mississippi Silverside",63,7,37,"",26695
+"1485",12214,"Mississippi Silverside",39,90,120,"",27607
+"1486",12161,"Mississippi Silverside",59,68,98,"",26916
+"1487",12126,"Mississippi Silverside",75,896,926,"",26599
+"1488",12161,"Mississippi Silverside",71,68,98,"",26922
+"1489",12214,"Mississippi Silverside",49,90,120,"",27620
+"1490",12126,"Mississippi Silverside",68,896,926,"",26587
+"1491",12126,"Mississippi Silverside",61,896,926,"",26588
+"1492",12192,"Mississippi Silverside",63,0,2,"",27400
+"1493",12103,"Mississippi Silverside",53,83,113,"",26231
+"1494",12175,"Mississippi Silverside",52,129,159,"",27251
+"1495",12163,"Mississippi Silverside",61,141,171,"",26961
+"1496",12126,"Mississippi Silverside",85,896,926,"",26572
+"1497",12163,"Mississippi Silverside",58,141,171,"",26960
+"1498",12126,"Mississippi Silverside",87,896,926,"",26586
+"1499",12163,"Mississippi Silverside",56,141,171,"",26938
+"1500",12163,"Mississippi Silverside",68,141,171,"",26935
+"1501",12163,"Mississippi Silverside",40,141,171,"",26940
+"1502",12176,"Mississippi Silverside",53,0,18,"",27296
+"1503",12176,"Mississippi Silverside",56,0,18,"",27301
+"1504",12223,"Mississippi Silverside",73,71,101,"",27889
+"1505",12176,"Mississippi Silverside",56,0,18,"",27290
+"1506",12176,"Mississippi Silverside",59,0,18,"",27300
+"1507",12118,"Mississippi Silverside",62,51,81,"",26471
+"1508",12163,"Mississippi Silverside",50,141,171,"",26949
+"1509",12129,"Mississippi Silverside",55,0,17,"",26632
+"1510",12129,"Mississippi Silverside",76,0,17,"",26634
+"1511",12176,"Mississippi Silverside",52,0,18,"",27303
+"1512",12176,"Mississippi Silverside",54,0,18,"",27294
+"1513",12129,"Mississippi Silverside",53,0,17,"",26631
+"1514",12129,"Mississippi Silverside",54,0,17,"",26633
+"1515",12215,"Mississippi Silverside",48,55,85,"",27642
+"1516",12215,"Mississippi Silverside",56,55,85,"",27660
+"1517",12177,"Mississippi Silverside",62,0,11,"",27309
+"1518",12129,"Mississippi Silverside",57,0,17,"",26640
+"1519",12169,"Mississippi Silverside",68,2,28,"",27091
+"1520",12129,"Mississippi Silverside",62,0,17,"",26643
+"1521",12129,"Mississippi Silverside",62,0,17,"",26635
+"1522",12163,"Mississippi Silverside",54,141,171,"",26943
+"1523",12177,"Mississippi Silverside",57,0,11,"",27311
+"1524",12146,"Mississippi Silverside",30,0,3,"",26736
+"1525",12169,"Mississippi Silverside",59,2,28,"",27078
+"1526",12181,"Mississippi Silverside",56,0,14,"",27329
+"1527",12181,"Mississippi Silverside",57,0,14,"",27334
+"1528",12181,"Mississippi Silverside",58,0,14,"",27332
+"1529",12181,"Mississippi Silverside",53,0,14,"",27323
+"1530",12181,"Mississippi Silverside",57,0,14,"",27331
+"1531",12181,"Mississippi Silverside",69,0,14,"",27333
+"1532",12216,"Mississippi Silverside",53,201,231,"",27674
+"1533",12181,"Mississippi Silverside",58,0,14,"",27330
+"1534",12181,"Mississippi Silverside",61,0,14,"",27327
+"1535",12181,"Mississippi Silverside",84,0,14,"",27325
+"1536",12216,"Mississippi Silverside",57,201,231,"",27666
+"1537",12129,"Mississippi Silverside",57,0,17,"",26628
+"1538",12164,"Mississippi Silverside",54,283,313,"",26985
+"1539",12181,"Mississippi Silverside",48,0,14,"",27324
+"1540",12216,"Mississippi Silverside",56,201,231,"",27680
+"1541",12164,"Mississippi Silverside",49,283,313,"",26983
+"1542",12164,"Mississippi Silverside",67,283,313,"",26984
+"1543",12216,"Mississippi Silverside",60,201,231,"",27677
+"1544",12182,"Mississippi Silverside",46,0,16,"",27346
+"1545",12182,"Mississippi Silverside",50,0,16,"",27338
+"1546",12164,"Mississippi Silverside",33,283,313,"",26998
+"1547",12164,"Mississippi Silverside",53,283,313,"",26981
+"1548",12182,"Mississippi Silverside",38,0,16,"",27348
+"1549",12182,"Mississippi Silverside",57,0,16,"",27339
+"1550",12164,"Mississippi Silverside",84,283,313,"",26986
+"1551",12164,"Mississippi Silverside",56,283,313,"",27001
+"1552",12216,"Mississippi Silverside",54,201,231,"",27690
+"1553",12164,"Mississippi Silverside",72,283,313,"",27003
+"1554",12224,"Mississippi Silverside",71,6,36,"",27914
+"1555",12182,"Mississippi Silverside",56,0,16,"",27335
+"1556",12182,"Mississippi Silverside",56,0,16,"",27342
+"1557",12170,"Mississippi Silverside",60,510,540,"",27097
+"1558",12182,"Mississippi Silverside",71,0,16,"",27350
+"1559",12183,"Mississippi Silverside",41,0,5,"",27352
+"1560",12153,"Mississippi Silverside",53,0,2,"",26765
+"1561",12164,"Mississippi Silverside",73,283,313,"",26990
+"1562",12183,"Mississippi Silverside",41,0,5,"",27351
+"1563",12170,"Mississippi Silverside",78,510,540,"",27111
+"1564",12164,"Mississippi Silverside",74,283,313,"",26980
+"1565",12164,"Mississippi Silverside",68,283,313,"",26993
+"1566",12164,"Mississippi Silverside",66,283,313,"",26991
+"1567",12164,"Mississippi Silverside",48,283,313,"",26992
+"1568",12164,"Mississippi Silverside",82,283,313,"",26978
+"1569",12141,"Mississippi Silverside",83,0,4,"",26665
+"1570",12165,"Mississippi Silverside",87,0,2,"",27004
+"1571",12184,"Mississippi Silverside",81,30,60,"",27359
+"1572",12167,"Mississippi Silverside",71,144,174,"",27013
+"1573",12167,"Mississippi Silverside",74,144,174,"",27030
+"1574",12170,"Mississippi Silverside",65,510,540,"",27093
+"1575",12184,"Mississippi Silverside",64,30,60,"",27361
+"1576",12184,"Mississippi Silverside",61,30,60,"",27357
+"1577",12143,"Mississippi Silverside",69,7,37,"",26692
+"1578",12184,"Mississippi Silverside",53,30,60,"",27380
+"1579",12184,"Mississippi Silverside",50,30,60,"",27376
+"1580",12202,"Mississippi Silverside",53,24,54,"",27486
+"1581",12111,"Mississippi Silverside",102,0,5,"",26317
+"1582",12202,"Mississippi Silverside",65,24,54,"",27465
+"1583",12167,"Mississippi Silverside",50,144,174,"",27007
+"1584",12167,"Mississippi Silverside",69,144,174,"",27031
+"1585",12184,"Mississippi Silverside",58,30,60,"",27385
+"1586",12184,"Mississippi Silverside",43,30,60,"",27381
+"1587",12184,"Mississippi Silverside",58,30,60,"",27379
+"1588",12209,"Mississippi Silverside",82,0,9,"",27521
+"1589",12184,"Mississippi Silverside",54,30,60,"",27372
+"1590",12219,"Mississippi Silverside",58,196,226,"",27729
+"1591",12219,"Mississippi Silverside",63,196,226,"",27734
+"1592",12184,"Mississippi Silverside",52,30,60,"",27373
+"1593",12184,"Mississippi Silverside",54,30,60,"",27375
+"1594",12167,"Mississippi Silverside",80,144,174,"",27025
+"1595",12167,"Mississippi Silverside",71,144,174,"",27033
+"1596",12185,"Mississippi Silverside",39,1,3,"",27388
+"1597",12143,"Mississippi Silverside",81,7,37,"",26676
+"1598",12205,"Mississippi Silverside",51,4,34,"",27493
+"1599",12143,"Mississippi Silverside",68,7,37,"",26701
+"1600",12167,"Mississippi Silverside",75,144,174,"",27028
+"1601",12222,"Mississippi Silverside",41,388,418,"",27867
+"1602",12187,"Mississippi Silverside",69,0,4,"",27389
+"1603",12188,"Mississippi Silverside",59,0,2,"",27394
+"1604",12118,"Mississippi Silverside",54,51,81,"",26521
+"1605",12171,"Mississippi Silverside",53,149,179,"",27156
+"1606",12188,"Mississippi Silverside",61,0,2,"",27393
+"1607",12222,"Mississippi Silverside",61,388,418,"",27844
+"1608",12169,"Mississippi Silverside",63,2,28,"",27073
+"1609",12219,"Mississippi Silverside",63,196,226,"",27727
+"1610",12143,"Mississippi Silverside",70,7,37,"",26678
+"1611",12143,"Mississippi Silverside",64,7,37,"",26704
+"1612",12143,"Mississippi Silverside",80,7,37,"",26697
+"1613",12222,"Mississippi Silverside",68,388,418,"",27842
+"1614",12144,"Mississippi Silverside",61,0,4,"",26707
+"1615",12219,"Mississippi Silverside",53,196,226,"",27740
+"1616",12194,"Mississippi Silverside",54,0,1,"",27401
+"1617",12219,"Mississippi Silverside",57,196,226,"",27718
+"1618",12219,"Mississippi Silverside",60,196,226,"",27741
+"1619",12169,"Mississippi Silverside",45,2,28,"",27075
+"1620",12196,"Mississippi Silverside",81,0,6,"",27402
+"1621",12220,"Mississippi Silverside",58,20,50,"",27778
+"1622",12169,"Mississippi Silverside",65,2,28,"",27086
+"1623",12223,"Mississippi Silverside",95,71,101,"",27893
+"1624",12169,"Mississippi Silverside",60,2,28,"",27088
+"1625",12215,"Mississippi Silverside",42,55,85,"",27646
+"1626",12223,"Mississippi Silverside",59,71,101,"",27891
+"1627",12197,"Mississippi Silverside",33,0,3,"",27409
+"1628",12149,"Mississippi Silverside",62,0,1,"",26753
+"1629",12118,"Mississippi Silverside",49,51,81,"",26516
+"1630",12223,"Mississippi Silverside",72,71,101,"",27897
+"1631",12198,"Mississippi Silverside",40,100,130,"",27413
+"1632",12198,"Mississippi Silverside",64,100,130,"",27431
+"1633",12119,"Mississippi Silverside",49,17,47,"",26358
+"1634",12119,"Mississippi Silverside",64,17,47,"",26357
+"1635",12198,"Mississippi Silverside",48,100,130,"",27414
+"1636",12119,"Mississippi Silverside",62,17,47,"",26350
+"1637",12169,"Mississippi Silverside",68,2,28,"",27092
+"1638",12220,"Mississippi Silverside",77,20,50,"",27783
+"1639",12119,"Mississippi Silverside",61,17,47,"",26344
+"1640",12163,"Mississippi Silverside",55,141,171,"",26959
+"1641",12223,"Mississippi Silverside",71,71,101,"",27886
+"1642",12220,"Mississippi Silverside",74,20,50,"",27772
+"1643",12198,"Mississippi Silverside",64,100,130,"",27439
+"1644",12198,"Mississippi Silverside",46,100,130,"",27432
+"1645",12211,"Mississippi Silverside",57,35,65,"",27541
+"1646",12211,"Mississippi Silverside",52,35,65,"",27554
+"1647",12198,"Mississippi Silverside",32,100,130,"",27433
+"1648",12198,"Mississippi Silverside",52,100,130,"",27435
+"1649",12198,"Mississippi Silverside",57,100,130,"",27430
+"1650",12198,"Mississippi Silverside",54,100,130,"",27424
+"1651",12198,"Mississippi Silverside",47,100,130,"",27428
+"1652",12220,"Mississippi Silverside",66,20,50,"",27767
+"1653",12169,"Mississippi Silverside",77,2,28,"",27070
+"1654",12198,"Mississippi Silverside",58,100,130,"",27421
+"1655",12119,"Mississippi Silverside",41,17,47,"",26361
+"1656",12169,"Mississippi Silverside",56,2,28,"",27089
+"1657",11547,"Mississippi Silverside",73,0,27,"",25905
+"1658",12173,"Mississippi Silverside",72,0,26,"",27216
+"1659",12211,"Mississippi Silverside",73,35,65,"",27564
+"1660",12119,"Mississippi Silverside",57,17,47,"",26339
+"1661",12198,"Mississippi Silverside",63,100,130,"",27417
+"1662",12170,"Mississippi Silverside",65,510,540,"",27119
+"1663",12170,"Mississippi Silverside",75,510,540,"",27113
+"1664",12211,"Mississippi Silverside",60,35,65,"",27548
+"1665",12199,"Mississippi Silverside",68,0,12,"",27447
+"1666",12199,"Mississippi Silverside",86,0,12,"",27453
+"1667",12220,"Mississippi Silverside",53,20,50,"",27757
+"1668",12221,"Mississippi Silverside",63,894,924,"",27808
+"1669",12199,"Mississippi Silverside",48,0,12,"",27444
+"1670",12151,"Mississippi Silverside",65,0,6,"",26759
+"1671",12151,"Mississippi Silverside",82,0,6,"",26756
+"1672",12119,"Mississippi Silverside",63,17,47,"",26333
+"1673",12170,"Mississippi Silverside",70,510,540,"",27100
+"1674",12119,"Mississippi Silverside",57,17,47,"",26335
+"1675",12216,"Mississippi Silverside",58,201,231,"",27692
+"1676",12151,"Mississippi Silverside",69,0,6,"",26755
+"1677",12170,"Mississippi Silverside",62,510,540,"",27107
+"1678",12216,"Mississippi Silverside",56,201,231,"",27688
+"1679",12216,"Mississippi Silverside",59,201,231,"",27687
+"1680",12202,"Mississippi Silverside",52,24,54,"",27469
+"1681",12216,"Mississippi Silverside",57,201,231,"",27685
+"1682",12202,"Mississippi Silverside",46,24,54,"",27460
+"1683",12202,"Mississippi Silverside",62,24,54,"",27468
+"1684",12174,"Mississippi Silverside",61,0,27,"",27220
+"1685",12170,"Mississippi Silverside",72,510,540,"",27116
+"1686",12158,"Mississippi Silverside",93,8,38,"",26773
+"1687",12170,"Mississippi Silverside",76,510,540,"",27104
+"1688",12202,"Mississippi Silverside",53,24,54,"",27471
+"1689",12170,"Mississippi Silverside",56,510,540,"",27096
+"1690",12158,"Mississippi Silverside",71,8,38,"",26784
+"1691",12202,"Mississippi Silverside",72,24,54,"",27478
+"1692",12170,"Mississippi Silverside",67,510,540,"",27105
+"1693",12170,"Mississippi Silverside",70,510,540,"",27094
+"1694",12202,"Mississippi Silverside",70,24,54,"",27457
+"1695",12184,"Mississippi Silverside",63,30,60,"",27368
+"1696",12171,"Mississippi Silverside",68,149,179,"",27149
+"1697",12202,"Mississippi Silverside",72,24,54,"",27467
+"1698",12202,"Mississippi Silverside",64,24,54,"",27464
+"1699",12171,"Mississippi Silverside",70,149,179,"",27146
+"1700",12202,"Mississippi Silverside",50,24,54,"",27473
+"1701",12225,"Mississippi Silverside",55,70,100,"",27959
+"1702",12202,"Mississippi Silverside",46,24,54,"",27479
+"1703",12143,"Mississippi Silverside",64,7,37,"",26694
+"1704",12202,"Mississippi Silverside",72,24,54,"",27484
+"1705",12202,"Mississippi Silverside",50,24,54,"",27485
+"1706",12221,"Mississippi Silverside",69,894,924,"",27821
+"1707",12202,"Mississippi Silverside",76,24,54,"",27463
+"1708",12209,"Mississippi Silverside",75,0,9,"",27523
+"1709",12215,"Mississippi Silverside",43,55,85,"",27659
+"1710",12222,"Mississippi Silverside",55,388,418,"",27856
+"1711",12214,"Mississippi Silverside",33,90,120,"",27628
+"1712",12171,"Mississippi Silverside",50,149,179,"",27147
+"1713",12222,"Mississippi Silverside",89,388,418,"",27855
+"1714",12222,"Mississippi Silverside",42,388,418,"",27854
+"1715",12205,"Mississippi Silverside",57,4,34,"",27496
+"1716",12222,"Mississippi Silverside",65,388,418,"",27839
+"1717",12184,"Mississippi Silverside",54,30,60,"",27378
+"1718",12222,"Mississippi Silverside",52,388,418,"",27845
+"1719",12214,"Mississippi Silverside",47,90,120,"",27615
+"1720",12205,"Mississippi Silverside",68,4,34,"",27511
+"1721",12205,"Mississippi Silverside",65,4,34,"",27512
+"1722",12187,"Mississippi Silverside",74,0,4,"",27392
+"1723",12205,"Mississippi Silverside",74,4,34,"",27498
+"1724",12205,"Mississippi Silverside",50,4,34,"",27497
+"1725",12205,"Mississippi Silverside",71,4,34,"",27491
+"1726",12126,"Mississippi Silverside",86,896,926,"",26596
+"1727",12205,"Mississippi Silverside",44,4,34,"",27504
+"1728",12175,"Mississippi Silverside",43,129,159,"",27263
+"1729",12172,"Mississippi Silverside",54,11,41,"",27187
+"1730",12222,"Mississippi Silverside",44,388,418,"",27848
+"1731",12214,"Mississippi Silverside",44,90,120,"",27603
+"1732",12222,"Mississippi Silverside",55,388,418,"",27851
+"1733",12205,"Mississippi Silverside",68,4,34,"",27513
+"1734",12161,"Mississippi Silverside",59,68,98,"",26926
+"1735",12214,"Mississippi Silverside",48,90,120,"",27616
+"1736",12222,"Mississippi Silverside",72,388,418,"",27846
+"1737",12222,"Mississippi Silverside",70,388,418,"",27860
+"1738",12222,"Mississippi Silverside",50,388,418,"",27849
+"1739",12222,"Mississippi Silverside",56,388,418,"",27858
+"1740",12222,"Mississippi Silverside",47,388,418,"",27866
+"1741",12222,"Mississippi Silverside",49,388,418,"",27850
+"1742",12176,"Mississippi Silverside",51,0,18,"",27299
+"1743",12223,"Mississippi Silverside",54,71,101,"",27896
+"1744",12176,"Mississippi Silverside",43,0,18,"",27307
+"1745",12205,"Mississippi Silverside",77,4,34,"",27509
+"1746",12220,"Mississippi Silverside",63,20,50,"",27777
+"1747",12163,"Mississippi Silverside",55,141,171,"",26939
+"1748",12211,"Mississippi Silverside",63,35,65,"",27539
+"1749",12211,"Mississippi Silverside",57,35,65,"",27558
+"1750",12176,"Mississippi Silverside",48,0,18,"",27291
+"1751",12176,"Mississippi Silverside",45,0,18,"",27292
+"1752",12223,"Mississippi Silverside",55,71,101,"",27890
+"1753",12223,"Mississippi Silverside",68,71,101,"",27877
+"1754",12215,"Mississippi Silverside",46,55,85,"",27647
+"1755",12215,"Mississippi Silverside",44,55,85,"",27639
+"1756",12176,"Mississippi Silverside",43,0,18,"",27306
+"1757",12223,"Mississippi Silverside",85,71,101,"",27898
+"1758",12169,"Mississippi Silverside",59,2,28,"",27087
+"1759",12210,"Mississippi Silverside",106,0,2,"",27529
+"1760",12223,"Mississippi Silverside",62,71,101,"",27885
+"1761",12169,"Mississippi Silverside",68,2,28,"",27090
+"1762",12177,"Mississippi Silverside",70,0,11,"",27312
+"1763",12223,"Mississippi Silverside",50,71,101,"",27899
+"1764",12163,"Mississippi Silverside",45,141,171,"",26947
+"1765",12173,"Mississippi Silverside",62,0,26,"",27193
+"1766",12211,"Mississippi Silverside",67,35,65,"",27552
+"1767",12169,"Mississippi Silverside",61,2,28,"",27077
+"1768",12211,"Mississippi Silverside",54,35,65,"",27561
+"1769",12211,"Mississippi Silverside",31,35,65,"",27562
+"1770",12223,"Mississippi Silverside",70,71,101,"",27871
+"1771",12211,"Mississippi Silverside",62,35,65,"",27536
+"1772",12223,"Mississippi Silverside",73,71,101,"",27876
+"1773",12211,"Mississippi Silverside",51,35,65,"",27537
+"1774",12211,"Mississippi Silverside",50,35,65,"",27565
+"1775",12211,"Mississippi Silverside",96,35,65,"",27550
+"1776",12223,"Mississippi Silverside",70,71,101,"",27881
+"1777",12211,"Mississippi Silverside",51,35,65,"",27547
+"1778",12211,"Mississippi Silverside",50,35,65,"",27538
+"1779",12169,"Mississippi Silverside",71,2,28,"",27082
+"1780",12181,"Mississippi Silverside",56,0,14,"",27328
+"1781",12211,"Mississippi Silverside",58,35,65,"",27559
+"1782",12224,"Mississippi Silverside",75,6,36,"",27922
+"1783",12211,"Mississippi Silverside",70,35,65,"",27542
+"1784",12211,"Mississippi Silverside",58,35,65,"",27549
+"1785",12182,"Mississippi Silverside",57,0,16,"",27347
+"1786",12224,"Mississippi Silverside",80,6,36,"",27904
+"1787",12224,"Mississippi Silverside",74,6,36,"",27912
+"1788",12225,"Mississippi Silverside",62,70,100,"",27958
+"1789",12219,"Mississippi Silverside",74,196,226,"",27736
+"1790",12224,"Mississippi Silverside",90,6,36,"",27919
+"1791",12224,"Mississippi Silverside",84,6,36,"",27931
+"1792",12216,"Mississippi Silverside",52,201,231,"",27678
+"1793",12224,"Mississippi Silverside",80,6,36,"",27921
+"1794",12211,"Mississippi Silverside",63,35,65,"",27557
+"1795",12224,"Mississippi Silverside",70,6,36,"",27908
+"1796",12151,"Mississippi Silverside",61,0,6,"",26757
+"1797",12170,"Mississippi Silverside",50,510,540,"",27103
+"1798",12216,"Mississippi Silverside",64,201,231,"",27675
+"1799",12202,"Mississippi Silverside",51,24,54,"",27458
+"1800",12202,"Mississippi Silverside",85,24,54,"",27459
+"1801",12224,"Mississippi Silverside",75,6,36,"",27928
+"1802",12221,"Mississippi Silverside",59,894,924,"",27830
+"1803",12212,"Mississippi Silverside",58,124,154,"",27584
+"1804",12224,"Mississippi Silverside",85,6,36,"",27915
+"1805",12217,"Mississippi Silverside",60,0,2,"",27709
+"1806",12224,"Mississippi Silverside",67,6,36,"",27930
+"1807",12224,"Mississippi Silverside",78,6,36,"",27925
+"1808",12212,"Mississippi Silverside",47,124,154,"",27591
+"1809",12174,"Mississippi Silverside",66,0,27,"",27240
+"1810",12225,"Mississippi Silverside",62,70,100,"",27962
+"1811",12184,"Mississippi Silverside",65,30,60,"",27370
+"1812",12212,"Mississippi Silverside",55,124,154,"",27587
+"1813",12225,"Mississippi Silverside",50,70,100,"",27952
+"1814",12202,"Mississippi Silverside",63,24,54,"",27461
+"1815",12184,"Mississippi Silverside",56,30,60,"",27382
+"1816",12221,"Mississippi Silverside",29,894,924,"",27834
+"1817",12184,"Mississippi Silverside",53,30,60,"",27386
+"1818",12202,"Mississippi Silverside",56,24,54,"",27475
+"1819",12212,"Mississippi Silverside",50,124,154,"",27572
+"1820",12225,"Mississippi Silverside",78,70,100,"",27939
+"1821",12225,"Mississippi Silverside",68,70,100,"",27951
+"1822",12221,"Mississippi Silverside",65,894,924,"",27810
+"1823",12225,"Mississippi Silverside",60,70,100,"",27950
+"1824",12221,"Mississippi Silverside",60,894,924,"",27833
+"1825",12225,"Mississippi Silverside",52,70,100,"",27937
+"1826",12213,"Mississippi Silverside",53,0,4,"",27597
+"1827",12213,"Mississippi Silverside",53,0,4,"",27598
+"1828",12216,"Mississippi Silverside",63,201,231,"",27664
+"1829",12215,"Mississippi Silverside",44,55,85,"",27658
+"1830",12220,"Mississippi Silverside",67,20,50,"",27779
+"1831",12197,"Mississippi Silverside",30,0,3,"",27410
+"1832",12219,"Mississippi Silverside",80,196,226,"",27735
+"1833",12175,"Mississippi Silverside",52,129,159,"",27271
+"1834",12225,"Mississippi Silverside",43,70,100,"",27948
+"1835",12176,"Mississippi Silverside",56,0,18,"",27305
+"1836",12225,"Mississippi Silverside",68,70,100,"",27947
+"1837",12214,"Mississippi Silverside",38,90,120,"",27621
+"1838",12225,"Mississippi Silverside",84,70,100,"",27957
+"1839",12225,"Mississippi Silverside",77,70,100,"",27955
+"1840",12167,"Mississippi Silverside",85,144,174,"",27006
+"1841",12222,"Mississippi Silverside",80,388,418,"",27852
+"1842",12167,"Mississippi Silverside",72,144,174,"",27023
+"1843",12222,"Mississippi Silverside",48,388,418,"",27863
+"1844",12187,"Mississippi Silverside",74,0,4,"",27390
+"1845",12214,"Mississippi Silverside",43,90,120,"",27623
+"1846",12175,"Mississippi Silverside",74,129,159,"",27247
+"1847",12143,"Mississippi Silverside",61,7,37,"",26688
+"1848",12161,"Mississippi Silverside",39,68,98,"",26913
+"1849",12219,"Mississippi Silverside",45,196,226,"",27715
+"1850",12175,"Mississippi Silverside",55,129,159,"",27250
+"1851",12161,"Mississippi Silverside",70,68,98,"",26917
+"1852",12214,"Mississippi Silverside",25,90,120,"",27619
+"1853",12219,"Mississippi Silverside",98,196,226,"",27716
+"1854",12161,"Mississippi Silverside",53,68,98,"",26921
+"1855",12192,"Mississippi Silverside",70,0,2,"",27399
+"1856",12219,"Mississippi Silverside",57,196,226,"",27732
+"1857",12126,"Mississippi Silverside",68,896,926,"",26571
+"1858",12214,"Mississippi Silverside",28,90,120,"",27618
+"1859",12214,"Mississippi Silverside",36,90,120,"",27602
+"1860",12163,"Mississippi Silverside",42,141,171,"",26941
+"1861",12176,"Mississippi Silverside",55,0,18,"",27295
+"1862",12163,"Mississippi Silverside",66,141,171,"",26936
+"1863",12219,"Mississippi Silverside",53,196,226,"",27721
+"1864",12176,"Mississippi Silverside",60,0,18,"",27298
+"1865",12196,"Mississippi Silverside",47,0,6,"",27407
+"1866",12215,"Mississippi Silverside",42,55,85,"",27631
+"1867",12223,"Mississippi Silverside",78,71,101,"",27894
+"1868",12184,"Mississippi Silverside",72,30,60,"",27364
+"1869",12216,"Mississippi Silverside",51,201,231,"",27681
+"1870",12182,"Mississippi Silverside",92,0,16,"",27337
+"1871",12182,"Mississippi Silverside",43,0,16,"",27343
+"1872",12169,"Mississippi Silverside",78,2,28,"",27080
+"1873",12163,"Mississippi Silverside",41,141,171,"",26962
+"1874",12163,"Mississippi Silverside",45,141,171,"",26937
+"1875",12182,"Mississippi Silverside",62,0,16,"",27341
+"1876",12198,"Mississippi Silverside",56,100,130,"",27426
+"1877",12169,"Mississippi Silverside",75,2,28,"",27072
+"1878",12176,"Mississippi Silverside",58,0,18,"",27304
+"1879",12215,"Mississippi Silverside",45,55,85,"",27648
+"1880",12198,"Mississippi Silverside",59,100,130,"",27423
+"1881",12215,"Mississippi Silverside",64,55,85,"",27636
+"1882",12216,"Mississippi Silverside",63,201,231,"",27689
+"1883",12198,"Mississippi Silverside",58,100,130,"",27412
+"1884",12163,"Mississippi Silverside",71,141,171,"",26946
+"1885",12177,"Mississippi Silverside",66,0,11,"",27313
+"1886",12177,"Mississippi Silverside",99,0,11,"",27310
+"1887",12215,"Mississippi Silverside",48,55,85,"",27649
+"1888",12223,"Mississippi Silverside",64,71,101,"",27880
+"1889",12198,"Mississippi Silverside",70,100,130,"",27429
+"1890",12220,"Mississippi Silverside",68,20,50,"",27780
+"1891",12215,"Mississippi Silverside",52,55,85,"",27634
+"1892",12215,"Mississippi Silverside",47,55,85,"",27652
+"1893",12220,"Mississippi Silverside",75,20,50,"",27782
+"1894",12216,"Mississippi Silverside",50,201,231,"",27673
+"1895",12216,"Mississippi Silverside",68,201,231,"",27665
+"1896",12198,"Mississippi Silverside",44,100,130,"",27436
+"1897",12216,"Mississippi Silverside",52,201,231,"",27672
+"1898",12216,"Mississippi Silverside",55,201,231,"",27670
+"1899",12216,"Mississippi Silverside",58,201,231,"",27671
+"1900",12223,"Mississippi Silverside",48,71,101,"",27884
+"1901",12211,"Mississippi Silverside",58,35,65,"",27563
+"1902",12181,"Mississippi Silverside",82,0,14,"",27321
+"1903",12216,"Mississippi Silverside",26,201,231,"",27684
+"1904",12220,"Mississippi Silverside",60,20,50,"",27770
+"1905",12182,"Mississippi Silverside",45,0,16,"",27345
+"1906",12220,"Mississippi Silverside",69,20,50,"",27764
+"1907",12224,"Mississippi Silverside",64,6,36,"",27910
+"1908",12216,"Mississippi Silverside",54,201,231,"",27667
+"1909",12225,"Mississippi Silverside",63,70,100,"",27934
+"1910",12221,"Mississippi Silverside",86,894,924,"",27819
+"1911",12223,"Mississippi Silverside",57,71,101,"",27895
+"1912",12216,"Mississippi Silverside",50,201,231,"",27676
+"1913",12170,"Mississippi Silverside",62,510,540,"",27118
+"1914",12182,"Mississippi Silverside",45,0,16,"",27349
+"1915",12214,"Mississippi Silverside",43,90,120,"",27630
+"1916",12199,"Mississippi Silverside",71,0,12,"",27452
+"1917",12219,"Mississippi Silverside",61,196,226,"",27738
+"1918",12170,"Mississippi Silverside",48,510,540,"",27108
+"1919",12170,"Mississippi Silverside",47,510,540,"",27117
+"1920",12220,"Mississippi Silverside",54,20,50,"",27761
+"1921",12220,"Mississippi Silverside",47,20,50,"",27776
+"1922",12185,"Mississippi Silverside",42,1,3,"",27387
+"1923",12220,"Mississippi Silverside",63,20,50,"",27763
+"1924",12170,"Mississippi Silverside",60,510,540,"",27109
+"1925",12217,"Mississippi Silverside",71,0,2,"",27708
+"1926",12221,"Mississippi Silverside",71,894,924,"",27828
+"1927",12202,"Mississippi Silverside",57,24,54,"",27480
+"1928",12183,"Mississippi Silverside",36,0,5,"",27354
+"1929",12183,"Mississippi Silverside",44,0,5,"",27355
+"1930",12184,"Mississippi Silverside",68,30,60,"",27358
+"1931",12184,"Mississippi Silverside",45,30,60,"",27384
+"1932",12202,"Mississippi Silverside",72,24,54,"",27483
+"1933",12165,"Mississippi Silverside",70,0,2,"",27005
+"1934",12184,"Mississippi Silverside",62,30,60,"",27366
+"1935",12221,"Mississippi Silverside",75,894,924,"",27831
+"1936",12202,"Mississippi Silverside",70,24,54,"",27476
+"1937",12221,"Mississippi Silverside",58,894,924,"",27809
+"1938",12202,"Mississippi Silverside",56,24,54,"",27474
+"1939",12221,"Mississippi Silverside",59,894,924,"",27820
+"1940",12221,"Mississippi Silverside",61,894,924,"",27817
+"1941",12167,"Mississippi Silverside",70,144,174,"",27014
+"1942",12202,"Mississippi Silverside",59,24,54,"",27472
+"1943",12221,"Mississippi Silverside",50,894,924,"",27836
+"1944",12221,"Mississippi Silverside",84,894,924,"",27824
+"1945",12215,"Mississippi Silverside",44,55,85,"",27645
+"1946",12221,"Mississippi Silverside",89,894,924,"",27818
+"1947",12184,"Mississippi Silverside",57,30,60,"",27360
+"1948",12221,"Mississippi Silverside",57,894,924,"",27822
+"1949",12221,"Mississippi Silverside",52,894,924,"",27816
+"1950",12176,"Mississippi Silverside",53,0,18,"",27297
+"1951",12224,"Mississippi Silverside",57,6,36,"",27926
+"1952",12199,"Mississippi Silverside",55,0,12,"",27445
+"1953",12215,"Mississippi Silverside",63,55,85,"",27632
+"1954",12225,"Mississippi Silverside",65,70,100,"",27945
+"1955",12176,"Mississippi Silverside",53,0,18,"",27302
+"1956",12215,"Mississippi Silverside",54,55,85,"",27637
+"1957",12215,"Mississippi Silverside",50,55,85,"",27654
+"1958",12184,"Mississippi Silverside",69,30,60,"",27374
+"1959",12219,"Mississippi Silverside",70,196,226,"",27733
+"1960",12219,"Mississippi Silverside",56,196,226,"",27717
+"1961",12219,"Mississippi Silverside",89,196,226,"",27714
+"1962",12223,"Mississippi Silverside",68,71,101,"",27875
+"1963",12220,"Mississippi Silverside",70,20,50,"",27773
+"1964",12187,"Mississippi Silverside",82,0,4,"",27391
+"1965",12219,"Mississippi Silverside",90,196,226,"",27726
+"1966",12219,"Mississippi Silverside",58,196,226,"",27724
+"1967",12219,"Mississippi Silverside",64,196,226,"",27730
+"1968",12222,"Mississippi Silverside",51,388,418,"",27853
+"1969",12202,"Mississippi Silverside",59,24,54,"",27466
+"1970",12222,"Mississippi Silverside",50,388,418,"",27861
+"1971",12214,"Mississippi Silverside",44,90,120,"",27611
+"1972",12219,"Mississippi Silverside",60,196,226,"",27742
+"1973",12222,"Mississippi Silverside",63,388,418,"",27847
+"1974",12170,"Mississippi Silverside",57,510,540,"",27095
+"1975",12219,"Mississippi Silverside",65,196,226,"",27722
+"1976",12222,"Mississippi Silverside",52,388,418,"",27865
+"1977",12175,"Mississippi Silverside",64,129,159,"",27249
+"1978",12219,"Mississippi Silverside",96,196,226,"",27739
+"1979",12214,"Mississippi Silverside",45,90,120,"",27606
+"1980",12219,"Mississippi Silverside",63,196,226,"",27743
+"1981",12221,"Mississippi Silverside",74,894,924,"",27837
+"1982",12214,"Mississippi Silverside",49,90,120,"",27617
+"1983",12196,"Mississippi Silverside",76,0,6,"",27406
+"1984",12176,"Mississippi Silverside",59,0,18,"",27293
+"1985",12198,"Mississippi Silverside",58,100,130,"",27419
+"1986",12215,"Mississippi Silverside",50,55,85,"",27643
+"1987",12215,"Mississippi Silverside",51,55,85,"",27641
+"1988",12216,"Mississippi Silverside",58,201,231,"",27683
+"1989",12184,"Mississippi Silverside",55,30,60,"",27369
+"1990",12220,"Mississippi Silverside",69,20,50,"",27755
+"1991",12177,"Mississippi Silverside",55,0,11,"",27314
+"1992",12215,"Mississippi Silverside",54,55,85,"",27633
+"1993",12220,"Mississippi Silverside",68,20,50,"",27754
+"1994",12215,"Mississippi Silverside",30,55,85,"",27640
+"1995",12170,"Mississippi Silverside",58,510,540,"",27122
+"1996",12199,"Mississippi Silverside",66,0,12,"",27443
+"1997",12224,"Mississippi Silverside",76,6,36,"",27924
+"1998",12216,"Mississippi Silverside",62,201,231,"",27679
+"1999",12215,"Mississippi Silverside",41,55,85,"",27657
+"2000",12220,"Mississippi Silverside",77,20,50,"",27759
+"2001",12199,"Mississippi Silverside",67,0,12,"",27446
+"2002",12220,"Mississippi Silverside",64,20,50,"",27766
+"2003",12223,"Mississippi Silverside",74,71,101,"",27887
+"2004",12223,"Mississippi Silverside",73,71,101,"",27873
+"2005",12215,"Mississippi Silverside",51,55,85,"",27653
+"2006",12221,"Mississippi Silverside",71,894,924,"",27832
+"2007",12220,"Mississippi Silverside",79,20,50,"",27774
+"2008",12215,"Mississippi Silverside",55,55,85,"",27656
+"2009",12214,"Mississippi Silverside",49,90,120,"",27622
+"2010",12223,"Mississippi Silverside",69,71,101,"",27872
+"2011",12223,"Mississippi Silverside",71,71,101,"",27883
+"2012",12220,"Mississippi Silverside",72,20,50,"",27771
+"2013",12225,"Mississippi Silverside",52,70,100,"",27941
+"2014",12214,"Mississippi Silverside",44,90,120,"",27612
+"2015",12220,"Mississippi Silverside",57,20,50,"",27762
+"2016",12220,"Mississippi Silverside",56,20,50,"",27765
+"2017",12219,"Mississippi Silverside",55,196,226,"",27731
+"2018",12219,"Mississippi Silverside",66,196,226,"",27728
+"2019",12198,"Mississippi Silverside",58,100,130,"",27440
+"2020",12198,"Mississippi Silverside",79,100,130,"",27434
+"2021",12223,"Mississippi Silverside",81,71,101,"",27882
+"2022",12198,"Mississippi Silverside",52,100,130,"",27420
+"2023",12224,"Mississippi Silverside",76,6,36,"",27909
+"2024",12169,"Mississippi Silverside",62,2,28,"",27083
+"2025",12219,"Mississippi Silverside",54,196,226,"",27723
+"2026",12199,"Mississippi Silverside",62,0,12,"",27442
+"2027",12224,"Mississippi Silverside",71,6,36,"",27923
+"2028",12221,"Mississippi Silverside",85,894,924,"",27823
+"2029",12221,"Mississippi Silverside",65,894,924,"",27835
+"2030",12225,"Mississippi Silverside",48,70,100,"",27956
+"2031",12221,"Mississippi Silverside",62,894,924,"",27814
+"2032",12198,"Mississippi Silverside",44,100,130,"",27427
+"2033",12224,"Mississippi Silverside",74,6,36,"",27905
+"2034",12216,"Mississippi Silverside",60,201,231,"",27668
+"2035",12212,"Mississippi Silverside",43,124,154,"",27579
+"2036",12199,"Mississippi Silverside",42,0,12,"",27451
+"2037",12216,"Mississippi Silverside",49,201,231,"",27663
+"2038",12199,"Mississippi Silverside",66,0,12,"",27450
+"2039",12222,"Mississippi Silverside",53,388,418,"",27840
+"2040",12220,"Mississippi Silverside",90,20,50,"",27769
+"2041",12167,"Mississippi Silverside",74,144,174,"",27032
+"2042",12224,"Mississippi Silverside",80,6,36,"",27920
+"2043",12221,"Mississippi Silverside",83,894,924,"",27827
+"2044",12225,"Mississippi Silverside",73,70,100,"",27944
+"2045",12202,"Mississippi Silverside",63,24,54,"",27481
+"2046",12219,"Mississippi Silverside",71,196,226,"",27719
+"2047",12221,"Mississippi Silverside",63,894,924,"",27813
+"2048",12216,"Mississippi Silverside",51,201,231,"",27686
+"2049",12215,"Mississippi Silverside",55,55,85,"",27635
+"2050",12170,"Mississippi Silverside",66,510,540,"",27114
+"2051",12221,"Mississippi Silverside",70,894,924,"",27811
+"2052",12221,"Mississippi Silverside",63,894,924,"",27812
+"2053",12205,"Mississippi Silverside",62,4,34,"",27501
+"2054",12198,"Mississippi Silverside",48,100,130,"",27438
+"2055",12212,"Mississippi Silverside",43,124,154,"",27593
+"2056",12202,"Mississippi Silverside",49,24,54,"",27470
+"2057",12222,"Mississippi Silverside",90,388,418,"",27841
+"2058",12175,"Mississippi Silverside",53,129,159,"",27253
+"2059",12214,"Mississippi Silverside",54,90,120,"",27626
+"2060",12215,"Mississippi Silverside",52,55,85,"",27651
+"2061",12224,"Mississippi Silverside",92,6,36,"",27918
+"2062",12221,"Mississippi Silverside",78,894,924,"",27825
+"2063",12184,"Mississippi Silverside",75,30,60,"",27367
+"2064",12215,"Mississippi Silverside",44,55,85,"",27644
+"2065",12214,"Mississippi Silverside",55,90,120,"",27608
+"2066",12215,"Mississippi Silverside",52,55,85,"",27655
+"2067",12223,"Mississippi Silverside",63,71,101,"",27874
+"2068",12220,"Mississippi Silverside",102,20,50,"",27756
+"2069",12221,"Mississippi Silverside",78,894,924,"",27829
+"2070",12175,"Mississippi Silverside",51,129,159,"",27260
+"2071",12222,"Mississippi Silverside",53,388,418,"",27857
+"2072",12184,"Mississippi Silverside",56,30,60,"",27383
+"2073",12224,"Mississippi Silverside",61,6,36,"",27929
+"2074",12225,"Mississippi Silverside",85,70,100,"",27963
+"2075",12220,"Mississippi Silverside",59,20,50,"",27760
+"2076",12220,"Mississippi Silverside",68,20,50,"",27775
+"2077",12177,"Mississippi Silverside",60,0,11,"",27317
+"2078",12224,"Mississippi Silverside",90,6,36,"",27913
+"2079",12216,"Mississippi Silverside",50,201,231,"",27682
+"2080",12216,"Mississippi Silverside",69,201,231,"",27669
+"2081",12220,"Mississippi Silverside",67,20,50,"",27781
+"2082",12220,"Mississippi Silverside",78,20,50,"",27758
+"2083",12219,"Mississippi Silverside",40,196,226,"",27725
+"2084",12224,"Mississippi Silverside",76,6,36,"",27917
+"2085",12224,"Mississippi Silverside",85,6,36,"",27906
+"2086",12198,"Mississippi Silverside",58,100,130,"",27425
+"2087",12221,"Mississippi Silverside",73,894,924,"",27826
+"2088",12214,"Mississippi Silverside",43,90,120,"",27604
+"2089",12202,"Mississippi Silverside",64,24,54,"",27482
+"2090",12120,"Mosquitofish",40,144,174,"",26443
+"2091",12119,"Mosquitofish",20,0,12,"",26382
+"2092",11478,"Mosquitofish",26,0,1,"",25624
+"2093",12146,"Mosquitofish",36,0,21,"",26725
+"2094",12120,"Mosquitofish",37,144,174,"",26444
+"2095",12120,"Mosquitofish",21,144,174,"",26458
+"2096",12120,"Mosquitofish",27,144,174,"",26462
+"2097",12120,"Mosquitofish",25,144,174,"",26456
+"2098",12120,"Mosquitofish",33,144,174,"",26455
+"2099",12119,"Mosquitofish",25,0,12,"",26384
+"2100",12120,"Mosquitofish",31,144,174,"",26438
+"2101",12120,"Mosquitofish",24,144,174,"",26440
+"2102",12146,"Mosquitofish",42,0,21,"",26714
+"2103",12146,"Mosquitofish",18,0,21,"",26731
+"2104",12146,"Mosquitofish",33,0,21,"",26733
+"2105",12120,"Mosquitofish",30,144,174,"",26436
+"2106",12146,"Mosquitofish",26,0,21,"",26729
+"2107",12119,"Mosquitofish",26,0,12,"",26385
+"2108",12146,"Mosquitofish",26,0,21,"",26728
+"2109",12146,"Mosquitofish",44,0,21,"",26713
+"2110",12120,"Mosquitofish",24,144,174,"",26449
+"2111",12120,"Mosquitofish",28,144,174,"",26454
+"2112",12147,"Mosquitofish",23,0,1,"",26751
+"2113",12146,"Mosquitofish",53,0,21,"",26720
+"2114",12120,"Mosquitofish",28,144,174,"",26461
+"2115",12120,"Mosquitofish",24,144,174,"",26460
+"2116",12146,"Mosquitofish",28,0,21,"",26721
+"2117",12120,"Mosquitofish",31,144,174,"",26447
+"2118",12120,"Mosquitofish",26,144,174,"",26463
+"2119",12119,"Mosquitofish",23,0,12,"",26388
+"2120",12146,"Mosquitofish",15,0,21,"",26732
+"2121",12120,"Mosquitofish",29,144,174,"",26448
+"2122",12146,"Mosquitofish",30,0,21,"",26727
+"2123",12119,"Mosquitofish",21,0,12,"",26391
+"2124",12120,"Mosquitofish",26,144,174,"",26453
+"2125",12119,"Mosquitofish",30,0,12,"",26392
+"2126",12120,"Mosquitofish",32,144,174,"",26450
+"2127",12146,"Mosquitofish",24,0,21,"",26730
+"2128",12146,"Mosquitofish",28,0,21,"",26724
+"2129",12120,"Mosquitofish",26,144,174,"",26465
+"2130",12120,"Mosquitofish",53,144,174,"",26439
+"2131",12146,"Mosquitofish",39,0,21,"",26723
+"2132",12120,"Mosquitofish",31,144,174,"",26452
+"2133",12146,"Mosquitofish",36,0,21,"",26716
+"2134",12119,"Mosquitofish",28,0,12,"",26390
+"2135",12120,"Mosquitofish",38,144,174,"",26442
+"2136",12120,"Mosquitofish",28,144,174,"",26437
+"2137",12119,"Mosquitofish",34,0,12,"",26383
+"2138",12146,"Mosquitofish",36,0,21,"",26719
+"2139",12120,"Mosquitofish",23,144,174,"",26457
+"2140",12120,"Mosquitofish",23,144,174,"",26441
+"2141",12119,"Mosquitofish",24,0,12,"",26386
+"2142",12146,"Mosquitofish",30,0,21,"",26715
+"2143",12119,"Mosquitofish",24,0,12,"",26387
+"2144",12146,"Mosquitofish",29,0,21,"",26726
+"2145",12120,"Mosquitofish",26,144,174,"",26451
+"2146",12119,"Mosquitofish",29,0,12,"",26389
+"2147",12146,"Mosquitofish",40,0,21,"",26722
+"2148",12120,"Mosquitofish",26,144,174,"",26446
+"2149",12146,"Mosquitofish",45,0,21,"",26718
+"2150",12146,"Mosquitofish",27,0,21,"",26717
+"2151",12120,"Mosquitofish",30,144,174,"",26459
+"2152",12119,"Mosquitofish",20,0,12,"",26393
+"2153",12120,"Mosquitofish",32,144,174,"",26445
+"2154",12120,"Mosquitofish",35,144,174,"",26464
+"2155",11475,"No Catch",NA,0,0,"",NA
+"2156",12204,"No Catch",NA,0,0,"",NA
+"2157",12127,"No Catch",NA,0,0,"",NA
+"2158",11466,"No Catch",NA,0,0,"",NA
+"2159",10299,"No Catch",NA,0,0,"",NA
+"2160",10306,"No Catch",NA,0,0,"",NA
+"2161",12150,"No Catch",NA,0,0,"",NA
+"2162",11515,"No Catch",NA,0,0,"",NA
+"2163",12186,"No Catch",NA,0,0,"",NA
+"2164",12116,"No Catch",NA,0,0,"",NA
+"2165",12134,"No Catch",NA,0,0,"",NA
+"2166",12206,"No Catch",NA,0,0,"",NA
+"2167",11474,"No Catch",NA,0,0,"",NA
+"2168",11544,"No Catch",NA,0,0,"",NA
+"2169",12055,"No Catch",NA,0,0,"",NA
+"2170",11480,"No Catch",NA,0,0,"",NA
+"2171",12190,"No Catch",NA,0,0,"",NA
+"2172",12142,"No Catch",NA,0,0,"",NA
+"2173",10947,"No Catch",NA,0,0,"",NA
+"2174",10321,"No Catch",NA,0,0,"",NA
+"2175",12125,"No Catch",NA,0,0,"",NA
+"2176",11473,"No Catch",NA,0,0,"",NA
+"2177",12023,"No Catch",NA,0,0,"",NA
+"2178",10295,"No Catch",NA,0,0,"",NA
+"2179",11506,"No Catch",NA,0,0,"",NA
+"2180",10302,"No Catch",NA,0,0,"",NA
+"2181",12157,"No Catch",NA,0,0,"",NA
+"2182",12110,"No Catch",NA,0,0,"",NA
+"2183",12195,"No Catch",NA,0,0,"",NA
+"2184",12112,"No Catch",NA,0,0,"",NA
+"2185",12136,"No Catch",NA,0,0,"",NA
+"2186",12133,"No Catch",NA,0,0,"",NA
+"2187",12168,"No Catch",NA,0,0,"",NA
+"2188",12101,"No Catch",NA,0,0,"",NA
+"2189",11517,"No Catch",NA,0,0,"",NA
+"2190",12122,"No Catch",NA,0,0,"",NA
+"2191",12114,"No Catch",NA,0,0,"",NA
+"2192",11555,"No Catch",NA,0,0,"",NA
+"2193",11508,"No Catch",NA,0,0,"",NA
+"2194",11554,"No Catch",NA,0,0,"",NA
+"2195",12135,"No Catch",NA,0,0,"",NA
+"2196",12191,"Northern Anchovy",32,0,4,"",27398
+"2197",12083,"Northern Anchovy",29,0,1,"2022-HCH_035; UNID brought back; IDed by MA 11OCT2022",26182
+"2198",12191,"Northern Anchovy",30,0,4,"",27396
+"2199",12191,"Northern Anchovy",30,0,4,"",27397
+"2200",12191,"Northern Anchovy",29,0,4,"",27395
+"2201",10945,"Pacific Herring",36,13,43,"",25190
+"2202",10945,"Pacific Herring",35,13,43,"",25198
+"2203",10948,"Pacific Herring",30,0,6,"",25224
+"2204",10949,"Pacific Herring",32,0,2,"",25231
+"2205",10945,"Pacific Herring",32,13,43,"",25185
+"2206",10948,"Pacific Herring",32,0,6,"",25223
+"2207",10315,"Pacific Herring",29,0,2,"",24947
+"2208",10945,"Pacific Herring",35,13,43,"",25179
+"2209",10945,"Pacific Herring",33,13,43,"",25193
+"2210",10945,"Pacific Herring",32,13,43,"",25181
+"2211",10945,"Pacific Herring",30,13,43,"",25196
+"2212",10946,"Pacific Herring",32,1,10,"",25220
+"2213",10948,"Pacific Herring",32,0,6,"",25226
+"2214",10948,"Pacific Herring",31,0,6,"",25222
+"2215",10946,"Pacific Herring",33,1,10,"",25217
+"2216",10948,"Pacific Herring",30,0,6,"",25227
+"2217",10945,"Pacific Herring",32,13,43,"",25192
+"2218",10945,"Pacific Herring",27,13,43,"",25195
+"2219",10945,"Pacific Herring",32,13,43,"",25197
+"2220",10945,"Pacific Herring",29,13,43,"",25205
+"2221",10945,"Pacific Herring",35,13,43,"",25203
+"2222",10948,"Pacific Herring",31,0,6,"",25225
+"2223",10945,"Pacific Herring",31,13,43,"",25204
+"2224",10945,"Pacific Herring",28,13,43,"",25194
+"2225",10946,"Pacific Herring",36,1,10,"",25212
+"2226",10945,"Pacific Herring",32,13,43,"",25180
+"2227",10945,"Pacific Herring",33,13,43,"",25188
+"2228",10945,"Pacific Herring",33,13,43,"",25177
+"2229",10945,"Pacific Herring",30,13,43,"",25191
+"2230",10293,"Pacific Herring",38,0,2,"",24862
+"2231",10944,"Pacific Herring",35,0,4,"",25169
+"2232",10945,"Pacific Herring",35,13,43,"",25176
+"2233",10941,"Pacific Herring",31,0,1,"",25164
+"2234",10946,"Pacific Herring",32,1,10,"",25218
+"2235",10946,"Pacific Herring",35,1,10,"",25216
+"2236",10944,"Pacific Herring",34,0,4,"",25170
+"2237",10946,"Pacific Herring",32,1,10,"",25214
+"2238",10949,"Pacific Herring",38,0,2,"",25230
+"2239",10945,"Pacific Herring",35,13,43,"",25186
+"2240",10946,"Pacific Herring",32,1,10,"",25213
+"2241",10315,"Pacific Herring",32,0,2,"",24946
+"2242",10946,"Pacific Herring",32,1,10,"",25219
+"2243",10945,"Pacific Herring",35,13,43,"",25184
+"2244",10944,"Pacific Herring",35,0,4,"",25171
+"2245",11507,"Pacific Herring",37,0,1,"",25677
+"2246",10293,"Pacific Herring",30,0,2,"",24863
+"2247",10309,"Pacific Herring",30,0,1,"",24912
+"2248",10945,"Pacific Herring",29,13,43,"",25187
+"2249",10945,"Pacific Herring",31,13,43,"",25200
+"2250",10945,"Pacific Herring",32,13,43,"",25202
+"2251",10946,"Pacific Herring",30,1,10,"",25215
+"2252",10945,"Pacific Herring",32,13,43,"",25189
+"2253",10945,"Pacific Herring",31,13,43,"",25201
+"2254",10945,"Pacific Herring",33,13,43,"",25182
+"2255",10944,"Pacific Herring",34,0,4,"",25172
+"2256",10945,"Pacific Herring",35,13,43,"",25178
+"2257",10945,"Pacific Herring",33,13,43,"",25183
+"2258",10945,"Pacific Herring",34,13,43,"",25199
+"2259",10320,"Pacific Staghorn Sculpin",68,0,3,"",25035
+"2260",10957,"Pacific Staghorn Sculpin",61,0,1,"",25250
+"2261",10300,"Pacific Staghorn Sculpin",52,0,1,"",24878
+"2262",10320,"Pacific Staghorn Sculpin",66,0,3,"",25034
+"2263",10320,"Pacific Staghorn Sculpin",48,0,3,"",25036
+"2264",11477,"Pacific Staghorn Sculpin",80,0,1,"",25608
+"2265",11478,"Pacific Staghorn Sculpin",90,0,1,"",25610
+"2266",12044,"Oriental Shrimp",NA,1,1,"",NA
+"2267",11520,"Oriental Shrimp",NA,4,4,"",NA
+"2268",11523,"Oriental Shrimp",NA,1,1,"",NA
+"2269",12189,"Oriental Shrimp",NA,1,1,"",NA
+"2270",12056,"Oriental Shrimp",NA,1,1,"",NA
+"2271",11471,"Oriental Shrimp",NA,5,5,"",NA
+"2272",12196,"Oriental Shrimp",NA,1,1,"",NA
+"2273",10312,"Oriental Shrimp",NA,1,1,"",NA
+"2274",11543,"Oriental Shrimp",NA,1,1,"",NA
+"2275",10979,"Oriental Shrimp",NA,1,1,"",NA
+"2276",12182,"Oriental Shrimp",NA,2,2,"",NA
+"2277",12045,"Oriental Shrimp",NA,1,1,"",NA
+"2278",11528,"Oriental Shrimp",NA,1,1,"",NA
+"2279",10315,"Oriental Shrimp",NA,1,1,"",NA
+"2280",11545,"Oriental Shrimp",NA,2,2,"",NA
+"2281",12042,"Oriental Shrimp",NA,2,2,"",NA
+"2282",11522,"Oriental Shrimp",NA,2,2,"",NA
+"2283",11479,"Grass Shrimp",NA,1,1,"",NA
+"2284",12145,"Grass Shrimp",NA,2,2,"",NA
+"2285",10981,"Grass Shrimp",NA,6,6,"",NA
+"2286",12163,"Grass Shrimp",NA,44,44,"",NA
+"2287",10289,"Grass Shrimp",NA,13,13,"",NA
+"2288",11542,"Grass Shrimp",NA,1,1,"",NA
+"2289",10286,"Grass Shrimp",NA,33,33,"",NA
+"2290",12160,"Grass Shrimp",NA,54,54,"",NA
+"2291",11510,"Grass Shrimp",NA,1,1,"",NA
+"2292",10291,"Grass Shrimp",NA,1,1,"",NA
+"2293",12143,"Grass Shrimp",NA,49,49,"",NA
+"2294",12164,"Grass Shrimp",NA,2,2,"",NA
+"2295",10288,"Grass Shrimp",NA,4,4,"",NA
+"2296",12210,"Grass Shrimp",NA,1,1,"",NA
+"2297",12161,"Grass Shrimp",NA,21,21,"",NA
+"2298",11509,"Grass Shrimp",NA,2,2,"",NA
+"2299",12128,"Grass Shrimp",NA,1,1,"",NA
+"2300",12218,"Grass Shrimp",NA,4,4,"",NA
+"2301",12146,"Grass Shrimp",NA,10,10,"",NA
+"2302",12223,"Grass Shrimp",NA,1,1,"",NA
+"2303",12220,"Grass Shrimp",NA,1,1,"",NA
+"2304",12123,"Grass Shrimp",NA,1,1,"",NA
+"2305",10294,"Grass Shrimp",NA,32,32,"",NA
+"2306",12144,"Grass Shrimp",NA,4,4,"",NA
+"2307",10311,"Grass Shrimp",NA,30,30,"",NA
+"2308",12119,"Grass Shrimp",NA,10,10,"",NA
+"2309",12120,"Grass Shrimp",NA,3,3,"",NA
+"2310",12197,"Potamocorbula",NA,4,4,"",NA
+"2311",12082,"Potamocorbula",NA,1,1,"",NA
+"2312",11528,"Potamocorbula",NA,5,5,"",NA
+"2313",12081,"Potamocorbula",NA,112,112,"",NA
+"2314",12083,"Potamocorbula",NA,4,4,"",NA
+"2315",10978,"Potamocorbula",NA,7,7,"",NA
+"2316",12203,"Potamocorbula",NA,1,1,"",NA
+"2317",11526,"Potamocorbula",NA,23,23,"",NA
+"2318",12043,"Potamocorbula",NA,1,1,"",NA
+"2319",11527,"Potamocorbula",NA,9,9,"",NA
+"2320",11510,"Potamocorbula",NA,1,1,"",NA
+"2321",10296,"Potamocorbula",NA,1,1,"",NA
+"2322",11525,"Potamocorbula",NA,8,8,"",NA
+"2323",12084,"Potamocorbula",NA,3,3,"",NA
+"2324",12063,"Potamocorbula",NA,11,11,"",NA
+"2325",12198,"Potamocorbula",NA,1,1,"",NA
+"2326",12210,"Potamocorbula",NA,2,2,"",NA
+"2327",11471,"Prickly Sculpin",28,0,5,"",25572
+"2328",10294,"Prickly Sculpin",25,0,1,"",24874
+"2329",11476,"Prickly Sculpin",19,0,2,"",28222
+"2330",11476,"Prickly Sculpin",19,0,2,"",28221
+"2331",11470,"Prickly Sculpin",26,0,3,"",25544
+"2332",10292,"Prickly Sculpin",26,3,4,"",24860
+"2333",11522,"Prickly Sculpin",57,0,1,"",25738
+"2334",10291,"Prickly Sculpin",85,0,2,"",24820
+"2335",10981,"Prickly Sculpin",28,0,4,"",25271
+"2336",12128,"Prickly Sculpin",72,0,1,"",26603
+"2337",11462,"Prickly Sculpin",47,0,1,"",25466
+"2338",10318,"Prickly Sculpin",30,0,1,"",25001
+"2339",10290,"Prickly Sculpin",25,0,1,"",24819
+"2340",10291,"Prickly Sculpin",60,0,2,"",24821
+"2341",12163,"Prickly Sculpin",73,0,2,"",26969
+"2342",11471,"Prickly Sculpin",28,0,5,"",25568
+"2343",11479,"Prickly Sculpin",26,0,1,"",25658
+"2344",11471,"Prickly Sculpin",27,0,5,"",25569
+"2345",12129,"Prickly Sculpin",56,0,1,"",26645
+"2346",12160,"Prickly Sculpin",61,0,1,"",26897
+"2347",10286,"Prickly Sculpin",25,0,1,"",24722
+"2348",11470,"Prickly Sculpin",37,0,3,"",25545
+"2349",10981,"Prickly Sculpin",36,0,4,"",25270
+"2350",12163,"Prickly Sculpin",58,0,2,"",26970
+"2351",11471,"Prickly Sculpin",38,0,5,"",25570
+"2352",11471,"Prickly Sculpin",25,0,5,"",25571
+"2353",10981,"Prickly Sculpin",31,0,4,"",25269
+"2354",10981,"Prickly Sculpin",25,0,4,"",25272
+"2355",11470,"Prickly Sculpin",29,0,3,"",25546
+"2356",10957,"Prickly Sculpin",43,0,1,"",25251
+"2357",10294,"Rainwater Killifish",27,0,8,"",24865
+"2358",10294,"Rainwater Killifish",22,0,8,"Dark stripe down side; possibly BLUKIL",24867
+"2359",10294,"Rainwater Killifish",41,0,8,"Dark stripe down side; possibly BLUKIL",24864
+"2360",10294,"Rainwater Killifish",30,0,8,"",24868
+"2361",11477,"Rainwater Killifish",40,0,2,"",25607
+"2362",11477,"Rainwater Killifish",32,0,2,"",25606
+"2363",10294,"Rainwater Killifish",21,0,8,"",24870
+"2364",10294,"Rainwater Killifish",29,0,8,"",24869
+"2365",10981,"Rainwater Killifish",35,0,1,"",25268
+"2366",10294,"Rainwater Killifish",32,0,8,"",24871
+"2367",10294,"Rainwater Killifish",32,0,8,"",24866
+"2368",10289,"Rainwater Killifish",44,0,1,"",24786
+"2369",10288,"Redear Sunfish",168,0,1,"",24787
+"2370",10318,"Redear Sunfish",39,0,2,"",24992
+"2371",12160,"Redear Sunfish",48,0,2,"",26862
+"2372",10318,"Redear Sunfish",168,0,2,"",24991
+"2373",12163,"Redear Sunfish",40,0,2,"",26971
+"2374",12160,"Redear Sunfish",55,0,2,"",26863
+"2375",11471,"Redear Sunfish",153,0,1,"",25564
+"2376",12163,"Redear Sunfish",33,0,2,"",26972
+"2377",11478,"Sacramento Pikeminnow",118,0,1,"",25611
+"2378",10320,"Sacramento Pikeminnow",80,0,1,"",25033
+"2379",10317,"Sacramento Sucker",22,0,1,"",24990
+"2380",12129,"Shimofuri Goby",49,0,5,"",26627
+"2381",12128,"Shimofuri Goby",37,0,2,"",26604
+"2382",11545,"Shimofuri Goby",58,0,1,"",25870
+"2383",12218,"Shimofuri Goby",38,0,2,"",27710
+"2384",12210,"Shimofuri Goby",33,0,5,"",27535
+"2385",12160,"Shimofuri Goby",58,0,2,"",26895
+"2386",12083,"Shimofuri Goby",49,0,1,"",26183
+"2387",12172,"Shimofuri Goby",36,0,2,"",27192
+"2388",11505,"Shimofuri Goby",54,0,1,"",25676
+"2389",12058,"Shimofuri Goby",71,0,1,"",26143
+"2390",12129,"Shimofuri Goby",30,0,5,"",26624
+"2391",12172,"Shimofuri Goby",27,0,2,"",27191
+"2392",12160,"Shimofuri Goby",66,0,2,"",26896
+"2393",12088,"Shimofuri Goby",71,0,1,"",26202
+"2394",12210,"Shimofuri Goby",27,0,5,"",27534
+"2395",11478,"Shimofuri Goby",57,0,2,"",25622
+"2396",12210,"Shimofuri Goby",43,0,5,"",27532
+"2397",11478,"Shimofuri Goby",44,0,2,"",25623
+"2398",12129,"Shimofuri Goby",37,0,5,"",26625
+"2399",12126,"Shimofuri Goby",28,0,1,"",26602
+"2400",12056,"Shimofuri Goby",40,0,3,"",26141
+"2401",12056,"Shimofuri Goby",37,0,3,"",26140
+"2402",12128,"Shimofuri Goby",26,0,2,"",26605
+"2403",12210,"Shimofuri Goby",42,0,5,"",27533
+"2404",12085,"Shimofuri Goby",51,0,1,"",26193
+"2405",11461,"Shimofuri Goby",61,0,1,"",25461
+"2406",12205,"Shimofuri Goby",40,0,1,"",27519
+"2407",12156,"Shimofuri Goby",39,0,1,"",26768
+"2408",12105,"Shimofuri Goby",39,0,1,"",26254
+"2409",12123,"Shimofuri Goby",58,0,1,"",26538
+"2410",12084,"Shimofuri Goby",47,0,1,"",26187
+"2411",12056,"Shimofuri Goby",70,0,3,"",26142
+"2412",12129,"Shimofuri Goby",43,0,5,"",26623
+"2413",12046,"Shimofuri Goby",39,0,1,"",26105
+"2414",12129,"Shimofuri Goby",39,0,5,"",26626
+"2415",12210,"Shimofuri Goby",38,0,5,"",27531
+"2416",10981,"Shimofuri Goby",61,0,1,"",25264
+"2417",12218,"Shimofuri Goby",34,0,2,"",27711
+"2418",12163,"Shimofuri Goby",67,0,1,"",26973
+"2419",12161,"Shrimp Other",NA,1,1,"",NA
+"2420",10294,"Shrimp Other",NA,1,1,"",NA
+"2421",12042,"Shrimp Other",NA,2,2,"",NA
+"2422",11478,"Shrimp Other",NA,1,1,"",NA
+"2423",10290,"Shrimp Other",NA,1,1,"",NA
+"2424",11402,"Splittail",154,0,1,"",25448
+"2425",11522,"Splittail",250,0,1,"",25737
+"2426",11552,"Splittail",175,0,1,"",25964
+"2427",11401,"Splittail",148,0,4,"",25443
+"2428",10949,"Splittail",261,0,2,"",25233
+"2429",11520,"Splittail",350,0,1,"DMC230517: Initially had 520 as weight but it was really S20 for HAI code",25717
+"2430",11527,"Splittail",320,1,5,"",25766
+"2431",11527,"Splittail",270,1,5,"",25767
+"2432",12170,"Splittail",93,0,1,"",27126
+"2433",11401,"Splittail",155,0,4,"",25441
+"2434",11464,"Splittail",293,0,1,"",25475
+"2435",11527,"Splittail",280,1,5,"",25768
+"2436",10312,"Splittail",286,0,1,"",24917
+"2437",12159,"Splittail",285,0,1,"",26831
+"2438",11401,"Splittail",137,0,4,"",25442
+"2439",12148,"Splittail",290,0,1,"",26752
+"2440",11527,"Splittail",135,1,5,"",25769
+"2441",11401,"Splittail",164,0,4,"",25444
+"2442",10951,"Splittail",285,0,1,"",25236
+"2443",10949,"Splittail",159,0,2,"",25232
+"2444",12086,"Splittail",280,0,1,"",26195
+"2445",11507,"Splittail",329,0,1,"",25678
+"2446",12106,"Splittail",282,0,1,"",26256
+"2447",12024,"Starry Flounder",86,0,1,"",26081
+"2448",11551,"Starry Flounder",34,0,2,"",25960
+"2449",11523,"Starry Flounder",38,0,1,"",25744
+"2450",12085,"Starry Flounder",83,0,1,"",26194
+"2451",11551,"Starry Flounder",31,0,2,"",25961
+"2452",12045,"Starry Flounder",114,0,1,"",26104
+"2453",12085,"Striped Bass",127,1,3,"",26189
+"2454",12143,"Striped Bass",430,0,1,"",26666
+"2455",11546,"Striped Bass",189,0,2,"",25871
+"2456",11520,"Striped Bass",394,0,1,"",25703
+"2457",12202,"Striped Bass",308,0,2,"",27456
+"2458",12088,"Striped Bass",250,0,3,"",26199
+"2459",10944,"Striped Bass",153,0,1,"",25168
+"2460",12220,"Striped Bass",620,0,1,"",27751
+"2461",12063,"Striped Bass",145,0,1,"",26161
+"2462",12053,"Striped Bass",131,0,3,"",26126
+"2463",11547,"Striped Bass",290,0,1,"",25920
+"2464",12197,"Striped Bass",414,0,1,"",27408
+"2465",12106,"Striped Bass",405,0,1,"",26257
+"2466",12118,"Striped Bass",358,0,2,"",26466
+"2467",11546,"Striped Bass",160,0,2,"",25872
+"2468",12088,"Striped Bass",175,0,3,"",26200
+"2469",12201,"Striped Bass",444,0,1,"",27454
+"2470",12026,"Striped Bass",101,0,1,"",26082
+"2471",10292,"Striped Bass",705,0,1,"",24822
+"2472",10310,"Striped Bass",375,0,1,"",24914
+"2473",12088,"Striped Bass",143,0,3,"",26201
+"2474",12053,"Striped Bass",132,0,3,"",26124
+"2475",12084,"Striped Bass",109,0,2,"",26185
+"2476",12053,"Striped Bass",115,0,3,"",26125
+"2477",12202,"Striped Bass",405,0,2,"",27455
+"2478",12118,"Striped Bass",382,0,2,"",26467
+"2479",11527,"Striped Bass",199,0,2,"",25780
+"2480",12084,"Striped Bass",116,0,2,"",26184
+"2481",12085,"Striped Bass",107,1,3,"",26188
+"2482",12130,"Striped Bass",424,0,1,"",26646
+"2483",11527,"Striped Bass",192,0,2,"",25779
+"2484",12053,"Threadfin Shad",72,0,18,"",26121
+"2485",12053,"Threadfin Shad",59,0,18,"",26119
+"2486",12143,"Threadfin Shad",78,0,1,"",26669
+"2487",12054,"Threadfin Shad",74,0,9,"",26130
+"2488",12217,"Threadfin Shad",66,0,14,"",27700
+"2489",10324,"Threadfin Shad",94,0,23,"",25053
+"2490",12220,"Threadfin Shad",71,0,23,"",27806
+"2491",12053,"Threadfin Shad",53,0,18,"",26106
+"2492",10324,"Threadfin Shad",93,0,23,"",25043
+"2493",12220,"Threadfin Shad",87,0,23,"",27792
+"2494",12220,"Threadfin Shad",73,0,23,"",27797
+"2495",12220,"Threadfin Shad",85,0,23,"",27790
+"2496",12053,"Threadfin Shad",100,0,18,"",26114
+"2497",12054,"Threadfin Shad",82,0,9,"",26134
+"2498",10324,"Threadfin Shad",90,0,23,"",25051
+"2499",10324,"Threadfin Shad",72,0,23,"",25054
+"2500",12220,"Threadfin Shad",97,0,23,"",27799
+"2501",12217,"Threadfin Shad",55,0,14,"",27705
+"2502",12222,"Threadfin Shad",36,0,2,"",27870
+"2503",12054,"Threadfin Shad",72,0,9,"",26128
+"2504",12220,"Threadfin Shad",80,0,23,"",27805
+"2505",11401,"Threadfin Shad",69,0,2,"",25445
+"2506",10324,"Threadfin Shad",100,0,23,"",25044
+"2507",12053,"Threadfin Shad",72,0,18,"",26107
+"2508",10324,"Threadfin Shad",78,0,23,"",25042
+"2509",12217,"Threadfin Shad",45,0,14,"",27702
+"2510",12054,"Threadfin Shad",74,0,9,"",26127
+"2511",12126,"Threadfin Shad",41,0,1,"",26600
+"2512",10324,"Threadfin Shad",89,0,23,"",25047
+"2513",12053,"Threadfin Shad",93,0,18,"",26112
+"2514",10323,"Threadfin Shad",108,0,1,"",25040
+"2515",12217,"Threadfin Shad",65,0,14,"",27694
+"2516",12205,"Threadfin Shad",25,0,1,"",27517
+"2517",12053,"Threadfin Shad",54,0,18,"",26115
+"2518",12220,"Threadfin Shad",87,0,23,"",27789
+"2519",12220,"Threadfin Shad",82,0,23,"",27798
+"2520",12220,"Threadfin Shad",84,0,23,"",27791
+"2521",10322,"Threadfin Shad",95,0,3,"",25039
+"2522",12220,"Threadfin Shad",69,0,23,"",27802
+"2523",12220,"Threadfin Shad",79,0,23,"",27794
+"2524",10324,"Threadfin Shad",95,0,23,"",25048
+"2525",10324,"Threadfin Shad",91,0,23,"",25060
+"2526",10324,"Threadfin Shad",94,0,23,"",25058
+"2527",12054,"Threadfin Shad",75,0,9,"",26129
+"2528",12217,"Threadfin Shad",62,0,14,"",27696
+"2529",10324,"Threadfin Shad",85,0,23,"",25062
+"2530",12220,"Threadfin Shad",82,0,23,"",27801
+"2531",12220,"Threadfin Shad",81,0,23,"",27784
+"2532",12217,"Threadfin Shad",48,0,14,"",27704
+"2533",10324,"Threadfin Shad",82,0,23,"",25061
+"2534",10324,"Threadfin Shad",78,0,23,"",25049
+"2535",11481,"Threadfin Shad",90,0,1,"",25659
+"2536",12220,"Threadfin Shad",57,0,23,"",27800
+"2537",12054,"Threadfin Shad",35,0,9,"",26135
+"2538",12220,"Threadfin Shad",88,0,23,"",27796
+"2539",12053,"Threadfin Shad",57,0,18,"",26116
+"2540",12053,"Threadfin Shad",59,0,18,"",26113
+"2541",12054,"Threadfin Shad",75,0,9,"",26132
+"2542",10319,"Threadfin Shad",62,0,1,"",25002
+"2543",10322,"Threadfin Shad",96,0,3,"",25038
+"2544",12183,"Threadfin Shad",36,0,1,"",27356
+"2545",12118,"Threadfin Shad",73,0,1,"",26468
+"2546",12217,"Threadfin Shad",66,0,14,"",27698
+"2547",12220,"Threadfin Shad",76,0,23,"",27785
+"2548",12053,"Threadfin Shad",50,0,18,"",26108
+"2549",10324,"Threadfin Shad",80,0,23,"",25056
+"2550",10324,"Threadfin Shad",78,0,23,"",25059
+"2551",12220,"Threadfin Shad",80,0,23,"",27795
+"2552",12054,"Threadfin Shad",79,0,9,"",26131
+"2553",12158,"Threadfin Shad",61,0,2,"",26800
+"2554",12220,"Threadfin Shad",94,0,23,"",27804
+"2555",12158,"Threadfin Shad",47,0,2,"",26799
+"2556",10324,"Threadfin Shad",85,0,23,"",25063
+"2557",12053,"Threadfin Shad",55,0,18,"",26117
+"2558",12053,"Threadfin Shad",61,0,18,"",26122
+"2559",12220,"Threadfin Shad",88,0,23,"",27786
+"2560",12217,"Threadfin Shad",61,0,14,"",27701
+"2561",10324,"Threadfin Shad",87,0,23,"",25046
+"2562",10324,"Threadfin Shad",79,0,23,"",25045
+"2563",12222,"Threadfin Shad",63,0,2,"",27869
+"2564",12053,"Threadfin Shad",67,0,18,"",26111
+"2565",12217,"Threadfin Shad",53,0,14,"",27693
+"2566",12220,"Threadfin Shad",77,0,23,"",27803
+"2567",12217,"Threadfin Shad",44,0,14,"",27699
+"2568",10324,"Threadfin Shad",88,0,23,"",25052
+"2569",12054,"Threadfin Shad",97,0,9,"",26133
+"2570",10322,"Threadfin Shad",100,0,3,"",25037
+"2571",12053,"Threadfin Shad",69,0,18,"",26109
+"2572",12053,"Threadfin Shad",70,0,18,"",26110
+"2573",11549,"Threadfin Shad",84,0,1,"",25951
+"2574",10324,"Threadfin Shad",73,0,23,"",25041
+"2575",12220,"Threadfin Shad",90,0,23,"",27787
+"2576",10324,"Threadfin Shad",90,0,23,"",25057
+"2577",12220,"Threadfin Shad",82,0,23,"",27793
+"2578",12053,"Threadfin Shad",46,0,18,"",26118
+"2579",11471,"Threadfin Shad",112,0,1,"",25556
+"2580",10324,"Threadfin Shad",72,0,23,"",25050
+"2581",11546,"Threadfin Shad",83,NA,1,"",25873
+"2582",12053,"Threadfin Shad",64,0,18,"",26120
+"2583",12217,"Threadfin Shad",43,0,14,"",27703
+"2584",10324,"Threadfin Shad",70,0,23,"",25055
+"2585",12217,"Threadfin Shad",62,0,14,"",27695
+"2586",12053,"Threadfin Shad",60,0,18,"",26123
+"2587",12217,"Threadfin Shad",53,0,14,"",27706
+"2588",12220,"Threadfin Shad",81,0,23,"",27788
+"2589",11401,"Threadfin Shad",61,0,2,"",25446
+"2590",12217,"Threadfin Shad",74,0,14,"",27697
+"2591",12215,"Threespine Stickleback",29,2,4,"",27661
+"2592",10946,"Threespine Stickleback",24,0,1,"",25221
+"2593",11462,"Threespine Stickleback",26,0,2,"",25467
+"2594",10954,"Threespine Stickleback",53,0,4,"",25244
+"2595",10313,"Threespine Stickleback",29,0,1,"",24944
+"2596",11477,"Threespine Stickleback",16,0,1,"",25609
+"2597",10954,"Threespine Stickleback",34,0,4,"",25243
+"2598",10954,"Threespine Stickleback",46,0,4,"",25245
+"2599",10943,"Threespine Stickleback",26,0,1,"",25167
+"2600",11520,"Threespine Stickleback",32,0,1,"",25718
+"2601",10942,"Threespine Stickleback",42,0,1,"",25165
+"2602",10954,"Threespine Stickleback",51,0,4,"",25242
+"2603",10314,"Threespine Stickleback",23,0,1,"",24945
+"2604",11552,"Threespine Stickleback",31,0,2,"",25962
+"2605",11462,"Threespine Stickleback",29,0,2,"",25468
+"2606",10941,"Threespine Stickleback",19,0,3,"",25163
+"2607",10941,"Threespine Stickleback",23,0,3,"",25161
+"2608",10944,"Threespine Stickleback",25,0,1,"",25173
+"2609",10952,"Threespine Stickleback",28,0,1,"",25238
+"2610",12151,"Threespine Stickleback",33,0,1,"",26760
+"2611",10309,"Threespine Stickleback",32,0,1,"",24913
+"2612",10941,"Threespine Stickleback",26,0,3,"",25162
+"2613",11518,"Threespine Stickleback",49,0,1,"",25700
+"2614",11523,"Threespine Stickleback",32,0,1,"",25745
+"2615",11528,"Threespine Stickleback",30,0,1,"",25827
+"2616",11552,"Threespine Stickleback",41,0,2,"",25963
+"2617",11522,"Threespine Stickleback",43,0,1,"",25735
+"2618",10957,"Threespine Stickleback",28,0,1,"",25248
+"2619",12215,"Threespine Stickleback",33,2,4,"",27662
+"2620",11551,"Threespine Stickleback",34,0,2,"",25955
+"2621",11551,"Threespine Stickleback",56,0,2,"",25954
+"2622",11527,"Topsmelt",134,0,20,"",25776
+"2623",11527,"Topsmelt",28,0,20,"",25773
+"2624",11526,"Topsmelt",32,0,8,"",25759
+"2625",11520,"Topsmelt",40,0,5,"",25707
+"2626",11528,"Topsmelt",27,18,48,"",25814
+"2627",12131,"Topsmelt",108,0,2,"",26649
+"2628",11527,"Topsmelt",26,0,20,"",25793
+"2629",11527,"Topsmelt",31,0,20,"",25787
+"2630",11528,"Topsmelt",32,18,48,"",25810
+"2631",11528,"Topsmelt",113,18,48,"",25797
+"2632",11520,"Topsmelt",40,0,5,"",25708
+"2633",11528,"Topsmelt",32,18,48,"",25820
+"2634",11528,"Topsmelt",114,18,48,"",25799
+"2635",11528,"Topsmelt",111,18,48,"",25801
+"2636",11528,"Topsmelt",135,18,48,"",25798
+"2637",11521,"Topsmelt",30,0,7,"",25726
+"2638",12111,"Topsmelt",83,0,6,"",26323
+"2639",11527,"Topsmelt",34,0,20,"",25789
+"2640",11527,"Topsmelt",117,0,20,"",25784
+"2641",11528,"Topsmelt",94,18,48,"",25806
+"2642",11526,"Topsmelt",28,0,8,"",25765
+"2643",12131,"Topsmelt",69,0,2,"",26648
+"2644",11520,"Topsmelt",28,0,5,"",25706
+"2645",11522,"Topsmelt",32,2,7,"",25730
+"2646",11528,"Topsmelt",38,18,48,"",25812
+"2647",11527,"Topsmelt",26,0,20,"",25790
+"2648",11527,"Topsmelt",111,0,20,"",25770
+"2649",11526,"Topsmelt",96,0,8,"",25758
+"2650",11521,"Topsmelt",29,0,7,"",25729
+"2651",11528,"Topsmelt",26,18,48,"",25811
+"2652",11528,"Topsmelt",31,18,48,"",25809
+"2653",11528,"Topsmelt",33,18,48,"",25807
+"2654",11527,"Topsmelt",30,0,20,"",25788
+"2655",11525,"Topsmelt",21,0,1,"",29063
+"2656",11523,"Topsmelt",20,0,6,"",29062
+"2657",11527,"Topsmelt",190,0,20,"",25774
+"2658",11527,"Topsmelt",32,0,20,"",25786
+"2659",11528,"Topsmelt",109,18,48,"",25804
+"2660",11522,"Topsmelt",34,2,7,"",25734
+"2661",11526,"Topsmelt",25,0,8,"",25760
+"2662",12111,"Topsmelt",82,0,6,"",26326
+"2663",11523,"Topsmelt",25,0,6,"",25749
+"2664",10949,"Topsmelt",98,0,1,"",25229
+"2665",11521,"Topsmelt",26,0,7,"",25727
+"2666",11528,"Topsmelt",37,18,48,"",25823
+"2667",11528,"Topsmelt",30,18,48,"",25817
+"2668",11527,"Topsmelt",115,0,20,"",25772
+"2669",12111,"Topsmelt",71,0,6,"",26324
+"2670",11528,"Topsmelt",116,18,48,"",25800
+"2671",11527,"Topsmelt",31,0,20,"",25792
+"2672",12111,"Topsmelt",102,0,6,"",26322
+"2673",11527,"Topsmelt",121,0,20,"",25783
+"2674",11527,"Topsmelt",137,0,20,"",25778
+"2675",11521,"Topsmelt",32,0,7,"",25725
+"2676",11527,"Topsmelt",37,0,20,"",25791
+"2677",11528,"Topsmelt",114,18,48,"",25796
+"2678",11527,"Topsmelt",112,0,20,"",25785
+"2679",12111,"Topsmelt",85,0,6,"",26325
+"2680",11528,"Topsmelt",36,18,48,"",25808
+"2681",11520,"Topsmelt",122,0,5,"",25704
+"2682",11522,"Topsmelt",36,2,7,"",25731
+"2683",11521,"Topsmelt",34,0,7,"",25723
+"2684",11523,"Topsmelt",30,0,6,"",25748
+"2685",11526,"Topsmelt",39,0,8,"",25763
+"2686",11521,"Topsmelt",29,0,7,"",25724
+"2687",11528,"Topsmelt",92,18,48,"",25795
+"2688",11528,"Topsmelt",26,18,48,"",25818
+"2689",11528,"Topsmelt",27,18,48,"",25816
+"2690",11521,"Topsmelt",31,0,7,"",25728
+"2691",11520,"Topsmelt",32,0,5,"",25705
+"2692",11528,"Topsmelt",39,18,48,"",25822
+"2693",11526,"Topsmelt",29,0,8,"",25761
+"2694",12141,"Topsmelt",89,0,1,"",26661
+"2695",11527,"Topsmelt",34,0,20,"",25777
+"2696",11522,"Topsmelt",29,2,7,"",25733
+"2697",11523,"Topsmelt",21,0,6,"",29061
+"2698",11528,"Topsmelt",28,18,48,"",25794
+"2699",11509,"Topsmelt",23,0,1,"",25679
+"2700",12111,"Topsmelt",68,0,6,"",26327
+"2701",11528,"Topsmelt",28,18,48,"",25821
+"2702",11526,"Topsmelt",30,0,8,"",25764
+"2703",11528,"Topsmelt",35,18,48,"",25813
+"2704",11527,"Topsmelt",135,0,20,"",25775
+"2705",11523,"Topsmelt",25,0,6,"",25746
+"2706",11528,"Topsmelt",38,18,48,"",25803
+"2707",11522,"Topsmelt",25,2,7,"",25732
+"2708",11528,"Topsmelt",33,18,48,"",25819
+"2709",12137,"Topsmelt",115,0,2,"",26654
+"2710",12113,"Topsmelt",83,0,1,"",26328
+"2711",11528,"Topsmelt",31,18,48,"",25815
+"2712",11528,"Topsmelt",37,18,48,"",25802
+"2713",11527,"Topsmelt",29,0,20,"",25771
+"2714",12137,"Topsmelt",88,0,2,"",26653
+"2715",11528,"Topsmelt",27,18,48,"",25805
+"2716",11523,"Topsmelt",29,0,6,"",25747
+"2717",11526,"Topsmelt",30,0,8,"",25762
+"2718",11471,"Tule Perch",34,0,2,"",25558
+"2719",11402,"Tule Perch",140,0,1,"",25447
+"2720",11518,"Tule Perch",39,0,1,"",25701
+"2721",12220,"Tule Perch",122,0,1,"",27752
+"2722",11545,"Tule Perch",43,0,1,"",25843
+"2723",10957,"Tule Perch",138,0,1,"",25249
+"2724",10952,"Tule Perch",31,0,1,"",25237
+"2725",11471,"Tule Perch",36,0,2,"",25557
+"2726",11542,"Tule Perch",34,0,1,"",25842
+"2727",11467,"Wakasagi",31,0,1,"Lab confirmed",25477
+"2728",11470,"Wakasagi",27,0,19,"Lab confirmed",29087
+"2729",11470,"Wakasagi",29,0,19,"Lab confirmed",29086
+"2730",11470,"Wakasagi",29,0,19,"Lab confirmed",29094
+"2731",11470,"Wakasagi",25,0,19,"DNA confirmed",29095
+"2732",11470,"Wakasagi",20,0,19,"DNA confirmed",29098
+"2733",10292,"Wakasagi",23,0,1,"Lab identified as DELSME; DNA identified as WAKASA",29081
+"2734",11470,"Wakasagi",24,0,19,"Lab confirmed",29100
+"2735",11470,"Wakasagi",27,0,19,"Lab confirmed",29092
+"2736",11470,"Wakasagi",27,0,19,"Lab confirmed",29090
+"2737",11470,"Wakasagi",25,0,19,"DNA confirmed",29084
+"2738",11470,"Wakasagi",32,0,19,"Lab confirmed",29088
+"2739",11470,"Wakasagi",30,0,19,"DNA confirmed",29093
+"2740",11470,"Wakasagi",26,0,19,"Lab confirmed",29091
+"2741",11470,"Wakasagi",28,0,19,"Lab confirmed",29097
+"2742",11470,"Wakasagi",29,0,19,"Lab confirmed",29089
+"2743",11470,"Wakasagi",28,0,19,"Lab confirmed",29101
+"2744",11470,"Wakasagi",32,0,19,"Lab confirmed",29085
+"2745",11470,"Wakasagi",25,0,19,"Lab confirmed",29099
+"2746",11470,"Wakasagi",25,0,19,"DNA confirmed",29083
+"2747",11470,"Wakasagi",29,0,19,"Lab confirmed",29096
+"2748",12042,"White Catfish",290,0,1,"",26101
+"2749",10289,"White Catfish",250,0,1,"",24725
+"2750",11470,"White Catfish",250,0,3,"",25508
+"2751",11470,"White Catfish",310,0,3,"",25507
+"2752",11470,"White Catfish",274,0,3,"",25509
+"2753",11545,"Yellowfin Goby",29,0,15,"",25865
+"2754",11547,"Yellowfin Goby",28,0,22,"",25924
+"2755",12222,"Yellowfin Goby",99,0,1,"",27868
+"2756",11477,"Yellowfin Goby",25,0,2,"",25604
+"2757",11553,"Yellowfin Goby",26,0,16,"",25995
+"2758",11478,"Yellowfin Goby",24,0,13,"",25618
+"2759",11553,"Yellowfin Goby",28,0,16,"",25989
+"2760",11553,"Yellowfin Goby",25,0,16,"",25986
+"2761",11547,"Yellowfin Goby",26,0,22,"",25936
+"2762",12172,"Yellowfin Goby",116,0,1,"",27189
+"2763",11545,"Yellowfin Goby",28,0,15,"",25861
+"2764",11553,"Yellowfin Goby",22,0,16,"",25985
+"2765",11478,"Yellowfin Goby",37,0,13,"",25614
+"2766",11547,"Yellowfin Goby",25,0,22,"",25940
+"2767",11553,"Yellowfin Goby",21,0,16,"",25987
+"2768",11545,"Yellowfin Goby",24,0,15,"",25859
+"2769",11547,"Yellowfin Goby",29,0,22,"",25931
+"2770",11478,"Yellowfin Goby",27,0,13,"",25615
+"2771",11478,"Yellowfin Goby",21,0,13,"",25650
+"2772",12083,"Yellowfin Goby",120,0,1,"",26181
+"2773",11545,"Yellowfin Goby",22,0,15,"",25862
+"2774",11547,"Yellowfin Goby",29,0,22,"",25925
+"2775",11547,"Yellowfin Goby",39,0,22,"",25934
+"2776",11545,"Yellowfin Goby",37,0,15,"",25867
+"2777",11478,"Yellowfin Goby",21,0,13,"",25649
+"2778",11478,"Yellowfin Goby",35,0,13,"",25617
+"2779",11478,"Yellowfin Goby",25,0,13,"",25613
+"2780",11547,"Yellowfin Goby",30,0,22,"",25941
+"2781",11551,"Yellowfin Goby",40,1,5,"",25959
+"2782",11553,"Yellowfin Goby",25,0,16,"",25992
+"2783",11547,"Yellowfin Goby",26,0,22,"",25930
+"2784",11553,"Yellowfin Goby",28,0,16,"",25983
+"2785",11553,"Yellowfin Goby",30,0,16,"",25994
+"2786",11477,"Yellowfin Goby",25,0,2,"",25605
+"2787",11553,"Yellowfin Goby",23,0,16,"",25988
+"2788",11553,"Yellowfin Goby",21,0,16,"",25997
+"2789",11521,"Yellowfin Goby",28,0,2,"",25719
+"2790",11545,"Yellowfin Goby",31,0,15,"",25856
+"2791",11547,"Yellowfin Goby",27,0,22,"",25932
+"2792",11547,"Yellowfin Goby",27,0,22,"",25922
+"2793",12084,"Yellowfin Goby",134,0,1,"",26186
+"2794",11545,"Yellowfin Goby",42,0,15,"",25869
+"2795",11551,"Yellowfin Goby",34,1,5,"",25958
+"2796",11478,"Yellowfin Goby",25,0,13,"",25616
+"2797",11547,"Yellowfin Goby",26,0,22,"",25921
+"2798",11553,"Yellowfin Goby",22,0,16,"",25999
+"2799",12124,"Yellowfin Goby",91,0,1,"",26569
+"2800",12085,"Yellowfin Goby",126,0,2,"",26191
+"2801",11463,"Yellowfin Goby",97,0,1,"",25474
+"2802",11547,"Yellowfin Goby",30,0,22,"",25929
+"2803",12026,"Yellowfin Goby",90,0,1,"",26083
+"2804",11551,"Yellowfin Goby",31,1,5,"",25957
+"2805",11553,"Yellowfin Goby",21,0,16,"",25990
+"2806",11478,"Yellowfin Goby",23,0,13,"",25612
+"2807",11547,"Yellowfin Goby",29,0,22,"",25927
+"2808",11547,"Yellowfin Goby",25,0,22,"",25928
+"2809",10956,"Yellowfin Goby",119,0,1,"",25247
+"2810",11478,"Yellowfin Goby",27,0,13,"",25648
+"2811",11545,"Yellowfin Goby",41,0,15,"",25866
+"2812",11553,"Yellowfin Goby",25,0,16,"",25993
+"2813",11547,"Yellowfin Goby",28,0,22,"",25935
+"2814",11545,"Yellowfin Goby",25,0,15,"",25868
+"2815",11528,"Yellowfin Goby",28,0,1,"",25826
+"2816",11553,"Yellowfin Goby",23,0,16,"",25984
+"2817",11478,"Yellowfin Goby",24,0,13,"",25621
+"2818",11553,"Yellowfin Goby",21,0,16,"",25991
+"2819",11545,"Yellowfin Goby",38,0,15,"",25858
+"2820",12085,"Yellowfin Goby",114,0,2,"",26192
+"2821",11521,"Yellowfin Goby",27,0,2,"",25720
+"2822",11478,"Yellowfin Goby",26,0,13,"",25619
+"2823",11547,"Yellowfin Goby",25,0,22,"",25939
+"2824",11547,"Yellowfin Goby",28,0,22,"",25938
+"2825",11547,"Yellowfin Goby",36,0,22,"",25933
+"2826",11478,"Yellowfin Goby",24,0,13,"",25620
+"2827",11545,"Yellowfin Goby",31,0,15,"",25857
+"2828",11551,"Yellowfin Goby",25,1,5,"",25956
+"2829",12126,"Yellowfin Goby",95,0,1,"",26601
+"2830",11547,"Yellowfin Goby",21,0,22,"",25942
+"2831",11545,"Yellowfin Goby",27,0,15,"",25855
+"2832",11522,"Yellowfin Goby",30,0,1,"",25736
+"2833",12167,"Yellowfin Goby",170,0,1,"",27036
+"2834",11547,"Yellowfin Goby",26,0,22,"",25937
+"2835",11547,"Yellowfin Goby",27,0,22,"",25926
+"2836",11545,"Yellowfin Goby",40,0,15,"",25864
+"2837",11553,"Yellowfin Goby",21,0,16,"",25998
+"2838",11545,"Yellowfin Goby",27,0,15,"",25860
+"2839",11545,"Yellowfin Goby",31,0,15,"",25863
+"2840",11523,"Yellowfin Goby",30,0,1,"",25750
+"2841",11547,"Yellowfin Goby",23,0,22,"",25923
+"2842",12223,"Tadpole",NA,3,3,"",NA
+"2843",11519,"Silverside UNID",20,0,1,"",28507
+"2844",12215,"Silverside UNID",NA,5,5,"",NA
+"2845",12214,"Silverside UNID",NA,4,4,"",NA
+"2846",10979,"Chinook Salmon (fall)",80,0,1,"",25262
+"2847",11527,"Chinook Salmon (fall)",72,0,1,"",25781
+"2848",11541,"Chinook Salmon (fall)",89,0,1,"fin clip 2022_HCH_031",25841
+"2849",12146,"Killifish spp.",28,0,14,"",26746
+"2850",12161,"Killifish spp.",21,2,5,"",26930
+"2851",12120,"Killifish spp.",34,57,87,"",26431
+"2852",12175,"Killifish spp.",30,0,14,"",27281
+"2853",12120,"Killifish spp.",33,57,87,"",26410
+"2854",12146,"Killifish spp.",40,0,14,"",26742
+"2855",12169,"Killifish spp.",32,0,30,"",27052
+"2856",12129,"Killifish spp.",31,0,16,"",26621
+"2857",12119,"Killifish spp.",35,0,8,"",26370
+"2858",12169,"Killifish spp.",26,0,30,"",27048
+"2859",12175,"Killifish spp.",34,0,14,"",27283
+"2860",12175,"Killifish spp.",28,0,14,"",27288
+"2861",12105,"Killifish spp.",35,0,1,"",26255
+"2862",12120,"Killifish spp.",29,57,87,"",26415
+"2863",12160,"Killifish spp.",30,246,276,"",26879
+"2864",12169,"Killifish spp.",30,0,30,"",27038
+"2865",12175,"Killifish spp.",27,0,14,"",27280
+"2866",12219,"Killifish spp.",32,0,7,"",27746
+"2867",12175,"Killifish spp.",26,0,14,"",27284
+"2868",12120,"Killifish spp.",30,57,87,"",26414
+"2869",12129,"Killifish spp.",26,0,16,"",26615
+"2870",12162,"Killifish spp.",27,0,1,"",26933
+"2871",12120,"Killifish spp.",31,57,87,"",26422
+"2872",12169,"Killifish spp.",25,0,30,"",27047
+"2873",12218,"Killifish spp.",31,0,2,"",27713
+"2874",12169,"Killifish spp.",32,0,30,"",27050
+"2875",12145,"Killifish spp.",27,0,2,"",26711
+"2876",12169,"Killifish spp.",26,0,30,"",27051
+"2877",12144,"Killifish spp.",21,0,1,"",26710
+"2878",12120,"Killifish spp.",32,57,87,"",26411
+"2879",12146,"Killifish spp.",43,0,14,"",26741
+"2880",12119,"Killifish spp.",34,0,8,"",26364
+"2881",12155,"Killifish spp.",14,0,1,"",26767
+"2882",12129,"Killifish spp.",29,0,16,"",26618
+"2883",12169,"Killifish spp.",31,0,30,"",27065
+"2884",12145,"Killifish spp.",28,0,2,"",26712
+"2885",12163,"Killifish spp.",30,0,5,"",26964
+"2886",12129,"Killifish spp.",30,0,16,"",26612
+"2887",12175,"Killifish spp.",18,0,14,"",27286
+"2888",12169,"Killifish spp.",26,0,30,"",27041
+"2889",12119,"Killifish spp.",30,0,8,"",26367
+"2890",12146,"Killifish spp.",30,0,14,"",26749
+"2891",12129,"Killifish spp.",25,0,16,"",26613
+"2892",12129,"Killifish spp.",26,0,16,"",26616
+"2893",12160,"Killifish spp.",23,246,276,"",26885
+"2894",12129,"Killifish spp.",30,0,16,"",26620
+"2895",12169,"Killifish spp.",28,0,30,"",27064
+"2896",12169,"Killifish spp.",26,0,30,"",27039
+"2897",12160,"Killifish spp.",18,246,276,"",26890
+"2898",12169,"Killifish spp.",32,0,30,"",27045
+"2899",12146,"Killifish spp.",33,0,14,"",26743
+"2900",12218,"Killifish spp.",32,0,2,"",27712
+"2901",12169,"Killifish spp.",40,0,30,"",27054
+"2902",12129,"Killifish spp.",33,0,16,"",26608
+"2903",12219,"Killifish spp.",30,0,7,"",27748
+"2904",12119,"Killifish spp.",35,0,8,"",26368
+"2905",12120,"Killifish spp.",28,57,87,"",26407
+"2906",12120,"Killifish spp.",25,57,87,"",26406
+"2907",12205,"Killifish spp.",30,0,1,"",27518
+"2908",12123,"Killifish spp.",24,0,5,"",26534
+"2909",12120,"Killifish spp.",28,57,87,"",26409
+"2910",12219,"Killifish spp.",29,0,7,"",27747
+"2911",12169,"Killifish spp.",33,0,30,"",27063
+"2912",12219,"Killifish spp.",30,0,7,"",27744
+"2913",12129,"Killifish spp.",18,0,16,"",26622
+"2914",12175,"Killifish spp.",28,0,14,"",27282
+"2915",12169,"Killifish spp.",29,0,30,"",27053
+"2916",12120,"Killifish spp.",29,57,87,"",26416
+"2917",12120,"Killifish spp.",45,57,87,"",26433
+"2918",12169,"Killifish spp.",31,0,30,"",27037
+"2919",12169,"Killifish spp.",32,0,30,"",27061
+"2920",12169,"Killifish spp.",30,0,30,"",27062
+"2921",12120,"Killifish spp.",29,57,87,"",26408
+"2922",12169,"Killifish spp.",21,0,30,"",27042
+"2923",12163,"Killifish spp.",31,0,5,"",26967
+"2924",12120,"Killifish spp.",36,57,87,"",26428
+"2925",12169,"Killifish spp.",25,0,30,"",27046
+"2926",12120,"Killifish spp.",28,57,87,"",26430
+"2927",12120,"Killifish spp.",29,57,87,"",26417
+"2928",12120,"Killifish spp.",36,57,87,"",26424
+"2929",12219,"Killifish spp.",20,0,7,"",27750
+"2930",12120,"Killifish spp.",38,57,87,"",26432
+"2931",12169,"Killifish spp.",25,0,30,"",27049
+"2932",12120,"Killifish spp.",34,57,87,"",26413
+"2933",12169,"Killifish spp.",30,0,30,"",27040
+"2934",12169,"Killifish spp.",34,0,30,"",27066
+"2935",12160,"Killifish spp.",24,246,276,"",26894
+"2936",12120,"Killifish spp.",31,57,87,"",26412
+"2937",12169,"Killifish spp.",47,0,30,"",27044
+"2938",12119,"Killifish spp.",43,0,8,"",26366
+"2939",12160,"Killifish spp.",28,246,276,"",26889
+"2940",12129,"Killifish spp.",33,0,16,"",26619
+"2941",12146,"Killifish spp.",31,0,14,"",26745
+"2942",12120,"Killifish spp.",28,57,87,"",26419
+"2943",12160,"Killifish spp.",34,246,276,"",26893
+"2944",12120,"Killifish spp.",39,57,87,"",26420
+"2945",12119,"Killifish spp.",29,0,8,"",26365
+"2946",12146,"Killifish spp.",27,0,14,"",26744
+"2947",12169,"Killifish spp.",30,0,30,"",27057
+"2948",12169,"Killifish spp.",30,0,30,"",27058
+"2949",12169,"Killifish spp.",29,0,30,"",27055
+"2950",12169,"Killifish spp.",27,0,30,"",27043
+"2951",12129,"Killifish spp.",25,0,16,"",26617
+"2952",12163,"Killifish spp.",38,0,5,"",26966
+"2953",12129,"Killifish spp.",36,0,16,"",26607
+"2954",12146,"Killifish spp.",29,0,14,"",26738
+"2955",12163,"Killifish spp.",22,0,5,"",26965
+"2956",12223,"Killifish spp.",29,0,1,"",27902
+"2957",12119,"Killifish spp.",36,0,8,"",26369
+"2958",12146,"Killifish spp.",34,0,14,"",26737
+"2959",12119,"Killifish spp.",35,0,8,"",26371
+"2960",12146,"Killifish spp.",38,0,14,"",26750
+"2961",12160,"Killifish spp.",19,246,276,"",26886
+"2962",12146,"Killifish spp.",44,0,14,"",26740
+"2963",12120,"Killifish spp.",36,57,87,"",26427
+"2964",12169,"Killifish spp.",31,0,30,"",27059
+"2965",12146,"Killifish spp.",33,0,14,"",26739
+"2966",12129,"Killifish spp.",30,0,16,"",26611
+"2967",12169,"Killifish spp.",33,0,30,"",27056
+"2968",12120,"Killifish spp.",32,57,87,"",26418
+"2969",12120,"Killifish spp.",31,57,87,"",26434
+"2970",12146,"Killifish spp.",42,0,14,"",26748
+"2971",12160,"Killifish spp.",25,246,276,"",26865
+"2972",12160,"Killifish spp.",20,246,276,"",26866
+"2973",12146,"Killifish spp.",29,0,14,"",26747
+"2974",12175,"Killifish spp.",25,0,14,"",27289
+"2975",12129,"Killifish spp.",33,0,16,"",26609
+"2976",12129,"Killifish spp.",32,0,16,"",26610
+"2977",12160,"Killifish spp.",28,246,276,"",26887
+"2978",12219,"Killifish spp.",31,0,7,"",27745
+"2979",12123,"Killifish spp.",24,0,5,"",26533
+"2980",12169,"Killifish spp.",31,0,30,"",27060
+"2981",12160,"Killifish spp.",25,246,276,"",26891
+"2982",12160,"Killifish spp.",26,246,276,"",26892
+"2983",12123,"Killifish spp.",28,0,5,"",26532
+"2984",12160,"Killifish spp.",24,246,276,"",26878
+"2985",12212,"Killifish spp.",15,0,1,"",27566
+"2986",12160,"Killifish spp.",26,246,276,"",26867
+"2987",12160,"Killifish spp.",27,246,276,"",26868
+"2988",12160,"Killifish spp.",30,246,276,"",26869
+"2989",12160,"Killifish spp.",23,246,276,"",26870
+"2990",12160,"Killifish spp.",25,246,276,"",26884
+"2991",12160,"Killifish spp.",26,246,276,"",26872
+"2992",12160,"Killifish spp.",35,246,276,"",26873
+"2993",12160,"Killifish spp.",49,246,276,"",26874
+"2994",12160,"Killifish spp.",29,246,276,"",26875
+"2995",12160,"Killifish spp.",35,246,276,"",26876
+"2996",12160,"Killifish spp.",26,246,276,"",26877
+"2997",12160,"Killifish spp.",31,246,276,"",26882
+"2998",12160,"Killifish spp.",32,246,276,"",26883
+"2999",12160,"Killifish spp.",27,246,276,"",26880
+"3000",12160,"Killifish spp.",29,246,276,"",26881
+"3001",12120,"Killifish spp.",31,57,87,"",26429
+"3002",12175,"Killifish spp.",19,0,14,"",27277
+"3003",12163,"Killifish spp.",30,0,5,"",26968
+"3004",12120,"Killifish spp.",28,57,87,"",26423
+"3005",12175,"Killifish spp.",30,0,14,"",27287
+"3006",12120,"Killifish spp.",35,57,87,"",26421
+"3007",12161,"Killifish spp.",32,2,5,"",26928
+"3008",12161,"Killifish spp.",20,2,5,"",26929
+"3009",12129,"Killifish spp.",29,0,16,"",26614
+"3010",12120,"Killifish spp.",31,57,87,"",26425
+"3011",12120,"Killifish spp.",28,57,87,"",26426
+"3012",12219,"Killifish spp.",20,0,7,"",27749
+"3013",12160,"Killifish spp.",30,246,276,"",26871
+"3014",12160,"Killifish spp.",30,246,276,"",26888
+"3015",12120,"Killifish spp.",32,57,87,"",26435
+"3016",12175,"Killifish spp.",19,0,14,"",27278
+"3017",12123,"Killifish spp.",29,0,5,"",26530
+"3018",12123,"Killifish spp.",29,0,5,"",26531
+"3019",12175,"Killifish spp.",24,0,14,"GIVEN 30 BUT NO LETTER TO ASSOCIATE WITH CODE",27279
+"3020",12175,"Killifish spp.",29,0,14,"",27285
+"3021",12175,"Killifish spp.",28,0,14,"GIVEN 30 BUT NO LETTER TO ASSOCIATE WITH CODE",27276

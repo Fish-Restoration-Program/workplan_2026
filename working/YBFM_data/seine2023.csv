@@ -1,0 +1,242 @@
+"EventID","SeineLength","SeineWidth","SeineDepth","Volume","SubstrateCode","HabitatType","SeineComments","Tide_Seine","ConditionCode"
+10298,26,5,0.8,104,"MUD","VEG","","High",NA
+10299,30,5,0.8,120,"MUD","RIP","Went 3m downstream.","Ebb",NA
+10300,30,5,0.7,105,"MUD","VEG","","Ebb",NA
+10301,30,4,0.6,72,"MUD","VEG","","Ebb",NA
+10302,30,5,0.5,75,"MUD","RIP","10+ crayfish","Flood",NA
+10303,30,5,0.5,75,"MUD","RIP","","Ebb",NA
+10304,30,4,0.6,72,"MUD","RIP","","Ebb",NA
+10305,30,8,0.9,216,"AVG","VEG","Too clear/shallow for secchi - over 1 m.","Ebb",NA
+10306,23,5,0.8,92,"MUD","RIP","Sampling shortned due to veg.","Flood",NA
+10307,30,5,0.9,135,"MUD","VEG","Sampled 3m downstream due to primrose, went over ~2m primrose patch.","Flood",NA
+10308,30,5,0.8,120,"MUD","VEG","","Flood",NA
+10309,30,5,0.7,105,"MUD","VEG","","Ebb",NA
+10310,30,5,0.4,60,"MUD","RIP","","Flood",NA
+10311,30,5,0.5,75,"MUD","RIP","10 corbicula. High filamentous algae created high morts.","Ebb",NA
+10312,30,4,1,120,"MUD","RIP","Veg caused high mortality - filamentous algae","Ebb",NA
+10313,30,8,0.8,192,"AVG","VEG","","Ebb",NA
+10314,24,5,0.7,84,"MUD","VEG","Shortened length due to veg.","Flood",NA
+10315,30,5,0.8,120,"MUD","VEG","Moved ~3m upstream due to veg. ~2m.","Flood",NA
+10316,30,5,0.8,120,"MUD","VEG","","High",NA
+10317,30,5,0.5,75,"MUD","VEG","","Ebb",NA
+10318,30,5,0.6,90,"MUD","RIP","","Ebb",NA
+10319,30,5,0.8,120,"MUD","RIP","","Ebb",NA
+10320,30,4,1.2,144,"MUD","RIP","","Ebb",NA
+10321,30,8,1,240,"AVG","VEG","Too clear/deep for secchi; filamentous algae.","Ebb",NA
+10322,24,5,0.7,84,"MUD","VEG","Sample shortened due to vegetation. FAL = Felipe La Luz. Found a LP in mouth of SPB!","Ebb",NA
+10323,28,5,0.7,98,"MUD","VEG","Went ~3m upstream and shortened due to primrose.","Ebb",NA
+10324,30,5,0.6,90,"MUD","VEG","","Ebb",NA
+10325,30,5,0.6,90,"MUD","VEG","","Ebb",NA
+10326,30,5,0.4,60,"MUD","RIP","","Ebb",NA
+10327,30,5,0.6,90,"MUD","RIP","","Ebb",NA
+10328,30,4,0.9,108,"MUD","RIP","Saw a sea lion!","Ebb",NA
+10329,30,8,0.5,120,"AVG","VEG","Too clear/shallow for secchi. Went over ~15m of heavy veg.","Ebb",NA
+10331,24,5,0.7,84,"MUD","VEG","Shortened seine due to veg.","Ebb",NA
+10332,27,5,0.7,94.5,"MUD","VEG","Sample shortened due to vegetation.","Ebb",NA
+10333,30,5,0.7,105,"MUD","VEG","","Ebb",NA
+10334,30,5,0.5,75,"MUD","VEG","","Ebb",NA
+10335,30,5,0.4,60,"MUD","VEG","","Flood",NA
+10336,30,5,0.4,60,"MUD","RIP","10+ corbicula!","Low",NA
+10337,30,4,0.7,84,"MUD","RIP","10 Corbicula","Ebb",NA
+10338,NA,NA,NA,NA,NA,"VEG","Too clear/deep for secchi,. Vegetation too thick (surfacing), couldn't sein","Ebb",NA
+10339,23,5,0.6,69,"MUD","RIP","BM = Brian Mahardja; Length shortened due to primrose","Ebb",NA
+10340,28,5,0.8,112,"MUD","RIP","BM = Brian Mahardja","Ebb",NA
+10341,30,5,0.6,90,"MUD","VEG","BM = Brian Mahardja","Low",NA
+10342,30,5,0.6,90,"MUD","VEG","BM = Brian Mahardja","Flood",NA
+10343,30,5,0.7,105,"MUD","RIP","BM = Brian Mahardja","Flood",NA
+10344,30,5,0.8,120,"MUD","RIP","BM = Brian Mahardja; corbicula 10+","Flood",NA
+10345,30,4,0.8,96,"MUD","RIP","corbicula 20+. SAV 12 x 3m near shore interrupted the sein . BM = Brian Mahardja(USBR)","Flood",NA
+10346,NA,NA,NA,NA,"AVG","VEG","Couldn't seine due to vegetation.","Ebb",NA
+10356,24,5,0.6,72,"MUD","VEG","Site shortened because of vegetation","Ebb",NA
+10357,28,5,0.6,84,"MUD","VEG","Site shortened because of vegetation","Flood",NA
+10358,30,5,0.4,60,"MUD","RIP","","Low",NA
+10359,30,5,0.5,75,"MUD","VEG","","Ebb",NA
+10360,30,5,0.4,60,"MUD","RIP","","Low",NA
+10361,30,5,0.4,60,"MUD","RIP","10+ Corbicula","Low",NA
+10362,30,4,0.8,96,"MUD","RIP","","Ebb",NA
+10370,23,5,0.5,57.5,"MUD","RIP","Seine shortened due to vegetation.","Flood",NA
+10371,27,5,0.6,81,"MUD","RIP","Shortened seine b/c of primrose.","Flood",NA
+10372,30,5,0.5,75,"MUD","VEG","","Ebb",NA
+10373,30,5,0.4,60,"MUD","VEG","Took water quality after trap was rolled down (high NTU).","Ebb",NA
+10374,30,5,0.5,75,"MUD","RIP","","Flood",NA
+10375,30,5,0.6,90,"MUD","RIP","10+ Corbicula","Flood",NA
+10376,30,4,0.7,84,"MUD","RIP","10+ Corbicula","Ebb",NA
+10387,24,5,0.5,60,"MUD","RIP","shortened due to FAV/SAV","Flood",NA
+10388,27,5,0.5,67.5,"MUD","RIP","","Flood",NA
+10389,30,5,0.4,60,"MUD","RIP","","Flood",NA
+10390,30,5,0.7,105,"MUD","VEG","","Flood",NA
+10391,30,5,0.8,120,"MUD","RIP","too deep for sechi (0.89m).","Flood",NA
+10392,30,5,0.8,120,"MUD","RIP","","Flood",NA
+10393,30,4,1.1,132,"MUD","RIP","Too shallow for secchi (0.85m).","Flood",NA
+10403,21.5,5,0.3,32.25,"MUD","RIP","","Flood",NA
+10404,26.5,5,0.5,66.25,"MUD","RIP","Shortened due to vegetation.","Flood",NA
+10405,30,5,0.3,45,"MUD","RIP","","Flood",NA
+10406,30,5,0.5,75,"MUD","VEG","","Flood",NA
+10407,30,5,0.7,105,"MUD","RIP","","Flood",NA
+10408,30,5,0.9,135,"MUD","RIP","","Flood",NA
+10409,30,4,0.8,96,"MUD","RIP","Too clear for secchi.","Flood",NA
+10419,21,5,0.5,52.5,"MUD","RIP","Shortened due to veg (SAV/FAV).","Flood",NA
+10420,26,5,0.5,65,"MUD","VEG","shortened due to SAV/FAV","Flood",NA
+10421,30,5,0.4,60,"MUD","VEG","","Flood",NA
+10422,30,5,0.8,120,"MUD","VEG","","High",NA
+10423,30,5,0.5,75,"MUD","RIP","","Flood",NA
+10424,30,5,0.5,75,"MUD","RIP","","Flood",NA
+10425,30,4,1.2,144,"MUD","RIP","visibility too deep for secchi (>1.00 m)","Ebb",NA
+10442,21,5,0.6,63.00000381,"MUD","VEG","Shortened seine due to veg.","Flood",NA
+10443,26,5,0.8,104,"MUD","RIP","sample shortened due to veg","Flood",NA
+10444,30,5,0.6,90,"MUD","RIP","","Flood",NA
+10445,30,5,0.8,120,"MUD","VEG","","Flood",NA
+10446,30,5,1,150,"MUD","RIP","","Flood",NA
+10447,30,4,1,120,"MUD","RIP","","Flood",NA
+10448,30,4,1.2,144,"MUD","RIP","","Flood",NA
+10453,22,5,1,110,"MUD","RIP","No secchi. Length shortened due to primrose","Ebb",NA
+10455,30,5,0.8,120,"MUD","RIP","Forgot secchi","Ebb",NA
+10456,30,4,0.9,108,"MUD","VEG","No secchi","High",NA
+10457,30,5,0.9,135,"MUD","RIP","","Flood",NA
+10458,30,5,0.9,135,"MUD","RIP","","Flood",NA
+10459,30,4,1.1,132,"MUD","RIP","","Flood",NA
+10469,NA,NA,NA,NA,NA,NA,"",NA,NA
+10478,NA,NA,NA,NA,NA,"RIP","","Ebb",NA
+10479,NA,NA,NA,NA,NA,"RIP","DO calibrated in field. Water too high to sample.","Ebb",NA
+10480,NA,NA,NA,NA,NA,"RIP","DO calibrated in field; couldn't seine, water too high.","Ebb",NA
+10481,30,5,0.7,105,"MUD","VEG","No catch.","Ebb",NA
+10482,30,5,0.6,90,"MUD","RIP","Calibrated DO in field- was reading -5000mg/l","Ebb",NA
+10483,30,5,1,150,"MUD","RIP","DO calibrated in field.","Ebb",NA
+10484,NA,NA,NA,NA,NA,"RIP","Water level too high. DO calibrated in field.","Flood",NA
+10491,NA,NA,NA,NA,NA,"VEG","Too high to seine.","Flood",NA
+10492,NA,NA,NA,NA,NA,"VEG","Too high to seine.","Flood",NA
+10493,NA,NA,NA,NA,NA,"VEG","Too high to seine.","Flood",NA
+10494,NA,NA,NA,NA,NA,"RIP","Too high to seine.","Flood",NA
+10495,NA,NA,NA,NA,NA,"RIP","Too high to seine.","Flood",NA
+10496,NA,NA,NA,NA,NA,"RIP","Too high to seine.","Low",NA
+10497,NA,NA,NA,NA,NA,"RIP","Too high to seine.","Low",NA
+10498,10,8,1.2,96,"MUD","RIP","Shortened typical seine.","Flood",NA
+10499,NA,NA,NA,NA,NA,"RIP","No seine - water level too high; DO calibrated in field","Ebb",NA
+10500,30,5,0.7,105,"MUD","VEG","No catch","Ebb",NA
+10513,30,8,0.6,144,"AVG","AG","FNU malfunctioning","Overtopping",NA
+10514,30,8,0.6,144,"AVG","AG","NTU malfunctioning","Overtopping",NA
+10515,30,8,0.6,144,"AVG","AG","NTU MALFUNCTIONING.","Overtopping",NA
+10516,30,8,0.4,96,"AVG","AG","NTU MALFUNCTIONING","Overtopping",NA
+10517,30,6,0.6,108.0000076,"AVG","VEG","","Overtopping",NA
+10518,30,6,0.6,108.0000076,"AVG","VEG","","Overtopping",NA
+10519,20,6,0.03,3.599999905,"AVG","VEG","","Overtopping",NA
+10520,20,8,0.2,32,"AVG","VEG","","Low",NA
+10521,30,4,0.4,48,"GRV","RIP","LOTS OF BRANCHES; FOR THE NTU : ''++++'' MALFUNCTION","Overtopping",NA
+10522,30,8,0.4,96,"AVG","VEG","Turbidity probe malfunction. J-Seine.","Overtopping",NA
+10523,30,8,0.4,96,"GRV","AG","NTU Malfunctioning.","Overtopping",NA
+10524,30,8,0.9,216,"AVG","AG","FNU MALFUNTIONING.","Overtopping",NA
+10540,30,4,0.3,36,"MUD","AG","CHNF= 0 - 53 mm","Overtopping",NA
+10541,2,8,0.6,9.600000381,"AVG","AG","","Overtopping",NA
+10542,30,5,0.7,105,"AVG","VEG","","Overtopping",NA
+10543,30,6,0.2,36,"GRV","AG","Too shallow for Secchi.","Overtopping",NA
+10544,30,6,0.8,144,"AVG","VEG","Stock on big metal debris.","Overtopping",NA
+10545,30,5,0.9,135,"AVG","VEG","","Overtopping",NA
+10547,30,8,0.8,192,"AVG","VEG","","Overtopping",NA
+10548,30,8,1.1,264,"AVG","VEG","","Overtopping",NA
+10549,30,8,0.5,120,"AVG","VEG","","Overtopping",NA
+10550,30,8,0.7,168,"AVG","VEG","","Overtopping",NA
+10551,30,6,0.4,72,"AVG","VEG","","Overtopping",NA
+10552,NA,NA,NA,NA,NA,"RIP","NO SEINE - water level too low","Overtopping",NA
+10553,16,8,1.2,153.6000061,"AVG","VEG","CHN F = 0.54","Overtopping",NA
+10559,30,4,0.3,36,"GRV","AG","CHN F 0-55","Overtopping",NA
+10560,13,7,0.5,45.5,"AVG","RIP","","Overtopping",NA
+10561,30,6,0.8,144,"AVG","VEG","","Overtopping",NA
+10562,30,6,0.3,54.00000381,"GRV","VEG","10+ crawdads","Overtopping",NA
+10563,30,8,0.9,216,"AVG","VEG","","Overtopping",NA
+10564,30,8,0.7,168,"AVG","VEG","","Overtopping",NA
+10565,30,8,0.7,168,"AVG","VEG","","Overtopping",NA
+10566,30,8,0.6,144,"AVG","VEG","","Overtopping",NA
+10567,30,8,0.5,120,"AVG","VEG","","Overtopping",NA
+10568,30,5,0.9,135,"AVG","VEG","Veg on bank, moved seine out of debris.","Overtopping",NA
+10569,30,5,0.8,120,"AVG","VEG","Significant debris on bank (w/in site). Moved seine outside of debris.","Overtopping",NA
+10570,22,6,0.6,79.20000458,"AVG","VEG","","Overtopping",NA
+10571,15,8,1.2,144,"AVG","VEG","Fall 0-56 mm","Overtopping",NA
+10572,30,4,0.5,60,"AVG","VEG","5m downstream of road.","Overtopping",NA
+10573,8,8,1.2,76.80000305,"AVG","RIP","Current was reverse. AC = Amanda Casby","Overtopping",NA
+10574,17,8,1.2,163.2000122,"GRV",NA,"AKC = Amanda Casby","Overtopping",NA
+10575,30,8,0.8,192,"MUD","AG","","Overtopping",NA
+10576,10,8,1.3,104,"AVG","VEG","","Overtopping",NA
+10577,30,5,0.9,135,"AVG","VEG","","Overtopping",NA
+10578,30,6,0.9,162,"AVG","VEG","","Overtopping",NA
+10579,30,6,0.7,126,"AVG","VEG","","Overtopping",NA
+10580,30,6,0.8,144,"AVG","VEG","","Overtopping",NA
+10581,19,4,0.9,68.40000153,"AVG","VEG","The seine was shrotened & narrowed due to the floating debris.","Overtopping",NA
+10582,15,4,0.9,54,"AVG","RIP","Super high debris fillded up the entire bag. Lenth was shortened due to the heavy floating debris.","Overtopping",NA
+10583,30,5,0.7,105,"AVG","VEG","","Overtopping",NA
+10584,10,8,1.2,96,"MUD","VEG","Altered due to veg and depth.","Overtopping",NA
+10585,30,4,0.3,36,"GRV","AG","","Overtopping",NA
+10586,30,6,0.7,126,"AVG","AG","Water is too clear for secchi","Overtopping",NA
+10587,18,4,0.5,36,"MUD","RIP","","Overtopping",NA
+10589,30,5,0.2,30,"GRV","AG","Too shallow/clear for secchi.","Overtopping",NA
+10590,30,8,1.1,264,"AVG","VEG","","Overtopping",NA
+10591,30,6,0.6,108.0000076,"AVG","VEG","","Overtopping",NA
+10592,30,8,0.7,168,"AVG","VEG","","Overtopping",NA
+10593,30,5,0.4,60,"AVG","RIP","","Overtopping",NA
+10594,30,8,0.7,168,"AVG","VEG","","Overtopping",NA
+10595,30,5,0.6,90,"AVG","VEG","","Overtopping",NA
+10596,30,5,0.5,75,"AVG","RIP","","Overtopping",NA
+10597,NA,NA,NA,NA,NA,NA,"Too much veg in site to seine.",NA,NA
+10607,30,4,0.6,72,"MUD","RIP","","Overtopping",NA
+10608,NA,NA,NA,NA,NA,NA,"Too low to seine - NO SEINE",NA,NA
+10609,30,6,0.7,126,"AVG","VEG","Too shallow/clear for secchi","Overtopping",NA
+10610,30,8,0.4,96,"GRV",NA,"Too clear/shallow for secchi; DO taken seperately","Overtopping",NA
+10611,30,8,0.8,192,"AVG","VEG","**High DO**","Overtopping",NA
+10612,30,5,0.6,90,"AVG","VEG","","Overtopping",NA
+10613,30,6,0.7,126,"MUD","VEG","KSC - Kobe Carpenter","Overtopping",NA
+10614,30,8,0.6,144,"AVG","RIP","","Overtopping",NA
+10615,30,6,0.5,90,"AVG","VEG","VERY WINDY","Overtopping",NA
+10616,30,6,0.6,108.0000076,"AVG","VEG","Lead line lifted because of wind","Overtopping",NA
+10617,NA,NA,NA,NA,NA,"VEG","Water not at a good stage for seining - NO SEINE","Overtopping",NA
+10618,NA,NA,NA,NA,NA,"VEG","Awkward depth - NO SEINE","Overtopping",NA
+10619,20,8,1.1,176,"MUD","RIP","","Overtopping",NA
+10626,NA,NA,NA,NA,NA,"VEG","Not at right stage height to seine; too clear for secchi",NA,NA
+10627,30,5,0.5,75,"AVG","VEG","caught BBQ stack in seine","Overtopping",NA
+10628,30,6,0.4,72,"AVG","VEG","","Overtopping",NA
+10629,30,5,0.4,60,"AVG","VEG","","Overtopping",NA
+10630,NA,NA,NA,NA,NA,"VEG","Water not at right stage height to seine",NA,NA
+10631,NA,NA,NA,NA,NA,"RIP","Wrong stage height to seine","Ebb",NA
+10632,NA,NA,NA,NA,NA,"RIP","Wrong stage height to seine","Ebb",NA
+10633,NA,NA,NA,NA,NA,NA,"stage height too high","Ebb",NA
+10634,30,8,0.9,216,"AVG","VEG","Too deep for secchi","Flood",NA
+10659,NA,NA,NA,NA,NA,"VEG","stage height too high for sample","Flood",NA
+10660,NA,NA,NA,NA,NA,"VEG","Stage hright too high, no seine","Flood",NA
+10661,NA,NA,NA,NA,NA,"VEG","stage height too high, no seine","Flood",NA
+10662,NA,NA,NA,NA,NA,"VEG","Stage height too high, no seine","Flood",NA
+10663,NA,NA,NA,NA,NA,"VEG","stage height too high, no seine","Flood",NA
+10664,NA,NA,NA,NA,NA,"RIP","stage height too high, no seine","Flood",NA
+10665,NA,NA,NA,NA,NA,"RIP","stage height too high, no seine","Flood",NA
+10666,NA,NA,NA,NA,NA,"VEG","Stage height too high, no seine","Flood",NA
+10691,NA,NA,NA,NA,NA,NA,"Stage height too high to seine.","Ebb",NA
+10692,NA,NA,NA,NA,NA,NA,"Stage height too high to seine.","Ebb",NA
+10693,NA,NA,NA,NA,NA,NA,"Stage height too high to seine.","Ebb",NA
+10694,30,5,0.8,120,"MUD","VEG","","Ebb",NA
+10695,30,5,0.8,120,"MUD","RIP","","Ebb",NA
+10696,30,5,0.9,135,"MUD","RIP","","Ebb",NA
+10697,30,4,1.2,144,"MUD","RIP","","Ebb",NA
+10698,NA,NA,NA,NA,NA,"VEG","Too much Veg to seine. Too clear for secchi.","Ebb",NA
+10723,23,5,0.7,80.5,"MUD","RIP","","Flood",NA
+10724,30,5,0.7,105,"MUD",NA,"Moved downstream due to veg.","Flood",NA
+10725,30,5,0.7,105,"MUD",NA,"","Flood",NA
+10726,30,5,0.7,105,"MUD",NA,"","Flood",NA
+10727,30,5,0.7,105,NA,NA,"","Ebb",NA
+10728,30,5,0.8,120,"MUD",NA,"","Ebb",NA
+10729,30,5,1,150,"MUD",NA,"","Ebb",NA
+10730,30,4,1.3,156,"MUD",NA,"","Ebb",NA
+10731,30,8,1.2,288,"MUD",NA,"","Ebb",NA
+10754,22,5,0.8,88,"MUD",NA,"","Flood",NA
+10755,28,5,0.8,112,"MUD",NA,"","Flood",NA
+10756,30,5,0.9,135,"MUD",NA,"","Flood",NA
+10757,305,5,0.6,915.000061,NA,NA,"","Ebb",NA
+10758,30,5,0.6,90,"MUD",NA,"","Low",NA
+10759,30,5,0.7,105,"MUD",NA,"","Ebb",NA
+10761,30,4,1.1,132,"MUD",NA,"","Ebb",NA
+10762,30,8,1.1,264,"AVG",NA,"","Flood",NA
+10763,NA,NA,NA,NA,NA,NA,"","Ebb",NA
+10781,24,0.5,0.6,7.200000286,"MUD",NA,"DRONE:   Battery : #7, 96%  Time Up: 08:29  Time Done: 08:33  Battery End: 84%","Flood",NA
+10782,29,5,0.7,101.5,"MUD",NA,"DRONE:  Battery #7  Battery Start: 83%   Battery End: 70% Time Up: 09:18  Time Done: 9:23","Flood",NA
+10783,30,5,0.6,90,"MUD",NA,"","High",NA
+10784,30,5,0.9,135,"MUD",NA,"","Flood",NA
+10785,30,4,1,120,"MUD",NA,"","Flood",NA
+10786,30,4,1.2,144,"MUD",NA,"","Low",NA
+10787,30,4,1,120,"MUD",NA,"DRONE:  Battery: #4  Start Battery: 95%  Start Time: 1:35  End Battery: 83%  End Time: 1:40","Ebb",NA
+10788,30,8,0.7,168,"MUD",NA,"DRONE:  Time Start: 12:30  Time End: 12:33  Battery Start: 68%  Battery End: 60%  Battery #: 7","Ebb",NA

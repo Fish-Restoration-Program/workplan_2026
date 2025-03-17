@@ -1,0 +1,76 @@
+"","SampleID_frp","Location","CommonName","TotalCatch","CPUEbySpp2"
+"1","BEASEI01-BRAD-16NOV2023","Bradmoor Island","Killifish spp.",4,711.111111111111
+"2","BEASEI01-BRAD-21DEC2023","Bradmoor Island","Mosquitofish",2,799.200799200799
+"3","BEASEI01-HORS-01FEB2023","Horseshoe Bend","Chinook Salmon (fall)",2,355.555555555556
+"4","BEASEI01-HORS-02MAR2023","Horseshoe Bend","Chinook Salmon (fall)",59,12190.0826446281
+"5","BEASEI01-HORS-03JAN2023","Horseshoe Bend","Chinook Salmon (fall)",4,888.888888888889
+"6","BEASEI01-HORS-11APR2023","Horseshoe Bend","Chinook Salmon (fall)",25,5341.88034188034
+"7","BEASEI01-HORS-19DEC2023","Horseshoe Bend","Mississippi Silverside",59,14898.9898989899
+"8","BEASEI01-LIBE-07NOV2023","Liberty Island","Killifish spp.",1,663.129973474801
+"9","BEASEI01-LIBE-08MAR2023","Liberty Island","Chinook Salmon (fall)",2,242.424242424242
+"10","BEASEI01-LIBE-25MAY2023","Liberty Island","Prickly Sculpin",2,220.385674931129
+"11","BEASEI01-LOWE-17MAR2023","Lower Yolo Ranch","Mosquitofish",2,253.968253968254
+"12","BEASEI01-TULE-14DEC2023","Tule Red","Killifish spp.",323,61523.8095238095
+"13","BEASEI01-TULE-30JAN2023","Tule Red","Pacific Staghorn Sculpin",26,4622.22222222222
+"14","BEASEI01-WING-04APR2023","Wings Landing","Pacific Staghorn Sculpin",2,2721.08843537415
+"15","BEASEI02-BRAD-09MAY2023","Bradmoor Island","Killifish spp.",26,2888.88888888889
+"16","BEASEI02-BRAD-21DEC2023","Bradmoor Island","Mosquitofish",2,538.720538720539
+"17","BEASEI02-FLYW-08MAR2023","Flyway Farms","Killifish spp.",4,1098.9010989011
+"18","BEASEI02-HORS-01FEB2023","Horseshoe Bend","Killifish spp.",3,350.877192982456
+"19","BEASEI02-HORS-02MAR2023","Horseshoe Bend","Chinook Salmon (fall)",5,701.754385964912
+"20","BEASEI02-HORS-03JAN2023","Horseshoe Bend","Chinook Salmon (fall)",4,1367.52136752137
+"21","BEASEI02-HORS-21NOV2023","Horseshoe Bend","Mississippi Silverside",4,355.555555555556
+"22","BEASEI02-LIBE-07NOV2023","Liberty Island","Killifish spp.",2,796.305144131231
+"23","BEASEI02-LIBE-26APR2023","Liberty Island","Chinook Salmon (late-fall)",1,333.333333333333
+"24","BEASEI02-TULE-14DEC2023","Tule Red","Killifish spp.",52,20392.1568627451
+"25","BEASEI03-BRAD-09MAY2023","Bradmoor Island","Killifish spp.",23,2920.63492063492
+"26","BEASEI03-BRAD-16NOV2023","Bradmoor Island","Killifish spp.",11,1086.41975308642
+"27","BEASEI04-ARNO-09MAY2023","Arnold Slough","Killifish spp.",39,11555.5555555556
+"28","BEASEI04-ARNO-16NOV2023","Arnold Slough","Killifish spp.",9,2285.71428571429
+"29","LAMOPE02-HORS-19DEC2023","Horseshoe Bend","Killifish spp.",5,388.502248040367
+"30","LAMOPE02-LIBE-20DEC2023","Liberty Island","Largemouth Bass",5,422.94839948557
+"31","LAMOPE03-LOWE-26MAY2023","Lower Yolo Ranch","Mississippi Silverside",37,2874.91663549872
+"32","LAMOPE03-NURS-28NOV2023","Nurse-Denverton","Mississippi Silverside",25,1798.42337513965
+"33","LAMOPE03-PEYT-29DEC2023","Peytonia-Suisun","Mississippi Silverside",27,1810.23962236906
+"34","LAMOPE03-STAI-06DEC2023","Stairsteps-Liberty Cut","Mississippi Silverside",11,330.628193567779
+"35","LAMOPE03-TULE-22DEC2023","Tule Red","Mississippi Silverside",23,922.008068538516
+"36","LAMOPE04-BROW-12JAN2023","Browns Island","Mississippi Silverside",6,336.036895901629
+"37","LAMOPE04-DECK-21NOV2023","Decker Island","Mississippi Silverside",12,638.260038971896
+"38","LAMOPE04-FLYW-25MAY2023","Flyway Farms","Mississippi Silverside",6,431.621610033516
+"39","LAMOPE04-HONK-18MAY2023","Honker-Spoonbill","Splittail",5,232.162083710862
+"40","LAMOPE04-LIBE-20DEC2023","Liberty Island","Killifish spp.",3,310.099126887753
+"41","LAMOPE04-LOWE-26MAY2023","Lower Yolo Ranch","Killifish spp.",5,359.68467502793
+"42","LAMOPE04-TULE-22DEC2023","Tule Red","Mississippi Silverside",33,1243.04293363875
+"43","LAMOPE05-BROW-12JAN2023","Browns Island","Mississippi Silverside",9,270.513976555455
+"44","LAMOPE05-FLYW-20DEC2023","Flyway Farms","Mississippi Silverside",63,3528.3874069671
+"45","LAMOPE05-LOWE-06DEC2023","Lower Yolo Ranch","Mississippi Silverside",1564,52931.367210554
+"46","LAMOPE05-LOWE-20NOV2023","Lower Yolo Ranch","Mississippi Silverside",38,1926.0002600144
+"47","LAMOPE05-WINT-11DEC2023","Winter Island","Mississippi Silverside",88,3220.69451621914
+"48","LAMOPE06-CHIP-15NOV2023","Chipps Island","Mississippi Silverside",41,1270.33241766172
+"49","LAMOPE06-FLYW-25JAN2023","Flyway Farms","Killifish spp.",11,585.071702390904
+"50","LAMOPE06-LOWE-06DEC2023","Lower Yolo Ranch","Killifish spp.",10,464.324167421724
+"51","LAMOPE06-STAI-20NOV2023","Stairsteps-Liberty Cut","Mississippi Silverside",48,2841.54629522585
+"52","LAMOPE07-ARNO-16MAR2023","Arnold Slough","Mississippi Silverside",3,233.10134882422
+"53","LAMOPE07-ARNO-28NOV2023","Arnold Slough","Mississippi Silverside",15,942.672844007966
+"54","LAMOPE07-FLYW-20NOV2023","Flyway Farms","Mississippi Silverside",138,9927.29703077086
+"55","LAMOPE07-RYER-22DEC2023","Ryer Island","Mississippi Silverside",25,1267.10543422
+"56","LAMOPE07-WTIB-03JAN2023","Webb Tract Island and Berms","Mississippi Silverside",6,248.767651053514
+"57","LAMOPE08-ARNO-28NOV2023","Arnold Slough","Mississippi Silverside",123,8246.64716857018
+"58","LAMOPE08-BLAC-26DEC2023","Blacklock","Mississippi Silverside",5,335.229559697975
+"59","LAMOPE08-BROW-11DEC2023","Browns Island","Threadfin Shad",18,541.027953110911
+"60","LAMOPE08-RYER-22DEC2023","Ryer Island","Mississippi Silverside",5,335.229559697975
+"61","LAMOPE09-ARNO-16MAR2023","Arnold Slough","Mississippi Silverside",16,1653.86201006802
+"62","LAMOPE09-ARNO-28NOV2023","Arnold Slough","Mississippi Silverside",10,560.061493169381
+"63","LAMOPE09-HONK-12JAN2023","Honker-Spoonbill","Mississippi Silverside",4,413.465502517004
+"64","LAMOPE09-NURS-19JAN2023","Nurse-Denverton","Mississippi Silverside",5,232.162083710862
+"65","LAMOPE10-BLAC-28NOV2023","Blacklock","Mississippi Silverside",65,3294.47412897201
+"66","LAMOPE10-WING-29DEC2023","Wings Landing","Mississippi Silverside",3,233.10134882422
+"67","LAMOPE11-BLAC-28NOV2023","Blacklock","Mississippi Silverside",6,304.105304212801
+"68","LAMOPE11-BROW-15NOV2023","Browns Island","Mississippi Silverside",77,2818.10770169175
+"69","LAMOPE12-BROW-05APR2023","Browns Island","Mississippi Silverside",7,543.903147256514
+"70","LAMOPE12-BROW-15NOV2023","Browns Island","Mississippi Silverside",87,4872.53499057362
+"71","LAMOPE12-BROW-18MAY2023","Browns Island","Mississippi Silverside",9,504.055343852443
+"72","LAMOPE12-WING-29DEC2023","Wings Landing","Mississippi Silverside",4,287.747740022344
+"73","LAMOPE13-CHIP-11DEC2023","Chipps Island","Mississippi Silverside",101,4689.67409095941
+"74","LAMOPE13-WINT-15NOV2023","Winter Island","Mississippi Silverside",31,2230.04498517316
+"75","OTTTRA05-WINT-14JUN2023","Winter Island","Killifish spp.",11,291.320753617657
