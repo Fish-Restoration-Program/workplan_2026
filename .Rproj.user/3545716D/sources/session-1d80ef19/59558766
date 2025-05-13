@@ -1,0 +1,28 @@
+{
+    "id": "59558766",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1747172896325.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "id": "878471ee27fb438e928a32aea1057b3e",
+        "name": "species_list",
+        "title": "species_list",
+        "language": "R",
+        "source_window_id": "ws3toiq9e9bj7",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1790927149272,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1747172896325,
+    "read_only": false,
+    "read_only_alternatives": []
+}

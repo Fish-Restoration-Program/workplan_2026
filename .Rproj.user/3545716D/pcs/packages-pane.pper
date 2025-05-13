@@ -1,0 +1,7 @@
+{
+    "installOptions": {
+        "installFromRepository": false,
+        "libraryPath": "C:/Users/edavidson/OneDrive - California Department of Fish and Wildlife/Documents/R/R-4.1.1/library",
+        "installDependencies": true
+    }
+}
