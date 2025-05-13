@@ -52,7 +52,7 @@ dwr_sv$month = lubridate::month(dwr_sv$Visit.Date2)
 #dwr_sv= subset(dwr_sv, Visit.Date2 > "2023-01-01" & Visit.Date2 < "2023-12-31")
 
 
-dwr_sv=filter(dwr_sv, dwr_sv$year== 2023)
+#dwr_sv=filter(dwr_sv, dwr_sv$year== 2023)
 
 save(list=ls(),file= here::here("RData","fish_prep_code_01.RData"))
 
