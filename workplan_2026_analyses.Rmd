@@ -100,7 +100,22 @@ library(tidyr)
 
 #Now we need to make this into wide format aka each row is a sample with all the species in columns
 # Ensure SampleID and species columns are clean
+
 fish.comp3 <- fish.comp2 %>%
+  mutate(SampleID = SampleID_frp,
+         Species = fish5.CommonName,
+         Catch = TotalCatch,
+         Group= Location) %>%
+  select(SampleID, Group, Species, Catch)
+  
+fish.comp4 <- fish.comp2 %>%
+  mutate(SampleID = SampleID_frp,
+         Species = fish5.CommonName,
+         Catch = TotalCatch,
+         Group= paste(Location, GearTypeAbbreviation, sep = "_")) %>%
+  select(SampleID, Group, Species, Catch)
+
+fish.comp5 <- fish.comp2 %>%
   mutate(SampleID = SampleID_frp,
          Species = fish5.CommonName,
          Catch = TotalCatch,
@@ -190,21 +205,70 @@ accum_df <- bind_rows(accum_data)
 ploX<-ggplot(accum_df, aes(x = Samples, y = Richness, color = Group)) +
   geom_line(size = 1.2) +
   labs(
-    title = "Species Accumulation by Location × Gear",
+    title = "Species Accumulation by Location",
     x = "Samples",
     y = "Species Richness",
     color = NULL  # removes default legend title
   ) +
   theme_minimal() +
   theme(
-    legend.position = "bottom",
+    legend.position = "right",
     plot.title = element_text(hjust = 0.5)
   )
 ggsave(paste("RARE_CURVE2_",".png",sep = ""),path = here::here("working/Figures"), ploX, width = 1000, height = 500, dpi = 150, units = "px")
 
+
+
+
+
 save(list=ls(),file= here::here("working/RData", "Workplan_Fish_code_03.RData"))
 
 
+
+```
+
+
+```{r}
+library(dplyr)
+library(vegan)
+library(purrr)
+
+# Function to calculate samples needed to reach 80% and 90% of estimated richness
+samples_to_target <- function(species_matrix, group_name) {
+  # 1. Estimate asymptotic richness
+  pool <- specpool(species_matrix)
+  est_richness <- pool$chao
+  
+  # 2. Accumulation curve
+  acc <- specaccum(species_matrix, method = "random")
+  
+  # 3. Targets
+  target_80 <- 0.8 * est_richness
+  target_90 <- 0.9 * est_richness
+  
+  # 4. Find where richness first reaches or exceeds targets
+  n_80 <- min(which(acc$richness >= target_80), na.rm = TRUE)
+  n_90 <- min(which(acc$richness >= target_90), na.rm = TRUE)
+  
+  # If never reaches target, return NA
+  if (is.infinite(n_80)) n_80 <- NA
+  if (is.infinite(n_90)) n_90 <- NA
+  
+  return(tibble(
+    Group = group_name,
+    Estimated_Richness = est_richness,
+    Samples_80pct = n_80,
+    Samples_90pct = n_90,
+    Max_Samples = length(acc$sites),
+    Max_Observed_Richness = max(acc$richness)
+  ))
+}
+
+# Run for all groups
+results_tbl <- imap_dfr(species_list, samples_to_target)
+
+# View results
+print(results_tbl)
 
 ```
 
