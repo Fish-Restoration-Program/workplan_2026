@@ -183,21 +183,49 @@ cols <- brewer.pal(min(length(species_list), 8), "Set2")
 
 
 
-# Prepare plot space
+# Set output file path and size
+png(filename = here::here("working/Figures", "rare_curve_plot_only.png"),
+    width = 1200, height = 800)
+
+# Set plot margins (adjust if legend was moved out)
+par(mar = c(5, 4, 4, 2))  # default margins: bottom, left, top, right
+
+# Base plot
 plot(NULL,
      xlim = c(1, max(sapply(species_list, nrow))),
      ylim = c(0, max(sapply(species_list, function(mat) max(specaccum(mat)$richness)))),
      xlab = "Samples",
      ylab = "Species Richness",
-     main = "Species Accumulation by Location × Gear x Season")
+     main = "Species Accumulation by Location × Gear × Season")
 
-# Plot each group's accumulation curve
+# Add lines
 for (i in seq_along(species_list)) {
   acc <- specaccum(species_list[[i]], method = "random")
   lines(acc$sites, acc$richness, col = cols[i %% length(cols) + 1], lwd = 2)
 }
 
-legend("right", legend = names(species_list), col = cols, lwd = 2, cex = 0.7)
+# Close the graphics device to write the file
+dev.off()
+#legend("right", legend = names(species_list), col = cols, lwd = 2, cex = 0.7)
+
+# Open PNG device
+png(filename = here::here("working/Figures", "legend_only.png"), width = 1000, height = 750)
+
+# Create a new blank plot
+plot.new()
+
+# Add legend to fill the space
+legend("center",
+       legend = names(species_list),
+       col = cols,
+       lwd = 2,
+       cex = 0.8,
+       ncol = 3,          # 1 column (adjust to fit better)
+       bty = "n")         # no box around legend
+
+# Close device
+dev.off()
+
 
 # 1. Calculate specaccum results for each group
 accum_data <- lapply(names(species_list), function(name) {
@@ -212,21 +240,86 @@ accum_data <- lapply(names(species_list), function(name) {
 # 2. Combine all into one data frame
 accum_df <- bind_rows(accum_data)
 
+library(ggplot2)
+
 # 3. Plot with ggplot2
-ploX<-ggplot(accum_df, aes(x = Samples, y = Richness, color = Group)) +
-  geom_line(size = 1.2) +
+# ploX<-ggplot(accum_df, aes(x = Samples, y = Richness, color = Group)) +
+#   geom_line(size = 1.2) +
+#   labs(
+#     title = "Species Accumulation by Location x Gear x Season",
+#     x = "Samples",
+#     y = "Species Richness",
+#     color = NULL  # removes default legend title
+#   ) +
+#   theme_minimal() +
+#   theme(
+#     legend.position = "bottom",
+#     legend.title = element_text(size = 12),
+#     legend.text = element_text(size = 10),
+#     plot.title = element_text(hjust = 0.5),
+#     legend.background = element_rect(fill = "white", color = NA),
+#     panel.background = element_rect(fill = "white", color = NA),
+#     plot.background = element_rect(fill = "white", color = NA),
+#     panel.grid = element_blank()
+#   ) +
+#   guides(color = guide_legend(nrow = 6, byrow = TRUE))
+
+ploX<-ggplot(accum_df, aes(x = Samples, y = Richness)) +
+  geom_line(aes(color = Group), size = 1.2, show.legend = FALSE) +
+  facet_wrap(~ Group, scales = "free_y", ncol = 5) +
   labs(
     title = "Species Accumulation by Location x Gear x Season",
     x = "Samples",
-    y = "Species Richness",
-    color = NULL  # removes default legend title
+    y = "Species Richness"
   ) +
   theme_minimal() +
   theme(
-    legend.position = "right",
-    plot.title = element_text(hjust = 0.5)
+    strip.text = element_text(size = 8),
+    panel.background = element_rect(fill = "grey20", color = NA),
+    plot.background = element_rect(fill = "white", color = NA),
+    plot.title = element_text(hjust = 0.5),
+    panel.grid = element_blank()
   )
-ggsave(paste("RARE_CURVE2_LAM_COMBINED",".png",sep = ""),path = here::here("working/Figures"), ploX, width = 1000, height = 500, dpi = 150, units = "px")
+
+ggsave(paste("RARE_CURVE2_LAM_COMBINED",".png",sep = ""),path = here::here("working/Figures"), ploX, width = 1600, height = 800, dpi = 100, units = "px")
+
+
+
+# Get unique groups
+group_list <- unique(accum_df$Group)
+
+# Split groups into chunks
+group_chunks <- split(group_list, ceiling(seq_along(group_list) / per_page))
+
+# Loop over chunks and plot each
+for (i in seq_along(group_chunks)) {
+  subset_df <- accum_df %>% filter(Group %in% group_chunks[[i]])
+  
+  p <- ggplot(subset_df, aes(x = Samples, y = Richness)) +
+    geom_line(aes(group = Group), color = "steelblue", size = 1) +
+    facet_wrap(~ Group, ncol = n_cols) +
+    labs(
+      title = paste("Rarefaction Curves – Page", i, "of", length(group_chunks)),
+      x = "Samples",
+      y = "Species Richness"
+    ) +
+    theme_minimal(base_size = 12) +
+    theme(
+      strip.text = element_text(size = 9, face = "bold"),
+      panel.background = element_rect(fill = "grey20", color = NA),
+      plot.background = element_rect(fill = "white", color = NA),
+      plot.title = element_text(hjust = 0.5),
+      axis.text = element_text(size = 7),
+      panel.grid = element_blank()
+    )
+  
+  ggsave(
+    filename = paste0("rare_curve_manual_page_", i, ".png"),
+    plot = p,
+    path = here::here("working/Figures"),
+    width = 12, height = 10, dpi = 300
+  )
+}
 
 
 
